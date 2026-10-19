@@ -6,6 +6,8 @@
    https://juanmedici.github.io/gangling-portfolio/
 2. **银发经济 · KANO** — 家庭照护协同方向：5 需求收集、KANO 评分、属性评级、Better–Worse 四象限  
    https://juanmedici.github.io/gangling-portfolio/kano-yinfa.html
+3. **荐知 · 个性化推荐智能体** — 与示例作业同等方法链：定位、15 条 KANO、画像、HMW、竞品五层、MVP、信息架构、商业化  
+   https://juanmedici.github.io/gangling-portfolio/rec-agent.html
 
 仓库：https://github.com/juanmedici/gangling-portfolio
 
@@ -15,7 +17,7 @@
 python -m http.server 8765
 ```
 
-打开 http://127.0.0.1:8765/index.html 或 http://127.0.0.1:8765/kano-yinfa.html
+打开 http://127.0.0.1:8765/index.html 、kano-yinfa.html 或 rec-agent.html
 
 ## 更新 Pages
 

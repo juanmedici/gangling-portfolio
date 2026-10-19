@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娟｜个性化推荐智能体</title>
+<style>
+:root{--ink:#1c1917;--muted:#57534e;--paper:#f3efe6;--sheet:#fbf8f2;--line:#e4dcd0;--accent:#9a3412;--header:#163d35}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;font-size:16px}
+a{color:inherit}
+.top{background:var(--header);color:#f4f7f5;padding:36px 48px 32px}
+.identity{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;font-size:14px;color:#b7c9c3;margin-bottom:28px}
+.identity .name{font-family:"Palatino Linotype","Songti SC","STSong",serif;font-size:20px;color:#fff;letter-spacing:.08em}
+.identity a{color:#a7d7c5;text-decoration:none;border-bottom:1px solid rgba(167,215,197,.45)}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#a7d7c5;margin-bottom:10px}
+.top h1{font-family:"Palatino Linotype","Songti SC","STSong",serif;font-weight:600;font-size:40px;line-height:1.2;color:#fff}
+.hero-def{max-width:40em;margin-top:14px;font-size:18px;line-height:1.55;color:#fff}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:13px;color:#a7d7c5}
+.hero-meta b{color:#fff;font-weight:600;margin-right:6px}
+.nav-bar{position:sticky;top:0;z-index:20;background:rgba(243,239,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:4px;padding:0 20px;overflow-x:auto}
+.nav-bar a{text-decoration:none;color:var(--muted);font-size:13px;padding:14px 10px 12px;border-bottom:2px solid transparent;white-space:nowrap}
+.nav-bar a:hover,.nav-bar a.active{color:var(--ink);border-bottom-color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:36px 28px 80px}
+section{margin-bottom:56px;scroll-margin-top:64px}
+.sec-no{font-size:12px;letter-spacing:.14em;color:var(--accent);margin-bottom:6px}
+h2{font-family:"Palatino Linotype","Songti SC","STSong",serif;font-size:30px;font-weight:600;margin-bottom:16px}
+h3{font-size:16px;margin:26px 0 10px;font-weight:650}
+p{margin:8px 0}
+.note{color:var(--muted);font-size:13px}
+.pull{font-family:"Palatino Linotype","Songti SC","STSong",serif;font-size:22px;line-height:1.45;padding:8px 0 8px 18px;border-left:3px solid var(--accent);margin:16px 0 22px}
+.sheet{background:var(--sheet);border:1px solid var(--line);padding:18px 20px}
+.grid4,.grid3,.people{display:grid;gap:12px;margin-top:12px}
+.grid4{grid-template-columns:repeat(4,1fr)}
+.grid3,.people{grid-template-columns:repeat(3,1fr)}
+.card,.person{background:var(--sheet);border:1px solid var(--line);padding:14px 16px}
+.card b,.person h4{display:block;margin-bottom:6px}
+.person h4{font-size:16px}
+.person .age{font-size:12px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#ebe4d8;font-size:12px;color:var(--muted);font-weight:600}
+.scroll-x{overflow-x:auto}
+.tag{display:inline-block;font-size:12px;font-weight:650;padding:1px 7px;white-space:nowrap}
+.m{background:#fff7ed;color:#9a3412}.o{background:#fffbeb;color:#b45309}.a{background:#f0fdfa;color:#115e59}.i{background:#f5f5f4;color:#78716c}.r{background:#eff6ff;color:#1e3a5f}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.steps span{background:var(--sheet);border:1px solid var(--line);padding:6px 10px;font-size:13px}
+.steps span::after{content:" →";color:var(--accent)}
+.steps span:last-child::after{content:""}
+.quad-wrap{background:var(--sheet);border:1px solid var(--line);padding:12px}
+.quad-wrap svg{width:100%;height:auto;max-width:760px;display:block;margin:0 auto}
+footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:860px){.top{padding:24px 16px}.top h1{font-size:30px}.grid4,.grid3,.people{grid-template-columns:1fr}.wrap{padding:24px 14px 60px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="identity">
+    <span class="name">刘娟</span>
+    <span>产品经理作品集</span>
+    <a href="index.html">案例 01</a>
+    <a href="kano-yinfa.html">案例 02</a>
+    <a href="https://juanmedici.github.io/gangling-portfolio/rec-agent.html">在线版</a>
+  </div>
+  <p class="kicker">案例 03 · 与示例作业同等方法链</p>
+  <h1>荐知 · 个性化推荐智能体</h1>
+  <p class="hero-def">主题换成个性化推荐。方法与示例作业对齐：定位、15 条 KANO、用户研究与画像、HMW 五步、三款竞品五层、核心链路、MVP、体验与最小验证、自身五层金字塔、信息架构六模式、商业化三驾马车。</p>
+  <div class="hero-meta">
+    <span><b>作者</b>刘娟</span>
+    <span><b>用户</b>刷内容的人 · 网购决策的人 · 想自己控制推荐的人</span>
+    <span><b>样本</b>演示问卷有效 20 份，用于方法演练</span>
+  </div>
+</header>
+<nav class="nav-bar">
+  <a href="#pos">定位</a>
+  <a href="#kano">KANO</a>
+  <a href="#user">用户</a>
+  <a href="#hmw">HMW</a>
+  <a href="#comp">竞品</a>
+  <a href="#flow">链路</a>
+  <a href="#mvp">MVP</a>
+  <a href="#ux">体验</a>
+  <a href="#five">五层</a>
+  <a href="#ia">架构</a>
+  <a href="#biz">商业</a>
+</nav>
+<div class="wrap">
+
+<section id="pos">
+  <p class="sec-no">01</p>
+  <h2>产品定位</h2>
+  <h3>1.1 产品名称</h3>
+  <p>荐知 · 个性化推荐智能体</p>
+  <h3>1.2 目标用户</h3>
+  <ul>
+    <li>每天刷资讯 / 短视频，感觉「越刷越窄」的内容消费者</li>
+    <li>在电商里被「猜你喜欢」带着买、买完后悔的决策者</li>
+    <li>想知道为什么被推、并且能关掉个性化的控制型用户</li>
+  </ul>
+  <h3>1.3 核心定位</h3>
+  <p class="pull">市面推荐是黑盒信息流：推什么、为什么推、怎么停，用户说了不算。荐知是一层可解释、可纠偏、可关闭的推荐智能体，兴趣只建一次，资讯、视频、商品三条场景共用。</p>
+  <h3>1.4 差异化</h3>
+  <div class="grid4">
+    <div class="card"><b>功能</b>解释理由 + 负反馈立刻生效 + 多样性旋钮，而不是只给下一刷</div>
+    <div class="card"><b>数据</b>一份兴趣档案跨场景复用，不用在每个 App 里重新养模型</div>
+    <div class="card"><b>体验</b>主动说「这个主题有更新」，也能一键回到时间序</div>
+    <div class="card"><b>商业</b>免费基础解释 / 会员跨场景与复盘 / 品牌内容位（明确标成广告，不伪装成推荐）</div>
+  </div>
+</section>
+
+<section id="kano">
+  <p class="sec-no">02</p>
+  <h2>KANO 需求模型</h2>
+  <h3>2.1 判定规则</h3>
+  <p>每条需求两题。正向：有这个功能你的感受；反向：没有这个功能你的感受。选项：很喜欢 / 理应如此 / 无所谓 / 能忍受 / 很不喜欢。对照经典 KANO 表归入 M 必备、O 期望、A 兴奋、I 无差异、R 反向、Q 存疑。</p>
+  <p>Better = (A+O)/(A+O+M+I)；Worse = −(O+M)/(A+O+M+I)。下表有效作答各 20 人，Q 不进分母。属性取人数最多的一类。</p>
+  <h3>2.2 十五条需求</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>排名</th><th>需求</th><th>A</th><th>O</th><th>M</th><th>I</th><th>R</th><th>Better</th><th>Worse</th><th>属性</th><th>优先级</th><th>链路</th></tr>
+    <tr><td>11</td><td>不感兴趣，立刻少推</td><td>0</td><td>1</td><td>15</td><td>4</td><td>0</td><td>0.05</td><td>−0.80</td><td><span class="tag m">M</span></td><td>P0</td><td>纠偏</td></tr>
+    <tr><td>10</td><td>兴趣档案一次建立、全局复用</td><td>0</td><td>1</td><td>14</td><td>5</td><td>0</td><td>0.05</td><td>−0.75</td><td><span class="tag m">M</span></td><td>P0</td><td>底座</td></tr>
+    <tr><td>13</td><td>可关闭个性化，回到时间序</td><td>0</td><td>0</td><td>14</td><td>6</td><td>0</td><td>0.00</td><td>−0.70</td><td><span class="tag m">M</span></td><td>P0</td><td>控制</td></tr>
+    <tr><td>12</td><td>每条都写「为什么推给我」</td><td>1</td><td>2</td><td>12</td><td>5</td><td>0</td><td>0.15</td><td>−0.70</td><td><span class="tag m">M</span></td><td>P0</td><td>解释</td></tr>
+    <tr><td>1</td><td>资讯 / 视频 / 商品共用一份兴趣</td><td>5</td><td>9</td><td>3</td><td>3</td><td>0</td><td>0.70</td><td>−0.60</td><td><span class="tag o">O</span></td><td>P1</td><td>跨场景</td></tr>
+    <tr><td>4</td><td>冷启动三问 + 行为快速收敛</td><td>4</td><td>9</td><td>3</td><td>4</td><td>0</td><td>0.65</td><td>−0.60</td><td><span class="tag o">O</span></td><td>P1</td><td>冷启动</td></tr>
+    <tr><td>6</td><td>主题订阅与一键屏蔽</td><td>4</td><td>8</td><td>4</td><td>4</td><td>0</td><td>0.60</td><td>−0.60</td><td><span class="tag o">O</span></td><td>P1</td><td>控制</td></tr>
+    <tr><td>7</td><td>多样性旋钮：少推同类</td><td>5</td><td>7</td><td>4</td><td>4</td><td>0</td><td>0.60</td><td>−0.55</td><td><span class="tag o">O</span></td><td>P1</td><td>调控</td></tr>
+    <tr><td>5</td><td>「再来一组相似」</td><td>3</td><td>8</td><td>3</td><td>6</td><td>0</td><td>0.55</td><td>−0.55</td><td><span class="tag o">O</span></td><td>P1</td><td>探索</td></tr>
+    <tr><td>2</td><td>关心的主题有更新就主动说</td><td>14</td><td>1</td><td>0</td><td>5</td><td>0</td><td>0.75</td><td>−0.05</td><td><span class="tag a">A</span></td><td>P2</td><td>主动</td></tr>
+    <tr><td>3</td><td>每周兴趣与推荐复盘</td><td>13</td><td>2</td><td>0</td><td>5</td><td>0</td><td>0.75</td><td>−0.10</td><td><span class="tag a">A</span></td><td>P2</td><td>复盘</td></tr>
+    <tr><td>8</td><td>语音播报今日推荐</td><td>3</td><td>2</td><td>0</td><td>15</td><td>0</td><td>0.25</td><td>0.00</td><td><span class="tag i">I</span></td><td>P3 延后</td><td>外围</td></tr>
+    <tr><td>9</td><td>好友在看 / 热度榜</td><td>2</td><td>1</td><td>1</td><td>16</td><td>0</td><td>0.15</td><td>−0.10</td><td><span class="tag i">I</span></td><td>P3 延后</td><td>外围</td></tr>
+    <tr><td>14</td><td>自定义皮肤</td><td>0</td><td>1</td><td>0</td><td>3</td><td>16</td><td>—</td><td>—</td><td><span class="tag r">R</span></td><td>不做</td><td>外围</td></tr>
+    <tr><td>15</td><td>广告伪装成个性化推荐</td><td>0</td><td>0</td><td>1</td><td>2</td><td>17</td><td>—</td><td>—</td><td><span class="tag r">R</span></td><td>不做</td><td>商业</td></tr>
+  </table>
+  </div>
+  <p class="note">人数为课堂演示问卷，用来把方法和图走通，不外推成市场份额。反向型人数落在 R，不再用 Better/Worse 硬套成象限坐标。</p>
+  <h3>2.3 四象限</h3>
+  <div class="quad-wrap">
+    <svg viewBox="0 0 760 480" role="img" aria-label="推荐智能体 KANO 四象限">
+      <rect width="760" height="480" fill="#fbf8f2"/>
+      <rect x="70" y="36" width="300" height="190" fill="#fff7ed"/>
+      <rect x="370" y="36" width="320" height="190" fill="#f0fdfa"/>
+      <rect x="70" y="226" width="300" height="190" fill="#f5f5f4"/>
+      <rect x="370" y="226" width="320" height="190" fill="#fffbeb"/>
+      <line x1="70" y1="226" x2="690" y2="226" stroke="#1c1917"/>
+      <line x1="370" y1="36" x2="370" y2="416" stroke="#1c1917"/>
+      <text x="220" y="56" text-anchor="middle" font-size="13" fill="#9a3412">左上 · 必备 M</text>
+      <text x="530" y="56" text-anchor="middle" font-size="13" fill="#115e59">右上 · 期望 O</text>
+      <text x="220" y="400" text-anchor="middle" font-size="13" fill="#78716c">左下 · 无差异 I</text>
+      <text x="530" y="400" text-anchor="middle" font-size="13" fill="#b45309">右下 · 兴奋 A</text>
+      <text x="380" y="458" font-size="12" fill="#57534e">Better →</text>
+      <text x="18" y="230" font-size="12" fill="#57534e" transform="rotate(-90 18 230)">|Worse| →</text>
+      <circle cx="148" cy="96" r="13" fill="#9a3412"/><text x="148" y="100" text-anchor="middle" font-size="11" fill="#fff">11</text>
+      <text x="148" y="124" text-anchor="middle" font-size="11" fill="#1c1917">负反馈</text>
+      <circle cx="168" cy="116" r="13" fill="#9a3412"/><text x="168" y="120" text-anchor="middle" font-size="11" fill="#fff">10</text>
+      <circle cx="190" cy="136" r="13" fill="#9a3412"/><text x="190" y="140" text-anchor="middle" font-size="11" fill="#fff">13</text>
+      <circle cx="210" cy="136" r="13" fill="#9a3412"/><text x="210" y="140" text-anchor="middle" font-size="11" fill="#fff">12</text>
+      <circle cx="566" cy="126" r="13" fill="#b45309"/><text x="566" y="130" text-anchor="middle" font-size="11" fill="#fff">1</text>
+      <text x="566" y="154" text-anchor="middle" font-size="11" fill="#1c1917">跨场景记忆</text>
+      <circle cx="546" cy="146" r="13" fill="#b45309"/><text x="546" y="150" text-anchor="middle" font-size="11" fill="#fff">4</text>
+      <circle cx="526" cy="166" r="13" fill="#b45309"/><text x="526" y="170" text-anchor="middle" font-size="11" fill="#fff">6</text>
+      <circle cx="610" cy="386" r="13" fill="#115e59"/><text x="610" y="390" text-anchor="middle" font-size="11" fill="#fff">2</text>
+      <text x="610" y="368" text-anchor="middle" font-size="11" fill="#1c1917">主动提醒 · 周复盘</text>
+      <circle cx="200" cy="360" r="13" fill="#78716c"/><text x="200" y="364" text-anchor="middle" font-size="11" fill="#fff">8</text>
+      <text x="200" y="388" text-anchor="middle" font-size="11" fill="#1c1917">语音 · 热度榜</text>
+    </svg>
+  </div>
+  <div class="grid4">
+    <div class="card"><b>左上 M</b>负反馈、兴趣档案、关闭个性化、推荐理由</div>
+    <div class="card"><b>右上 O</b>跨场景记忆、冷启动、订阅屏蔽、多样性、再来一组</div>
+    <div class="card"><b>右下 A</b>主题更新提醒、每周复盘</div>
+    <div class="card"><b>左下 I / 不做</b>语音播报、好友热度榜；皮肤与广告伪装为反向，不进图</div>
+  </div>
+</section>
+
+<section id="user">
+  <p class="sec-no">03</p>
+  <h2>用户调研与画像</h2>
+  <p>顺序与示例相同：定性 → 定量（含 KANO）→ 可用性走查 → 注意力走查 → 聚类 → 角色 → 画像。</p>
+  <div class="steps"><span>定性访谈</span><span>KANO 与行为量表</span><span>任务走查</span><span>首屏注意力</span><span>四类聚类</span><span>三张 Persona</span></div>
+  <h3>3.2 样本（演示）</h3>
+  <p>定性 8 人（重度刷内容 3、网购决策 3、在意隐私 2）。定量有效 20 份。走查任务：「连续划掉 3 条不感兴趣后，下一条是否还在推同类。」演示结论：14/20 把「说了不感兴趣却还在推」选成最不能忍；11/20 愿意为「跨场景少重养兴趣」付费；只有 3/20 认为热度榜必需。</p>
+  <h3>3.4 聚类</h3>
+  <div class="grid4">
+    <div class="card"><b>窄刷型 40%</b>越刷越窄，最看重负反馈、多样性、解释</div>
+    <div class="card"><b>挑货型 30%</b>怕被种草，最看重理由、订阅屏蔽、再来一组</div>
+    <div class="card"><b>可控型 20%</b>要开关，最看重关闭个性化、档案、解释</div>
+    <div class="card"><b>随划型 10%</b>低优先，热度榜和语音即可，不作为首版用户</div>
+  </div>
+  <h3>3.5 核心画像</h3>
+  <div class="people">
+    <article class="person">
+      <h4>林窄 · 26 · 窄刷型</h4>
+      <p class="age">运营 · 杭州 · 每天刷 2 小时</p>
+      <p>目标：还能刷，但不要只剩一个主题。痛点：点过一次露营，后面三天全是帐篷。场景：对一条点「不感兴趣」，期望下一条换题。付费：19–39 元/月。</p>
+    </article>
+    <article class="person">
+      <h4>周挑 · 31 · 挑货型</h4>
+      <p class="age">产品 · 上海 · 每月网购 4–6 次</p>
+      <p>目标：少买错。痛点：猜你喜欢不说为什么，退货成本自己扛。场景：看一条推荐，先读理由再决定点不点。付费：39–69 元/月。</p>
+    </article>
+    <article class="person">
+      <h4>陈控 · 34 · 可控型</h4>
+      <p class="age">法务 · 北京 · 很少授权</p>
+      <p>目标：推荐可以有，但必须能关。痛点：找不到「关闭个性化」或关掉后又被打开。场景：出差时切到时间序。付费：愿为开关和导出档案付一次 29 元，不愿为皮肤付费。</p>
+    </article>
+  </div>
+  <h3>3.6 画像 × 需求（强度）</h3>
+  <table>
+    <tr><th>需求</th><th>林窄</th><th>周挑</th><th>陈控</th></tr>
+    <tr><td>负反馈立刻生效</td><td>高</td><td>高</td><td>高</td></tr>
+    <tr><td>兴趣档案全局复用</td><td>中</td><td>高</td><td>高</td></tr>
+    <tr><td>关闭个性化</td><td>中</td><td>低</td><td>高</td></tr>
+    <tr><td>为什么推给我</td><td>高</td><td>高</td><td>高</td></tr>
+    <tr><td>跨场景同一份兴趣</td><td>中</td><td>高</td><td>中</td></tr>
+    <tr><td>多样性旋钮</td><td>高</td><td>中</td><td>中</td></tr>
+    <tr><td>每周复盘</td><td>中</td><td>中</td><td>高</td></tr>
+    <tr><td>热度榜 / 皮肤 / 广告伪装</td><td>低</td><td>低</td><td>反向</td></tr>
+  </table>
+  <h3>3.7 对设计的启示</h3>
+  <table>
+    <tr><th>结论</th><th>证据（演示）</th><th>启示</th></tr>
+    <tr><td>不能忍的是「反馈无效」</td><td>14/20</td><td>P0 先做负反馈立刻生效，再谈更聪明的排序</td></tr>
+    <tr><td>愿意为少重养兴趣付费</td><td>11/20</td><td>P1 把跨场景记忆做成会员理由</td></tr>
+    <tr><td>控制权比皮肤重要</td><td>陈控类把广告伪装选成反向</td><td>广告必须标注；皮肤不做</td></tr>
+  </table>
+</section>
+
+<section id="hmw">
+  <p class="sec-no">04</p>
+  <h2>HMW 五步法</h2>
+  <div class="steps"><span>1 场景痛点</span><span>2 HMW 提问</span><span>3 方案</span><span>4 按 Better 排序</span><span>5 收成 MVP 流程</span></div>
+  <div class="scroll-x">
+  <table>
+    <tr><th>需求</th><th>属性</th><th>Step1 痛点</th><th>Step2 核心提问</th><th>Step4 策略</th></tr>
+    <tr><td>负反馈立刻少推</td><td>M / P0</td><td>点了不感兴趣，下一条还是同类</td><td>如何让一次负反馈在下一刷就生效？</td><td>缺失不满最高，底座第一位</td></tr>
+    <tr><td>兴趣档案全局复用</td><td>M / P0</td><td>每个场景重新猜</td><td>如何一次记下兴趣，三处共用？</td><td>P0 数据底座</td></tr>
+    <tr><td>关闭个性化</td><td>M / P0</td><td>开关藏得很深或会自己打开</td><td>如何让时间序随时可回、状态可见？</td><td>P0 信任底线</td></tr>
+    <tr><td>为什么推给我</td><td>M / P0</td><td>只有「猜你喜欢」四个字</td><td>如何用一句人话写出依据，而不是模型黑话？</td><td>P0，周挑的购买前决策</td></tr>
+    <tr><td>跨场景同一兴趣</td><td>O / P1</td><td>视频里喜欢的，商品里还在乱推</td><td>如何在授权后把同一主题迁到另一场景？</td><td>Better 0.70，会员主功能</td></tr>
+    <tr><td>冷启动三问</td><td>O / P1</td><td>新用户前 20 条全是大盘热门</td><td>如何三问内离开纯热门？</td><td>P1，新用户第一分钟</td></tr>
+    <tr><td>订阅与屏蔽</td><td>O / P1</td><td>想看的跟不想看的混在一起</td><td>如何让主题级开关比单条反馈更稳？</td><td>P1</td></tr>
+    <tr><td>多样性旋钮</td><td>O / P1</td><td>信息茧房感</td><td>如何让用户自己把「更像」调成「更散」？</td><td>P1，林窄的主诉求</td></tr>
+    <tr><td>再来一组相似</td><td>O / P1</td><td>喜欢一条却不知道怎么多要</td><td>如何只加这一组、不改长期画像？</td><td>P1，避免一次点击锁死长期兴趣</td></tr>
+    <tr><td>主题更新提醒</td><td>A / P2</td><td>关心的事要自己记得回来刷</td><td>如何只在订阅主题有增量时开口？</td><td>P2，没有也不骂，有了会回来</td></tr>
+    <tr><td>每周复盘</td><td>A / P2</td><td>不知道这周被收窄了多少</td><td>如何用一页说明推了什么、挡了什么？</td><td>P2 留存</td></tr>
+    <tr><td>语音 / 热度榜</td><td>I / P3</td><td>可有可无</td><td>—</td><td>延后</td></tr>
+    <tr><td>皮肤、广告伪装</td><td>R</td><td>干扰或欺骗</td><td>—</td><td>不开发</td></tr>
+  </table>
+  </div>
+  <h3>P0 展开（Step3–5）</h3>
+  <div class="sheet">
+    <p><b>负反馈。</b>方案：长按即选原因（看过 / 不喜欢这类 / 广告）；写入屏蔽表；下一刷过滤同类；24 小时内可撤销。流程：点不感兴趣 → 选原因 → 写入档案 → 下一刷不见同类。</p>
+    <p><b>档案。</b>方案：三问生成初稿；行为只追加不覆盖；资讯、视频、商品读同一份；可导出、可删除。流程：三问或授权行为 → 结构化主题 → 三场景读取。</p>
+    <p><b>关闭个性化。</b>方案：首页常驻状态；关闭后只按时间；再次打开要二次确认。流程：看见状态 → 一键时间序 → 推荐理由消失 → 需要时再打开。</p>
+    <p><b>解释。</b>方案：每条一句：「因为你看过 / 订阅了 / 和这条相似」；没有依据就标成「热门」而不是「为你推荐」。流程：取依据 → 生成一句 → 用户可点进屏蔽该依据。</p>
+  </div>
+  <h3>4.7 MVP 总流程</h3>
+  <div class="steps"><span>三问建档 P0</span><span>每条给理由 P0</span><span>不感兴趣立刻生效 P0</span><span>可关个性化 P0</span><span>冷启动离开纯热门 P1</span><span>多样性旋钮 P1</span><span>跨场景复用 P1</span><span>主题提醒 P2</span><span>每周复盘 P2</span></div>
+</section>
+
+<section id="comp">
+  <p class="sec-no">05</p>
+  <h2>三款竞品 · 五层模型</h2>
+  <p>六步：确认竞品 → 五层拆解 → 看迭代 → 定我方阶段 → 分层改 → 写出差异。</p>
+  <table>
+    <tr><th></th><th>抖音推荐</th><th>淘宝猜你喜欢</th><th>通用对话模型</th></tr>
+    <tr><td>类型</td><td>直接 · 内容信息流 · 成熟期</td><td>直接 · 电商推荐 · 成熟期</td><td>间接 · 用户拿它问「推荐点什么」</td></tr>
+    <tr><td>战略</td><td>时长与广告</td><td>成交与广告</td><td>通用订阅，不经营推荐关系</td></tr>
+    <tr><td>范围</td><td>强排序、弱解释、负反馈慢</td><td>强成交、理由少、跨内容场景弱</td><td>能解释，但不能记住并执行下一刷</td></tr>
+    <tr><td>结构</td><td>单场景模型，兴趣出不了 App</td><td>交易行为主导，内容兴趣进不来</td><td>对话内记忆，没有推荐位</td></tr>
+    <tr><td>框架</td><td>全屏上滑，控制项在设置深处</td><td>信息流插在首页中部</td><td>一问一答，没有旋钮</td></tr>
+    <tr><td>表现</td><td>沉浸、少文字</td><td>价格与销量优先</td><td>一段话，没有「已屏蔽」状态</td></tr>
+  </table>
+  <h3>分年摘要（战略 / 范围）</h3>
+  <table>
+    <tr><th>竞品</th><th>早年</th><th>近年</th><th>仍然不做</th></tr>
+    <tr><td>抖音</td><td>关注 + 热门</td><td>完播、互动、广告混排更紧</td><td>把兴趣导出给别的场景；每条强制解释</td></tr>
+    <tr><td>淘宝</td><td>买了又买</td><td>首页猜你喜欢占比升高</td><td>内容兴趣与商品兴趣显式分开给用户看</td></tr>
+    <tr><td>通用模型</td><td>不能联网的问答</td><td>能搜索后给清单</td><td>负反馈作用于下一次信息流</td></tr>
+  </table>
+  <h3>我方机会</h3>
+  <table>
+    <tr><th>层</th><th>机会</th></tr>
+    <tr><td>战略</td><td>卖「可控的个性化」，不卖「更上头的时长」</td></tr>
+    <tr><td>范围</td><td>解释、负反馈、开关、跨场景，四件竞品拆开做或藏起来</td></tr>
+    <tr><td>结构</td><td>一份档案，三条场景来读</td></tr>
+    <tr><td>框架</td><td>理由、不感兴趣、多样性、时间序都在卡片上，不进三级设置</td></tr>
+    <tr><td>表现</td><td>状态可见：正在个性化 / 已关闭 / 已屏蔽这类</td></tr>
+  </table>
+  <p>复盘：三家都不会把「用户可带走的兴趣档案」当成主产品。MVP 先做四项 P0，避免一上来模仿抖音的排序精度。</p>
+</section>
+
+<section id="flow">
+  <p class="sec-no">06</p>
+  <h2>首页与核心链路</h2>
+  <div class="sheet">
+    <p><b>首页。</b>顶栏：个性化开/关。中部四张卡：今日主题、已屏蔽、多样性、本周复盘入口。列表：每条推荐带一句理由和「不感兴趣」。底栏：首页 / 兴趣 / 屏蔽 / 我的。</p>
+  </div>
+  <div class="steps"><span>打开首页看见开关状态</span><span>三问或沿用档案</span><span>刷到一条并读理由</span><span>不感兴趣或再来一组</span><span>下一刷按新约束出</span><span>周末看复盘</span></div>
+</section>
+
+<section id="mvp">
+  <p class="sec-no">07</p>
+  <h2>MVP 与路线</h2>
+  <table>
+    <tr><th>功能</th><th>为什么</th><th>验收</th><th>级</th></tr>
+    <tr><td>兴趣档案</td><td>没有档案，后面都是临时猜</td><td>三问可生成主题列表，可改可删</td><td>P0</td></tr>
+    <tr><td>推荐理由</td><td>没有依据就不要写「为你推荐」</td><td>每条有一句依据或明确标「热门」</td><td>P0</td></tr>
+    <tr><td>负反馈</td><td>反馈无效是流失点</td><td>屏蔽后下 10 条不再出现该主题</td><td>P0</td></tr>
+    <tr><td>关闭个性化</td><td>信任底线</td><td>一键时间序，状态在首屏</td><td>P0</td></tr>
+    <tr><td>冷启动</td><td>新用户不该先吃 20 条大盘热门</td><td>三问后前 10 条至少 6 条命中所选主题</td><td>P1</td></tr>
+    <tr><td>多样性旋钮</td><td>窄刷型的主诉求</td><td>调高后相邻 5 条主题不重复</td><td>P1</td></tr>
+    <tr><td>跨场景复用</td><td>会员理由</td><td>视频里确认的主题，商品流默认可读到</td><td>P1</td></tr>
+    <tr><td>订阅屏蔽 / 再来一组</td><td>比单条反馈更稳，又不污染长期画像</td><td>再来一组只影响当次；订阅写入档案</td><td>P1</td></tr>
+  </table>
+  <p class="note">P2 提醒与周复盘、P3 语音与热度榜不进首版。皮肤与广告伪装不进任何版本。</p>
+  <table>
+    <tr><th>阶段</th><th>周期</th><th>包含</th><th>退出</th></tr>
+    <tr><td>v0.5</td><td>1–3 周</td><td>四项 P0</td><td>走查：负反馈后下一条换题</td></tr>
+    <tr><td>v1.0</td><td>4–7 周</td><td>冷启动、多样性、跨场景、再来一组、订阅</td><td>种子用户里「理由有用」≥50%</td></tr>
+    <tr><td>v1.5</td><td>8–11 周</td><td>主题提醒、每周复盘</td><td>周回访高于 v1.0</td></tr>
+    <tr><td>v2.0</td><td>12 周后</td><td>视数据再看语音；热度榜仍默认不做主路径</td><td>不破坏「广告不等于推荐」</td></tr>
+  </table>
+  <h3>指标</h3>
+  <table>
+    <tr><th>指标</th><th>定义</th><th>目标</th></tr>
+    <tr><td>北极星</td><td>一周内至少一次「负反馈后确认下一刷已换题」的人数</td><td>种子期 ≥100</td></tr>
+    <tr><td>建档完成率</td><td>完成三问 / 打开产品</td><td>≥70%</td></tr>
+    <tr><td>理由点开率</td><td>点开解释 / 曝光</td><td>≥25%</td></tr>
+    <tr><td>误推回潮</td><td>屏蔽后 10 条内再出现同类</td><td>&lt;10%</td></tr>
+  </table>
+  <h3>角色与风险</h3>
+  <p>PM 1（本作业即范围与验收）、提示词 / 排序 1、前端 1、后端 1。风险：理由编造 → 没有依据就标热门；过度收集行为 → 默认最少字段、可导出删除；平台内置推荐太强 → 先做浏览器 / 独立信息流原型，不正面替换抖音排序。</p>
+</section>
+
+<section id="ux">
+  <p class="sec-no">08</p>
+  <h2>体验流程与最小验证</h2>
+  <table>
+    <tr><th>阶段</th><th>场景</th><th>角色</th><th>任务</th><th>需求</th></tr>
+    <tr><td>进入</td><td>第一次打开</td><td>林窄、陈控</td><td>看见开关，完成三问</td><td>档案、关闭个性化</td></tr>
+    <tr><td>消费</td><td>刷十条</td><td>林窄、周挑</td><td>读理由，决定点不点</td><td>解释</td></tr>
+    <tr><td>纠偏</td><td>出现不想看的</td><td>三人</td><td>不感兴趣，检查下一条</td><td>负反馈</td></tr>
+    <tr><td>调节</td><td>觉得太窄</td><td>林窄</td><td>把多样性调高</td><td>旋钮</td></tr>
+    <tr><td>复盘</td><td>周末</td><td>陈控</td><td>看这周推了什么、挡了什么</td><td>周复盘 P2</td></tr>
+  </table>
+  <h3>为什么先做网页而不是 App</h3>
+  <p>要验证的是「反馈有没有生效、理由信不信」，不是分发渠道。网页能在一周内让 8 个熟人完成同一任务：划掉 3 条，说出下一条为什么变了。App 上架和推送权限会把验证拖进渠道问题。</p>
+  <div class="steps"><span>第 1 周 静态页 + 人工改下一条</span><span>第 2–3 周 规则过滤原型</span><span>第 4 周后再谈排序模型</span></div>
+  <p><b>一句话生意：</b>用户为「推荐听得懂、停得掉」付会员；品牌内容单独买位置，并且永远标成广告。</p>
+</section>
+
+<section id="five">
+  <p class="sec-no">09</p>
+  <h2>自身五层（自上而下）</h2>
+  <div class="steps"><span>战略：可控的个性化</span><span>范围：15 条收到 P0–P3</span><span>结构：一份档案三条场景</span><span>框架：卡片上完成纠偏</span><span>表现：状态看得见</span></div>
+  <table>
+    <tr><th>层</th><th>要回答的</th><th>荐知的答案</th></tr>
+    <tr><td>战略</td><td>为谁、解决什么、怎么赚钱</td><td>窄刷、挑货、可控三类；解决「推了无法停、也无法解释」；会员 + 明示广告位</td></tr>
+    <tr><td>范围</td><td>做哪些</td><td>M→P0 四项；O→P1 五项；A→P2 两项；I 延后；R 不做</td></tr>
+    <tr><td>结构</td><td>数据怎么连</td><td>档案中台；资讯 / 视频 / 商品只读不各养一份</td></tr>
+    <tr><td>框架</td><td>人怎么走</td><td>首页状态 + 列表理由 + 负反馈；兴趣与屏蔽两个二级页</td></tr>
+    <tr><td>表现</td><td>长什么样</td><td>少沉浸、多状态：开着个性化、已屏蔽、这是广告，三句话永远分得开</td></tr>
+  </table>
+</section>
+
+<section id="ia">
+  <p class="sec-no">10</p>
+  <h2>信息架构</h2>
+  <p>全局用页签。首页是便当盒加集中分发。兴趣和屏蔽用过滤。我的用套娃收纳档案与会员。</p>
+  <table>
+    <tr><th>模式</th><th>用在哪</th></tr>
+    <tr><td>页签</td><td>首页 / 兴趣 / 屏蔽 / 我的</td></tr>
+    <tr><td>便当盒</td><td>首页四卡：主题、已屏蔽、多样性、复盘</td></tr>
+    <tr><td>集中分发</td><td>首页进入「调多样性」「看屏蔽」「关闭个性化」</td></tr>
+    <tr><td>过滤</td><td>兴趣按场景筛；屏蔽按原因筛</td></tr>
+    <tr><td>层级</td><td>兴趣 → 主题 → 来源依据</td></tr>
+    <tr><td>套娃</td><td>我的 → 档案 → 导出 / 删除 → 确认</td></tr>
+  </table>
+  <table>
+    <tr><th>功能</th><th>Tab</th><th>模式</th><th>优先级</th><th>画像</th></tr>
+    <tr><td>推荐流 + 理由 + 负反馈</td><td>首页</td><td>便当盒</td><td>P0</td><td>三人</td></tr>
+    <tr><td>开关个性化</td><td>首页顶栏</td><td>集中分发</td><td>P0</td><td>陈控</td></tr>
+    <tr><td>档案与主题</td><td>兴趣</td><td>层级 + 过滤</td><td>P0/P1</td><td>周挑、陈控</td></tr>
+    <tr><td>屏蔽列表</td><td>屏蔽</td><td>过滤</td><td>P0</td><td>林窄</td></tr>
+    <tr><td>多样性</td><td>首页卡</td><td>集中分发</td><td>P1</td><td>林窄</td></tr>
+    <tr><td>周复盘 / 会员</td><td>我的</td><td>套娃</td><td>P2</td><td>陈控、周挑</td></tr>
+  </table>
+</section>
+
+<section id="biz">
+  <p class="sec-no">11</p>
+  <h2>商业化</h2>
+  <div class="grid3">
+    <div class="card"><b>会员 · 约 60%</b>跨场景记忆、多样性细调、每周复盘、导出档案</div>
+    <div class="card"><b>明示广告 · 约 25%</b>单独位置，标「广告」，不进个性化理由</div>
+    <div class="card"><b>内容服务 · 约 15%</b>主题清单、选购对照表，按次买</div>
+  </div>
+  <table>
+    <tr><th></th><th>免费</th><th>会员 29 元/月</th></tr>
+    <tr><td>理由与负反馈</td><td>有</td><td>有</td></tr>
+    <tr><td>关闭个性化</td><td>有</td><td>有</td></tr>
+    <tr><td>跨场景</td><td>仅当前场景</td><td>资讯 / 视频 / 商品</td></tr>
+    <tr><td>多样性档位</td><td>两档</td><td>五档 + 主题配额</td></tr>
+    <tr><td>周复盘与导出</td><td>无</td><td>有</td></tr>
+    <tr><td>广告</td><td>有，每屏最多 1 条且标注</td><td>无</td></tr>
+  </table>
+  <p>不做的变现：把广告写成「因为你喜欢」；卖皮肤；用热度榜冒充个性化。分阶段：MVP 只验证有没有人愿意为「听得懂、停得掉」付钱；有留存后再开广告位。</p>
+  <footer class="colophon">方法链对齐示例作业（定位、KANO、画像、HMW、竞品五层、链路、MVP、体验、五层、信息架构、商业化）。主题为个性化推荐智能体。问卷人数为课堂演示，用于把属性、系数和象限算通。</footer>
+</section>
+</div>
+<script>
+(function(){
+  var links=document.querySelectorAll(".nav-bar a");
+  var sections=[];
+  links.forEach(function(a){
+    var el=document.getElementById(a.getAttribute("href").slice(1));
+    if(el) sections.push({link:a,el:el});
+  });
+  function mark(){
+    var y=window.scrollY+80, cur=sections[0];
+    sections.forEach(function(s){ if(s.el.offsetTop<=y) cur=s; });
+    links.forEach(function(a){ a.classList.remove("active"); });
+    if(cur) cur.link.classList.add("active");
+  }
+  window.addEventListener("scroll", mark, {passive:true});
+  mark();
+})();
+</script>
+</body>
+</html>
