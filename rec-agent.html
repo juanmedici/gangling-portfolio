@@ -36,17 +36,42 @@ table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#ebe4d8;color:var(--muted);font-size:12px}
 .scroll-x{overflow-x:auto}
-.tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 6px}
-.m{background:#fff7ed;color:#9a3412}.o{background:#fffbeb;color:#b45309}.a{background:#f0fdfa;color:#115e59}.i{background:#f5f5f4;color:#57534e}.r{background:#eff6ff;color:#1e3a5f}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;color:#fff}
+.m{background:#0284c7}.o{background:#059669}.a{background:#d97706}.i{background:#64748b}.r{background:#dc2626}
 .people,.grid3,.grid4{display:grid;gap:12px;margin:12px 0}
 .people,.grid3{grid-template-columns:repeat(3,1fr)}
 .grid4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--sheet);border:1px solid var(--line);padding:14px 16px}
-.card .who{font-family:"Palatino Linotype","Songti SC",serif;font-size:28px;color:var(--accent)}
-.fig{background:#fff;border:1px solid var(--line);padding:12px;margin:12px 0;overflow-x:auto}
-.fig .cap{font-size:12px;color:var(--muted);margin-top:6px}
-.q4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.q4 div{padding:14px;border:1px solid var(--line);background:var(--sheet)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.card .who{font-family:"Palatino Linotype","Songti SC",serif;font-size:28px}
+.card.c1{background:linear-gradient(180deg,#fff,#fff5f5);border-color:#ffc9c9}.card.c1 .who,.card.c1 b{color:#e03131}
+.card.c2{background:linear-gradient(180deg,#fff,#fff8ef);border-color:#ffd8a8}.card.c2 .who,.card.c2 b{color:#e8590c}
+.card.c3{background:linear-gradient(180deg,#fff,#f3f9ff);border-color:#a5d8ff}.card.c3 .who,.card.c3 b{color:#1c7ed6}
+.card.c4{background:linear-gradient(180deg,#fff,#f8f9fa);border-color:#dee2e6}.card.c4 b{color:#495057}
+.card.pay1{background:linear-gradient(180deg,#fffbeb,#fef3c7);border-color:#fbbf24}
+.card.pay2{background:linear-gradient(180deg,#eff6ff,#dbeafe);border-color:#60a5fa}
+.card.pay3{background:linear-gradient(180deg,#f0fdf4,#dcfce7);border-color:#4ade80}
+.pill{display:inline-block;color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;float:right}
+.donut-row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:12px 0 18px}
+.donut{width:210px;height:210px;border-radius:50%;flex:0 0 auto;position:relative;box-shadow:0 8px 20px rgba(15,23,42,.12);background:conic-gradient(#ff6b6b 0 40%,#ffa94d 40% 70%,#4dabf7 70% 90%,#ced4da 90% 100%)}
+.donut span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:118px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:26px;color:#1c1917}
+.donut span small{font-size:12px;font-weight:500;color:#78716c}
+.legend{flex:1;min-width:240px;display:flex;flex-direction:column;gap:10px}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block;margin-right:8px}
+.legend div{display:flex;align-items:center}
+.legend b{margin-left:auto}
+.tabs{display:flex;gap:8px;margin:14px 0;padding:12px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0}
+.tabs div{flex:1;text-align:center;padding:10px 4px;border-radius:8px;font-size:13px;font-weight:700;background:#fff;color:#475569;border:1px solid #cbd5e1}
+.tabs .on{background:#2563eb;color:#fff;border-color:#1d4ed8}
+.tabs small{display:block;font-weight:500;font-size:11px;opacity:.9}
+.fig{background:linear-gradient(180deg,#fff,#f8fafc);border:1px solid #dbe4f0;border-radius:14px;padding:18px 14px 12px;margin:14px 0;overflow-x:auto;box-shadow:0 10px 28px rgba(37,99,235,.08)}
+.fig .cap{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+.q4{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:12px;border:2px solid #94a3b8;border-radius:10px;overflow:hidden}
+.q4 div{padding:16px 18px}
+.q4 div:nth-child(1){background:#e0f2fe;border-right:1px solid #bae6fd;border-bottom:1px solid #bae6fd}
+.q4 div:nth-child(2){background:#dcfce7;border-bottom:1px solid #bbf7d0}
+.q4 div:nth-child(3){background:#f1f5f9;border-right:1px solid #e2e8f0}
+.q4 div:nth-child(4){background:#fef3c7}
+.q4 b{display:block;margin-bottom:6px}
 footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
 @media(max-width:860px){.top{padding:24px 16px}.top h1{font-size:28px}.people,.grid3,.grid4,.q4{grid-template-columns:1fr}.wrap{padding:24px 14px 48px}}
 </style>
@@ -120,41 +145,46 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   <p class="note">人数用于把分类、系数和象限走通，是课堂演示问卷，不外推成市场占有率。</p>
   <h3>2.3 KANO 四象限</h3>
   <div class="fig"><svg viewBox="0 0 760 460" width="100%" role="img" aria-label="Better Worse 四象限">
-    <rect width="760" height="460" fill="#fbf8f2"/>
-    <rect x="60" y="28" width="310" height="180" fill="#fff7ed"/><rect x="370" y="28" width="340" height="180" fill="#f0fdfa"/>
-    <rect x="60" y="208" width="310" height="180" fill="#f5f5f4"/><rect x="370" y="208" width="340" height="180" fill="#fffbeb"/>
-    <line x1="60" y1="208" x2="710" y2="208" stroke="#1c1917"/><line x1="370" y1="28" x2="370" y2="388" stroke="#1c1917"/>
-    <text x="215" y="52" text-anchor="middle" font-size="14" fill="#9a3412">左上 · 基本型 M · 低 Better · 高缺失不满</text>
-    <text x="540" y="52" text-anchor="middle" font-size="14" fill="#0f766e">右上 · 期望型 O · 高 Better · 高缺失不满</text>
-    <text x="215" y="372" text-anchor="middle" font-size="14" fill="#57534e">左下 · 无差异 I · 低 Better · 低缺失不满</text>
-    <text x="540" y="372" text-anchor="middle" font-size="14" fill="#b45309">右下 · 兴奋型 A · 高 Better · 低缺失不满</text>
-    <text x="380" y="430" font-size="13" fill="#57534e">横轴 Better →</text>
-    <text x="16" y="210" font-size="13" fill="#57534e" transform="rotate(-90 16 210)">纵轴 |Worse| →</text>
-    <circle cx="150" cy="88" r="16" fill="#9a3412"/><text x="150" y="93" text-anchor="middle" fill="#fff" font-size="12">11</text>
-    <text x="150" y="118" text-anchor="middle" font-size="12">负反馈</text>
-    <circle cx="190" cy="108" r="16" fill="#9a3412"/><text x="190" y="113" text-anchor="middle" fill="#fff" font-size="12">10</text>
-    <text x="190" y="138" text-anchor="middle" font-size="12">档案</text>
-    <circle cx="230" cy="128" r="16" fill="#9a3412"/><text x="230" y="133" text-anchor="middle" fill="#fff" font-size="12">12</text>
-    <text x="270" y="148" text-anchor="middle" font-size="12">理由 · 开关</text>
-    <circle cx="270" cy="128" r="16" fill="#9a3412"/><text x="270" y="133" text-anchor="middle" fill="#fff" font-size="12">13</text>
-    <circle cx="560" cy="118" r="16" fill="#b45309"/><text x="560" y="123" text-anchor="middle" fill="#fff" font-size="12">1</text>
-    <text x="560" y="148" text-anchor="middle" font-size="12">跨场景</text>
-    <circle cx="520" cy="140" r="16" fill="#b45309"/><text x="520" y="145" text-anchor="middle" fill="#fff" font-size="12">4</text>
-    <circle cx="600" cy="150" r="16" fill="#b45309"/><text x="600" y="155" text-anchor="middle" fill="#fff" font-size="12">7</text>
-    <text x="560" y="178" text-anchor="middle" font-size="12">冷启动 · 订阅 · 多样性 · 再来一组</text>
-    <circle cx="620" cy="330" r="16" fill="#115e59"/><text x="620" y="335" text-anchor="middle" fill="#fff" font-size="12">2</text>
-    <circle cx="580" cy="348" r="16" fill="#115e59"/><text x="580" y="353" text-anchor="middle" fill="#fff" font-size="12">3</text>
-    <text x="600" y="318" text-anchor="middle" font-size="12">提醒 · 周复盘</text>
-    <circle cx="180" cy="330" r="16" fill="#78716c"/><text x="180" y="335" text-anchor="middle" fill="#fff" font-size="12">8</text>
-    <circle cx="220" cy="348" r="16" fill="#78716c"/><text x="220" y="353" text-anchor="middle" fill="#fff" font-size="12">9</text>
-    <text x="200" y="378" text-anchor="middle" font-size="12">语音 · 热度榜</text>
+    <defs>
+      <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity=".25"/></filter>
+    </defs>
+    <rect width="760" height="460" rx="12" fill="#ffffff"/>
+    <rect x="60" y="28" width="310" height="180" fill="#dbeafe"/><rect x="370" y="28" width="340" height="180" fill="#bbf7d0"/>
+    <rect x="60" y="208" width="310" height="180" fill="#e2e8f0"/><rect x="370" y="208" width="340" height="180" fill="#fde68a"/>
+    <line x1="60" y1="208" x2="710" y2="208" stroke="#334155" stroke-width="1.5"/><line x1="370" y1="28" x2="370" y2="388" stroke="#334155" stroke-width="1.5"/>
+    <text x="215" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">左上 · 基本型 M · 低 Better · 高缺失不满</text>
+    <text x="540" y="52" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">右上 · 期望型 O · 高 Better · 高缺失不满</text>
+    <text x="215" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">左下 · 无差异 I · 低 Better · 低缺失不满</text>
+    <text x="540" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">右下 · 兴奋型 A · 高 Better · 低缺失不满</text>
+    <text x="380" y="430" font-size="13" fill="#334155">横轴 Better →</text>
+    <text x="16" y="210" font-size="13" fill="#334155" transform="rotate(-90 16 210)">纵轴 |Worse| →</text>
+    <circle cx="150" cy="88" r="18" fill="#2563eb" filter="url(#sh)"/><text x="150" y="93" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">11</text>
+    <text x="150" y="118" text-anchor="middle" font-size="12" fill="#1e3a8a">负反馈</text>
+    <circle cx="190" cy="108" r="18" fill="#1d4ed8" filter="url(#sh)"/><text x="190" y="113" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">10</text>
+    <text x="190" y="138" text-anchor="middle" font-size="12" fill="#1e3a8a">档案</text>
+    <circle cx="230" cy="128" r="18" fill="#0284c7" filter="url(#sh)"/><text x="230" y="133" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">12</text>
+    <text x="270" y="156" text-anchor="middle" font-size="12" fill="#1e3a8a">理由 · 开关</text>
+    <circle cx="270" cy="128" r="18" fill="#0369a1" filter="url(#sh)"/><text x="270" y="133" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">13</text>
+    <circle cx="560" cy="110" r="18" fill="#059669" filter="url(#sh)"/><text x="560" y="115" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">1</text>
+    <text x="560" y="142" text-anchor="middle" font-size="12" fill="#065f46">跨场景</text>
+    <circle cx="500" cy="148" r="18" fill="#10b981" filter="url(#sh)"/><text x="500" y="153" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">4</text>
+    <circle cx="620" cy="148" r="18" fill="#047857" filter="url(#sh)"/><text x="620" y="153" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">6</text>
+    <circle cx="560" cy="176" r="16" fill="#34d399" filter="url(#sh)"/><text x="560" y="181" text-anchor="middle" fill="#064e3b" font-size="11" font-weight="700">5</text>
+    <text x="640" y="186" font-size="12" fill="#065f46">冷启动 · 订阅 · 再来一组 · 多样性</text>
+    <circle cx="640" cy="160" r="16" fill="#16a34a" filter="url(#sh)"/><text x="640" y="165" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">7</text>
+    <circle cx="620" cy="310" r="18" fill="#f59e0b" filter="url(#sh)"/><text x="620" y="315" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">2</text>
+    <circle cx="560" cy="338" r="18" fill="#d97706" filter="url(#sh)"/><text x="560" y="343" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">3</text>
+    <text x="590" y="292" text-anchor="middle" font-size="12" fill="#92400e">提醒 · 周复盘</text>
+    <circle cx="160" cy="300" r="18" fill="#64748b" filter="url(#sh)"/><text x="160" y="305" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">8</text>
+    <circle cx="210" cy="332" r="18" fill="#94a3b8" filter="url(#sh)"/><text x="210" y="337" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">9</text>
+    <text x="190" y="364" text-anchor="middle" font-size="12" fill="#334155">语音 · 热度榜</text>
   </svg>
   <p class="cap">点的位置按 SI 与 |DSI| 落在四块里。14、15 为反向型，不画进象限。</p></div>
   <div class="q4">
-    <div><b>左上 · 基本型 M</b><ul><li>兴趣档案全局复用</li><li>不感兴趣立刻少推</li><li>每条说明为什么</li><li>可关闭个性化</li></ul></div>
-    <div><b>右上 · 期望型 O</b><ul><li>跨场景同一份兴趣</li><li>冷启动三问</li><li>主题订阅与屏蔽</li><li>多样性旋钮</li><li>再来一组相似</li></ul></div>
-    <div><b>左下 · 无差异</b><ul><li>语音播报今日推荐</li><li>好友在看 / 热度榜</li><li>皮肤、广告伪装见反向，不在此列开发</li></ul></div>
-    <div><b>右下 · 兴奋型 A</b><ul><li>主题有更新主动说</li><li>每周兴趣与推荐复盘</li></ul></div>
+    <div><b style="color:#1d4ed8">左上 · 基本型 M</b><ul><li>兴趣档案全局复用</li><li>不感兴趣立刻少推</li><li>每条说明为什么</li><li>可关闭个性化</li></ul></div>
+    <div><b style="color:#047857">右上 · 期望型 O</b><ul><li>跨场景同一份兴趣</li><li>冷启动三问</li><li>主题订阅与屏蔽</li><li>多样性旋钮</li><li>再来一组相似</li></ul></div>
+    <div><b style="color:#475569">左下 · 无差异</b><ul><li>语音播报今日推荐</li><li>好友在看 / 热度榜</li><li>皮肤、广告伪装见反向，不在此列开发</li></ul></div>
+    <div><b style="color:#b45309">右下 · 兴奋型 A</b><ul><li>主题有更新主动说</li><li>每周兴趣与推荐复盘</li></ul></div>
   </div>
 </section>
 <section id="s3">
@@ -211,25 +241,34 @@ mindmap
   </pre><p class="cap">从方法到产品决策。15 条需求的属性见第二章。</p></div>
   <h3>3.4 聚类结果</h3>
   <p>按「使用阶段、需求强度、付费意愿、使用频次」把演示样本分成 4 类。前 3 类是首版要服务的人，第 4 类不作为设计中心。</p>
+  <div class="donut-row">
+    <div class="donut" role="img" aria-label="四类用户占比"><span>20<small>演示样本</small></span></div>
+    <div class="legend">
+      <div><i style="background:#ff6b6b"></i>窄刷型<b style="color:#e03131">40% · 核心</b></div>
+      <div><i style="background:#ffa94d"></i>挑货型<b style="color:#e8590c">30% · 核心</b></div>
+      <div><i style="background:#4dabf7"></i>可控型<b style="color:#1c7ed6">20% · 核心</b></div>
+      <div><i style="background:#ced4da"></i>随划型<b style="color:#868e96">10% · 低优先</b></div>
+    </div>
+  </div>
   <div class="grid4">
-    <div class="card"><b>窄刷型 40% · 核心</b><p>特征：每天刷很久，主题越来越单一。</p><p>痛点：点过一次露营，后面几天全是帐篷。</p><p>最看重：负反馈、多样性旋钮、推荐理由。</p></div>
-    <div class="card"><b>挑货型 30% · 核心</b><p>特征：下单前会比较，讨厌被种草。</p><p>痛点：猜你喜欢不说依据，退货成本自己扛。</p><p>最看重：理由、订阅屏蔽、再来一组。</p></div>
-    <div class="card"><b>可控型 20% · 核心</b><p>特征：授权少，会找设置里的开关。</p><p>痛点：关掉个性化后又被打开，或者找不到入口。</p><p>最看重：时间序开关、档案可导出删除、理由。</p></div>
-    <div class="card"><b>随划型 10% · 低优先</b><p>特征：划过即可，不愿设置。</p><p>痛点：不明显。</p><p>最看重：热度榜、语音。首版不围绕他们做。</p></div>
+    <div class="card c1"><span class="pill" style="background:#ff6b6b">40%</span><b>窄刷型 · 核心</b><p>特征：每天刷很久，主题越来越单一。</p><p>痛点：点过一次露营，后面几天全是帐篷。</p><p>最看重：负反馈、多样性旋钮、推荐理由。</p></div>
+    <div class="card c2"><span class="pill" style="background:#ffa94d">30%</span><b>挑货型 · 核心</b><p>特征：下单前会比较，讨厌被种草。</p><p>痛点：猜你喜欢不说依据，退货成本自己扛。</p><p>最看重：理由、订阅屏蔽、再来一组。</p></div>
+    <div class="card c3"><span class="pill" style="background:#4dabf7">20%</span><b>可控型 · 核心</b><p>特征：授权少，会找设置里的开关。</p><p>痛点：关掉个性化后又被打开，或者找不到入口。</p><p>最看重：时间序开关、档案可导出删除、理由。</p></div>
+    <div class="card c4"><span class="pill" style="background:#adb5bd">10%</span><b>随划型 · 低优先</b><p>特征：划过即可，不愿设置。</p><p>痛点：不明显。</p><p>最看重：热度榜、语音。首版不围绕他们做。</p></div>
   </div>
   <h3>3.5 核心用户画像</h3>
   <div class="people">
-    <article class="card">
+    <article class="card c1">
       <p class="who">林</p>
       <h4>林窄 · 窄刷型 · 26 岁</h4>
       <p>运营，杭州，每天信息流约 2 小时。目标：还能刷，但不要只剩一个主题。痛点：① 负反馈像没点过；② 不知道这周被收窄了多少；③ 设置藏得深。场景：对一条露营点「不感兴趣」，期望下一条换题，并看到「已屏蔽露营」。Top：负反馈、多样性、理由、周复盘、订阅屏蔽。付费：19–39 元/月，买「能停掉」。 </p>
     </article>
-    <article class="card">
+    <article class="card c2">
       <p class="who">周</p>
       <h4>周挑 · 挑货型 · 31 岁</h4>
       <p>产品，上海，每月网购 4–6 次。目标：少买错。痛点：① 推荐不写为什么；② 视频里看过的主题，商品流完全无关或反过来乱推；③ 一次点击就把长期兴趣锁死。场景：先读一句理由，再决定点不点；想多看两件时用「再来一组」，而不是改档案。Top：理由、跨场景、再来一组、订阅、冷启动。付费：39–69 元/月，买「少重养、少买错」。</p>
     </article>
-    <article class="card">
+    <article class="card c3">
       <p class="who">陈</p>
       <h4>陈控 · 可控型 · 34 岁</h4>
       <p>法务，北京，很少授权行为数据。目标：推荐可以有，必须能关。痛点：① 开关不在首屏；② 关掉后仍出现「为你推荐」；③ 广告和兴趣混在同一句理由里。场景：出差时切到时间序，周末看一页「这周推了什么、挡了什么」，并可导出或删除档案。Top：关闭个性化、档案、理由、周复盘、负反馈。付费：一次 29 元买导出和开关记忆，不为皮肤付费。</p>
@@ -684,6 +723,14 @@ flowchart LR
     D1[语音视情况] --> D2[热度榜不做主路径]
   end
   S0 --> S1 --> S2 --> S3
+  classDef p0 fill:#2563eb,stroke:#1e3a8a,color:#fff
+  classDef p1 fill:#059669,stroke:#065f46,color:#fff
+  classDef p2 fill:#d97706,stroke:#92400e,color:#fff
+  classDef p3 fill:#64748b,stroke:#334155,color:#fff
+  class A1,A2,A3,A4,S0 p0
+  class B1,B2,B3,S1 p1
+  class C1,C2,S2 p2
+  class D1,D2,S3 p3
   </pre></div>
   <h3>7.3 指标</h3>
   <p>北极星：一周内至少完成一次「负反馈后确认下一刷已换题」的人数。它同时看使用和价值是否兑现。</p>
@@ -800,10 +847,16 @@ flowchart TD
   P[荐知：听得懂、停得掉的推荐] --> A[看]
   P --> B[纠]
   P --> C[管]
-  A --> A1[理由 / 热门 / 广告三种句子]
-  B --> B1[负反馈 / 多样性 / 再来一组]
-  C --> C1[档案 / 开关 / 订阅屏蔽 / 复盘]
-  </pre><p class="cap">上窄下宽：定位下面是看、纠、管，再落到具体功能。</p></div>
+  A --> A1["看<br/>理由 · 热门 · 广告三种句子"]
+  B --> B1["纠<br/>负反馈 · 多样性 · 再来一组"]
+  C --> C1["管<br/>档案 · 开关 · 订阅 · 复盘"]
+  classDef top fill:#facc15,stroke:#a16207,color:#1a1a1a,font-size:15px
+  classDef mid fill:#2563eb,stroke:#1e3a8a,color:#fff
+  classDef leaf fill:#60a5fa,stroke:#2563eb,color:#fff
+  class P top
+  class A,B,C mid
+  class A1,B1,C1 leaf
+  </pre><p class="cap">顶层黄、中层蓝、底层浅蓝，和示例作业的金字塔同一套配色。</p></div>
   <h3>9.1 战略</h3>
   <table>
     <tr><th>要素</th><th>定义</th></tr>
@@ -870,11 +923,11 @@ flowchart TD
     <tr><td>套娃</td><td>一层套一层</td><td>我的 → 档案 → 导出或删除 → 确认</td></tr>
   </table>
   <h3>10.3 底栏四个页签</h3>
-  <div class="grid4">
-    <div class="card"><b>首页</b><p>便当盒 + 集中分发。顶栏开关。列表带理由。</p></div>
-    <div class="card"><b>兴趣</b><p>层级 + 过滤。主题的订阅、场景开关。</p></div>
-    <div class="card"><b>屏蔽</b><p>过滤。按原因看，可撤销。</p></div>
-    <div class="card"><b>我的</b><p>套娃。档案、复盘、会员。</p></div>
+  <div class="tabs">
+    <div class="on">首页<small>便当盒 + 分发</small></div>
+    <div>兴趣<small>层级 + 过滤</small></div>
+    <div>屏蔽<small>过滤</small></div>
+    <div>我的<small>套娃</small></div>
   </div>
   <h4>首页</h4>
   <ul><li>顶：开或关</li><li>中：四张卡</li><li>下：推荐列表，广告卡样式不同</li></ul>
@@ -965,7 +1018,45 @@ flowchart LR
 
 </div>
 <script>
-mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"loose"});
+mermaid.initialize({
+  startOnLoad:false,
+  theme:"default",
+  themeVariables:{fontSize:"15px",fontFamily:"Microsoft YaHei, Segoe UI, PingFang SC, sans-serif"},
+  flowchart:{useMaxWidth:true,curve:"basis",padding:16,nodeSpacing:40,rankSpacing:48,htmlLabels:true},
+  securityLevel:"loose"
+});
+(function(){
+  var fills=[
+    ["#2563eb","#1e3a8a","#fff"],
+    ["#0891b2","#155e75","#fff"],
+    ["#059669","#065f46","#fff"],
+    ["#ca8a04","#854d0e","#fff"],
+    ["#ea580c","#9a3412","#fff"],
+    ["#db2777","#9d174d","#fff"],
+    ["#7c3aed","#5b21b6","#fff"],
+    ["#dc2626","#991b1b","#fff"]
+  ];
+  document.querySelectorAll("pre.mermaid").forEach(function(pre){
+    var src=pre.textContent;
+    if(!/(flowchart|graph)\s/.test(src)||/classDef/.test(src)) return;
+    var seen={},ids=[],re=/(^|[\n\s])([A-Za-z][\w]*)\s*[\[\{\(]/g,m;
+    while((m=re.exec(src))){
+      var id=m[2];
+      if(seen[id]||/^(subgraph|end|class|style|click)$/.test(id)) continue;
+      seen[id]=1; ids.push(id);
+    }
+    if(!ids.length) return;
+    var extra="\n";
+    ids.forEach(function(id,i){
+      var diamond=new RegExp("(^|[\\n\\s])"+id+"\\s*\\{").test(src);
+      var c=diamond?["#f59e0b","#b45309","#1c1917"]:fills[i%fills.length];
+      extra+="    classDef k"+i+" fill:"+c[0]+",stroke:"+c[1]+",color:"+c[2]+",stroke-width:1.5px\n";
+      extra+="    class "+id+" k"+i+"\n";
+    });
+    pre.textContent=src.replace(/\s+$/,"")+extra;
+  });
+  mermaid.run({querySelector:"pre.mermaid"});
+})();
 (function(){
   var links=document.querySelectorAll(".nav-bar a"), sections=[];
   links.forEach(function(a){var el=document.getElementById(a.getAttribute("href").slice(1)); if(el) sections.push({link:a,el:el});});
