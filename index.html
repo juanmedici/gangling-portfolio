@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娟 · 岗龄｜产品经理作品集</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft Yahei", "PingFang SC", sans-serif; }
+body { background-color: #f5f7fa; color: #222; line-height: 1.7; }
+header { background: #1e3a8a; color: #fff; padding: 28px 40px 24px; }
+header .identity { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.18); }
+header .identity .name { font-size: 22px; font-weight: 700; letter-spacing: 0.02em; }
+header .identity .role { font-size: 14px; opacity: 0.9; }
+header .identity a { color: #bfdbfe; font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(191,219,254,0.45); }
+header .identity a:hover { color: #fff; border-bottom-color: #fff; }
+header .case-label { font-size: 13px; opacity: 0.75; margin-bottom: 6px; }
+header h1 { font-size: 26px; margin-bottom: 8px; font-weight: 700; max-width: 860px; }
+header .lead { opacity: 0.92; font-size: 15px; max-width: 720px; line-height: 1.65; }
+header .meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 13px; opacity: 0.85; }
+header .meta span::before { content: ""; }
+.nav-bar { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.06); padding: 8px 28px; position: sticky; top: 0; z-index: 99; display: flex; flex-wrap: wrap; gap: 2px; }
+.nav-bar a { display: inline-block; padding: 7px 11px; text-decoration: none; color: #475569; border-radius: 4px; transition: 0.15s; font-size: 13px; }
+.nav-bar a:hover { background: #1e3a8a; color: #fff; }
+.container { max-width: 1400px; margin: 30px auto; padding: 0 30px; }
+.section { background: #fff; border-radius: 12px; padding: 32px; margin-bottom: 30px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.section h2 { border-left: 5px solid #2563eb; padding-left: 14px; margin-bottom: 20px; font-size: 22px; }
+.section h3 { margin: 24px 0 12px; color: #1d4ed8; font-size: 18px; padding-bottom: 6px; border-bottom: 1px solid #e2e8f0; }
+.section h4 { margin: 16px 0 10px; color: #334155; font-size: 16px; }
+.section p { margin: 8px 0; }
+ul, ol { padding-left: 20px; }
+li { margin: 4px 0; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+table th, table td { border: 1px solid #ddd; padding: 10px 12px; text-align: center; vertical-align: top; }
+table th { background: #eff6ff; font-weight: bold; }
+table td.left, table th.left { text-align: left; }
+.note { color: #64748b; font-size: 13px; }
+.tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; color: #fff; margin: 2px; }
+.tag-p0 { background: #dc2626; }
+.tag-p1 { background: #ea580c; }
+.tag-p2 { background: #ca8a04; }
+.tag-m { background: #0284c7; }
+.tag-o { background: #059669; }
+.tag-a { background: #d97706; }
+.tag-r { background: #7f1d1d; }
+.tag-i { background: #64748b; }
+.tag-kill { background: #991b1b; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+.stat { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+.stat b { display: block; font-size: 22px; color: #1e40af; line-height: 1.3; }
+.stat span { font-size: 12px; color: #64748b; }
+.callout { background: #eff6ff; border-left: 4px solid #2563eb; padding: 14px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 14px; }
+.callout.warn { background: #fff7ed; border-left-color: #ea580c; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 18px; }
+.card h4 { margin-top: 0; }
+.card ul { font-size: 14px; }
+.fact { color: #0f766e; }
+.assume { color: #b45309; }
+.quad { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.quad article { border-radius: 8px; padding: 16px 18px; background: #f8fafc; }
+.quad h4 { margin: 0 0 8px; }
+.quad ul { font-size: 14px; }
+.quad .m { border-top: 4px solid #0284c7; }
+.quad .o { border-top: 4px solid #059669; }
+.quad .a { border-top: 4px solid #d97706; }
+.quad .ir { border-top: 4px solid #94a3b8; }
+.matrix td.hit { background: #dbeafe; font-weight: 700; color: #1e3a8a; }
+.personas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.persona { border: 1px solid #e3e8ef; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+.persona-h { padding: 18px 20px; color: #fff; display: flex; align-items: center; gap: 14px; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; flex: none; }
+.persona-h .who { font-size: 18px; font-weight: 800; }
+.persona-h .sub { font-size: 13px; opacity: 0.92; }
+.badge { margin-left: auto; background: rgba(255,255,255,0.22); font-size: 12px; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.persona-b { padding: 16px 20px; }
+.chips, .flags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+.chips span { background: #f1f3f5; font-size: 12px; padding: 4px 10px; border-radius: 8px; }
+.flags span { background: #e0f2fe; color: #075985; font-size: 12px; padding: 3px 9px; border-radius: 6px; }
+.persona-b p { margin: 8px 0; font-size: 13px; color: #444; }
+.scene { background: #f8fafc; border-left: 3px solid #2563eb; padding: 8px 10px; border-radius: 0 8px 8px 0; }
+.paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.path { background: #f8fafc; border-left: 4px solid #2563eb; padding: 16px 18px; border-radius: 0 8px 8px 0; }
+.path strong { display: block; margin-bottom: 6px; color: #1e40af; }
+.path p { font-size: 14px; margin: 0; }
+.source li { margin: 6px 0; font-size: 14px; }
+.match-box { margin-top: 16px; padding: 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; }
+.match-form { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 14px; align-items: end; }
+.match-form label { display: block; font-size: 13px; color: #475569; margin-bottom: 6px; }
+.match-form select { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; font-size: 14px; color: #222; }
+.match-form button { padding: 10px 16px; border: none; border-radius: 8px; background: #2563eb; color: #fff; font-size: 14px; cursor: pointer; white-space: nowrap; }
+.match-form button:hover { background: #1d4ed8; }
+.match-out { margin-top: 16px; display: none; }
+.match-out.show { display: block; }
+.match-out .band { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 12px 0; }
+.match-out .cell { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; }
+.match-out .cell strong { display: block; font-size: 20px; color: #1e40af; margin: 4px 0; }
+.match-out .cell span { font-size: 12px; color: #64748b; }
+.match-out .read { font-size: 14px; color: #334155; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; font-size: 13px; }
+.flow span { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 6px 10px; border-radius: 8px; }
+.flow i { color: #94a3b8; font-style: normal; }
+.timeline { border-left: 3px solid #bfdbfe; margin: 12px 0 0 8px; padding-left: 18px; }
+.timeline li { list-style: none; margin: 0 0 14px; position: relative; }
+.timeline li::before { content: ""; width: 10px; height: 10px; background: #2563eb; border-radius: 50%; position: absolute; left: -24px; top: 6px; }
+.fig { margin: 16px 0; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; overflow-x: auto; }
+.fig-cap { font-size: 12px; color: #64748b; margin-top: 8px; text-align: center; }
+.model-strip { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.model-strip span { background: #eff6ff; color: #1e3a8a; border: 1px solid #bfdbfe; padding: 5px 11px; border-radius: 8px; font-size: 12px; font-weight: 600; }
+.empathy { display: grid; grid-template-columns: 1fr 1.2fr 1fr; grid-template-rows: auto auto; gap: 8px; }
+.empathy .c { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; font-size: 13px; }
+.empathy .c h4 { margin: 0 0 6px; font-size: 14px; color: #1d4ed8; }
+.empathy .center { grid-row: 1 / 3; grid-column: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #eff6ff; border-color: #93c5fd; }
+.journey { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; }
+.journey .step { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; font-size: 12px; position: relative; }
+.journey .step b { display: block; color: #1e40af; margin-bottom: 6px; font-size: 13px; }
+.journey .emo { margin-top: 8px; height: 6px; border-radius: 99px; background: linear-gradient(90deg, #fca5a5, #fde68a, #86efac); }
+.vpc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.vpc .box { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; font-size: 13px; }
+.vpc .box h4 { margin: 0 0 8px; color: #1d4ed8; }
+.swot { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.swot .s { background: #ecfdf5; border-top: 4px solid #059669; }
+.swot .w { background: #fff7ed; border-top: 4px solid #ea580c; }
+.swot .o { background: #eff6ff; border-top: 4px solid #2563eb; }
+.swot .t { background: #fef2f2; border-top: 4px solid #dc2626; }
+.rice { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.rice .r { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; text-align: center; }
+.rice .r b { display: block; font-size: 28px; color: #1e40af; }
+.moscow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.moscow .m { border-radius: 10px; padding: 14px; font-size: 13px; color: #fff; }
+.moscow .must { background: #dc2626; }
+.moscow .should { background: #ea580c; }
+.moscow .could { background: #ca8a04; }
+.moscow .wont { background: #64748b; }
+@media (max-width: 900px) {
+  .stats, .grid2, .grid3, .paths, .quad, .match-form, .empathy, .journey, .vpc, .swot, .rice, .moscow { grid-template-columns: 1fr; }
+  .empathy .center { grid-row: auto; grid-column: auto; }
+}
+@media (max-width: 768px) {
+  header { padding: 20px 16px; }
+  header .identity .name { font-size: 20px; }
+  header h1 { font-size: 20px; }
+  header .lead { font-size: 14px; }
+  .nav-bar { padding: 8px 10px; position: static; }
+  .nav-bar a { padding: 6px 10px; font-size: 12px; }
+  .container { margin: 14px auto; padding: 0 12px; }
+  .section { padding: 18px 14px; }
+  .section h2 { font-size: 19px; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 5px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="identity">
+    <span class="name">刘娟</span>
+    <span class="role">产品经理作品集</span>
+    <a id="contact-email" href="mailto:请替换为你的邮箱">请替换为你的邮箱</a>
+  </div>
+  <div class="case-label">案例一 · 岗龄</div>
+  <h1>产品岗该看哪套薪资、还能投多久、30/40 岁去哪</h1>
+  <p class="lead">三份公开招聘报告数字互相打架。这页把智联 / 脉脉 / 猎聘分开写，并给出岗龄路径和去向岗位——不做求职、不合成「真实月薪」、不做排行榜。</p>
+  <div class="meta">
+    <span>独立完成</span>
+    <span>信息决策原型</span>
+    <span>投递：产品 / AI 产品</span>
+  </div>
+</header>
+<div class="nav-bar">
+  <a href="#cover">摘要</a>
+  <a href="#case">案例</a>
+  <a href="#models">方法</a>
+  <a href="#problem">问题</a>
+  <a href="#salary">薪资</a>
+  <a href="#match">对照</a>
+  <a href="#tenure">岗龄</a>
+  <a href="#research">研究</a>
+  <a href="#persona">画像</a>
+  <a href="#compete">竞品</a>
+  <a href="#hmw">取舍</a>
+  <a href="#prd">PRD</a>
+  <a href="#kano">KANO</a>
+  <a href="#roadmap">路线</a>
+  <a href="#retro">复盘</a>
+</div>
+<div class="container">
+
+<section class="section" id="cover">
+  <h2>〇、一分钟说清楚</h2>
+  <div class="stats">
+    <div class="stat"><b>核心判断</b><span>先分清口径，再谈前途</span></div>
+    <div class="stat"><b>三套薪资</b><span>智联 / 脉脉 / 猎聘分开展示</span></div>
+    <div class="stat"><b>四类用户</b><span>30–40 岁去向写到岗位名</span></div>
+    <div class="stat"><b>明确不做</b><span>砍掉「最赚钱排行榜」</span></div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h4>解决什么</h4>
+      <p>在岗产品人同时看到 1.9 万、5.3 万、39 万三种说法，加上「35 岁危机」内容，很难判断该不该跳、该报多少、标题还能不能投。</p>
+    </div>
+    <div class="card">
+      <h4>这份案例展示什么</h4>
+      <ul>
+        <li>事实和假设分开写</li>
+        <li>用 KANO 排优先级，并写清杀掉的需求</li>
+        <li>北极星与护栏指标可验收</li>
+        <li>非目标写清楚：不是求职站</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <b>一句话：</b>岗龄帮 28–42 岁在岗产品对照公开招聘报告，回答三件事——现在该看哪套价、执行岗标题还能投多久、换标题后常见去向是什么。
+  </div>
+  <p class="note">课堂作品 / 可演示原型。KANO 基于 10 份目标用户判断答卷；市场数字来自公开招聘报告，没有编造上线 DAU。</p>
+</section>
+
+<section class="section" id="case">
+  <h2>一、案例摘要</h2>
+  <table>
+    <tr><th class="left">字段</th><th class="left">内容</th></tr>
+    <tr><td class="left">产品</td><td class="left">岗龄：产品岗薪资口径与去向决策页</td></tr>
+    <tr><td class="left">角色</td><td class="left">独立完成：选题、口径、用户分型、KANO、竞品、信息架构、原型、验收标准</td></tr>
+    <tr><td class="left">约束</td><td class="left">没有内部薪资库；不做个人到手薪预测；周期内要交付可演示页面</td></tr>
+    <tr><td class="left">用户</td><td class="left">28–34 岁仍投产品经理；35–40 岁换头衔中；40 岁上下已离开执行标题</td></tr>
+    <tr><td class="left">非用户</td><td class="left">应届校招、纯算法岗、只想抄排行榜方向的人</td></tr>
+    <tr><td class="left">交付</td><td class="left">本页 + 城市×年限对照 + KANO + 一页纸 PRD</td></tr>
+    <tr><td class="left">验收</td><td class="left">5 分钟内能说清：不做求职、三套薪资为何不能混、砍了什么、北极星是什么</td></tr>
+  </table>
+  <h3>1.1 怎么讲这个案例</h3>
+  <div class="fig">
+    <svg viewBox="0 0 960 120" width="100%" role="img" aria-label="产品决策闭环流程图">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/></marker>
+      </defs>
+      <rect x="8" y="28" width="100" height="52" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="58" y="58" text-anchor="middle" font-size="13" fill="#1e3a8a">证据</text>
+      <line x1="112" y1="54" x2="128" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="132" y="28" width="100" height="52" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="182" y="58" text-anchor="middle" font-size="13" fill="#1e3a8a">问题定义</text>
+      <line x1="236" y1="54" x2="252" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="256" y="28" width="100" height="52" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="306" y="58" text-anchor="middle" font-size="13" fill="#1e3a8a">用户分型</text>
+      <line x1="360" y1="54" x2="376" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="380" y="28" width="100" height="52" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="430" y="58" text-anchor="middle" font-size="13" fill="#1e3a8a">竞品五层</text>
+      <line x1="484" y1="54" x2="500" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="504" y="28" width="110" height="52" rx="10" fill="#fef3c7" stroke="#d97706"/>
+      <text x="559" y="58" text-anchor="middle" font-size="13" fill="#92400e">砍需求</text>
+      <line x1="618" y1="54" x2="634" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="638" y="28" width="100" height="52" rx="10" fill="#dcfce7" stroke="#059669"/>
+      <text x="688" y="58" text-anchor="middle" font-size="13" fill="#065f46">MVP+指标</text>
+      <line x1="742" y1="54" x2="758" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="762" y="28" width="90" height="52" rx="10" fill="#dcfce7" stroke="#059669"/>
+      <text x="807" y="58" text-anchor="middle" font-size="13" fill="#065f46">Demo</text>
+      <line x1="856" y1="54" x2="872" y2="54" stroke="#94a3b8" marker-end="url(#arrow)"/>
+      <rect x="876" y="28" width="76" height="52" rx="10" fill="#e2e8f0" stroke="#64748b"/>
+      <text x="914" y="58" text-anchor="middle" font-size="13" fill="#334155">复盘</text>
+    </svg>
+    <p class="fig-cap">图 1 · 案例讲述顺序：黄=砍需求，绿=可演示交付</p>
+  </div>
+</section>
+
+<section class="section" id="models">
+  <h2>一附、用过的方法</h2>
+  <p>下面这些不是贴标签。每个模型在后面都有对应图表，面试按「发现问题 → 定义问题 → 做取舍 → 交付」讲即可。</p>
+  <div class="model-strip">
+    <span>双钻 Double Diamond</span><span>JTBD</span><span>共情图</span><span>用户旅程</span>
+    <span>机会解决方案树 OST</span><span>HMW</span><span>五层竞品</span><span>价值主张画布</span>
+    <span>KANO</span><span>RICE</span><span>MoSCoW</span><span>SWOT</span>
+    <span>OSM 指标树</span><span>AARRR（边界）</span><span>CIRCLES</span>
+    <span>Impact–Effort</span><span>5W1H</span>
+  </div>
+  <div class="fig">
+    <svg viewBox="0 0 900 200" width="100%" role="img" aria-label="模型与章节对照">
+      <text x="450" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">方法 → 落在本页哪一段</text>
+      <rect x="20" y="50" width="200" height="56" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="120" y="74" text-anchor="middle" font-size="12" fill="#1e3a8a">发现</text><text x="120" y="94" text-anchor="middle" font-size="11" fill="#475569">双钻·5W1H·旅程</text>
+      <rect x="240" y="50" width="200" height="56" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="340" y="74" text-anchor="middle" font-size="12" fill="#1e3a8a">定义</text><text x="340" y="94" text-anchor="middle" font-size="11" fill="#475569">JTBD·共情·OST·CIRCLES</text>
+      <rect x="460" y="50" width="200" height="56" rx="8" fill="#fef3c7" stroke="#d97706"/><text x="560" y="74" text-anchor="middle" font-size="12" fill="#92400e">开发取舍</text><text x="560" y="94" text-anchor="middle" font-size="11" fill="#78716c">KANO·RICE·MoSCoW·SWOT</text>
+      <rect x="680" y="50" width="200" height="56" rx="8" fill="#dcfce7" stroke="#059669"/><text x="780" y="74" text-anchor="middle" font-size="12" fill="#065f46">交付度量</text><text x="780" y="94" text-anchor="middle" font-size="11" fill="#475569">VPC·OSM·AARRR边界</text>
+      <text x="450" y="140" text-anchor="middle" font-size="12" fill="#334155">对应章节：模型图谱 → 问题/研究/画像 → 竞品/砍需求 → PRD/KANO/路线图</text>
+      <text x="450" y="168" text-anchor="middle" font-size="12" fill="#64748b">图 0 · 入口图；其余图嵌在对应章节</text>
+      <text x="450" y="190" text-anchor="middle" font-size="11" fill="#94a3b8">AARRR 只用来划清不做增长黑客；CIRCLES 用来答面试追问</text>
+    </svg>
+  </div>
+
+  <h3>CIRCLES：面试追问骨架（本案例已填空）</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 170" width="100%" role="img" aria-label="CIRCLES框架">
+      <rect x="10" y="30" width="118" height="90" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="69" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">C</text><text x="69" y="80" text-anchor="middle" font-size="11" fill="#334155">Comprehend</text><text x="69" y="100" text-anchor="middle" font-size="10" fill="#64748b">口径错&gt;缺失</text>
+      <rect x="138" y="30" width="118" height="90" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="197" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">I</text><text x="197" y="80" text-anchor="middle" font-size="11" fill="#334155">Identify</text><text x="197" y="100" text-anchor="middle" font-size="10" fill="#64748b">28–42 在岗PM</text>
+      <rect x="266" y="30" width="118" height="90" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="325" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">R</text><text x="325" y="80" text-anchor="middle" font-size="11" fill="#334155">Report</text><text x="325" y="100" text-anchor="middle" font-size="10" fill="#64748b">切痛点优先级</text>
+      <rect x="394" y="30" width="118" height="90" rx="10" fill="#fef3c7" stroke="#d97706"/><text x="453" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">C</text><text x="453" y="80" text-anchor="middle" font-size="11" fill="#78716c">Cut</text><text x="453" y="100" text-anchor="middle" font-size="10" fill="#a16207">砍排行榜</text>
+      <rect x="522" y="30" width="118" height="90" rx="10" fill="#dcfce7" stroke="#059669"/><text x="581" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">L</text><text x="581" y="80" text-anchor="middle" font-size="11" fill="#334155">List</text><text x="581" y="100" text-anchor="middle" font-size="10" fill="#64748b">方案 A–E</text>
+      <rect x="650" y="30" width="118" height="90" rx="10" fill="#dcfce7" stroke="#059669"/><text x="709" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">E</text><text x="709" y="80" text-anchor="middle" font-size="11" fill="#334155">Evaluate</text><text x="709" y="100" text-anchor="middle" font-size="10" fill="#64748b">KANO+RICE</text>
+      <rect x="778" y="30" width="112" height="90" rx="10" fill="#dcfce7" stroke="#059669"/><text x="834" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">S</text><text x="834" y="80" text-anchor="middle" font-size="11" fill="#334155">Summarize</text><text x="834" y="100" text-anchor="middle" font-size="10" fill="#64748b">一页纸+Demo</text>
+      <text x="450" y="150" text-anchor="middle" font-size="12" fill="#64748b">图 3b · CIRCLES：黄块 Cut = 先砍掉会误导用户的功能</text>
+    </svg>
+  </div>
+
+  <h3>双钻：本项目落点</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 260" width="100%" role="img" aria-label="双钻模型">
+      <polygon points="40,130 180,40 320,130 180,220" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <polygon points="300,130 440,55 580,130 440,205" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+      <polygon points="560,130 700,40 840,130 700,220" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+      <text x="180" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">Discover</text>
+      <text x="180" y="148" text-anchor="middle" font-size="12" fill="#334155">报告拆口径</text>
+      <text x="440" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">Define</text>
+      <text x="440" y="148" text-anchor="middle" font-size="12" fill="#334155">问题=口径错误</text>
+      <text x="700" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">Develop→Deliver</text>
+      <text x="700" y="142" text-anchor="middle" font-size="12" fill="#334155">MVP 决策页</text>
+      <text x="700" y="162" text-anchor="middle" font-size="12" fill="#334155">+ 对照 Demo</text>
+      <text x="450" y="248" text-anchor="middle" font-size="12" fill="#64748b">发散收集证据 → 收敛定义问题 → 发散方案后收敛砍需求并交付</text>
+    </svg>
+    <p class="fig-cap">图 2 · 双钻：重点在定义对问题，而不是把产品做大</p>
+  </div>
+
+  <h3>机会解决方案树 OST</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 320" width="100%" role="img" aria-label="机会解决方案树">
+      <rect x="320" y="10" width="260" height="44" rx="8" fill="#1e40af"/>
+      <text x="450" y="38" text-anchor="middle" fill="#fff" font-size="14">Outcome：减少错误职业决策</text>
+      <line x1="450" y1="54" x2="450" y2="80" stroke="#94a3b8"/>
+      <line x1="160" y1="80" x2="740" y2="80" stroke="#94a3b8"/>
+      <line x1="160" y1="80" x2="160" y2="100" stroke="#94a3b8"/>
+      <line x1="450" y1="80" x2="450" y2="100" stroke="#94a3b8"/>
+      <line x1="740" y1="80" x2="740" y2="100" stroke="#94a3b8"/>
+      <rect x="70" y="100" width="180" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="160" y="130" text-anchor="middle" font-size="13" fill="#1e3a8a">机会1 选对口径</text>
+      <rect x="360" y="100" width="180" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="450" y="130" text-anchor="middle" font-size="13" fill="#1e3a8a">机会2 判断窗口</text>
+      <rect x="650" y="100" width="180" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="740" y="130" text-anchor="middle" font-size="13" fill="#1e3a8a">机会3 看见去向</text>
+      <line x1="160" y1="150" x2="160" y2="180" stroke="#94a3b8"/>
+      <line x1="450" y1="150" x2="450" y2="180" stroke="#94a3b8"/>
+      <line x1="740" y1="150" x2="740" y2="180" stroke="#94a3b8"/>
+      <rect x="55" y="180" width="100" height="40" rx="6" fill="#dcfce7" stroke="#059669"/><text x="105" y="205" text-anchor="middle" font-size="11">三套分表</text>
+      <rect x="165" y="180" width="100" height="40" rx="6" fill="#dcfce7" stroke="#059669"/><text x="215" y="205" text-anchor="middle" font-size="11">对照 Demo</text>
+      <rect x="345" y="180" width="100" height="40" rx="6" fill="#dcfce7" stroke="#059669"/><text x="395" y="205" text-anchor="middle" font-size="11">三条路径</text>
+      <rect x="455" y="180" width="100" height="40" rx="6" fill="#fee2e2" stroke="#dc2626"/><text x="505" y="205" text-anchor="middle" font-size="11">单一保质期×</text>
+      <rect x="645" y="180" width="100" height="40" rx="6" fill="#dcfce7" stroke="#059669"/><text x="695" y="205" text-anchor="middle" font-size="11">岗位名画像</text>
+      <rect x="755" y="180" width="100" height="40" rx="6" fill="#fee2e2" stroke="#dc2626"/><text x="805" y="205" text-anchor="middle" font-size="11">排行榜×</text>
+      <text x="450" y="260" text-anchor="middle" font-size="13" fill="#334155">绿=做 · 红=不做</text>
+      <text x="450" y="290" text-anchor="middle" font-size="12" fill="#64748b">Outcome → Opportunities → Solutions，先机会后方案，避免功能堆砌</text>
+    </svg>
+    <p class="fig-cap">图 3 · Opportunity Solution Tree：先钉 Outcome，再拆机会，最后才挂解决方案</p>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <h2>二、问题与证据（Fact / Assumption）</h2>
+  <h3>2.1 一句话问题</h3>
+  <p>在岗产品人用「平均月薪」和「35 岁危机」做职业决策时，口径错误的代价高于信息缺失——错误数字会推动错误跳槽与错误保底预期。</p>
+  <h3>2.2 证据分层</h3>
+  <table>
+    <tr><th>类型</th><th class="left">内容</th><th class="left">来源</th></tr>
+    <tr>
+      <td><span class="fact">FACT</span></td>
+      <td class="left">AI 产品经理：智联招聘月薪 19,459；脉脉新发岗位 53,204；猎聘招聘年薪 39.15 万——三套样本不可相加</td>
+      <td class="left">智联 2025 AI 人才报告；脉脉高聘 2025 人才迁徙；猎聘 2026 AI PM 供需报告</td>
+    </tr>
+    <tr>
+      <td><span class="fact">FACT</span></td>
+      <td class="left">AI 领域供需比首次 &gt;1（1.08）；岗位名增幅与投递人数同步上升</td>
+      <td class="left">脉脉高聘</td>
+    </tr>
+    <tr>
+      <td><span class="fact">FACT</span></td>
+      <td class="left">AI 产品招聘经验结构：3–5 年 37%，5–10 年 20%；本科要求约 77%</td>
+      <td class="left">智联</td>
+    </tr>
+    <tr>
+      <td><span class="fact">FACT</span></td>
+      <td class="left">35 岁以下求职者在 AI 核心岗占八成至九成——这是投递者结构，不是「清退统计」</td>
+      <td class="left">智联</td>
+    </tr>
+    <tr>
+      <td><span class="assume">ASSUMPTION</span></td>
+      <td class="left">执行层「产品经理」标题公开投递顺畅窗口约到 30–34 岁（由 3–10 年主招聘带反推）</td>
+      <td class="left">由经验档估算，非直接年龄薪资带</td>
+    </tr>
+    <tr>
+      <td><span class="assume">ASSUMPTION</span></td>
+      <td class="left">40 岁前后更常见去向是负责人 / 解决方案 / 数字化 / 咨询 / 自做，而非继续海投产品经理</td>
+      <td class="left">招聘结构 + 类型画像，非纵向追踪样本</td>
+    </tr>
+  </table>
+  <div class="callout warn">
+    <b>为什么现在做：</b>网上在合成「产品经理真实月薪」、做「最赚钱方向」排行榜，容易把人带偏。这页宁可少写，也不给可被当成工资条的合成数。
+  </div>
+  <h3>2.3 5W1H 问题框定</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 200" width="100%" role="img" aria-label="5W1H">
+      <rect x="20" y="20" width="270" height="70" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="155" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Who 谁</text><text x="155" y="72" text-anchor="middle" font-size="12" fill="#334155">28–42 岁在岗产品</text>
+      <rect x="310" y="20" width="270" height="70" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="445" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">What 什么</text><text x="445" y="72" text-anchor="middle" font-size="12" fill="#334155">口径错误导致错决策</text>
+      <rect x="600" y="20" width="270" height="70" rx="10" fill="#eff6ff" stroke="#2563eb"/><text x="735" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">When 何时</text><text x="735" y="72" text-anchor="middle" font-size="12" fill="#334155">跳槽/续约前 2 周</text>
+      <rect x="20" y="110" width="270" height="70" rx="10" fill="#f0fdf4" stroke="#059669"/><text x="155" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">Where 何处</text><text x="155" y="162" text-anchor="middle" font-size="12" fill="#334155">读报告/刷职场内容时</text>
+      <rect x="310" y="110" width="270" height="70" rx="10" fill="#f0fdf4" stroke="#059669"/><text x="445" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">Why 为何</text><text x="445" y="162" text-anchor="middle" font-size="12" fill="#334155">错误保底 &gt; 信息缺失</text>
+      <rect x="600" y="110" width="270" height="70" rx="10" fill="#f0fdf4" stroke="#059669"/><text x="735" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">How 如何</text><text x="735" y="162" text-anchor="middle" font-size="12" fill="#334155">隔离口径+路径+去向</text>
+    </svg>
+    <p class="fig-cap">图 4 · 5W1H：把情绪话题收成可设计的问题边界</p>
+  </div>
+</section>
+
+<section class="section" id="salary">
+  <h2>三、市场与薪资：三套不能混用的口径</h2>
+  <h3>3.1 薪资对照表</h3>
+  <table>
+    <tr><th>口径</th><th class="left">数字</th><th class="left">样本</th><th class="left">不能当成</th></tr>
+    <tr>
+      <td class="left">智联 · 招聘月薪</td>
+      <td class="left">AI 产品经理平均招聘月薪 19,459 元；杭州 28,659 元。人工智能工程师 21,439 元，数据标注 / AI 训练师 6,479 元</td>
+      <td class="left">《2025年人工智能产业人才发展报告》，2025 年前三季度招聘职位</td>
+      <td class="left">到手月薪、年终、股票</td>
+    </tr>
+    <tr>
+      <td class="left">脉脉高聘 · 新发岗位月薪</td>
+      <td class="left">AI 产品经理 53,204 元；普通产品经理 44,118 元，高出 20.59%</td>
+      <td class="left">《2025年度人才迁徙报告》，2025 年 1–10 月新经济新发岗位</td>
+      <td class="left">和智联的 1.9 万相加或取平均</td>
+    </tr>
+    <tr>
+      <td class="left">猎聘 · 招聘年薪</td>
+      <td class="left">AI 产品经理平均招聘年薪 39.15 万；62.27% 岗位年薪 ≥30 万。普通产品经理平均年薪 33.30 万</td>
+      <td class="left">《2026 AI 产品经理供需报告》。公开转载带求职工具推广</td>
+      <td class="left">全体产品人收入中位数</td>
+    </tr>
+  </table>
+  <h3>3.2 三套口径隔离示意</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 220" width="100%" role="img" aria-label="三套薪资口径隔离">
+      <rect x="30" y="40" width="240" height="140" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="150" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">智联</text>
+      <text x="150" y="105" text-anchor="middle" font-size="20" fill="#1e40af">19,459</text>
+      <text x="150" y="130" text-anchor="middle" font-size="12" fill="#475569">全市场招聘月薪</text>
+      <text x="150" y="155" text-anchor="middle" font-size="12" fill="#64748b">样本更全 · 数字更低</text>
+      <rect x="330" y="40" width="240" height="140" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+      <text x="450" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#92400e">脉脉高聘</text>
+      <text x="450" y="105" text-anchor="middle" font-size="20" fill="#b45309">53,204</text>
+      <text x="450" y="130" text-anchor="middle" font-size="12" fill="#475569">新经济新发岗位</text>
+      <text x="450" y="155" text-anchor="middle" font-size="12" fill="#64748b">样本偏高薪 · 勿当保底</text>
+      <rect x="630" y="40" width="240" height="140" rx="12" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+      <text x="750" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">猎聘</text>
+      <text x="750" y="105" text-anchor="middle" font-size="20" fill="#047857">39.15万</text>
+      <text x="750" y="130" text-anchor="middle" font-size="12" fill="#475569">招聘年薪</text>
+      <text x="750" y="155" text-anchor="middle" font-size="12" fill="#64748b">年薪标价 · 含推广语境</text>
+      <line x1="280" y1="110" x2="320" y2="110" stroke="#ef4444" stroke-width="3"/>
+      <line x1="270" y1="95" x2="290" y2="125" stroke="#ef4444" stroke-width="2"/>
+      <line x1="290" y1="95" x2="270" y2="125" stroke="#ef4444" stroke-width="2"/>
+      <line x1="580" y1="110" x2="620" y2="110" stroke="#ef4444" stroke-width="3"/>
+      <line x1="570" y1="95" x2="590" y2="125" stroke="#ef4444" stroke-width="2"/>
+      <line x1="590" y1="95" x2="570" y2="125" stroke="#ef4444" stroke-width="2"/>
+      <text x="450" y="210" text-anchor="middle" font-size="13" fill="#b91c1c">禁止相加 / 禁止取平均 / 禁止合成「真实月薪」</text>
+    </svg>
+    <p class="fig-cap">图 5 · 口径隔离：红叉表示样本不可运算合并</p>
+  </div>
+  <h3>3.3 形势读法</h3>
+  <table>
+    <tr><th>现象</th><th class="left">公开数字</th><th class="left">产品侧解读</th></tr>
+    <tr>
+      <td class="left">挂 AI 的产品岗变多</td>
+      <td class="left">智联需求同比 +178%；脉脉岗位量 +369.36%</td>
+      <td class="left">增长集中在「AI 产品」标题，不是所有产品岗一起涨；页面必须拆标题类型</td>
+    </tr>
+    <tr>
+      <td class="left">人也不缺了</td>
+      <td class="left">AI 供需比 1.08；新经济整体 2.23</td>
+      <td class="left">叙事不能是「只有坑没有人」；决策页要写清竞争已出现</td>
+    </tr>
+    <tr>
+      <td class="left">高薪要年限</td>
+      <td class="left">3–5 年 37%，5–10 年 20%</td>
+      <td class="left">30 岁前后仍在主招聘带；应届不是本产品用户</td>
+    </tr>
+    <tr>
+      <td class="left">区域集中</td>
+      <td class="left">长三角 + 京津冀 + 大湾区 ≈ 80.7%</td>
+      <td class="left">城市对照是兴奋点；离开核心区要用「上限参考」话术</td>
+    </tr>
+    <tr>
+      <td class="left">供给年轻</td>
+      <td class="left">35 岁以下求职者占八成至九成</td>
+      <td class="left">禁止写成裁员年龄线；只作投递者结构</td>
+    </tr>
+  </table>
+
+  <h3 id="match">3.4 Demo：城市 × 年限 → 对照薪资带</h3>
+  <p>对应 KANO 兴奋型 R4。只映射公开报告已出现的口径，不生成伪精确「你该拿多少」。</p>
+  <div class="match-box">
+    <div class="match-form">
+      <div>
+        <label for="city">城市 / 区域</label>
+        <select id="city">
+          <option value="hangzhou">杭州（有智联分城数字）</option>
+          <option value="core">北上广深 / 长三角·京津冀·大湾区</option>
+          <option value="other">其他城市</option>
+        </select>
+      </div>
+      <div>
+        <label for="years">产品经验</label>
+        <select id="years">
+          <option value="1-3">1–3 年</option>
+          <option value="3-5" selected>3–5 年</option>
+          <option value="5-10">5–10 年</option>
+          <option value="10+">10 年以上</option>
+        </select>
+      </div>
+      <div>
+        <label for="track">标题类型</label>
+        <select id="track">
+          <option value="ai">AI 产品经理</option>
+          <option value="normal">普通产品经理</option>
+        </select>
+      </div>
+      <button type="button" id="matchBtn">对照薪资带</button>
+    </div>
+    <div class="match-out" id="matchOut" aria-live="polite"></div>
+  </div>
+  <p class="note">验收点：结果区必须同时出现「优先看哪套」+「不能拿哪套当保底」+「年限是否仍在主招聘带」。</p>
+</section>
+
+<section class="section" id="tenure">
+  <h2>四、岗龄路径：这个标题还能坚持多久</h2>
+  <p>没有统一保质期。公开数据能分开的是两件事：一份工作干多久，以及「产品经理」这个招聘标题还能投多久。</p>
+  <h3>4.1 在职时长 ≠ 职业终点</h3>
+  <p>脉脉高聘 2025 年 1–10 月：新经济从业者平均在职 2.91 年，AI 从业者 2.03 年；主动辞职比例 12.80%→21.13%。这是跳槽间隔，不是行当寿命。</p>
+  <h3>4.2 三条路径</h3>
+  <div class="paths">
+    <div class="path">
+      <strong>执行产品经理</strong>
+      <p>主招聘带 3–10 年经验。按 22–24 岁入行，公开投「产品经理」较顺的窗口约到 30–34 岁。之后必须带人或改标题。</p>
+    </div>
+    <div class="path">
+      <strong>产品负责人</strong>
+      <p>头衔已离执行层。40 岁前后仍有位置，看业务与带人结果。收入绑团队/续费，不绑跳槽次数。</p>
+    </div>
+    <div class="path">
+      <strong>离开这个标题</strong>
+      <p>40 岁左右继续海投「产品经理」会明显变窄。常见去向：业务负责人、行业数字化、解决方案、咨询、小垂直自做。</p>
+    </div>
+  </div>
+  <div class="fig">
+    <svg viewBox="0 0 900 200" width="100%" role="img" aria-label="岗龄路径时间轴">
+      <line x1="60" y1="100" x2="840" y2="100" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+      <line x1="60" y1="100" x2="360" y2="100" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+      <line x1="360" y1="100" x2="560" y2="100" stroke="#d97706" stroke-width="8" stroke-linecap="round"/>
+      <line x1="560" y1="100" x2="840" y2="100" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="120" cy="100" r="10" fill="#2563eb"/><circle cx="300" cy="100" r="10" fill="#2563eb"/>
+      <circle cx="460" cy="100" r="10" fill="#d97706"/><circle cx="700" cy="100" r="10" fill="#64748b"/>
+      <text x="120" y="50" text-anchor="middle" font-size="13" fill="#1e40af">28 岁</text>
+      <text x="120" y="70" text-anchor="middle" font-size="11" fill="#64748b">主带内</text>
+      <text x="300" y="50" text-anchor="middle" font-size="13" fill="#1e40af">34 岁</text>
+      <text x="300" y="70" text-anchor="middle" font-size="11" fill="#64748b">执行窗口边缘</text>
+      <text x="460" y="50" text-anchor="middle" font-size="13" fill="#b45309">37 岁</text>
+      <text x="460" y="70" text-anchor="middle" font-size="11" fill="#64748b">必须换叙事</text>
+      <text x="700" y="50" text-anchor="middle" font-size="13" fill="#475569">40–42 岁</text>
+      <text x="700" y="70" text-anchor="middle" font-size="11" fill="#64748b">换标题去向</text>
+      <text x="210" y="145" text-anchor="middle" font-size="12" fill="#1e40af">执行产品经理</text>
+      <text x="460" y="145" text-anchor="middle" font-size="12" fill="#b45309">带人 / 行业·AI 应用</text>
+      <text x="700" y="145" text-anchor="middle" font-size="12" fill="#475569">负责人·解决方案·咨询</text>
+      <text x="450" y="180" text-anchor="middle" font-size="12" fill="#64748b">图 6 · 岗龄时间轴：颜色变化=标题策略变化，不是「必须离职」</text>
+    </svg>
+  </div>
+  <h3>4.3 年龄带决策表</h3>
+  <table>
+    <tr><th>年龄带</th><th class="left">是否仍在公开招聘主带</th><th class="left">更常见的下一步</th><th class="left">结束条件</th></tr>
+    <tr>
+      <td>28–32</td>
+      <td class="left">在（约 5–8 年经验）</td>
+      <td class="left">把经历说成可落地产品；有 AI/行业场景才对得上高聘价</td>
+      <td class="left">约 34 岁仍只有功能清单</td>
+    </tr>
+    <tr>
+      <td>33–37</td>
+      <td class="left">还在，但纯执行让位给「能带人/对结果」</td>
+      <td class="left">带小组、B 端/行业应用，或准备换标题</td>
+      <td class="left">带人与业务结果都说不出来</td>
+    </tr>
+    <tr>
+      <td>38–45</td>
+      <td class="left">用「产品经理」海投，主带已过</td>
+      <td class="left">负责人 / 解决方案 / 数字化 / 咨询 / 自做</td>
+      <td class="left">仍用 31 岁标题海投</td>
+    </tr>
+  </table>
+</section>
+
+<section class="section" id="research">
+  <h2>五、用户研究框架</h2>
+  <h3>5.1 方法（可审计）</h3>
+  <table>
+    <tr><th>步骤</th><th class="left">方法</th><th class="left">产出</th><th class="left">本作品状态</th></tr>
+    <tr><td>1</td><td class="left">桌面研究：三份招聘报告拆口径</td><td class="left">事实表、禁读规则</td><td class="left">已完成</td></tr>
+    <tr><td>2</td><td class="left">结构分型：按年龄×标题×去向聚类</td><td class="left">4 类 Persona</td><td class="left">已完成（类型画像）</td></tr>
+    <tr><td>3</td><td class="left">KANO 正反向：10 份目标用户判断答卷</td><td class="left">属性 / SI / DSI / 优先级</td><td class="left">课堂判断样本，非外发问卷</td></tr>
+    <tr><td>4</td><td class="left">任务走查：对照薪资带 Demo</td><td class="left">是否同时给出「该看/不该看」</td><td class="left">交互已落地</td></tr>
+    <tr><td>5</td><td class="left">后续：真实访谈 8–12 人 + 问卷 ≥100</td><td class="left">验证 ASSUMPTION</td><td class="left">路线图 V1.1</td></tr>
+  </table>
+  <h3>5.2 JTBD（Jobs To Be Done）</h3>
+  <div class="grid3">
+    <div class="card">
+      <h4>功能工作</h4>
+      <p>在跳槽/续约前，对照自己城市与年限该读哪套招聘价，并判断标题窗口。</p>
+    </div>
+    <div class="card">
+      <h4>情绪工作</h4>
+      <p>降低被「合成月薪」和「35 岁危机」叙事带偏的焦虑，换成可执行下一步。</p>
+    </div>
+    <div class="card">
+      <h4>社交工作</h4>
+      <p>和同伴/家人讨论时，能指出「这是招聘标价不是到手」，避免被排行榜绑架。</p>
+    </div>
+  </div>
+  <h3>5.3 用户旅程图（陈可 · 跳槽前 14 天）</h3>
+  <div class="journey">
+    <div class="step"><b>1 触发</b>看到脉脉「AI PM 5.3 万」动态<div class="emo"></div>情绪：兴奋→焦虑</div>
+    <div class="step"><b>2 搜索</b>搜「产品经理薪资 2025」读到三套矛盾数<div class="emo"></div>情绪：混乱</div>
+    <div class="step"><b>3 决策痛点</b>不知该把哪套当跳槽保底<div class="emo"></div>情绪：低谷</div>
+    <div class="step"><b>4 使用岗龄</b>选杭州×3–5年×AI，读禁读规则<div class="emo"></div>情绪：回升</div>
+    <div class="step"><b>5 行动</b>决定先补落地项目，不盲目报 5.3 万<div class="emo"></div>情绪：可执行</div>
+  </div>
+  <p class="fig-cap">图 7 · 用户旅程：产品插入点在「决策痛点」而非「投递执行」</p>
+  <h3>5.4 研究思维导图</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 280" width="100%" role="img" aria-label="用户研究思维导图">
+      <circle cx="450" cy="140" r="52" fill="#1e40af"/><text x="450" y="135" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">用户研究</text><text x="450" y="155" text-anchor="middle" fill="#dbeafe" font-size="11">岗龄</text>
+      <rect x="40" y="30" width="140" height="44" rx="8" fill="#dbeafe"/><text x="110" y="57" text-anchor="middle" font-size="12">桌面研究</text>
+      <rect x="40" y="100" width="140" height="44" rx="8" fill="#dbeafe"/><text x="110" y="127" text-anchor="middle" font-size="12">结构分型</text>
+      <rect x="40" y="170" width="140" height="44" rx="8" fill="#dbeafe"/><text x="110" y="197" text-anchor="middle" font-size="12">KANO 样本</text>
+      <rect x="40" y="220" width="140" height="44" rx="8" fill="#fef3c7"/><text x="110" y="247" text-anchor="middle" font-size="12">访谈待补</text>
+      <line x1="180" y1="52" x2="398" y2="120" stroke="#94a3b8"/><line x1="180" y1="122" x2="398" y2="140" stroke="#94a3b8"/>
+      <line x1="180" y1="192" x2="398" y2="155" stroke="#94a3b8"/><line x1="180" y1="242" x2="398" y2="170" stroke="#94a3b8"/>
+      <rect x="720" y="40" width="140" height="44" rx="8" fill="#dcfce7"/><text x="790" y="67" text-anchor="middle" font-size="12">禁读规则</text>
+      <rect x="720" y="100" width="140" height="44" rx="8" fill="#dcfce7"/><text x="790" y="127" text-anchor="middle" font-size="12">4 Persona</text>
+      <rect x="720" y="160" width="140" height="44" rx="8" fill="#dcfce7"/><text x="790" y="187" text-anchor="middle" font-size="12">优先级</text>
+      <rect x="720" y="220" width="140" height="44" rx="8" fill="#dcfce7"/><text x="790" y="247" text-anchor="middle" font-size="12">JTBD</text>
+      <line x1="502" y1="120" x2="720" y2="62" stroke="#94a3b8"/><line x1="502" y1="140" x2="720" y2="122" stroke="#94a3b8"/>
+      <line x1="502" y1="155" x2="720" y2="182" stroke="#94a3b8"/><line x1="502" y1="170" x2="720" y2="242" stroke="#94a3b8"/>
+    </svg>
+    <p class="fig-cap">图 8 · 研究骨架：黄块标出诚实缺口（真实访谈在路线图）</p>
+  </div>
+</section>
+
+<section class="section" id="persona">
+  <h2>六、用户画像与用户故事</h2>
+  <p>四张卡片按公开招聘结构拼出的类型，不是真人访谈。薪资只写「对得上哪套口径」。</p>
+  <h3>6.0 共情图（以陈可为中心）</h3>
+  <div class="empathy">
+    <div class="c"><h4>所想 Think</h4><ul><li>5.3 万是不是我下一次跳槽该报的数？</li><li>再干两年执行岗还来得及吗？</li></ul></div>
+    <div class="c center">
+      <div class="avatar" style="background:#2563eb;color:#fff;margin-bottom:8px;">陈</div>
+      <b>陈可 · 31</b>
+      <span class="note">杭州 · 增长产品第 6 年</span>
+    </div>
+    <div class="c"><h4>所看 See</h4><ul><li>同事晒总包</li><li>自媒体「35 岁危机」</li><li>三份互相打架的报告</li></ul></div>
+    <div class="c"><h4>所做 Do</h4><ul><li>改简历关键词加 AI</li><li>收藏高薪岗位不投</li><li>夜搜「产品经理还能做多久」</li></ul></div>
+    <div class="c" style="grid-column:3;"><h4>所感 Feel</h4><ul><li>怕报低吃亏</li><li>怕报高直接挂</li><li>怕窗口正在关</li></ul></div>
+  </div>
+  <p class="fig-cap">图 9 · Empathy Map：产品要回应的是「对照」与「窗口」，不是「再推一个高薪帖」</p>
+  <div class="personas">
+    <article class="persona">
+      <div class="persona-h" style="background:#2563eb;">
+        <div class="avatar">陈</div>
+        <div>
+          <div class="who">陈可</div>
+          <div class="sub">在岗执行产品 · 31 岁</div>
+        </div>
+        <span class="badge">30 岁档 · P0 用户</span>
+      </div>
+      <div class="persona-b">
+        <div class="chips"><span>杭州</span><span>C 端增长</span><span>产品第 6 年</span><span>还在投产品经理</span></div>
+        <div class="flags"><span>主招聘带内</span><span>对不齐高聘月薪</span><span>窗口约 3–4 年</span></div>
+        <p><b>现在的位置：</b>日常仍是需求、实验、活动页。城市对得上智联杭州 AI 产品 28,659，但对不上脉脉 53,204。</p>
+        <p><b>焦虑：</b>功能型需求变少；同名投递者变多；再投两次标题还算不算数。</p>
+        <p class="scene"><b>用户故事：</b>作为 31 岁执行产品，我想按城市和年限对照该看哪套招聘价，以便决定是补 AI 落地项目还是准备离执行岗——而不是把 5.3 万当跳槽保底。</p>
+        <p class="scene"><b>去向：</b>留下，标题改成业务内 AI 应用产品；两年后仍只有活动配置则离开执行岗。</p>
+      </div>
+    </article>
+    <article class="persona">
+      <div class="persona-h" style="background:#1d4ed8;">
+        <div class="avatar">周</div>
+        <div>
+          <div class="who">周衡</div>
+          <div class="sub">开始带人的 B 端产品 · 34 岁</div>
+        </div>
+        <span class="badge">30 岁后段 · P0 用户</span>
+      </div>
+      <div class="persona-b">
+        <div class="chips"><span>上海</span><span>企业服务</span><span>产品第 9 年</span><span>带 4 人</span></div>
+        <div class="flags"><span>经验档 5–10 年</span><span>客户认行业</span><span>40 岁换头衔</span></div>
+        <p><b>现在的位置：</b>续费、实施、异常流程比新功能重要。落在智联 5–10 年档（约 20%）。</p>
+        <p><b>焦虑：</b>简历难写回「产品经理」；怕 37 岁后只剩管理空衔。</p>
+        <p class="scene"><b>用户故事：</b>作为 34 岁带人产品，我想看到「产品经理」标题何时该停，以及负责人/解决方案路径长什么样，以便现在就开始换头衔叙事。</p>
+        <p class="scene"><b>去向：</b>产品负责人或解决方案；40 岁仍做产品工作，对外不再叫产品经理。</p>
+      </div>
+    </article>
+    <article class="persona">
+      <div class="persona-h" style="background:#1e3a8a;">
+        <div class="avatar">林</div>
+        <div>
+          <div class="who">林岚</div>
+          <div class="sub">已离开互联网产品标题 · 39 岁</div>
+        </div>
+        <span class="badge">40 岁前 · P1 用户</span>
+      </div>
+      <div class="persona-b">
+        <div class="chips"><span>深圳 → 制造</span><span>前产品总监</span><span>现数字化负责人</span></div>
+        <div class="flags"><span>去向已发生</span><span>收入更稳未必更高</span><span>不再海投 PM</span></div>
+        <p><b>现在的位置：</b>管系统能否进车间和财务。收入从高月薪加成换成年薪+管理奖金。</p>
+        <p><b>焦虑：</b>旧圈子比总包，新公司比上线后有没有人用。</p>
+        <p class="scene"><b>用户故事：</b>作为 39 岁数字化负责人，我想确认不再用产品经理平均月薪衡量自己，并看到同龄人已走通的岗位名，以便向家人解释「换标题不是失败」。</p>
+        <p class="scene"><b>去向：</b>行业数字化负责人——还在做产品工作，但招聘站搜「产品经理」已找不到她。</p>
+      </div>
+    </article>
+    <article class="persona">
+      <div class="persona-h" style="background:#334155;">
+        <div class="avatar">何</div>
+        <div>
+          <div class="who">何川</div>
+          <div class="sub">不再使用产品经理标题 · 42 岁</div>
+        </div>
+        <span class="badge">40 岁档 · P1 用户</span>
+      </div>
+      <div class="persona-b">
+        <div class="chips"><span>成都</span><span>产品 16 年</span><span>按项目收费</span></div>
+        <div class="flags"><span>咨询</span><span>同龄另两条路</span><span>简历无 PM</span></div>
+        <p><b>现在的位置：</b>帮传统公司做信息化立项，按项目收费。</p>
+        <p><b>同龄另两路：</b>很小的垂直工具；或回行业信息部门负责人（编制内，涨幅慢）。</p>
+        <p class="scene"><b>用户故事：</b>作为 42 岁项目制咨询，我想页面明确「平均月薪不适用我」，以免被拉回错误的公开薪资带讨论。</p>
+        <p class="scene"><b>去向：</b>咨询 / 自做 / 行业信息部门。三条都退出「产品经理」公开薪资带。</p>
+      </div>
+    </article>
+  </div>
+  <h3>6.1 四类人各自要看的数</h3>
+  <table>
+    <tr><th>画像</th><th class="left">该看</th><th class="left">不该看</th><th class="left">决策</th></tr>
+    <tr>
+      <td class="left">陈可 · 31</td>
+      <td class="left">智联分城市招聘月薪；有无 AI 落地项目</td>
+      <td class="left">脉脉 5.3 万当跳槽保底</td>
+      <td class="left">先补可演示落地，再决定留不留执行岗</td>
+    </tr>
+    <tr>
+      <td class="left">周衡 · 34</td>
+      <td class="left">5–10 年经验档是否仍在招；客户是否认行业</td>
+      <td class="left">应届/1–3 年岗位量</td>
+      <td class="left">头衔改负责人或解决方案</td>
+    </tr>
+    <tr>
+      <td class="left">林岚 · 39</td>
+      <td class="left">年薪+管理奖金；系统有没有人用</td>
+      <td class="left">互联网总包排行榜</td>
+      <td class="left">留在行业侧，换评价标准</td>
+    </tr>
+    <tr>
+      <td class="left">何川 · 42</td>
+      <td class="left">项目费与在手客户</td>
+      <td class="left">任何「产品经理平均薪资」</td>
+      <td class="left">维持换过的标题，不回公开投递</td>
+    </tr>
+  </table>
+</section>
+
+<section class="section" id="compete">
+  <h2>七、竞品五层模型（为什么不是再做一个求职站）</h2>
+  <h3>7.1 竞品选择</h3>
+  <table>
+    <tr><th>竞品</th><th class="left">类型</th><th class="left">生命周期</th><th class="left">与岗龄关系</th></tr>
+    <tr><td>Boss 直聘 / 智联</td><td class="left">直接替代：招聘信息入口</td><td class="left">成熟期</td><td class="left">有岗位价，无口径隔离与岗龄路径</td></tr>
+    <tr><td>脉脉</td><td class="left">直接替代：职场社区+高薪样本</td><td class="left">成熟期</td><td class="left">数字偏高，用户易当「真实到手」</td></tr>
+    <tr><td>职场自媒体薪资文</td><td class="left">间接替代：情绪化排行榜</td><td class="left">高速生产</td><td class="left">合成数与方向榜最多，噪声最大</td></tr>
+  </table>
+  <h3>7.2 五层对照（浓缩）</h3>
+  <table>
+    <tr>
+      <th>层级</th>
+      <th class="left">招聘平台</th>
+      <th class="left">职场社区</th>
+      <th class="left">自媒体薪资文</th>
+      <th class="left">岗龄（本产品）</th>
+    </tr>
+    <tr>
+      <td>战略层</td>
+      <td class="left">撮合投递与招聘</td>
+      <td class="left">社交+高端岗位曝光</td>
+      <td class="left">流量与工具导流</td>
+      <td class="left"><b>决策正确性</b>：帮在岗产品选对口径与路径</td>
+    </tr>
+    <tr>
+      <td>范围层</td>
+      <td class="left">岗位流、投递、聊一聊</td>
+      <td class="left">动态、人脉、高薪榜</td>
+      <td class="left">排行榜、焦虑叙事、引流</td>
+      <td class="left">口径拆开、岗龄路径、去向岗位、对照 Demo；<b>不做投递/排行榜</b></td>
+    </tr>
+    <tr>
+      <td>结构层</td>
+      <td class="left">搜岗 → 看薪 → 投递</td>
+      <td class="left">刷动态 → 点高薪 → 跳槽冲动</td>
+      <td class="left">标题党 → 合成数 → 评论区</td>
+      <td class="left">读规则 → 对照自己 → 路径判断 → 去向</td>
+    </tr>
+    <tr>
+      <td>框架层</td>
+      <td class="left">列表+职位详情</td>
+      <td class="left">信息流+人脉卡</td>
+      <td class="left">长文+表格截图</td>
+      <td class="left">锚点报告站 + 交互对照器</td>
+    </tr>
+    <tr>
+      <td>表现层</td>
+      <td class="left">招聘效率风</td>
+      <td class="left">社区+高薪刺激</td>
+      <td class="left">强情绪配色</td>
+      <td class="left">冷静报告风，数字旁强制「不能当成」</td>
+    </tr>
+  </table>
+  <div class="callout">
+    <b>差异：</b>招聘站和社区在推投递效率或高薪刺激；岗龄要解决的是少因为看错口径做错决定。差异不在岗位量，而在<b>分口径规则、路径分型、以及明确删掉的功能</b>。
+  </div>
+  <h3>7.3 定位图（感知坐标）</h3>
+  <div class="fig">
+    <svg viewBox="0 0 720 420" width="100%" role="img" aria-label="竞品定位图">
+      <rect x="70" y="30" width="600" height="340" fill="#fff" stroke="#cbd5e1"/>
+      <line x1="370" y1="30" x2="370" y2="370" stroke="#e2e8f0"/>
+      <line x1="70" y1="200" x2="670" y2="200" stroke="#e2e8f0"/>
+      <text x="370" y="400" text-anchor="middle" font-size="13">决策正确性 →</text>
+      <text x="24" y="200" fill="#222" font-size="13" transform="rotate(-90 24 200)">投递效率 ↑</text>
+      <circle cx="560" cy="300" r="28" fill="#2563eb"/><text x="560" y="305" text-anchor="middle" fill="#fff" font-size="12">岗龄</text>
+      <circle cx="180" cy="90" r="26" fill="#94a3b8"/><text x="180" y="95" text-anchor="middle" fill="#fff" font-size="11">Boss</text>
+      <circle cx="250" cy="130" r="26" fill="#94a3b8"/><text x="250" y="135" text-anchor="middle" fill="#fff" font-size="11">脉脉</text>
+      <circle cx="220" cy="280" r="26" fill="#f59e0b"/><text x="220" y="285" text-anchor="middle" fill="#fff" font-size="11">自媒体</text>
+      <text x="80" y="50" font-size="12" fill="#64748b">高投递效率</text>
+      <text x="520" y="50" font-size="12" fill="#64748b">高决策正确</text>
+      <text x="80" y="355" font-size="12" fill="#64748b">低投递效率</text>
+      <text x="520" y="355" font-size="12" fill="#64748b">低投递·高正确</text>
+    </svg>
+    <p class="fig-cap">图 10 · 感知定位：岗龄刻意不抢投递效率象限，占领「决策正确」</p>
+  </div>
+  <h3>7.4 SWOT</h3>
+  <div class="swot">
+    <div class="card s"><h4>S 优势</h4><ul><li>口径隔离规则清晰</li><li>砍需求态度可辩护</li><li>有可交互 Demo</li></ul></div>
+    <div class="card w"><h4>W 劣势</h4><ul><li>尚无大规模真实访谈</li><li>分城数据稀缺</li><li>品牌认知为零</li></ul></div>
+    <div class="card o"><h4>O 机会</h4><ul><li>AI 岗位叙事升温</li><li>职场内容噪声大</li><li>可延伸企业侧生涯辅导</li></ul></div>
+    <div class="card t"><h4>T 威胁</h4><ul><li>平台直接做「薪资解读」</li><li>被当成焦虑营销站</li><li>报告口径季度失效</li></ul></div>
+  </div>
+  <p class="fig-cap">图 11 · SWOT：威胁侧重点防「被平台功能吃掉」与「被当成焦虑站」</p>
+</section>
+
+<section class="section" id="hmw">
+  <h2>八、方案探索、选项与砍需求</h2>
+  <h3>8.1 HMW</h3>
+  <ul>
+    <li>HMW 让用户在 30 秒内知道「自己该看哪套价」，而不是读完三篇长文仍混淆？</li>
+    <li>HMW 表达「标题窗口」而不制造新的年龄焦虑？</li>
+    <li>HMW 展示 40 岁去向时只用具体岗位名，避免「成功转型」空话？</li>
+  </ul>
+  <h3>8.2 选项与取舍（写清杀掉什么）</h3>
+  <table>
+    <tr><th>选项</th><th class="left">做法</th><th class="left">决策</th><th class="left">理由</th></tr>
+    <tr>
+      <td>A</td>
+      <td class="left">合成一个「产品经理真实月薪」</td>
+      <td><span class="tag tag-kill">杀掉</span></td>
+      <td class="left">三套样本不可合成；会直接误导已换标题的人</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td class="left">「最赚钱产品方向」排行榜</td>
+      <td><span class="tag tag-kill">杀掉</span></td>
+      <td class="left">KANO 反向 R；把不同口径排成名次</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td class="left">全链路求职 Agent（简历/投递/面试）</td>
+      <td><span class="tag tag-kill">不做</span></td>
+      <td class="left">越界成求职产品，稀释定位，与参考站同质化</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td class="left">口径隔离报告 + 路径 + 去向画像</td>
+      <td><span class="tag tag-p0">入选 MVP</span></td>
+      <td class="left">必备+期望需求全覆盖，约束内可交付</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td class="left">城市×年限对照器</td>
+      <td><span class="tag tag-p2">P2 已做</span></td>
+      <td class="left">兴奋型；无它前三条仍可读</td>
+    </tr>
+  </table>
+  <h3>8.3 范围 / 非范围 · MoSCoW</h3>
+  <div class="moscow">
+    <div class="m must"><b>Must</b><p>三套分表+禁读<br>三条路径<br>去向岗位名<br>KANO</p></div>
+    <div class="m should"><b>Should</b><p>对照 Demo<br>画像决策表<br>来源区</p></div>
+    <div class="m could"><b>Could</b><p>导出一页纸 PDF<br>「已换标题」开关</p></div>
+    <div class="m wont"><b>Won't</b><p>合成月薪<br>排行榜<br>求职全流程<br>到手薪预测</p></div>
+  </div>
+  <p class="fig-cap">图 12 · MoSCoW：Won't 与 Must 同等重要</p>
+  <h3>8.4 RICE 优先级（对入选需求打分）</h3>
+  <p class="note">Reach / Impact / Confidence / Effort，Score = R×I×C / E。分值为相对量表 1–5，用于排序而非精确预测。</p>
+  <table>
+    <tr><th>需求</th><th>R</th><th>I</th><th>C</th><th>E</th><th>Score</th><th>结论</th></tr>
+    <tr><td class="left">R1 口径拆开</td><td>5</td><td>5</td><td>5</td><td>2</td><td><b>62.5</b></td><td>先做</td></tr>
+    <tr><td class="left">R2 分路径窗口</td><td>4</td><td>5</td><td>4</td><td>2</td><td><b>40</b></td><td>P1</td></tr>
+    <tr><td class="left">R3 具体去向</td><td>4</td><td>4</td><td>3</td><td>2</td><td><b>24</b></td><td>P1</td></tr>
+    <tr><td class="left">R4 对照 Demo</td><td>3</td><td>4</td><td>4</td><td>3</td><td><b>16</b></td><td>P2 仍做（兴奋型）</td></tr>
+    <tr><td class="left">R5 排行榜</td><td>5</td><td>-3</td><td>5</td><td>2</td><td><b>负</b></td><td>杀掉</td></tr>
+  </table>
+  <div class="rice">
+    <div class="r"><b>R</b><span>覆盖用户面</span></div>
+    <div class="r"><b>I</b><span>决策影响</span></div>
+    <div class="r"><b>C</b><span>证据把握</span></div>
+    <div class="r"><b>E</b><span>交付成本</span></div>
+  </div>
+  <p class="fig-cap">图 13 · RICE：与 KANO 交叉验证——R5 即便 Reach 高也因 Impact 为负出局</p>
+  <h3>8.4b Impact–Effort 矩阵</h3>
+  <div class="fig">
+    <svg viewBox="0 0 720 360" width="100%" role="img" aria-label="Impact Effort矩阵">
+      <rect x="80" y="30" width="280" height="140" fill="#ecfdf5" stroke="#059669"/>
+      <rect x="360" y="30" width="280" height="140" fill="#eff6ff" stroke="#2563eb"/>
+      <rect x="80" y="170" width="280" height="140" fill="#f8fafc" stroke="#94a3b8"/>
+      <rect x="360" y="170" width="280" height="140" fill="#fef2f2" stroke="#dc2626"/>
+      <text x="220" y="55" text-anchor="middle" font-size="13" fill="#065f46">高影响 · 低成本 → 先做</text>
+      <text x="220" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">R1 口径拆开</text>
+      <text x="220" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">R2 分路径</text>
+      <text x="500" y="55" text-anchor="middle" font-size="13" fill="#1e40af">高影响 · 高成本 → 规划</text>
+      <text x="500" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">R3 去向画像</text>
+      <text x="500" y="125" text-anchor="middle" font-size="13" fill="#64748b">（结构分型成本）</text>
+      <text x="220" y="195" text-anchor="middle" font-size="13" fill="#64748b">低影响 · 低成本 → 可后置</text>
+      <text x="220" y="240" text-anchor="middle" font-size="14" fill="#475569">导出 PDF（Could）</text>
+      <text x="500" y="195" text-anchor="middle" font-size="13" fill="#991b1b">低影响/负影响 · 勿做</text>
+      <text x="500" y="240" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">R5 排行榜 ×</text>
+      <text x="500" y="265" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">合成月薪 ×</text>
+      <text x="360" y="335" text-anchor="middle" font-size="13" fill="#334155">Effort →</text>
+      <text x="28" y="180" fill="#334155" font-size="13" transform="rotate(-90 28 180)">Impact ↑</text>
+      <text x="360" y="352" text-anchor="middle" font-size="12" fill="#64748b">图 13b · Impact–Effort：与 RICE 同结论，面试官扫一眼即可</text>
+    </svg>
+  </div>
+  <h3>8.5 价值主张画布（精简）</h3>
+  <div class="vpc">
+    <div class="box">
+      <h4>用户侧</h4>
+      <ul>
+        <li><b>任务：</b>跳槽前选对口径与路径</li>
+        <li><b>痛点：</b>三套数打架；年龄焦虑叙事</li>
+        <li><b>收益：</b>能向家人/自己解释下一步</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>产品侧</h4>
+      <ul>
+        <li><b>止痛：</b>禁读规则 + 不合成</li>
+        <li><b>增益：</b>对照 Demo + 去向岗位名</li>
+        <li><b>产品：</b>岗龄决策页（非求职站）</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fig-cap">图 14 · Value Proposition Canvas：止痛优先于增益</p>
+</section>
+
+<section class="section" id="prd">
+  <h2>九、一页纸 PRD · 信息架构 · 指标</h2>
+  <h3>9.1 信息架构</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 130" width="100%" role="img" aria-label="信息架构">
+      <rect x="20" y="30" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="70" y="60" text-anchor="middle" font-size="12" fill="#1e3a8a">读数规则</text>
+      <text x="130" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="150" y="30" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="200" y="60" text-anchor="middle" font-size="12" fill="#1e3a8a">三套薪资</text>
+      <text x="260" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="280" y="30" width="100" height="50" rx="8" fill="#fef3c7" stroke="#d97706"/><text x="330" y="60" text-anchor="middle" font-size="12" fill="#92400e">对照 Demo</text>
+      <text x="390" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="410" y="30" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="460" y="60" text-anchor="middle" font-size="12" fill="#1e3a8a">岗龄路径</text>
+      <text x="520" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="540" y="30" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="590" y="60" text-anchor="middle" font-size="12" fill="#1e3a8a">画像去向</text>
+      <text x="650" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="670" y="30" width="90" height="50" rx="8" fill="#dcfce7" stroke="#059669"/><text x="715" y="60" text-anchor="middle" font-size="12" fill="#065f46">KANO</text>
+      <text x="770" y="60" fill="#94a3b8" font-size="16">→</text>
+      <rect x="790" y="30" width="90" height="50" rx="8" fill="#e2e8f0" stroke="#64748b"/><text x="835" y="60" text-anchor="middle" font-size="12" fill="#334155">来源</text>
+      <text x="450" y="110" text-anchor="middle" font-size="12" fill="#64748b">图 14b · IA：黄块为可交互兴奋点，绿块为优先级依据，灰块为可信度收尾</text>
+    </svg>
+  </div>
+  <h3>9.2 核心需求条目（可验收）</h3>
+  <table>
+    <tr><th>ID</th><th class="left">用户故事</th><th class="left">验收标准（AC）</th><th>优先级</th></tr>
+    <tr>
+      <td>R1</td>
+      <td class="left">作为读者，我想看到三套薪资分开标注样本，以便不把招聘价当到手价</td>
+      <td class="left">① 同屏可见智联/脉脉/猎聘；② 每行有「不能当成」；③ 无合成平均数</td>
+      <td><span class="tag tag-p0">P0</span></td>
+    </tr>
+    <tr>
+      <td>R2</td>
+      <td class="left">作为 30 岁档用户，我想按路径看到标题窗口，以便决定留执行还是换头衔</td>
+      <td class="left">① ≥3 条路径；② 无单一「保质期」数字冒充全体；③ 有结束条件</td>
+      <td><span class="tag tag-p1">P1</span></td>
+    </tr>
+    <tr>
+      <td>R3</td>
+      <td class="left">作为 40 岁档用户，我想看到具体去向岗位名，以便解释换标题</td>
+      <td class="left">① 去向为岗位名非「成功转型」；② 标明类型画像非访谈</td>
+      <td><span class="tag tag-p1">P1</span></td>
+    </tr>
+    <tr>
+      <td>R4</td>
+      <td class="left">作为读者，我想填城市和年限对照薪资带</td>
+      <td class="left">① 输出优先口径；② 提示不能当保底；③ 年限读法单独成句</td>
+      <td><span class="tag tag-p2">P2</span></td>
+    </tr>
+    <tr>
+      <td>R5</td>
+      <td class="left">（反向）最赚钱方向排行榜</td>
+      <td class="left">页面不出现任何方向排行榜模块</td>
+      <td><span class="tag tag-r">不展示</span></td>
+    </tr>
+  </table>
+  <h3>9.3 指标树（OSM）+ AARRR 边界</h3>
+  <div class="fig">
+    <svg viewBox="0 0 900 280" width="100%" role="img" aria-label="OSM指标树与AARRR边界">
+      <rect x="300" y="10" width="300" height="40" rx="8" fill="#1e40af"/><text x="450" y="36" text-anchor="middle" fill="#fff" font-size="14">O 目标：减少错误职业决策</text>
+      <line x1="450" y1="50" x2="450" y2="70" stroke="#94a3b8"/>
+      <rect x="280" y="70" width="340" height="40" rx="8" fill="#2563eb"/><text x="450" y="96" text-anchor="middle" fill="#fff" font-size="13">S 北极星：正确对照完成率</text>
+      <line x1="450" y1="110" x2="450" y2="130" stroke="#94a3b8"/>
+      <line x1="160" y1="130" x2="740" y2="130" stroke="#94a3b8"/>
+      <line x1="160" y1="130" x2="160" y2="145" stroke="#94a3b8"/>
+      <line x1="450" y1="130" x2="450" y2="145" stroke="#94a3b8"/>
+      <line x1="740" y1="130" x2="740" y2="145" stroke="#94a3b8"/>
+      <rect x="70" y="145" width="180" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="160" y="172" text-anchor="middle" font-size="12" fill="#1e3a8a">M 口径完读率</text>
+      <rect x="360" y="145" width="180" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="450" y="172" text-anchor="middle" font-size="12" fill="#1e3a8a">M 路径/画像点击</text>
+      <rect x="650" y="145" width="180" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/><text x="740" y="172" text-anchor="middle" font-size="12" fill="#991b1b">护栏：误解率&lt;15%</text>
+      <rect x="40" y="210" width="820" height="50" rx="8" fill="#fff7ed" stroke="#ea580c"/>
+      <text x="450" y="232" text-anchor="middle" font-size="12" fill="#9a3412">AARRR 边界：本产品不做 Acquisition 黑客增长叙事；Activation=完成对照且读禁读；Retention/Revenue/Referral 全部后置到误解率达标之后</text>
+      <text x="450" y="252" text-anchor="middle" font-size="11" fill="#c2410c">面试答法：决策产品失败模式是误解，不是日活不够——所以北极星不是 DAU</text>
+    </svg>
+    <p class="fig-cap">图 15 · OSM 树 + AARRR 边界：黄底写清「不做什么增长」</p>
+  </div>
+  <table>
+    <tr><th>层级</th><th class="left">定义</th><th class="left">口径</th></tr>
+    <tr>
+      <td>Objective</td>
+      <td class="left">减少因混用薪资口径导致的错误职业决策</td>
+      <td class="left">定性目标，上线后用调研验证</td>
+    </tr>
+    <tr>
+      <td>北极星</td>
+      <td class="left"><b>正确对照完成率</b></td>
+      <td class="left">完成对照 Demo 且停留 ≥20s 阅读「不能当成」说明的会话 / 总会话</td>
+    </tr>
+    <tr>
+      <td>领先指标</td>
+      <td class="left">口径区完读率；路径区点击；画像卡片展开</td>
+      <td class="left">滚动深度 + 锚点点击</td>
+    </tr>
+    <tr>
+      <td>护栏指标</td>
+      <td class="left">「把脉脉月薪当保底」误解率；排行榜相关投诉/求助</td>
+      <td class="left">可用性访谈 5 题抽测；目标误解率 &lt;15%</td>
+    </tr>
+  </table>
+  <div class="callout warn">
+    <b>怎么测（未上线，不编造结果）：</b>原型阶段用 5 分钟理解度测试代替 DAU。能说清「三套不能混」「不做排行榜」「自己在哪条路径」即通过。访谈和问卷放在 V1.1。
+  </div>
+  <h3>9.4 埋点草案</h3>
+  <table>
+    <tr><th>事件</th><th class="left">属性</th><th class="left">用途</th></tr>
+    <tr><td>view_salary_table</td><td class="left">scroll_depth</td><td class="left">口径完读</td></tr>
+    <tr><td>click_match</td><td class="left">city, years, track</td><td class="left">对照使用分布</td></tr>
+    <tr><td>view_persona</td><td class="left">persona_id</td><td class="left">哪类画像被关注</td></tr>
+    <tr><td>click_nav</td><td class="left">section_id</td><td class="left">信息架构是否过载</td></tr>
+  </table>
+</section>
+
+<section class="section" id="kano">
+  <h2>十、KANO：这页该展示哪些信息</h2>
+  <p>把页面当成给四类人用的信息产品，收 5 条需求。判定与课堂截图同一矩阵：正向=有该信息，反向=没有。选项 A–E。每条用 10 份目标用户判断答卷取众数。</p>
+  <h3>10.1 正反向众数与属性</h3>
+  <table>
+    <tr><th class="left">需求</th><th>正向众数</th><th>反向众数</th><th>属性</th><th>SI</th><th>DSI</th><th>优先级</th></tr>
+    <tr>
+      <td class="left">R1 薪资按三套口径拆开，不合成一个数</td>
+      <td>B 理应如此</td><td>E 很不喜欢</td>
+      <td><span class="tag tag-m">必备 M</span></td>
+      <td>0.20</td><td>-1.00</td>
+      <td><span class="tag tag-p0">P0</span></td>
+    </tr>
+    <tr>
+      <td class="left">R2 分路径写「还能投多久」，不给单一保质期</td>
+      <td>A 很喜欢</td><td>E 很不喜欢</td>
+      <td><span class="tag tag-o">期望 O</span></td>
+      <td>0.80</td><td>-0.80</td>
+      <td><span class="tag tag-p1">P1</span></td>
+    </tr>
+    <tr>
+      <td class="left">R3 30/40 岁去向写成具体岗位</td>
+      <td>A 很喜欢</td><td>E 很不喜欢</td>
+      <td><span class="tag tag-o">期望 O</span></td>
+      <td>0.80</td><td>-0.60</td>
+      <td><span class="tag tag-p1">P1</span></td>
+    </tr>
+    <tr>
+      <td class="left">R4 填城市和年限，对到招聘薪资带</td>
+      <td>A 很喜欢</td><td>C 无所谓</td>
+      <td><span class="tag tag-a">兴奋 A</span></td>
+      <td>0.90</td><td>-0.10</td>
+      <td><span class="tag tag-p2">P2</span></td>
+    </tr>
+    <tr>
+      <td class="left">R5 「最赚钱产品方向」排行榜</td>
+      <td>E 很不喜欢</td><td>A 很喜欢</td>
+      <td><span class="tag tag-r">反向 R</span></td>
+      <td>—</td><td>—</td>
+      <td><span class="tag tag-r">不展示</span></td>
+    </tr>
+  </table>
+  <p class="note">SI=(A+O)/(A+O+M+I)，DSI=−(O+M)/(A+O+M+I)。票数：R1 M8 O2；R2 A2 O6 M2；R3 A3 O5 M1 I1；R4 A8 O1 I1；R5 R9 I1。</p>
+  <h3>10.2 课堂判定矩阵</h3>
+  <table>
+    <tr><th>正向 \ 反向</th><th>A 很喜欢</th><th>B 理应如此</th><th>C 无所谓</th><th>D 勉强接受</th><th>E 很不喜欢</th></tr>
+    <tr><th>A 很喜欢</th><td>Q</td><td>A</td><td class="hit">A · R4</td><td>A</td><td class="hit">O · R2 R3</td></tr>
+    <tr><th>B 理应如此</th><td>R</td><td>I</td><td>I</td><td>I</td><td class="hit">M · R1</td></tr>
+    <tr><th>C 无所谓</th><td>R</td><td>I</td><td>I</td><td>I</td><td>M</td></tr>
+    <tr><th>D 勉强接受</th><td>R</td><td>I</td><td>I</td><td>I</td><td>M</td></tr>
+    <tr><th>E 很不喜欢</th><td class="hit">R · R5</td><td>R</td><td>R</td><td>R</td><td>Q</td></tr>
+  </table>
+  <h3>10.3 四象限</h3>
+  <svg viewBox="0 0 720 460" width="100%" role="img" aria-label="KANO 四象限">
+    <rect x="70" y="24" width="300" height="180" fill="#f8fafc"/>
+    <rect x="370" y="204" width="300" height="180" fill="#f8fafc"/>
+    <rect x="70" y="24" width="600" height="360" fill="none" stroke="#94a3b8"/>
+    <line x1="370" y1="24" x2="370" y2="384" stroke="#cbd5e1"/>
+    <line x1="70" y1="204" x2="670" y2="204" stroke="#cbd5e1"/>
+    <text x="82" y="46" fill="#64748b" font-size="14">必备型 M</text>
+    <text x="382" y="46" fill="#64748b" font-size="14">期望型 O</text>
+    <text x="82" y="228" fill="#64748b" font-size="14">无差异 / 反向</text>
+    <text x="382" y="228" fill="#64748b" font-size="14">兴奋型 A</text>
+    <text x="370" y="430" text-anchor="middle" fill="#222" font-size="14">Better（SI）→</text>
+    <text x="22" y="204" fill="#222" font-size="14" transform="rotate(-90 22 204)">|DSI| ↑</text>
+    <g fill="#2563eb">
+      <circle cx="190" cy="36" r="6"/><text x="202" y="40" font-size="13">R1 M</text>
+      <circle cx="550" cy="96" r="6"/><text x="562" y="92" font-size="13">R2 O</text>
+      <circle cx="550" cy="168" r="6"/><text x="468" y="172" font-size="13">R3 O</text>
+      <circle cx="610" cy="348" r="6"/><text x="548" y="344" font-size="13">R4 A</text>
+    </g>
+    <g fill="#475569" font-size="12">
+      <text x="70" y="404" text-anchor="middle">0</text>
+      <text x="370" y="404" text-anchor="middle">0.50</text>
+      <text x="670" y="404" text-anchor="middle">1.00</text>
+      <text x="58" y="388" text-anchor="end">0</text>
+      <text x="58" y="208" text-anchor="end">0.50</text>
+      <text x="58" y="28" text-anchor="end">1.00</text>
+    </g>
+  </svg>
+  <div class="quad">
+    <article class="m"><h4>左上 · 必备 M</h4><ul><li>R1 口径拆开。合成平均月薪会误导已换标题的人</li></ul></article>
+    <article class="o"><h4>右上 · 期望 O</h4><ul><li>R2 分路径写窗口</li><li>R3 去向写成具体岗位</li></ul></article>
+    <article class="ir"><h4>左下 · 反向</h4><ul><li>R5 最赚钱排行榜：有了更不可信</li></ul></article>
+    <article class="a"><h4>右下 · 兴奋 A</h4><ul><li>R4 城市×年限对照（已做在 3.4）</li></ul></article>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <h2>十一、路线图与商业化边界</h2>
+  <ul class="timeline">
+    <li><b>V0.9 原型（当前）</b>：口径报告 + 路径 + 画像 + KANO + 对照 Demo；可投递作品集形态</li>
+    <li><b>V1.0 可用性</b>：8–12 人访谈验证 ASSUMPTION；修正路径文案；补 1 个城市分城表（若公开数据允许）</li>
+    <li><b>V1.1 量化</b>：问卷 ≥100；埋点；误解率护栏达标后再谈增长</li>
+    <li><b>V1.2 可选增值</b>：导出「个人决策一页纸 PDF」（非预测薪资）；企业侧校招生涯辅导需另立合规评审</li>
+  </ul>
+  <div class="grid2">
+    <div class="card">
+      <h4>商业化（谨慎）</h4>
+      <ul>
+        <li>免费：口径与路径（信任资产）</li>
+        <li>会员：决策一页纸导出、历史报告对比</li>
+        <li>不做：出售「保底月薪」、方向榜导流</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>风险</h4>
+      <ul>
+        <li>报告过期 → 季度校准来源</li>
+        <li>被当成求职站 → 首屏写清非目标</li>
+        <li>年龄焦虑被放大 → 禁止单一保质期文案</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="retro">
+  <h2>十二、复盘与面试官可追问点</h2>
+  <h3>12.1 复盘</h3>
+  <ul>
+    <li>作品集比拼的是「不做什么」，不是功能清单有多长。</li>
+    <li>公开报告够支撑「这三套数不能混」；不够支撑「你个人该拿多少」——后者要么标假设，要么不做。</li>
+    <li>画像写明是类型归纳，比假装做过完整访谈更站得住。</li>
+  </ul>
+  <h3>12.2 若重做一次</h3>
+  <ul>
+    <li>先访谈 6 人再画 KANO，少依赖判断样本。</li>
+    <li>对照器加「我已换标题」开关，直接藏掉执行岗月薪带。</li>
+    <li>竞品补一版招聘 App 功能年表。</li>
+  </ul>
+  <h3>12.3 可能被问到的点</h3>
+  <table>
+    <tr><th class="left">问题</th><th class="left">怎么答</th></tr>
+    <tr><td class="left">为什么不做求职全流程？</td><td class="left">用户要解决的是「选对口径和路径」，不是「多投一份」。全流程会跟 Boss 等产品撞车。</td></tr>
+    <tr><td class="left">北极星为什么不是 DAU？</td><td class="left">这类产品做错的典型是用户误解数字；对照完成率比日活更能说明价值。</td></tr>
+    <tr><td class="left">40 岁去向证据？</td><td class="left">标成假设：招聘主带消失后的结构推断 + 类型画像，后续用访谈验证。</td></tr>
+    <tr><td class="left">你做了什么？</td><td class="left">问题定义、口径规则、砍需求、KANO、信息架构、对照交互和验收标准，一人完成。</td></tr>
+  </table>
+  <h3>12.4 来源</h3>
+  <ul class="source">
+    <li>智联招聘《2025年人工智能产业人才发展报告》，潮新闻 / 腾讯新闻，2025-10-29。</li>
+    <li>脉脉高聘《2025年度人才迁徙报告》，界面新闻转载。</li>
+    <li>猎聘大数据研究院《2026 AI 产品经理供需报告》，新浪财经 2026-07-20 转载（含工具推广，年薪只作招聘标价）。</li>
+  </ul>
+  <p class="note">数字来自公开报告整理；文案与结构为原创。</p>
+</section>
+
+</div>
+<script>
+(function () {
+  var DATA = {
+    ai: { zhilian: "19,459 元/月", hangzhou: "28,659 元/月", maimai: "53,204 元/月", liepin: "39.15 万/年" },
+    normal: { zhilian: "报告未单列全国均值", hangzhou: "无分城公开数", maimai: "44,118 元/月", liepin: "33.30 万/年" }
+  };
+  var YEAR_NOTE = {
+    "1-3": "智联主带更重 3–5 与 5–10 年，1–3 年不是这轮高薪 AI 产品岗主体。",
+    "3-5": "对得上智联样本里占比最高的一档（AI 产品经理招聘约 37%）。",
+    "5-10": "对得上智联约 20% 的档位，比算法/标注更吃年限。",
+    "10+": "公开招聘主带开始让位给负责人、解决方案或行业数字化标题。"
+  };
+  function render() {
+    var city = document.getElementById("city").value;
+    var years = document.getElementById("years").value;
+    var track = document.getElementById("track").value;
+    var d = DATA[track];
+    var title = track === "ai" ? "AI 产品经理" : "普通产品经理";
+    var cityLine, primary, primaryLabel, regionNote;
+    if (city === "hangzhou" && track === "ai") {
+      cityLine = "杭州"; primary = d.hangzhou; primaryLabel = "智联 · 杭州招聘月薪";
+      regionNote = "城市有单独数字，仍是招聘标价，不是到手。";
+    } else if (city === "hangzhou") {
+      cityLine = "杭州"; primary = d.maimai; primaryLabel = "脉脉高聘 · 新经济新发岗位月薪";
+      regionNote = "普通产品经理没有杭州分城公开数，改看全国新经济样本。";
+    } else if (city === "core") {
+      cityLine = "核心三区";
+      primary = track === "ai" ? d.zhilian : d.maimai;
+      primaryLabel = track === "ai" ? "智联 · 全国招聘月薪" : "脉脉高聘 · 新发岗位月薪";
+      regionNote = "猎聘活跃 AI 产品人才约八成在长三角、京津冀、大湾区；价与量都更厚。";
+    } else {
+      cityLine = "其他城市";
+      primary = track === "ai" ? d.zhilian : d.maimai;
+      primaryLabel = track === "ai" ? "智联 · 全国招聘月薪（上限参考）" : "脉脉高聘 · 新发岗位月薪（偏高样本）";
+      regionNote = "离开核心三区，同名岗位价量更薄；全国均值当上限参考，不当保底。";
+    }
+    var html = "<p class=\"read\"><b>对照结果（" + cityLine + " · " + years + " 年经验 · " + title + "）</b></p><div class=\"band\">";
+    html += "<div class=\"cell\"><span>" + primaryLabel + "</span><strong>" + primary + "</strong><span>优先看这一格</span></div>";
+    if (!(city === "hangzhou" && track === "ai") && track === "ai") {
+      html += "<div class=\"cell\"><span>脉脉高聘 · 新发岗位月薪</span><strong>" + d.maimai + "</strong><span>偏高薪样本，勿与智联相加</span></div>";
+    }
+    html += "<div class=\"cell\"><span>猎聘 · 招聘年薪</span><strong>" + d.liepin + "</strong><span>年薪标价，含转载推广语境</span></div></div>";
+    html += "<p class=\"read\">" + regionNote + "</p>";
+    html += "<p class=\"read\"><b>年限怎么读：</b>" + YEAR_NOTE[years] + "</p>";
+    if (years === "10+") html += "<p class=\"read\">请看岗龄路径与画像，停止用「产品经理平均月薪」套自己。</p>";
+    var out = document.getElementById("matchOut");
+    out.innerHTML = html;
+    out.className = "match-out show";
+  }
+  document.getElementById("matchBtn").addEventListener("click", render);
+})();
+</script>
+</body>
+</html>
