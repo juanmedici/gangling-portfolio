@@ -195,6 +195,18 @@ th {
 .legend .a::before { background: var(--excite); }
 .legend .i::before { background: var(--indiff); }
 .legend .r::before { background: var(--reverse); }
+.scroll-x { overflow-x: auto; }
+.kano-map { min-width: 640px; }
+.kano-map th, .kano-map td { text-align: center; vertical-align: middle; }
+.kano-map th.axis { text-align: left; white-space: nowrap; }
+.kano-map td { font-weight: 700; letter-spacing: 0.04em; }
+.kano-map td.m { background: #fff7ed; color: var(--must); }
+.kano-map td.o { background: #fffbeb; color: var(--expect); }
+.kano-map td.a { background: #f0fdfa; color: var(--excite); }
+.kano-map td.i { background: #f5f5f4; color: var(--indiff); }
+.kano-map td.r { background: #eff6ff; color: var(--reverse); }
+.kano-map td.q { background: #faf7f2; color: var(--faint); }
+.kano-map td.mark { box-shadow: inset 0 0 0 2px var(--accent); }
 .quad-wrap {
   background: var(--sheet);
   border: 1px solid var(--line);
@@ -315,7 +327,61 @@ footer.colophon { font-size: 13px; color: var(--muted); border-top: 1px solid va
 <section id="score">
   <p class="sec-no">03</p>
   <h2>KANO 评分</h2>
-  <p>每个需求问两题（正反向）：「如果有 / 如果没有」——喜欢、理应如此、无所谓、能忍受、不喜欢。按经典对照表归入 M / O / A / I / R / Q。样本 n=22，下表为归类人数与结构占比。</p>
+  <p>每个需求问两题。正向：「如果有这个功能」；反向：「如果没有」。选项都是很喜欢、理应如此、无所谓、能忍受、很不喜欢。两题答案交叉落到下表，格子里的字母就是这条作答的属性。样本 n=22，再下一张表是归类人数与结构占比。</p>
+  <h3>如何判断一个需求属于哪个类型</h3>
+  <div class="scroll-x">
+  <table class="kano-map">
+    <tr>
+      <th class="axis">正向（有） \ 反向（没有）</th>
+      <th>很喜欢</th>
+      <th>理应如此</th>
+      <th>无所谓</th>
+      <th>能忍受</th>
+      <th>很不喜欢</th>
+    </tr>
+    <tr>
+      <th class="axis">很喜欢</th>
+      <td class="q">Q</td>
+      <td class="a">A</td>
+      <td class="a">A</td>
+      <td class="a">A</td>
+      <td class="o">O</td>
+    </tr>
+    <tr>
+      <th class="axis">理应如此</th>
+      <td class="r">R</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="m mark">M</td>
+    </tr>
+    <tr>
+      <th class="axis">无所谓</th>
+      <td class="r">R</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="m">M</td>
+    </tr>
+    <tr>
+      <th class="axis">能忍受</th>
+      <td class="r">R</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="i">I</td>
+      <td class="m">M</td>
+    </tr>
+    <tr>
+      <th class="axis">很不喜欢</th>
+      <td class="r">R</td>
+      <td class="r">R</td>
+      <td class="r">R</td>
+      <td class="r">R</td>
+      <td class="q">Q</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">描边的一格是示例：正向选「理应如此」、反向选「很不喜欢」，交叉为 M，这条作答记为必备型。Q 是正反矛盾（两边都很喜欢，或两边都很不喜欢），不计入后面的 Better / Worse。</p>
   <div class="legend">
     <span class="m">M 必备</span>
     <span class="o">O 期望</span>
