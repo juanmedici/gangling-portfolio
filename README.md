@@ -1,12 +1,11 @@
-# 该看哪套薪资 · 产品经理作品集
+# 产品经理作品集 · 刘娟
 
-作者：刘娟
+## 案例
 
-给在岗产品经理用的案例页：跳槽或续约前，决定智联、脉脉、猎聘三套招聘价里该看哪一套。
-
-## 在线地址
-
-https://juanmedici.github.io/gangling-portfolio/
+1. **该看哪套薪资** — 在岗产品跳槽/续约前，决定智联、脉脉、猎聘三套招聘价该看哪一套  
+   https://juanmedici.github.io/gangling-portfolio/
+2. **银发经济 · KANO** — 家庭照护协同方向：5 需求收集、KANO 评分、属性评级、Better–Worse 四象限  
+   https://juanmedici.github.io/gangling-portfolio/kano-yinfa.html
 
 仓库：https://github.com/juanmedici/gangling-portfolio
 
@@ -16,7 +15,7 @@ https://juanmedici.github.io/gangling-portfolio/
 python -m http.server 8765
 ```
 
-打开 http://127.0.0.1:8765/index.html
+打开 http://127.0.0.1:8765/index.html 或 http://127.0.0.1:8765/kano-yinfa.html
 
 ## 更新 Pages
 

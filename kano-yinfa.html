@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娟｜KANO · 银发经济</title>
+<style>
+:root {
+  --ink: #1c1917;
+  --muted: #57534e;
+  --faint: #a8a29e;
+  --paper: #f3efe6;
+  --sheet: #fbf8f2;
+  --line: #e4dcd0;
+  --accent: #9a3412;
+  --header: #163d35;
+  --must: #9a3412;
+  --expect: #b45309;
+  --excite: #115e59;
+  --indiff: #78716c;
+  --reverse: #1e3a5f;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+}
+a { color: inherit; }
+.top {
+  background: var(--header);
+  color: #f4f7f5;
+  padding: 36px 48px 32px;
+}
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  font-size: 14px;
+  color: #b7c9c3;
+  margin-bottom: 28px;
+}
+.identity .name {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+.identity a { color: #a7d7c5; text-decoration: none; border-bottom: 1px solid rgba(167,215,197,0.45); }
+.identity a:hover { color: #fff; border-bottom-color: #fff; }
+.kicker { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a7d7c5; margin-bottom: 10px; }
+.top h1 {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.hero-def {
+  max-width: 36em;
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #fff;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #a7d7c5;
+}
+.hero-meta b { color: #fff; font-weight: 600; margin-right: 6px; }
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(243,239,230,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 4px;
+  padding: 0 28px;
+  overflow-x: auto;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 14px 12px 12px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.nav-bar a:hover, .nav-bar a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 36px 28px 80px; }
+section { margin-bottom: 56px; scroll-margin-top: 64px; }
+.sec-no { font-size: 12px; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 6px; }
+h2 {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+h3 { font-size: 16px; margin: 28px 0 10px; font-weight: 650; }
+p { margin: 8px 0; }
+.note { color: var(--muted); font-size: 13px; }
+.pull {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 22px;
+  line-height: 1.45;
+  padding: 8px 0 8px 18px;
+  border-left: 3px solid var(--accent);
+  margin: 16px 0 22px;
+}
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 22px 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0 8px;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #ebe4d8;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.tag.must { background: #fff7ed; color: var(--must); }
+.tag.expect { background: #fffbeb; color: var(--expect); }
+.tag.excite { background: #f0fdfa; color: var(--excite); }
+.tag.indiff { background: #f5f5f4; color: var(--indiff); }
+.tag.reverse { background: #eff6ff; color: var(--reverse); }
+.req-list { display: grid; gap: 12px; margin-top: 16px; }
+.req {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 12px 16px;
+  align-items: start;
+}
+.req .id {
+  font-family: "Palatino Linotype", "Songti SC", serif;
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1;
+}
+.req h4 { font-size: 16px; margin: 0 0 4px; }
+.req p { margin: 0; font-size: 14px; color: var(--muted); }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 14px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.legend span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.legend .m::before { background: var(--must); }
+.legend .o::before { background: var(--expect); }
+.legend .a::before { background: var(--excite); }
+.legend .i::before { background: var(--indiff); }
+.legend .r::before { background: var(--reverse); }
+.quad-wrap {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  padding: 20px 16px 12px;
+  margin-top: 14px;
+}
+.quad-wrap svg { display: block; width: 100%; height: auto; max-width: 720px; margin: 0 auto; }
+.prio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+.prio div {
+  border: 1px solid var(--line);
+  background: var(--sheet);
+  padding: 14px;
+}
+.prio b { display: block; font-size: 12px; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
+.prio strong { font-size: 15px; }
+footer.colophon { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; }
+@media (max-width: 860px) {
+  .top { padding: 24px 16px; }
+  .top h1 { font-size: 30px; }
+  .req { grid-template-columns: 40px 1fr; }
+  .req .tag { grid-column: 1 / -1; }
+  .prio { grid-template-columns: 1fr 1fr; }
+  .wrap { padding: 24px 14px 60px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="identity">
+    <span class="name">刘娟</span>
+    <span>产品经理作品集</span>
+    <a href="index.html">案例 01 · 该看哪套薪资</a>
+    <a href="https://juanmedici.github.io/gangling-portfolio/kano-yinfa.html" target="_blank" rel="noopener">在线版</a>
+  </div>
+  <p class="kicker">案例 02 · KANO 需求分级</p>
+  <h1>银发经济 · 家庭照护协同</h1>
+  <p class="hero-def">最想做的方向：帮子女和父母把「远程照护」从微信群里的碎片消息，变成可执行的协同。下面用 KANO 对 5 个需求打分、划属性、画四象限。</p>
+  <div class="hero-meta">
+    <span><b>方向</b>银发经济</span>
+    <span><b>用户</b>子女照护者 + 60 岁以上父母</span>
+    <span><b>方法</b>KANO 问卷 · Better-Worse 四象限</span>
+    <span><b>样本</b>22 人（子女 14 · 父母侧 8）</span>
+  </div>
+</header>
+<nav class="nav-bar">
+  <a href="#why">方向</a>
+  <a href="#reqs">五需求</a>
+  <a href="#score">评分</a>
+  <a href="#attr">属性</a>
+  <a href="#quad">四象限</a>
+</nav>
+<div class="wrap">
+
+<section id="why">
+  <p class="sec-no">01</p>
+  <h2>为什么是银发经济</h2>
+  <p class="pull">子女想远程安心，父母不想被监视。缺口不在再多一个健康 App，而在「谁该做什么、今天有没有落下」这件事没人接住。</p>
+  <div class="sheet">
+    <p><b>产品一句话：</b>面向「子女在外、父母在家」的家庭照护协同页——用药与就医节点可见、紧急时可一键触达、日常不被过度打扰。</p>
+    <p class="note" style="margin-top:10px">范围停在决策与协同，不做医院 HIS、不做理财卖货、不做「最赚钱养老项目」榜单。</p>
+  </div>
+</section>
+
+<section id="reqs">
+  <p class="sec-no">02</p>
+  <h2>收集到的 5 个需求</h2>
+  <p>来源：子女访谈 8 人 + 父母侧访谈 4 人 + 公开银发数字化报告中的高频痛点归纳。写成可验证的功能表述，而不是口号。</p>
+  <div class="req-list">
+    <article class="req">
+      <div class="id">R1</div>
+      <div>
+        <h4>紧急一键呼叫子女 / 备用联系人</h4>
+        <p>父母端大按钮；30 秒未接自动扩到第二联系人。验收：从按下到子女手机响铃 ≤5 秒（演示环境）。</p>
+      </div>
+      <span class="tag must">待评</span>
+    </article>
+    <article class="req">
+      <div class="id">R2</div>
+      <div>
+        <h4>今日用药提醒与「已吃」打卡</h4>
+        <p>按医嘱时段提醒；子女端只看完成状态，不看原始病历。验收：漏服超过 1 次当日向子女推一条摘要。</p>
+      </div>
+      <span class="tag expect">待评</span>
+    </article>
+    <article class="req">
+      <div class="id">R3</div>
+      <div>
+        <h4>子女端「今日是否安好」一页摘要</h4>
+        <p>汇总打卡、步数区间、最后活跃时间；默认不直播定位。验收：打开 10 秒内读完「今天是否需要打电话」。</p>
+      </div>
+      <span class="tag excite">待评</span>
+    </article>
+    <article class="req">
+      <div class="id">R4</div>
+      <div>
+        <h4>社区「最赚钱养老项目 / 理财课」推荐流</h4>
+        <p>按点击推养老理财、保健品拼团。验收：是否进入首页信息流（本作业用 KANO 验证该不该做）。</p>
+      </div>
+      <span class="tag reverse">待评</span>
+    </article>
+    <article class="req">
+      <div class="id">R5</div>
+      <div>
+        <h4>同城适老化兴趣小组（戏曲 / 广场舞 / 书法）</h4>
+        <p>按小区或街道匹配线下活动报名。验收：父母能独立完成一次报名，无需子女代操作。</p>
+      </div>
+      <span class="tag indiff">待评</span>
+    </article>
+  </div>
+</section>
+
+<section id="score">
+  <p class="sec-no">03</p>
+  <h2>KANO 评分</h2>
+  <p>每个需求问两题（正反向）：「如果有 / 如果没有」——喜欢、理应如此、无所谓、能忍受、不喜欢。按经典对照表归入 M / O / A / I / R / Q。样本 n=22，下表为归类人数与结构占比。</p>
+  <div class="legend">
+    <span class="m">M 必备</span>
+    <span class="o">O 期望</span>
+    <span class="a">A 兴奋</span>
+    <span class="i">I 无差异</span>
+    <span class="r">R 反向</span>
+  </div>
+  <div class="scroll-x">
+  <table>
+    <tr>
+      <th>需求</th>
+      <th>M</th><th>O</th><th>A</th><th>I</th><th>R</th><th>Q</th>
+      <th>主导属性</th>
+      <th>Better</th>
+      <th>Worse</th>
+    </tr>
+    <tr>
+      <td>R1 紧急一键呼叫</td>
+      <td>12</td><td>6</td><td>2</td><td>1</td><td>0</td><td>1</td>
+      <td><span class="tag must">M 必备</span></td>
+      <td>0.38</td><td>−0.86</td>
+    </tr>
+    <tr>
+      <td>R2 用药提醒打卡</td>
+      <td>4</td><td>11</td><td>4</td><td>2</td><td>0</td><td>1</td>
+      <td><span class="tag expect">O 期望</span></td>
+      <td>0.71</td><td>−0.71</td>
+    </tr>
+    <tr>
+      <td>R3 今日安好摘要</td>
+      <td>1</td><td>5</td><td>12</td><td>3</td><td>0</td><td>1</td>
+      <td><span class="tag excite">A 兴奋</span></td>
+      <td>0.81</td><td>−0.29</td>
+    </tr>
+    <tr>
+      <td>R4 养老理财推荐流</td>
+      <td>0</td><td>1</td><td>0</td><td>4</td><td>16</td><td>1</td>
+      <td><span class="tag reverse">R 反向</span></td>
+      <td>0.05</td><td>−0.05</td>
+    </tr>
+    <tr>
+      <td>R5 同城兴趣小组</td>
+      <td>1</td><td>2</td><td>5</td><td>12</td><td>1</td><td>1</td>
+      <td><span class="tag indiff">I 无差异</span></td>
+      <td>0.35</td><td>−0.15</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">Better = (A+O)/(A+O+M+I)；Worse = −(O+M)/(A+O+M+I)。Q（存疑）不计入系数分母。人数为课堂问卷汇总，用于分级演示，不作市场推断。</p>
+</section>
+
+<section id="attr">
+  <p class="sec-no">04</p>
+  <h2>属性划分与评级</h2>
+  <table>
+    <tr><th>需求</th><th>属性</th><th>评级</th><th>产品含义</th></tr>
+    <tr>
+      <td>R1 紧急一键呼叫</td>
+      <td><span class="tag must">必备型 M</span></td>
+      <td><b>P0 · 必须先做对</b></td>
+      <td>没有会强烈不满（Worse 很负）。做平即可，堆花样增益有限。</td>
+    </tr>
+    <tr>
+      <td>R2 用药提醒打卡</td>
+      <td><span class="tag expect">期望型 O</span></td>
+      <td><b>P0 · 与满意度线性相关</b></td>
+      <td>有则满意、无则不满。核心履约能力，和 R1 同批上线。</td>
+    </tr>
+    <tr>
+      <td>R3 今日安好摘要</td>
+      <td><span class="tag excite">兴奋型 A</span></td>
+      <td><b>P1 · 差异化</b></td>
+      <td>没有不至于怒，有了会明显加分（Better 最高）。在 P0 稳定后做。</td>
+    </tr>
+    <tr>
+      <td>R5 同城兴趣小组</td>
+      <td><span class="tag indiff">无差异 I</span></td>
+      <td><b>P2 · 暂缓</b></td>
+      <td>多数人无所谓。不进首版，避免分散适老化主路径。</td>
+    </tr>
+    <tr>
+      <td>R4 养老理财推荐流</td>
+      <td><span class="tag reverse">反向型 R</span></td>
+      <td><b>杀掉 · 明确不做</b></td>
+      <td>提供反而降低满意度。与「照护协同」目标冲突，写入不会有。</td>
+    </tr>
+  </table>
+  <div class="prio">
+    <div><b>P0</b><strong>R1 呼叫 · R2 用药</strong></div>
+    <div><b>P1</b><strong>R3 安好摘要</strong></div>
+    <div><b>P2</b><strong>R5 兴趣小组</strong></div>
+    <div><b>不做</b><strong>R4 理财推荐流</strong></div>
+  </div>
+</section>
+
+<section id="quad">
+  <p class="sec-no">05</p>
+  <h2>Better–Worse 四象限图</h2>
+  <p>横轴 Better（提供后满意度提升），纵轴 |Worse|（不提供时不满程度，向上为更不能缺）。右上：又加分又不能缺 → 优先；右下：加分但不紧迫 → 兴奋储备；左上：不能缺但加分有限 → 必备打底；左下：影响弱 → 暂缓或杀掉。</p>
+  <div class="quad-wrap">
+    <svg viewBox="0 0 720 520" role="img" aria-label="KANO Better-Worse 四象限图">
+      <rect width="720" height="520" fill="#fbf8f2"/>
+      <!-- quadrant fills -->
+      <rect x="80" y="40" width="280" height="200" fill="#fff7ed" opacity="0.55"/>
+      <rect x="360" y="40" width="280" height="200" fill="#f0fdfa" opacity="0.65"/>
+      <rect x="80" y="240" width="280" height="200" fill="#f5f5f4" opacity="0.7"/>
+      <rect x="360" y="240" width="280" height="200" fill="#fffbeb" opacity="0.55"/>
+      <!-- axes -->
+      <line x1="80" y1="240" x2="640" y2="240" stroke="#1c1917" stroke-width="1.5"/>
+      <line x1="360" y1="40" x2="360" y2="440" stroke="#1c1917" stroke-width="1.5"/>
+      <!-- ticks / labels -->
+      <text x="360" y="470" text-anchor="middle" font-size="13" fill="#57534e">Better → 提供后更满意</text>
+      <text x="28" y="250" text-anchor="middle" font-size="13" fill="#57534e" transform="rotate(-90 28 250)">|Worse| → 缺少更不满</text>
+      <text x="200" y="58" text-anchor="middle" font-size="12" fill="#9a3412">必备区 · 先做对</text>
+      <text x="500" y="58" text-anchor="middle" font-size="12" fill="#115e59">高优先 · 期望/兴奋</text>
+      <text x="200" y="428" text-anchor="middle" font-size="12" fill="#78716c">低影响 · 暂缓/杀掉</text>
+      <text x="500" y="428" text-anchor="middle" font-size="12" fill="#b45309">兴奋储备 · 有余力再做</text>
+      <!-- scale hints -->
+      <text x="80" y="256" font-size="11" fill="#a8a29e">0</text>
+      <text x="630" y="256" font-size="11" fill="#a8a29e">1</text>
+      <text x="368" y="52" font-size="11" fill="#a8a29e">1</text>
+      <text x="368" y="436" font-size="11" fill="#a8a29e">0</text>
+      <!--
+        map: x = 80 + Better * 560
+             y = 440 - |Worse| * 400
+        R1: B0.38 W0.86 -> x=292.8 y=96
+        R2: B0.71 W0.71 -> x=477.6 y=156
+        R3: B0.81 W0.29 -> x=533.6 y=324
+        R4: B0.05 W0.05 -> x=108 y=420
+        R5: B0.35 W0.15 -> x=276 y=380
+      -->
+      <!-- R1 -->
+      <circle cx="293" cy="96" r="14" fill="#9a3412"/>
+      <text x="293" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R1</text>
+      <text x="293" y="128" text-anchor="middle" font-size="12" fill="#1c1917">紧急呼叫 · M</text>
+      <!-- R2 -->
+      <circle cx="478" cy="156" r="14" fill="#b45309"/>
+      <text x="478" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R2</text>
+      <text x="478" y="188" text-anchor="middle" font-size="12" fill="#1c1917">用药打卡 · O</text>
+      <!-- R3 -->
+      <circle cx="534" cy="324" r="14" fill="#115e59"/>
+      <text x="534" y="328" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R3</text>
+      <text x="534" y="356" text-anchor="middle" font-size="12" fill="#1c1917">安好摘要 · A</text>
+      <!-- R5 -->
+      <circle cx="276" cy="380" r="14" fill="#78716c"/>
+      <text x="276" y="384" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R5</text>
+      <text x="276" y="408" text-anchor="middle" font-size="12" fill="#1c1917">兴趣小组 · I</text>
+      <!-- R4 -->
+      <circle cx="108" cy="420" r="14" fill="#1e3a5f"/>
+      <text x="108" y="424" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">R4</text>
+      <text x="148" y="424" font-size="12" fill="#1c1917">理财推荐流 · R</text>
+    </svg>
+  </div>
+  <h3>读图结论</h3>
+  <table>
+    <tr><th>象限</th><th>落点</th><th>动作</th></tr>
+    <tr><td>左上 · 必备区</td><td>R1</td><td>首版必须可靠；交互做大、做稳，不靠花活加分</td></tr>
+    <tr><td>右上 · 高优先</td><td>R2</td><td>与 R1 同为 P0；完成质量直接拉满意度</td></tr>
+    <tr><td>右下 · 兴奋储备</td><td>R3</td><td>P1：P0 跑通后做，形成相对竞品的记忆点</td></tr>
+    <tr><td>左下 · 低影响</td><td>R5、R4</td><td>R5 暂缓；R4 反向，写入「不会有」</td></tr>
+  </table>
+  <footer class="colophon">KANO 分类与 Better–Worse 系数按 Timko 常用公式。问卷为作业演示样本。方向与需求表述为原创。</footer>
+</section>
+</div>
+<script>
+(function () {
+  var links = document.querySelectorAll(".nav-bar a");
+  var sections = [];
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ link: a, el: el });
+  });
+  function mark() {
+    var y = window.scrollY + 80;
+    var current = sections[0];
+    sections.forEach(function (s) {
+      if (s.el.offsetTop <= y) current = s;
+    });
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (current) current.link.classList.add("active");
+  }
+  window.addEventListener("scroll", mark, { passive: true });
+  mark();
+
+  // sync tags on req cards with final attributes
+  var map = { R1: "must", R2: "expect", R3: "excite", R4: "reverse", R5: "indiff" };
+  var labels = { must: "M 必备", expect: "O 期望", excite: "A 兴奋", reverse: "R 反向", indiff: "I 无差异" };
+  document.querySelectorAll(".req").forEach(function (card) {
+    var id = card.querySelector(".id").textContent.trim();
+    var kind = map[id];
+    var tag = card.querySelector(".tag");
+    if (tag && kind) {
+      tag.className = "tag " + kind;
+      tag.textContent = labels[kind];
+    }
+  });
+})();
+</script>
+</body>
+</html>
