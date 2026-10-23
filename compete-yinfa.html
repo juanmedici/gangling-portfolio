@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娟｜家庭照护协同 · 竞品分析</title>
+<style>
+:root {
+  --ink: #1c1917;
+  --muted: #57534e;
+  --faint: #a8a29e;
+  --paper: #f3efe6;
+  --sheet: #fbf8f2;
+  --line: #e4dcd0;
+  --accent: #9a3412;
+  --header: #163d35;
+  --ok: #115e59;
+  --warn: #b45309;
+  --blue: #1e3a5f;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.65;
+  font-size: 15.5px;
+}
+a { color: inherit; }
+.top { background: var(--header); color: #f4f7f5; padding: 36px 48px 32px; }
+.identity {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px;
+  font-size: 13px; color: #b7c9c3; margin-bottom: 24px;
+}
+.identity .name {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 20px; color: #fff; letter-spacing: 0.08em;
+}
+.identity a { color: #a7d7c5; text-decoration: none; border-bottom: 1px solid rgba(167,215,197,0.45); }
+.identity a:hover { color: #fff; border-bottom-color: #fff; }
+.kicker { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a7d7c5; margin-bottom: 10px; }
+.top h1 {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-weight: 600; font-size: 36px; line-height: 1.25; color: #fff;
+}
+.hero-def { max-width: 44em; margin-top: 12px; font-size: 17px; line-height: 1.55; color: #fff; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-size: 13px; color: #a7d7c5; }
+.hero-meta b { color: #fff; font-weight: 600; margin-right: 6px; }
+.nav-bar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(243,239,230,0.94); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line); display: flex; gap: 2px; padding: 0 16px; overflow-x: auto;
+}
+.nav-bar a {
+  text-decoration: none; color: var(--muted); font-size: 12.5px;
+  padding: 13px 10px 11px; border-bottom: 2px solid transparent; white-space: nowrap;
+}
+.nav-bar a:hover, .nav-bar a.active { color: var(--ink); border-bottom-color: var(--accent); }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 32px 28px 80px; }
+section { margin-bottom: 52px; scroll-margin-top: 60px; }
+.sec-no { font-size: 12px; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 6px; }
+h2 {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 28px; font-weight: 600; margin-bottom: 14px;
+}
+h3 { font-size: 16px; margin: 24px 0 10px; font-weight: 650; }
+h4 { font-size: 14px; margin: 14px 0 6px; font-weight: 650; color: var(--muted); }
+p { margin: 8px 0; }
+ul, ol { padding-left: 1.25em; margin: 8px 0; }
+li { margin: 3px 0; }
+.note { color: var(--muted); font-size: 12.5px; }
+.pull {
+  font-family: "Palatino Linotype", "Songti SC", "STSong", serif;
+  font-size: 20px; line-height: 1.45; padding: 8px 0 8px 16px;
+  border-left: 3px solid var(--accent); margin: 14px 0 18px;
+}
+.sheet {
+  background: var(--sheet); border: 1px solid var(--line);
+  border-radius: 2px; padding: 18px 20px; margin: 12px 0;
+}
+table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0 8px; }
+th, td { border: 1px solid var(--line); padding: 9px 10px; text-align: left; vertical-align: top; }
+th { background: #ebe4d8; font-size: 11.5px; color: var(--muted); font-weight: 600; letter-spacing: 0.03em; }
+.scroll-x { overflow-x: auto; }
+.tag {
+  display: inline-block; font-size: 11px; font-weight: 650;
+  padding: 2px 7px; border-radius: 2px; white-space: nowrap; vertical-align: middle;
+}
+.tag.direct { background: #fff7ed; color: var(--accent); }
+.tag.indirect { background: #fffbeb; color: var(--warn); }
+.tag.potential { background: #f0fdfa; color: var(--ok); }
+.tag.pub { background: #ecfdf5; color: #047857; }
+.tag.sim { background: #eff6ff; color: #1d4ed8; }
+.tag.c2 { background: #faf5ff; color: #6b21a8; }
+.tag.mvp { background: #fff7ed; color: var(--accent); }
+.tag.hit { background: #163d35; color: #f4f7f5; }
+.legend-box {
+  display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 10px 0 16px;
+  padding: 10px 14px; background: #fff; border: 1px dashed var(--line); font-size: 12.5px; color: var(--muted);
+}
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+.facts div { background: var(--sheet); border: 1px solid var(--line); padding: 12px 14px; }
+.facts b {
+  display: block; font-family: "Palatino Linotype", "Songti SC", serif;
+  font-size: 19px; color: var(--accent); line-height: 1.25;
+}
+.facts span { display: block; margin-top: 4px; font-size: 12.5px; color: var(--muted); }
+.q4 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 14px 0;
+  border: 2px solid var(--line); overflow: hidden;
+}
+.q4 > div { padding: 14px 16px; min-height: 110px; }
+.q4 .q1 { background: #fff7ed; border-right: 1px solid #fdba74; border-bottom: 1px solid #fdba74; }
+.q4 .q2 { background: #fffbeb; border-bottom: 1px solid #fcd34d; }
+.q4 .q3 { background: #f5f5f4; border-right: 1px solid #e7e5e4; }
+.q4 .q4c { background: #f0fdfa; }
+.q4 b { display: block; margin-bottom: 6px; font-size: 13.5px; }
+.q4 p { margin: 0; font-size: 12.5px; color: var(--muted); }
+.layer { border: 1px solid var(--line); background: #fff; margin: 12px 0; }
+.layer-h {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px;
+  padding: 10px 14px; background: #ebe4d8; border-bottom: 1px solid var(--line);
+}
+.layer-h .lv {
+  font-family: "Palatino Linotype", "Songti SC", serif;
+  font-size: 17px; color: var(--accent); font-weight: 600;
+}
+.layer-h .core { font-size: 13px; color: var(--ink); font-weight: 650; }
+.layer-b { padding: 12px 14px; font-size: 13.5px; }
+.layer-b .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.layer-b .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.verdict {
+  background: #163d35; color: #f4f7f5; padding: 20px 22px; margin: 16px 0;
+}
+.verdict h3 { color: #a7d7c5; margin: 0 0 8px; font-size: 12px; letter-spacing: 0.1em; }
+.verdict .big {
+  font-family: "Palatino Linotype", "Songti SC", serif;
+  font-size: 19px; line-height: 1.4; margin: 8px 0 14px; color: #fff;
+}
+.verdict p { margin: 6px 0; color: #e7efec; font-size: 14px; }
+.verdict b { color: #fff; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+.steps div {
+  background: var(--sheet); border: 1px solid var(--line);
+  border-top: 3px solid var(--header); padding: 12px 12px;
+}
+.steps div:nth-child(2) { border-top-color: var(--accent); }
+.steps div:nth-child(3) { border-top-color: var(--warn); }
+.steps div:nth-child(4) { border-top-color: var(--ok); }
+.steps b { display: block; font-size: 13px; margin-bottom: 4px; }
+.steps span { font-size: 12.5px; color: var(--muted); }
+.stage-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 12px 0; }
+.stage-row div {
+  background: #fff; border: 1px solid var(--line); padding: 10px; font-size: 11.5px; color: var(--muted);
+}
+.stage-row div.on { border-color: var(--accent); background: #fff7ed; color: var(--ink); }
+.stage-row div.on b { color: var(--accent); }
+.stage-row b { display: block; font-size: 12.5px; color: var(--ink); margin-bottom: 4px; }
+.bars { margin: 12px 0; }
+.bar-row {
+  display: grid; grid-template-columns: 120px 1fr 48px; gap: 10px;
+  align-items: center; margin: 6px 0; font-size: 12.5px;
+}
+.bar-track { height: 10px; background: #ebe4d8; border-radius: 2px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--accent); }
+.bar-fill.g { background: var(--ok); }
+.bar-fill.w { background: var(--warn); }
+.bar-fill.b { background: var(--blue); }
+.phones {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0;
+}
+.phone {
+  background: #1c1917; border-radius: 22px; padding: 10px;
+  box-shadow: 0 12px 28px rgba(28,25,23,.14);
+}
+.screen {
+  background: #fbf8f2; border-radius: 14px; overflow: hidden; min-height: 420px; color: #1c1917;
+}
+.statusbar { height: 18px; background: #163d35; }
+.appbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; background: #163d35; color: #f4f7f5; font-size: 12px;
+}
+.appbar .sub { font-size: 10px; color: #a7d7c5; }
+.panel { padding: 10px 12px; }
+.cardx {
+  background: #fff; border: 1px solid #e4dcd0; border-radius: 8px;
+  padding: 10px; margin-bottom: 8px; font-size: 11.5px;
+}
+.cardx strong { display: block; font-size: 13px; margin-bottom: 2px; }
+.cardx .muted { color: #57534e; }
+.bigbtn {
+  display: block; text-align: center; background: #9a3412; color: #fff;
+  padding: 14px; border-radius: 10px; font-weight: 700; font-size: 14px; margin: 10px 0;
+}
+.metric {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px;
+}
+.metric span {
+  background: #fff7ed; border: 1px solid #fdba74; padding: 6px 8px;
+  border-radius: 6px; font-size: 11px; text-align: center;
+}
+.metric span em { display: block; font-style: normal; font-weight: 700; font-size: 14px; color: #9a3412; }
+.flow {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 12px 0; font-size: 12.5px;
+}
+.flow .n {
+  background: #fff; border: 1px solid var(--line); padding: 8px 10px; border-radius: 2px;
+}
+.flow .arrow { color: var(--accent); font-weight: 700; }
+.swot { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+.swot div { border: 1px solid var(--line); padding: 12px 14px; background: #fff; }
+.swot .s { border-top: 3px solid var(--ok); }
+.swot .w { border-top: 3px solid var(--warn); }
+.swot .o { border-top: 3px solid var(--blue); }
+.swot .t { border-top: 3px solid var(--accent); }
+.swot b { display: block; margin-bottom: 6px; }
+.score { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); }
+.toc {
+  columns: 2; column-gap: 24px; font-size: 13.5px; margin: 10px 0 0;
+}
+.toc a { text-decoration: none; border-bottom: 1px dotted var(--line); color: var(--ink); }
+.toc li { break-inside: avoid; margin: 4px 0; }
+footer.colophon {
+  font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line);
+  padding-top: 16px; margin-top: 12px;
+}
+@media (max-width: 900px) {
+  .top { padding: 24px 16px; }
+  .top h1 { font-size: 26px; }
+  .facts, .steps, .stage-row, .q4, .layer-b .cols, .layer-b .cols2,
+  .phones, .swot, .toc { grid-template-columns: 1fr; columns: 1; }
+  .wrap { padding: 24px 14px 56px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="identity">
+    <span class="name">刘娟</span>
+    <span>产品经理作品集</span>
+    <a href="index.html">案例 01</a>
+    <a href="kano-yinfa.html">案例 02 · 银发 KANO</a>
+    <a href="rec-agent.html">案例 03</a>
+    <a href="https://juanmedici.github.io/gangling-portfolio/compete-yinfa.html" target="_blank" rel="noopener">在线版</a>
+  </div>
+  <p class="kicker">Competitive Analysis · 银发 · 家庭照护协同</p>
+  <h1>家庭照护协同 · 竞品分析</h1>
+  <p class="hero-def">面向「子女在外、父母在家」场景：将远程照护从微信群碎片消息，收敛为可执行的家庭协同。本报告覆盖竞品选型、竞争关系判定、双主竞品五层拆解、阶段判断与 90 天落地建议，供产品决策使用。</p>
+  <div class="hero-meta">
+    <span><b>框架</b>五层模型 · 用户×服务 · 生命周期</span>
+    <span><b>主对标</b>爱牵挂 · 360 健康手表</span>
+    <span><b>产品阶段</b>MVP 验证期</span>
+    <span><b>需求依据</b>KANO 调研 n=22</span>
+  </div>
+</header>
+<nav class="nav-bar">
+  <a href="#exec">结论</a>
+  <a href="#method">方法</a>
+  <a href="#market">市场</a>
+  <a href="#pick">选品</a>
+  <a href="#quad">四象限</a>
+  <a href="#score">评分</a>
+  <a href="#l-aqg">5层·爱牵挂</a>
+  <a href="#l-360">5层·360</a>
+  <a href="#l-map">五层对照</a>
+  <a href="#l-wx">5层·微信</a>
+  <a href="#ui">框架·表现</a>
+  <a href="#flow">流程</a>
+  <a href="#stage">阶段</a>
+  <a href="#swot">机会风险</a>
+  <a href="#strategy">策略</a>
+  <a href="#appendix">来源</a>
+</nav>
+<div class="wrap">
+
+<section id="exec">
+  <p class="sec-no">00</p>
+  <h2>核心结论</h2>
+  <div class="verdict">
+    <h3>摘要</h3>
+    <p class="big">首版不做第二块老人表，做成「微信群照护消息」的结构化替代：与爱牵挂、360 同用户同服务，但以「无硬件协同」错位切入；P0 上线紧急呼叫与用药打卡，P1 用「今日安好」一页摘要建立相对硬件竞品的差异化记忆点。</p>
+    <p>1. <b>竞争定性：</b>爱牵挂、360 健康手表为高度直接竞争；微信、米家摄像头为同用户不同服务的间接竞争；京东健康与支付宝亲情链为潜在竞争。</p>
+    <p>2. <b>阶段判断：</b>本产品处于 <span class="tag hit">MVP 验证期</span>——优先验证「子女是否愿意每天看一页安好」；主竞品处于硬件渠道扩张与同质化竞争阶段。</p>
+    <p>3. <b>建议吸收：</b>SOS 多通道触达、家庭多成员协同、设置由子女代配、用药类提醒能力。</p>
+    <p>4. <b>建议避开：</b>默认直播定位与指标墙首页；理财与泛资讯主路径（需求调研中属反向型）；用安好摘要替代「打开 App 解读一堆数据」。</p>
+    <p>5. <b>验收口径：</b>呼叫响应 ≤5 秒；漏服当日摘要仅 1 条；安好页 10 秒内可完成决策——以闭环质量为准，不以下载量为准。</p>
+  </div>
+  <div class="sheet">
+    <p><b>目录</b></p>
+    <ol class="toc">
+      <li><a href="#method">分析方法与数据口径</a></li>
+      <li><a href="#market">市场与需求背景</a></li>
+      <li><a href="#pick">竞品清单与竞争类型</a></li>
+      <li><a href="#quad">用户×服务竞争关系</a></li>
+      <li><a href="#score">功能对标评分</a></li>
+      <li><a href="#l-aqg">爱牵挂 · 五层拆解</a></li>
+      <li><a href="#l-360">360 健康手表 · 五层拆解</a></li>
+      <li><a href="#l-map">五层对照总表</a></li>
+      <li><a href="#l-wx">微信五层 · 间接与潜在</a></li>
+      <li><a href="#ui">交互与界面对照</a></li>
+      <li><a href="#flow">用户路径对照</a></li>
+      <li><a href="#stage">生命周期与阶段策略</a></li>
+      <li><a href="#swot">机会与风险</a></li>
+      <li><a href="#strategy">建议与 90 天计划</a></li>
+      <li><a href="#appendix">数据来源说明</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id="method">
+  <p class="sec-no">01</p>
+  <h2>分析方法与数据口径</h2>
+  <p class="pull">分析目标：从竞品已验证的照护闭环中提炼可复用能力，明确本产品首版边界与差异化，支撑立项与排期决策——重点不在界面临摹，而在战略到体验的逐层对照。</p>
+  <div class="legend-box">
+    <span><span class="tag pub">外部公开</span> 官网、应用商店、导购与行业白皮书</span>
+    <span><span class="tag sim">内部估算</span> 基于公开能力的专家评分与试点指标，供决策排序</span>
+    <span><span class="tag c2">需求调研</span> 前期 KANO 问卷 n=22 的优先级结论</span>
+  </div>
+  <div class="steps">
+    <div><b>① 竞品筛选</b><span>按目标市场、用户与功能重合度筛选 6 个对象；深度拆解 2 个直接竞品</span></div>
+    <div><b>② 五层拆解</b><span>战略→范围→结构→框架→表现；提炼当前阶段「硬件绑定」共性</span></div>
+    <div><b>③ 自身定位</b><span>判定为 MVP 验证期；对齐需求调研中的 P0 / P1</span></div>
+    <div><b>④ 决策输出</b><span>吸收与规避清单 + 90 天验证指标</span></div>
+  </div>
+  <div class="sheet">
+    <p><b>本产品定义：</b>面向「子女在外、父母在家」的家庭照护协同——用药与就医节点可见、紧急可一键触达、日常不被过度打扰。范围聚焦决策与协同：不接入医院 HIS、不做理财卖货、不做养老项目导流。</p>
+  </div>
+</section>
+
+<section id="market">
+  <p class="sec-no">02</p>
+  <h2>市场与需求背景</h2>
+  <div class="facts">
+    <div><b>≈9 成</b><span><span class="tag pub">外部公开</span> 老年消费者倾向居家养老（2022 养老消费调查）</span></div>
+    <div><b>6272 亿</b><span><span class="tag pub">外部公开</span> 2023 养老服务市场规模测算（行业研究转载）</span></div>
+    <div><b>70%</b><span><span class="tag pub">外部公开</span> 子女无法常年照顾老人（居家养老白皮书相关调研口径）</span></div>
+    <div><b>9.4%→31%</b><span><span class="tag pub">外部公开</span> 已装监控 9.4%；可接受安装约 31%（隐私张力）</span></div>
+  </div>
+  <h3>与本产品直接相关的痛点排序</h3>
+  <div class="bars">
+    <div class="bar-row"><span>紧急可触达</span><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><span>92</span></div>
+    <div class="bar-row"><span>用药是否执行</span><div class="bar-track"><div class="bar-fill g" style="width:84%"></div></div><span>84</span></div>
+    <div class="bar-row"><span>今日是否安好</span><div class="bar-track"><div class="bar-fill w" style="width:78%"></div></div><span>78</span></div>
+    <div class="bar-row"><span>实时定位围栏</span><div class="bar-track"><div class="bar-fill b" style="width:61%"></div></div><span>61</span></div>
+    <div class="bar-row"><span>养生资讯/理财</span><div class="bar-track"><div class="bar-fill" style="width:18%;background:#78716c"></div></div><span>18</span></div>
+  </div>
+  <p class="note">上图为 <span class="tag sim">内部估算</span>：结合需求调研 Better / |Worse| 与公开「安全、健康刚需」叙述合成 0–100 优先级分，用于产品内排序，不外推为全国抽样结果。</p>
+  <div class="sheet">
+    <p><b>市场含义：</b>硬件远程监护供给充分（手表、摄像头），但「谁该做什么、今天有没有落下」的任务协同层仍然薄弱——与公开「远程监护重监测、轻任务闭环」的判断一致。本产品切入协同层，而非再做一块硬件。</p>
+  </div>
+</section>
+
+<section id="pick">
+  <p class="sec-no">03</p>
+  <h2>竞品清单与竞争类型</h2>
+  <div class="scroll-x">
+  <table>
+    <tr>
+      <th>竞品</th><th>类型</th><th>用户重合</th><th>服务重合</th><th>阶段（判断）</th><th>入选理由</th>
+    </tr>
+    <tr>
+      <td><b>爱牵挂 Care</b><br><span class="note">手表 ¥300–700 档 + App + 家庭圈</span></td>
+      <td><span class="tag direct">直接</span></td>
+      <td>高</td><td>高 · SOS/定位/健康/提醒</td>
+      <td>跑马圈地→高度竞争</td>
+      <td>功能与目标用户高度一致；公开资料全，主拆对象</td>
+    </tr>
+    <tr>
+      <td><b>360 健康/亲情手表</b><br><span class="note">手表 + 360亲情卫士 App</span></td>
+      <td><span class="tag direct">直接</span></td>
+      <td>高</td><td>高 · SOS/定位/健康/微聊</td>
+      <td>跑马圈地→高度竞争</td>
+      <td>第二直接竞品；验证「硬件监护」共性与差异</td>
+    </tr>
+    <tr>
+      <td><b>微信</b>（亲情群/视频/状态）</td>
+      <td><span class="tag indirect">间接</span></td>
+      <td>极高</td><td>低 · 沟通非结构化照护</td>
+      <td>高度竞争（沟通心智）</td>
+      <td>当前问安行为发生地；首版真实替代对象</td>
+    </tr>
+    <tr>
+      <td><b>米家智能摄像机</b></td>
+      <td><span class="tag indirect">间接</span></td>
+      <td>中高</td><td>中 · 看得见，缺任务协同</td>
+      <td>大幅扩张/高度竞争</td>
+      <td>功能互补：安全画面 ≠ 用药/就医节点</td>
+    </tr>
+    <tr>
+      <td><b>京东健康 · 慢病/居家</b></td>
+      <td><span class="tag potential">潜在</span></td>
+      <td>中</td><td>中低 · 医疗履约强</td>
+      <td>可跨入照护</td>
+      <td>医疗履约能力强，具备向家庭照护延伸的条件</td>
+    </tr>
+    <tr>
+      <td><b>支付宝 · 亲情账户/适老</b></td>
+      <td><span class="tag potential">潜在</span></td>
+      <td>中</td><td>低 · 关系链与支付</td>
+      <td>异业可复用</td>
+      <td>异业竞争者：亲属信任资产可被接到照护</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">价格带 <span class="tag pub">外部公开</span>：爱牵挂多型号导购约 ¥297–697（2024 标价区间）。App Store 爱牵挂 care 评分约 4.1（随版本与时间波动）。</p>
+</section>
+
+<section id="quad">
+  <p class="sec-no">04</p>
+  <h2>竞争关系：用户 × 服务</h2>
+  <div class="q4">
+    <div class="q1">
+      <b>相同用户 · 相同服务 → 高度直接竞争</b>
+      <p>爱牵挂、360：子女远程安心 + 父母紧急/健康可见。与本产品同框，需错位。</p>
+    </div>
+    <div class="q2">
+      <b>不同用户 · 相同服务 → 间接，可转直接</b>
+      <p>儿童定位手表、机构照护 SaaS：服务类似用户池不同；扩家庭照护会撞车。</p>
+    </div>
+    <div class="q3">
+      <b>不同用户 · 不同服务 → 不竞争</b>
+      <p>养老院床位营销、老年旅游团购：不进本报告。</p>
+    </div>
+    <div class="q4c">
+      <b>相同用户 · 不同服务 → 间接竞争</b>
+      <p>微信（聊天）、米家摄像头（画面）：占时间与心智，可转化或被本产品局部替代。</p>
+    </div>
+  </div>
+</section>
+
+<section id="score">
+  <p class="sec-no">05</p>
+  <h2>功能对标评分</h2>
+  <p>按核心需求与协同关键能力打分（1–5）。评分为 <span class="tag sim">内部估算</span>：依据公开功能有无与产品叙事权重，用于相对排序，不作绝对测量。</p>
+  <div class="scroll-x">
+  <table>
+    <tr>
+      <th>能力项</th>
+      <th>爱牵挂</th>
+      <th>360</th>
+      <th>微信</th>
+      <th>米家摄像</th>
+      <th>本产品目标</th>
+      <th>需求属性</th>
+    </tr>
+    <tr>
+      <td>紧急一键触达</td>
+      <td class="score">5</td><td class="score">5</td><td class="score">2</td><td class="score">3</td>
+      <td class="score">5</td><td><span class="tag c2">R1 · M 必备</span></td>
+    </tr>
+    <tr>
+      <td>用药提醒与确认闭环</td>
+      <td class="score">3</td><td class="score">3</td><td class="score">1</td><td class="score">1</td>
+      <td class="score">5</td><td><span class="tag c2">R2 · O 期望</span></td>
+    </tr>
+    <tr>
+      <td>今日安好一页决策摘要</td>
+      <td class="score">2</td><td class="score">2</td><td class="score">1</td><td class="score">2</td>
+      <td class="score">5</td><td><span class="tag c2">R3 · A 兴奋</span></td>
+    </tr>
+    <tr>
+      <td>实时定位 / 围栏</td>
+      <td class="score">5</td><td class="score">5</td><td class="score">2</td><td class="score">1</td>
+      <td class="score">1</td><td>非主路径</td>
+    </tr>
+    <tr>
+      <td>家庭多成员角色协同</td>
+      <td class="score">4</td><td class="score">3</td><td class="score">2</td><td class="score">3</td>
+      <td class="score">4</td><td>主责+备用</td>
+    </tr>
+    <tr>
+      <td>无硬件可启动</td>
+      <td class="score">1</td><td class="score">1</td><td class="score">5</td><td class="score">2</td>
+      <td class="score">5</td><td>MVP 关键</td>
+    </tr>
+    <tr>
+      <td>低监视感 / 隐私友好</td>
+      <td class="score">2</td><td class="score">2</td><td class="score">4</td><td class="score">1</td>
+      <td class="score">5</td><td>产品原则</td>
+    </tr>
+    <tr>
+      <td>理财/带货抗干扰</td>
+      <td class="score">3</td><td class="score">4</td><td class="score">2</td><td class="score">5</td>
+      <td class="score">5</td><td><span class="tag c2">R4 反向·不做</span></td>
+    </tr>
+    <tr>
+      <td><b>加权总分（内部估算）</b></td>
+      <td class="score">25</td><td class="score">25</td><td class="score">19</td><td class="score">18</td>
+      <td class="score">35</td><td>目标态</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">读表：硬件竞品在 SOS、定位上明显领先；本产品需在「用药闭环 + 安好摘要 + 无硬件启动 + 低监视感」形成明确优势，以错位竞争，而非功能全集对抗。</p>
+</section>
+
+<section id="l-aqg">
+  <p class="sec-no">06</p>
+  <h2>爱牵挂 · 五层拆解</h2>
+  <p><span class="tag direct">直接竞争</span> <span class="tag pub">外部公开</span> 功能依据：App Store「爱牵挂care」（id1025615485，约 4.1 分 / 101 评，核验日 2026-10-23）；S5 小鲸使用说明书（公众号刊发，绑定 / SOS / 家庭圈操作步骤）。</p>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">① 战略层</span><span class="core">企业愿景 · 产品定位 · 需求把控 · 盈利模式</span></div>
+    <div class="layer-b">
+      <div class="cols2">
+        <div>
+          <h4>竞品</h4>
+          <p>叙事：「牵挂没有距离」。定位 = <b>智能穿戴硬件 + App 远程监护</b>。付费决策人主要是子女；收入以硬件（约 ¥300–700）+ 流量卡/增值为主，资讯与健康内容为辅。</p>
+        </div>
+        <div>
+          <h4>对本产品</h4>
+          <p>建议吸收：获客与话术面向子女。建议差异：商业不绑硬件；首版以免费协同建立信任，后续可推进家庭会员或机构合作；明确不做理财推荐流。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">② 范围层</span><span class="core">主功能 / 核心 / 次级 · 业务链条</span></div>
+    <div class="layer-b">
+      <p><b>核心链：</b>买表 → 装卡开机 → 子女装 App 绑定 → 设亲情号与 SOS → 日常看定位/心率血压睡眠 → 异常推送 → 家庭圈拉多子女。</p>
+      <p><b>核心功能：</b>定位、SOS、健康监测、家庭圈。<b>次级：</b>养生资讯、急救常识、健康评估、亲情提醒（含用药类提醒，但非主叙事）。</p>
+      <p><b>本产品取舍：</b>只拉通 R1 呼叫 + R2 用药打卡 + R3 安好摘要；定位/围栏不做主卖点；R4 理财流写入不会有；R5 兴趣小组暂缓。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">③ 结构层</span><span class="core">信息架构 · 常规/特色 · 用户流程</span></div>
+    <div class="layer-b">
+      <div class="flow">
+        <span class="n">注册</span><span class="arrow">→</span>
+        <span class="n">扫码绑定设备</span><span class="arrow">→</span>
+        <span class="n">完善家人信息</span><span class="arrow">→</span>
+        <span class="n">亲情号/SOS</span><span class="arrow">→</span>
+        <span class="n">首页设备状态</span><span class="arrow">→</span>
+        <span class="n">地图/健康/家庭圈</span>
+      </div>
+      <p><b>操作证据（说明书）：</b>子女号注册登录 → 选设备类型与家庭圈 → 扫包装盒二维码 → 填家人信息完成绑定；绑后管理员在「首页 → 家庭圈」邀请亲友。信息架构以<strong>设备为中心</strong>，不是任务中心。</p>
+      <p><b>特色：</b>硬件强绑定，监护数据全。<b>缺口：</b>子女仍需「解读指标」，缺少「今天要不要打电话」的一句结论——R3 机会点。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">④ 框架层</span><span class="core">跳转 · 刷新 · 交互细节</span></div>
+    <div class="layer-b">
+      <ul>
+        <li><b>SOS（S5 说明书）：</b>长按 SOS 键 <b>3 秒</b>；管理员同时收到 App 推送、短信、设备主动拨打的求救电话，并可在 App 看当前位置</li>
+        <li><b>亲情号：</b>首页 → 设备功能表 → 亲情号码；最多 10 个紧急/亲情联系人</li>
+        <li><b>家庭圈：</b>已注册填手机号直接加入；未注册收短信邀请码，注册后填码加入</li>
+        <li><b>App Store 叙事：</b>健康监测 + 远程定位 + 一键 SOS + 电子围栏并列为主能力（非「任务协同」叙事）</li>
+        <li><b>可借鉴：</b>多通道触达、强制配紧急联系人、子女代设、邀请家人</li>
+        <li><b>要压掉：</b>指标墙首页；改为一页安好 + 异常才打扰</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">⑤ 表现层</span><span class="core">视觉 · 布局 · 配色 · 排版</span></div>
+    <div class="layer-b">
+      <p>子女端偏健康监护仪表盘：卡片密、地图+图表+资讯并存；适老主要在手表端大按钮/语音。观感强、监视感也强。</p>
+      <p><b>本产品：</b>子女端极简决策页；父母端超大触控；视觉安静，主操作一眼可见。</p>
+    </div>
+  </div>
+</section>
+
+<section id="l-360">
+  <p class="sec-no">07</p>
+  <h2>360 健康手表 · 五层拆解</h2>
+  <p><span class="tag direct">直接竞争</span> <span class="tag pub">外部公开</span> 依据：360 健康手表官网（401.watch.360.cn）、亲情手表 FAQ、新浪众测开箱评测（2019-12）；核验日 2026-10-23。覆盖定位、SOS、白名单通话、亲情卫士 App、单向监听等。</p>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">① 战略层</span><span class="core">安全公司能力外溢到银发硬件</span></div>
+    <div class="layer-b">
+      <div class="cols2">
+        <div>
+          <h4>竞品</h4>
+          <p>定位：中老年定制健康手表——「爸妈健康心里有数」。强调安全基因（定位算法、防骚扰白名单）。付费同样偏子女买硬件；App（亲情卫士）服务设备。</p>
+        </div>
+        <div>
+          <h4>对本产品</h4>
+          <p>建议吸收：通讯录白名单防诈、设置放子女端。建议规避：不引入「单向监听」类强监视能力（与低打扰、低监视的产品原则冲突）。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">② 范围层</span><span class="core">健康监测 + 随行看护 + 通话</span></div>
+    <div class="layer-b">
+      <p><b>核心：</b>多重定位、安全区域、一键 SOS、双向通话/语音微聊、心率血压、生活提醒、周健康报告。<b>次级：</b>天气播报、余额查询等运营向功能。</p>
+      <p>与爱牵挂高度同质：都是「表绑人、App 绑子女」。差异更多在品牌信任与交互细节，而非协同范式。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">③ 结构层</span><span class="core">手表极简 · App 远程配置</span></div>
+    <div class="layer-b">
+      <p><b>操作证据（众测 / FAQ）：</b>扫表二维码装「亲情卫士」→ 激活绑表（管理员）→ 他人绑定需管理员验证码或在「设置 → 手表通讯录」添加；手表主界面功能极少，通讯录/安全区/心率阈值等均在 App。</p>
+      <p>手表端：大字体、少设置，复杂配置全部放 App——与「父母少操作、子女代配」一致，建议直接吸收。</p>
+      <p>子女流程：装 App → 绑表 → 设通讯录/安全区 → 看定位与报告 → 异常报警。仍缺「用药是否吃了」的强闭环与「一句安好」。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">④ 框架层</span><span class="core">SOS 5 秒长按 · 白名单通话 · 安全区进出提醒</span></div>
+    <div class="layer-b">
+      <ul>
+        <li><b>SOS（官网/FAQ/众测一致）：</b>红色键长按约 <b>5 秒</b>发起；成功后手表振动；联系人收到提醒，未开 App 时有短信通道（同系产品说明口径）</li>
+        <li><b>白名单（官网）：</b>仅通讯录内号码可拨打/接听，陌生来电屏蔽——防诈强，但对「临时邻居求助」不友好；本产品备用联系人要可扩展</li>
+        <li><b>安全区域：</b>亲情卫士「守护 → 安全区域」划定范围，进出可提醒</li>
+        <li><b>单向监听：</b>App「守护 → 监听」可听表端环境音（众测公开）；与低监视原则冲突，本产品明确不做</li>
+        <li>生活提醒在 App 设、手表响——可落成用药提醒，但需升级为「已吃」回执</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">⑤ 表现层</span><span class="core">大屏大字大音量</span></div>
+    <div class="layer-b">
+      <p>手表端适老化表达清晰（众测：约 1.4" 大屏、大图标大字体、大功率扬声器）。子女 App 仍是监护控制台。本产品父母端应学其「删繁就简」，子女端则故意不学控制台密度。</p>
+    </div>
+  </div>
+</section>
+
+<section id="l-map">
+  <p class="sec-no">08</p>
+  <h2>五层对照总表</h2>
+  <p>把爱牵挂 / 360 与本产品按五层压成一张表，便于口述与评审对齐。硬件两家高度同质，表中合并为「硬件主竞品」；差异细节见上两节。</p>
+  <div class="scroll-x">
+  <table>
+    <tr>
+      <th>层</th>
+      <th>硬件主竞品（爱牵挂 / 360）</th>
+      <th>本产品对应</th>
+      <th>动作</th>
+    </tr>
+    <tr>
+      <td><b>① 战略</b></td>
+      <td>表 + App 远程监护；子女买单；硬件/流量变现</td>
+      <td>无硬件协同；子女决策；信任优先，后谈会员/机构</td>
+      <td>学话术对象 · 不绑硬件</td>
+    </tr>
+    <tr>
+      <td><b>② 范围</b></td>
+      <td>定位 · SOS · 健康监测 · 家庭圈；提醒为辅</td>
+      <td>R1 呼叫 + R2 用药打卡 + R3 安好；定位非主卖</td>
+      <td>学 SOS/提醒 · 砍理财流</td>
+    </tr>
+    <tr>
+      <td><b>③ 结构</b></td>
+      <td>设备中心 IA；绑表驱动全流程</td>
+      <td>任务/结论中心；手机即可启动</td>
+      <td>学「子女代配」 · 不做仪表盘 IA</td>
+    </tr>
+    <tr>
+      <td><b>④ 框架</b></td>
+      <td>长按防误触；多通道 SOS；白名单；家庭邀请</td>
+      <td>大红钮；≤5 秒响铃；30 秒扩第二人；异常才推</td>
+      <td>学触达与扩联 · 不做单向监听</td>
+    </tr>
+    <tr>
+      <td><b>⑤ 表现</b></td>
+      <td>父母端大字大钮；子女端监护舱/指标墙</td>
+      <td>父母端超大触控；子女端一页安好</td>
+      <td>学父母适老 · 故意不学控制台密度</td>
+    </tr>
+  </table>
+  </div>
+  <p class="note">口述口令：战略不绑硬件 → 范围只做三件事 → 结构绕任务不绕设备 → 框架学触达躲监听 → 表现父母学手表、子女反监护舱。</p>
+</section>
+
+<section id="l-wx">
+  <p class="sec-no">09</p>
+  <h2>微信 · 五层拆解（间接）与其他</h2>
+  <p><span class="tag indirect">间接竞争</span> 微信是当前问安行为的真实发生地——同用户、不同服务。深度略于硬件，但按五层过一遍，避免只盯表、忽略心智替代。</p>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">① 战略层</span><span class="core">连接一切 · 不是照护产品</span></div>
+    <div class="layer-b">
+      <div class="cols2">
+        <div>
+          <h4>竞品</h4>
+          <p>愿景是社交与连接；照护是用户自发用法，不是官方主叙事。变现靠广告、支付、小程序生态，不靠「家庭任务订阅」。</p>
+        </div>
+        <div>
+          <h4>对本产品</h4>
+          <p>不挑战「闲聊心智」；定位成微信群里照护碎片的结构化出口。成功标准：问安迁到安好页，群仍可聊天。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">② 范围层</span><span class="core">聊天 / 视频 / 状态 · 无照护闭环</span></div>
+    <div class="layer-b">
+      <p><b>有：</b>即时消息、语音视频、群、朋友圈/状态、适老化大字体等。<b>无：</b>角色主责、用药确认回执、漏服汇总、紧急未接扩联的产品级闭环。</p>
+      <p><b>本产品取舍：</b>只替代「吃了吗 / 血压多少 / 出门没有」三类问安；不替代拜年、闲聊、转账。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">③ 结构层</span><span class="core">时间线 · 无角色分工</span></div>
+    <div class="layer-b">
+      <div class="flow">
+        <span class="n">进亲情群</span><span class="arrow">→</span>
+        <span class="n">翻历史消息</span><span class="arrow">→</span>
+        <span class="n">口头叮嘱</span><span class="arrow">→</span>
+        <span class="n">多人重复问</span><span class="arrow">→</span>
+        <span class="n">仍不确定今日结论</span>
+      </div>
+      <p><b>缺口：</b>没有「主责子女 / 备用联系人」结构，也没有「今日是否安好」的单一事实页——正是本产品结构层要补的。</p>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">④ 框架层</span><span class="core">零学习成本 · 高噪音</span></div>
+    <div class="layer-b">
+      <ul>
+        <li>打开即聊、视频一键，学习成本接近零——启动门槛上我们打不过，只能用「更少打扰、更清结论」换留存</li>
+        <li>@全员、语音条、表情包混杂，照护信息被淹没</li>
+        <li><b>可借鉴：</b>极低摩擦启动、亲情关系已存在（可考虑提醒链回跳微信，而非迁徙社交）</li>
+        <li><b>要压掉：</b>用群消息当唯一照护系统的现状</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="layer-h"><span class="lv">⑤ 表现层</span><span class="core">全民习惯 · 非决策页</span></div>
+    <div class="layer-b">
+      <p>气泡时间线、红点未读，适合会话，不适合「10 秒决策」。本产品子女端视觉应刻意不像聊天：一页结论 + 少数字 + 一个行动按钮。</p>
+    </div>
+  </div>
+
+  <h3>米家摄像机 <span class="tag indirect">间接</span></h3>
+  <div class="sheet">
+    <p><b>战略：</b>智能家居看护。<b>范围：</b>画面、人形侦测、双向语音、云存。<b>结构：</b>设备中心。<b>框架：</b>打开即看。<b>表现：</b>监控感强。</p>
+    <p><b>策略：</b>互补不做替代。公开调研显示监控接受度有限（已装低、可接受约三成）——强化本产品「默认不直播定位/不依赖摄像头」的差异话术。</p>
+  </div>
+
+  <h3>京东健康 / 支付宝 <span class="tag potential">潜在</span></h3>
+  <div class="sheet">
+    <p><b>京东健康：</b>医疗履约与慢病管理强，家庭任务协同弱；若做家庭照护，窗口期会被压缩。<b>支付宝：</b>亲情关系链与适老支付强，照护任务弱。</p>
+    <p><b>应对：</b>先占「任务级协同」心智（谁提醒、谁确认、今日结论），再谈医疗或支付连接；过早做商城会与「不做理财/导流」的需求结论冲突。</p>
+  </div>
+</section>
+
+<section id="ui">
+  <p class="sec-no">10</p>
+  <h2>交互与界面对照</h2>
+  <p>以下为信息架构示意，非竞品界面截图还原，用于对照交互重心差异。</p>
+  <div class="phones">
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"></div>
+        <div class="appbar"><span>爱牵挂 · 示意</span><span class="sub">监护舱</span></div>
+        <div class="panel">
+          <div class="cardx"><strong>实时位置</strong><span class="muted">地图缩略 · 轨迹 · 围栏</span></div>
+          <div class="cardx"><strong>心率 76 · 血压 128/82</strong><span class="muted">今日运动 · 睡眠 · 历史曲线</span></div>
+          <div class="cardx"><strong>家庭圈 3 人</strong><span class="muted">设备功能表 · 发现资讯</span></div>
+          <div class="metric">
+            <span><em>SOS</em>多通道</span>
+            <span><em>绑表</em>强依赖</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"></div>
+        <div class="appbar"><span>360 亲情卫士 · 示意</span><span class="sub">安全卫士</span></div>
+        <div class="panel">
+          <div class="cardx"><strong>定位 · 安全区域</strong><span class="muted">进出提醒 · 轨迹回放</span></div>
+          <div class="cardx"><strong>本周健康报告</strong><span class="muted">心率预警阈值 · 通话白名单</span></div>
+          <div class="cardx"><strong>生活提醒</strong><span class="muted">闹钟在 App，响在手表</span></div>
+          <div class="metric">
+            <span><em>防诈</em>白名单</span>
+            <span><em>设置</em>子女代配</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="statusbar"></div>
+        <div class="appbar"><span>本产品 · 目标态</span><span class="sub">决策页</span></div>
+        <div class="panel">
+          <div class="cardx"><strong>今日安好 · 可打电话</strong><span class="muted">用药 2/3 已确认 · 最后活跃 09:40</span></div>
+          <div class="cardx"><strong>无需行动</strong><span class="muted">默认不显示直播定位</span></div>
+          <a class="bigbtn">若紧急 · 父母端大红钮</a>
+          <div class="metric">
+            <span><em>无硬件</em>手机启动</span>
+            <span><em>R3</em>记忆点</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <p class="sec-no">11</p>
+  <h2>用户路径对照</h2>
+  <h3>硬件竞品（爱牵挂 / 360）· 子女日活路径</h3>
+  <div class="flow">
+    <span class="n">担心时打开</span><span class="arrow">→</span>
+    <span class="n">看定位/指标</span><span class="arrow">→</span>
+    <span class="n">自己解读</span><span class="arrow">→</span>
+    <span class="n">再打电话确认</span><span class="arrow">→</span>
+    <span class="n">群里同步其他子女</span>
+  </div>
+  <h3>本产品目标路径</h3>
+  <div class="flow">
+    <span class="n">推送/习惯打开</span><span class="arrow">→</span>
+    <span class="n">10 秒读安好</span><span class="arrow">→</span>
+    <span class="n">无事则关</span><span class="arrow">→</span>
+    <span class="n">有事则一键联系</span><span class="arrow">→</span>
+    <span class="n">备用联系人自动扩</span>
+  </div>
+  <h3>父母端对比</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>步骤</th><th>硬件方案</th><th>本产品</th></tr>
+    <tr><td>启动门槛</td><td>接受戴表、充电、有信号</td><td>智能手机即可（可后续选配硬件）</td></tr>
+    <tr><td>紧急</td><td>长按 SOS</td><td>超大按钮；≤5 秒响铃；30 秒扩第二人</td></tr>
+    <tr><td>用药</td><td>提醒为主，确认弱</td><td>提醒 +「已吃」打卡；漏服日摘要 1 条</td></tr>
+    <tr><td>日常打扰</td><td>测量/围栏/资讯可能密</td><td>默认安静；异常才推</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="stage">
+  <p class="sec-no">12</p>
+  <h2>生命周期与本产品定位</h2>
+  <p>按产品生命周期划分，与本决策相关的阶段如下。</p>
+  <div class="stage-row">
+    <div class="on"><b>① MVP 验证期</b>本产品 · 最小闭环验证</div>
+    <div><b>② 跑马圈地</b>爱牵挂/360 硬件渠道铺货</div>
+    <div><b>③ 大幅扩张</b>米家摄像等标品规模化</div>
+    <div><b>④ 高度竞争</b>微信占沟通心智；硬件 guardi 同质化卷</div>
+    <div><b>⑤ 求新增长</b>纯聊天替代照护已疲态（痛点来源）</div>
+  </div>
+  <div class="sheet">
+    <p><b>主竞品「该阶段最大版本」核心特点：</b>硬件矩阵 + App 全家桶（定位、健康、SOS、家庭圈/亲情卫士、资讯或报告）。一句话：<b>表绑人、App 绑子女</b>；软件是硬件配件，不是独立协同产品。</p>
+    <p style="margin-top:10px"><b>自身：</b><span class="tag mvp">MVP 验证期</span> 策略 = 小成本拉通模式，验证商业/使用闭环可行性——先证明「无硬件也能完成 R1+R2」，再谈扩张。</p>
+  </div>
+  <h3>分阶段策略建议</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>阶段</th><th>典型动作</th><th>本产品现在该不该做</th></tr>
+    <tr><td>MVP 验证</td><td>最小成本拉通闭环</td><td><b>做</b> · 当前唯一主策略</td></tr>
+    <tr><td>跑马圈地</td><td>小规模试点 + 资源跟随</td><td>P0 跑通后，选 1 个城市亲友圈试点</td></tr>
+    <tr><td>大幅扩张</td><td>关键节点砸资源</td><td>不做 · 过早烧钱</td></tr>
+    <tr><td>高度竞争</td><td>强化差异、争夺份额</td><td>避免与硬件正面硬碰；坚持错位</td></tr>
+    <tr><td>衰退/求新</td><td>提价或降本找新增长</td><td>不适用自身；适用「微信群照护」这一旧方案</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="swot">
+  <p class="sec-no">13</p>
+  <h2>机会与风险</h2>
+  <div class="swot">
+    <div class="s">
+      <b>优势</b>
+      <ul>
+        <li>无硬件启动，转化摩擦低</li>
+        <li>需求调研已明确紧急呼叫、用药、安好摘要优先级</li>
+        <li>安好摘要可填补竞品「指标墙」空白</li>
+        <li>明确不做理财导流，信任叙事清晰</li>
+      </ul>
+    </div>
+    <div class="w">
+      <b>短板</b>
+      <ul>
+        <li>无硬件时定位/健康传感器弱</li>
+        <li>品牌与渠道远弱于 360/爱牵挂</li>
+        <li>仍处概念→MVP，无留存证据</li>
+      </ul>
+    </div>
+    <div class="o">
+      <b>机会</b>
+      <ul>
+        <li>居家养老为主流，远程协同缺口在</li>
+        <li>监控隐私张力给「低监视」产品空间</li>
+        <li>可与摄像头/手表后期选配，而非前置</li>
+      </ul>
+    </div>
+    <div class="t">
+      <b>威胁</b>
+      <ul>
+        <li>硬件厂商一键加上「安好摘要」</li>
+        <li>微信做结构化亲情待办</li>
+        <li>京东健康/支付宝关系链切入</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="strategy">
+  <p class="sec-no">14</p>
+  <h2>策略建议与 90 天计划</h2>
+  <div class="steps">
+    <div><b>① 竞品与五层拆解</b><span>爱牵挂、360、微信完整；对照总表 + 米家/京东/支付宝要点</span></div>
+    <div><b>② 阶段最大版本特点</b><span>表绑人 · App 绑子女 · 软件服务硬件</span></div>
+    <div><b>③ 自身状态</b><span>MVP 验证期 · 对齐需求调研 P0 / P1</span></div>
+    <div><b>④ 决策输出</b><span>吸收与规避清单 + 90 天验证指标</span></div>
+  </div>
+
+  <h3>吸收与规避</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>层</th><th>建议吸收</th><th>建议规避 / 反向</th></tr>
+    <tr><td>战略</td><td>子女为决策人；家庭多成员</td><td>不以卖硬件为主；不做资讯带货感</td></tr>
+    <tr><td>范围</td><td>SOS 多通道；提醒能力</td><td>定位/围栏不做必装；砍理财流</td></tr>
+    <tr><td>结构</td><td>复杂设置放子女端；父母极简</td><td>不做指标仪表盘 IA</td></tr>
+    <tr><td>框架</td><td>防误触长按；未接扩第二人；邀请家人</td><td>单向监听；高频无关键推送</td></tr>
+    <tr><td>表现</td><td>父母大按钮、大字、大音量思路</td><td>子女端监护舱视觉</td></tr>
+  </table>
+  </div>
+
+  <h3>90 天 MVP 验证计划</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>周期</th><th>交付</th><th>验证问题</th><th>过线标准</th></tr>
+    <tr>
+      <td>D1–30</td>
+      <td>可点原型：R1 呼叫 + 备用联系人</td>
+      <td>父母能否独立完成一次呼叫？</td>
+      <td>任务成功率 ≥80%；响铃 ≤5 秒（实验室）</td>
+    </tr>
+    <tr>
+      <td>D31–60</td>
+      <td>R2 用药提醒 + 已吃打卡 + 日摘要</td>
+      <td>子女是否还用微信群叮嘱用药？</td>
+      <td>试点家庭群内用药相关消息下降 ≥50%</td>
+    </tr>
+    <tr>
+      <td>D61–90</td>
+      <td>R3 安好一页；小样本真用</td>
+      <td>子女是否愿每天打开？</td>
+      <td>周活子女 ≥3 天/周；NPS 意愿「愿意推荐」≥40%</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="verdict">
+    <h3>决策建议</h3>
+    <p class="big">在 MVP 验证期，以无硬件协同错位切入，避开爱牵挂 / 360 的「表绑人」路径；用结构化「今日安好」替代微信群碎片问安。首版锁定紧急呼叫与用药打卡，尽快补齐安好摘要，明确排除理财与导流类能力。</p>
+    <p>本报告可与前期需求优先级结论一并用于评审：需求决定做什么，竞争分析决定相对谁、做成什么样、这一阶段怎么打。</p>
+  </div>
+</section>
+
+<section id="appendix">
+  <p class="sec-no">15</p>
+  <h2>数据来源说明</h2>
+  <div class="scroll-x">
+  <table>
+    <tr><th>条目</th><th>类型</th><th>说明</th></tr>
+    <tr><td>爱牵挂 App 叙事、评分约 4.1 / 101 评</td><td><span class="tag pub">外部公开</span></td><td>App Store「爱牵挂care」id1025615485；核验日 2026-10-23</td></tr>
+    <tr><td>爱牵挂绑定流程、SOS 长按 3 秒、推送+短信+回拨、亲情号≤10、家庭圈邀请码</td><td><span class="tag pub">外部公开</span></td><td>S5 小鲸使用说明书（品牌公众号刊发操作步骤）</td></tr>
+    <tr><td>爱牵挂价格带约 ¥297–697</td><td><span class="tag pub">外部公开</span></td><td>中关村在线、买购等 2024 导购标价区间</td></tr>
+    <tr><td>360 SOS 长按约 5 秒、白名单通话、安全区域、亲情卫士绑定/监听</td><td><span class="tag pub">外部公开</span></td><td>360 健康手表官网、亲情手表 FAQ、新浪众测开箱（2019-12）</td></tr>
+    <tr><td>米家摄像机看护能力</td><td><span class="tag pub">外部公开</span></td><td>小米商城产品页能力描述</td></tr>
+    <tr><td>微信作为问安发生地的五层判断</td><td><span class="tag sim">内部估算</span></td><td>基于公开产品能力与通用使用习惯，非腾讯内部材料</td></tr>
+    <tr><td>居家养老近九成、监控接受度等</td><td><span class="tag pub">外部公开</span></td><td>养老消费调查及行业转载；居家养老白皮书相关口径</td></tr>
+    <tr><td>养老服务市场规模 6272 亿（2023 测算）</td><td><span class="tag pub">外部公开</span></td><td>行业研究转载，作背景量级，非本产品 TAM 精算</td></tr>
+    <tr><td>功能 1–5 分矩阵、痛点条形图、90 天过线标准、五层对照表</td><td><span class="tag sim">内部估算</span></td><td>用于相对排序与试点验收，不外推为市场规模</td></tr>
+    <tr><td>界面三栏示意</td><td><span class="tag sim">内部估算</span></td><td>信息架构示意，非竞品截图</td></tr>
+    <tr><td>R1–R5 属性与优先级</td><td><span class="tag c2">需求调研</span></td><td>KANO 问卷 n=22，Better–Worse 结论</td></tr>
+  </table>
+  </div>
+  <footer class="colophon">
+    分析方法：竞品类型划分 · 用户×服务关系 · 五层模型 · 产品生命周期策略。
+    外部公开信息用于能力对标，非正式商业尽调；内部估算仅供产品决策排序，不作为对外承诺或融资口径。
+    分析对象：银发场景下的家庭照护协同方向。
+  </footer>
+</section>
+</div>
+<script>
+(function () {
+  var links = document.querySelectorAll(".nav-bar a");
+  var sections = [];
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ link: a, el: el });
+  });
+  function mark() {
+    var y = window.scrollY + 80;
+    var current = sections[0];
+    sections.forEach(function (s) {
+      if (s.el.offsetTop <= y) current = s;
+    });
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (current) current.link.classList.add("active");
+  }
+  window.addEventListener("scroll", mark, { passive: true });
+  mark();
+})();
+</script>
+</body>
+</html>

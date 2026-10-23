@@ -8,6 +8,8 @@
    https://juanmedici.github.io/gangling-portfolio/kano-yinfa.html
 3. **荐知 · 个性化推荐智能体** — 概念阶段的产品定义：定位、用户、15 条需求优先级、首版范围、验收、验证和商业化  
    https://juanmedici.github.io/gangling-portfolio/rec-agent.html
+4. **家庭照护协同 · 竞品分析** — 银发照护方向：竞品选型、五层拆解、阶段判断与 90 天策略  
+   https://juanmedici.github.io/gangling-portfolio/compete-yinfa.html
 
 仓库：https://github.com/juanmedici/gangling-portfolio
 
@@ -17,7 +19,7 @@
 python -m http.server 8765
 ```
 
-打开 http://127.0.0.1:8765/index.html 、kano-yinfa.html 或 rec-agent.html
+打开 http://127.0.0.1:8765/index.html 、kano-yinfa.html、rec-agent.html 或 compete-yinfa.html
 
 ## 更新 Pages
 
