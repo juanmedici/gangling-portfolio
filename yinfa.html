@@ -9,7 +9,7 @@
 :root{--ink:#1c1917;--muted:#57534e;--faint:#a8a29e;--paper:#f3efe6;--sheet:#fbf8f2;--line:#e4dcd0;--accent:#9a3412;--header:#163d35;--ok:#115e59;--warn:#b45309;--blue:#1e3a5f;--soft:#f0fdfa;--mint:#a7d7c5;--sand:#ebe4d8}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15.5px}
+body{background:var(--paper);color:var(--ink);font-family:"Source Han Sans SC","Noto Sans SC","PingFang SC","Segoe UI","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15.5px}
 a{color:inherit}
 .top{background:var(--header);color:#f4f7f5;padding:36px 48px 32px}
 .identity{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;font-size:13px;color:#b7c9c3;margin-bottom:22px}
@@ -21,15 +21,69 @@ a{color:inherit}
 .hero-def{max-width:44em;margin-top:12px;font-size:17px;line-height:1.55;color:#fff}
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13px;color:var(--mint)}
 .hero-meta b{color:#fff;font-weight:600;margin-right:6px}
+.hero-stage{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch;margin-top:18px}
+.hero-stage .thesis{grid-template-columns:1fr;gap:10px}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 16px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-size:13px;font-weight:700;box-shadow:0 8px 20px rgba(154,52,18,.28)}
+.hero-cta:hover{filter:brightness(1.06)}
+.hero-peeks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hero-peeks a{text-decoration:none;color:#d5e3de;font-size:11px;text-align:center}
+.hero-peeks a span{display:block;margin-top:6px;letter-spacing:.02em}
+.peek-frame{background:linear-gradient(160deg,#2a2623,#141210);border-radius:18px;padding:8px;box-shadow:0 14px 28px rgba(0,0,0,.28)}
+.peek-screen{background:#f6f0e6;border-radius:12px;min-height:148px;padding:10px 8px 8px;text-align:left;color:#24302a;position:relative;overflow:hidden}
+.peek-screen::before{content:"";position:absolute;left:50%;top:4px;transform:translateX(-50%);width:36px;height:8px;background:#0c0c0c;border-radius:6px}
+.peek-screen .pt{font-size:10px;font-weight:700;margin:10px 0 6px}
+.peek-screen .pb{display:block;width:42px;height:42px;margin:6px auto;border-radius:50%;background:radial-gradient(circle at 30% 28%,#e98c82,#d65a4c 60%,#b84438);box-shadow:0 0 0 4px rgba(214,90,76,.15)}
+.peek-screen .pl{height:8px;border-radius:4px;background:#ebc587;margin:6px 0 4px}
+.peek-screen .pl.s{width:70%;background:#139ea7}
+.peek-screen.child{background:linear-gradient(160deg,#e5f5f6,#fffcf7)}
+.peek-screen .chipg{display:inline-block;font-size:9px;font-weight:700;padding:3px 7px;border-radius:999px;background:rgba(19,158,167,.14);color:#0f8f98;margin-bottom:4px}
+.peek-screen .chipw{display:inline-block;font-size:9px;font-weight:700;padding:3px 7px;border-radius:999px;background:#f8eec8;color:#8a6a12;margin-bottom:4px}
 .reading-path{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
 .reading-path a{display:block;background:rgba(255,255,255,.1);border:1px solid rgba(167,215,197,.35);padding:12px 12px;text-decoration:none;color:#e7efec;font-size:12.5px;min-height:64px}
 .reading-path a:hover{background:rgba(255,255,255,.16);color:#fff}
 .reading-path b{display:block;color:var(--mint);font-size:11px;letter-spacing:.08em;margin-bottom:4px}
-.map-lab{margin:16px 0 8px;font-size:11px;letter-spacing:.12em;color:#a7d7c5}
-.map{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:0}
-@media(min-width:961px){.map{grid-template-columns:repeat(7,1fr)}.map a{min-height:52px}}
+.map-fold{margin-top:14px;border:1px solid rgba(167,215,197,.28);border-radius:10px;overflow:hidden;background:rgba(0,0,0,.12)}
+.map-fold>summary{cursor:pointer;list-style:none;padding:11px 14px;font-size:12px;color:var(--mint);letter-spacing:.08em;user-select:none}
+.map-fold>summary::-webkit-details-marker{display:none}
+.map-fold>summary::after{content:"展开细目 ›";float:right;color:#d5e3de}
+.map-fold[open]>summary::after{content:"收起 ˄"}
+.map{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:0 12px 12px}
+@media(min-width:961px){.map{grid-template-columns:repeat(7,1fr)}.map a{min-height:48px}}
 .chap-end{margin-top:18px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);font-size:13.5px;line-height:1.55;color:var(--ink)}
 .chap-end b{color:var(--accent);margin-right:6px}
+.viz-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;margin:14px 0}
+.bar-board{background:#fff;border:1px solid var(--line);padding:16px 16px 12px}
+.bar-board h4{margin:0 0 12px;font-size:14px}
+.bar-row{display:grid;grid-template-columns:72px 1fr 72px;gap:8px;align-items:center;margin:10px 0;font-size:12px}
+.bar-row .pair{display:grid;gap:4px}
+.bar-row .track{height:10px;border-radius:999px;background:#f0ebe3;overflow:hidden}
+.bar-row .track i{display:block;height:100%;border-radius:999px}
+.bar-row .track .b{background:linear-gradient(90deg,#0f766e,var(--ok))}
+.bar-row .track .w{background:linear-gradient(90deg,#c2410c,var(--accent))}
+.bar-legend{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-top:10px}
+.bar-legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.bar-legend .lb::before{background:var(--ok)}.bar-legend .lw::before{background:var(--accent)}
+.state-poster{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.state-poster article{border:1px solid var(--line);padding:16px 14px;background:#fff;min-height:140px;position:relative;overflow:hidden}
+.state-poster article::before{content:"";position:absolute;left:0;top:0;right:0;height:4px}
+.state-poster .ok::before{background:var(--ok)}.state-poster .care::before{background:var(--warn)}.state-poster .sos::before{background:var(--accent)}
+.state-poster .lab{font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+.state-poster .ok .lab{color:var(--ok)}.state-poster .care .lab{color:var(--warn)}.state-poster .sos .lab{color:var(--accent)}
+.state-poster strong{display:block;font-family:"Palatino Linotype","Songti SC",serif;font-size:20px;margin-bottom:6px}
+.state-poster p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.expand-rail{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:6px;align-items:stretch;margin:14px 0}
+.expand-rail .node{background:#fff;border:1px solid var(--line);padding:12px 10px;text-align:center;font-size:12px}
+.expand-rail .node b{display:block;font-size:13px;margin-bottom:4px;color:var(--ink)}
+.expand-rail .node.on{border-color:var(--accent);background:#fff1ee;box-shadow:inset 0 3px 0 var(--accent)}
+.expand-rail .node.ok{border-color:var(--ok);background:var(--soft)}
+.expand-rail .arrow{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:16px}
+.fig{border-radius:4px}
+.fig .mermaid{display:flex;justify-content:center}
+@media(max-width:960px){
+.hero-stage,.viz-grid,.state-poster,.hero-peeks,.expand-rail{grid-template-columns:1fr}
+.expand-rail{gap:8px}
+.expand-rail .arrow{transform:rotate(90deg);padding:2px 0}
+}
 .killbox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
 .killbox div{border:1px solid var(--line);padding:14px 16px;background:#fff}
 .killbox .go{border-top:3px solid var(--ok);background:var(--soft)}
@@ -520,7 +574,8 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 @media(max-width:1200px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:960px){
 .top{padding:24px 16px}.top h1{font-size:28px}
-.reading-path,.map,.steps,.roles,.scenes,.ux5,.phones,.phones.trio,.stage,.stage-row,.life7,.ia-tree,.nielsen,.q4,.prio,.comp-q,.killbox,.funnel,.quotes,.insight,.persona,.thesis,.contrast3,.journey,.jobs,.engine,.statebox,.defaults,.edge div,.mtree .branches{grid-template-columns:1fr}
+.reading-path,.map,.steps,.roles,.scenes,.ux5,.phones,.phones.trio,.stage,.stage-row,.life7,.ia-tree,.nielsen,.q4,.prio,.comp-q,.killbox,.funnel,.quotes,.insight,.persona,.thesis,.contrast3,.journey,.jobs,.engine,.statebox,.defaults,.edge div,.mtree .branches,.hero-stage,.viz-grid,.state-poster,.hero-peeks{grid-template-columns:1fr}
+.expand-rail{grid-template-columns:1fr}.expand-rail .arrow{transform:rotate(90deg);padding:2px 0}
 .arch-row{grid-template-columns:1fr}.wrap{padding:24px 14px 48px}
 .mtree .fork{display:none}.mtree .trunk{height:14px}
 }
@@ -540,24 +595,43 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   </div>
   <p class="kicker">银发经济 · 最终作品集</p>
   <h1>晓安 · 给子女的决策产品</h1>
-  <p class="hero-def">不补一套老人健康功能，也不做成「去硬件的定位手表」。晓安只回答一件事：今天要不要给父母打电话——父母端负责履约，子女端负责决策。</p>
-  <div class="thesis">
-    <div class="main">
-      <div class="lab">产品主张</div>
-      <div class="line">结论先于数据 · 异常才推 · 未接扩联</div>
-      <p style="margin:10px 0 0;font-size:13.5px;color:#d5e3de;line-height:1.55">MVP 只覆盖「慢病稳态日常 + 紧急触达」。复诊、情绪陪伴、社区与硬件接入写在边界之外：理解要完整，交付要克制。</p>
+  <div class="hero-stage">
+    <div>
+      <p class="hero-def">不补一套老人健康功能，也不做成「去硬件的定位手表」。晓安只回答一件事：今天要不要给父母打电话——父母端负责履约，子女端负责决策。</p>
+      <div class="thesis">
+        <div class="main">
+          <div class="lab">产品主张</div>
+          <div class="line">结论先于数据 · 异常才推 · 未接扩联</div>
+          <p style="margin:10px 0 0;font-size:13.5px;color:#d5e3de;line-height:1.55">MVP 只覆盖「慢病稳态日常 + 紧急触达」。复诊、情绪陪伴、社区与硬件接入写在边界之外：理解要完整，交付要克制。</p>
+        </div>
+        <div class="sigs">
+          <div><b>签名能力 ① 结论条</b>打开约 10 秒，完成「打不打电话」的判断，不堆监测曲线。</div>
+          <div><b>签名能力 ② 异常才推</b>默认安静；漏服日摘要至多一条；定位默认关闭。</div>
+          <div><b>签名能力 ③ 扩联状态机</b>主责 30 秒未接 → 备用联系人；权责写入规则，不靠群聊协商。</div>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span><b>产品</b>晓安</span>
+        <span><b>用户</b>异地子女（决策/付费）+ 居家父母（履约）</span>
+        <span><b>阶段</b>MVP 验证期</span>
+        <span><b>样本</b>访谈 12 · KANO 问卷 22</span>
+      </div>
+      <a class="hero-cta" href="#proto">看高保真原型 →</a>
     </div>
-    <div class="sigs">
-      <div><b>签名能力 ① 结论条</b>打开约 10 秒，完成「打不打电话」的判断，不堆监测曲线。</div>
-      <div><b>签名能力 ② 异常才推</b>默认安静；漏服日摘要至多一条；定位默认关闭。</div>
-      <div><b>签名能力 ③ 扩联状态机</b>主责 30 秒未接 → 备用联系人；权责写入规则，不靠群聊协商。</div>
+    <div class="hero-peeks">
+      <a href="#proto">
+        <div class="peek-frame"><div class="peek-screen"><div class="pt">紧急呼叫</div><i class="pb"></i><div class="pl"></div><div class="pl s"></div></div></div>
+        <span>父母 · 一键呼</span>
+      </a>
+      <a href="#proto">
+        <div class="peek-frame"><div class="peek-screen"><div class="pt">今日用药</div><div class="chipw">待确认</div><div class="pl"></div><div class="pl"></div><div class="pl s"></div></div></div>
+        <span>父母 · 打卡</span>
+      </a>
+      <a href="#proto">
+        <div class="peek-frame"><div class="peek-screen child"><div class="pt">晓安页</div><div class="chipg">可先不打</div><div class="pl s"></div><div class="pl"></div></div></div>
+        <span>子女 · 结论</span>
+      </a>
     </div>
-  </div>
-  <div class="hero-meta">
-    <span><b>产品</b>晓安</span>
-    <span><b>用户</b>异地子女（决策/付费）+ 居家父母（履约）</span>
-    <span><b>阶段</b>MVP 验证期</span>
-    <span><b>样本</b>访谈 12 · KANO 问卷 22</span>
   </div>
   <div class="reading-path">
     <a href="#thesis"><b>I · 立论</b>立场、边界与问题定义</a>
@@ -565,23 +639,25 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     <a href="#depth"><b>III · 方案</b>机制 → 功能 → 架构 → 原型</a>
     <a href="#validate"><b>IV · 验证</b>冷启动 · 生死线 · 商业时点</a>
   </div>
-  <p class="map-lab">章节细目</p>
-  <div class="map">
-    <a href="#thesis"><b>00</b>立场·边界·机制</a>
-    <a href="#hmw"><b>01</b>HMW 定方向</a>
-    <a href="#research"><b>02</b>用户研究</a>
-    <a href="#kano"><b>03</b>KANO 分级</a>
-    <a href="#ux"><b>04</b>体验分析</a>
-    <a href="#compete"><b>05</b>竞品金字塔</a>
-    <a href="#tear"><b>06</b>鱼骨拆解</a>
-    <a href="#depth"><b>07</b>机制深挖</a>
-    <a href="#func"><b>08</b>功能结构</a>
-    <a href="#arch"><b>09</b>功能架构</a>
-    <a href="#ver"><b>10</b>版本方案</a>
-    <a href="#ia"><b>11</b>信息架构</a>
-    <a href="#proto"><b>12</b>原型</a>
-    <a href="#validate"><b>13</b>验证商业</a>
-  </div>
+  <details class="map-fold">
+    <summary>章节细目 · 00–13</summary>
+    <div class="map">
+      <a href="#thesis"><b>00</b>立场·边界·机制</a>
+      <a href="#hmw"><b>01</b>HMW 定方向</a>
+      <a href="#research"><b>02</b>用户研究</a>
+      <a href="#kano"><b>03</b>KANO 分级</a>
+      <a href="#ux"><b>04</b>体验分析</a>
+      <a href="#compete"><b>05</b>竞品金字塔</a>
+      <a href="#tear"><b>06</b>鱼骨拆解</a>
+      <a href="#depth"><b>07</b>机制深挖</a>
+      <a href="#func"><b>08</b>功能结构</a>
+      <a href="#arch"><b>09</b>功能架构</a>
+      <a href="#ver"><b>10</b>版本方案</a>
+      <a href="#ia"><b>11</b>信息架构</a>
+      <a href="#proto"><b>12</b>原型</a>
+      <a href="#validate"><b>13</b>验证商业</a>
+    </div>
+  </details>
 </header>
 <nav class="nav-bar">
   <a href="#thesis">I 立论</a>
@@ -797,6 +873,28 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   </div>
   <p class="note">Better=(A+O)/(A+O+M+I)；Worse=−(O+M)/(A+O+M+I)。Q 矛盾卷已剔除。交叉定位全表见 <a href="kano-yinfa.html">KANO 详表页</a>。样本用于本产品优先级，不外推全国市场规模。</p>
 
+  <div class="viz-grid">
+    <div class="bar-board">
+      <h4>系数对照 · Better vs |Worse|</h4>
+      <div class="bar-row"><span>R1 呼叫</span><div class="pair"><div class="track"><i class="b" style="width:38%"></i></div><div class="track"><i class="w" style="width:86%"></i></div></div><span>0.38 / 0.86</span></div>
+      <div class="bar-row"><span>R2 用药</span><div class="pair"><div class="track"><i class="b" style="width:71%"></i></div><div class="track"><i class="w" style="width:71%"></i></div></div><span>0.71 / 0.71</span></div>
+      <div class="bar-row"><span>R3 晓安</span><div class="pair"><div class="track"><i class="b" style="width:81%"></i></div><div class="track"><i class="w" style="width:29%"></i></div></div><span>0.81 / 0.29</span></div>
+      <div class="bar-row"><span>R5 兴趣</span><div class="pair"><div class="track"><i class="b" style="width:35%"></i></div><div class="track"><i class="w" style="width:15%"></i></div></div><span>0.35 / 0.15</span></div>
+      <div class="bar-row"><span>R4 理财</span><div class="pair"><div class="track"><i class="b" style="width:5%"></i></div><div class="track"><i class="w" style="width:5%"></i></div></div><span>≈0 / ≈0</span></div>
+      <div class="bar-legend"><span class="lb">Better（有了会高兴）</span><span class="lw">|Worse|（缺了会怒）</span></div>
+    </div>
+    <div class="bar-board">
+      <h4>一眼排期</h4>
+      <p style="margin:0 0 10px;font-size:13px;color:var(--muted);line-height:1.5">左上 |Worse| 高 → 先做对；右上双高 → 同批拉满意度；右下 Better 高 → 差异化；左下近零 → 砍或缓。</p>
+      <div class="prio" style="margin:0;grid-template-columns:1fr 1fr">
+        <div><b>P0</b>R1 呼叫 + R2 用药</div>
+        <div><b>P1</b>R3 晓安摘要</div>
+        <div><b>杀掉</b>R4 理财推荐</div>
+        <div><b>暂缓</b>R5 兴趣小组</div>
+      </div>
+    </div>
+  </div>
+
   <h3>如何读这些数（支撑排期）</h3>
   <table>
     <tr><th>需求</th><th>数据含义</th><th>产品动作</th></tr>
@@ -817,27 +915,44 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   <h3>Better–Worse 四象限（读图规则）</h3>
   <div class="fig">
     <svg viewBox="0 0 720 420" role="img" aria-label="KANO 四象限">
-      <rect width="720" height="420" fill="var(--sheet)"/>
-      <rect x="70" y="30" width="270" height="170" fill="#fff1ee" opacity=".6"/>
-      <rect x="340" y="30" width="270" height="170" fill="var(--soft)" opacity=".65"/>
-      <rect x="70" y="200" width="270" height="170" fill="#f5f5f4" opacity=".75"/>
-      <rect x="340" y="200" width="270" height="170" fill="#fffbeb" opacity=".55"/>
-      <line x1="70" y1="200" x2="610" y2="200" stroke="#1c1917" stroke-width="1.5"/>
-      <line x1="340" y1="30" x2="340" y2="370" stroke="#1c1917" stroke-width="1.5"/>
-      <text x="340" y="398" text-anchor="middle" font-size="12" fill="#57534e">Better →</text>
-      <text x="24" y="210" text-anchor="middle" font-size="12" fill="#57534e" transform="rotate(-90 24 210)">|Worse| →</text>
-      <text x="200" y="48" text-anchor="middle" font-size="11" fill="var(--accent)">必备区</text>
-      <text x="480" y="48" text-anchor="middle" font-size="11" fill="var(--ok)">高优先</text>
-      <text x="200" y="358" text-anchor="middle" font-size="11" fill="#78716c">低影响</text>
-      <text x="480" y="358" text-anchor="middle" font-size="11" fill="var(--warn)">魅力储备</text>
-      <circle cx="276" cy="78" r="12" fill="var(--accent)"/><text x="276" y="82" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R1</text>
-      <text x="276" y="104" text-anchor="middle" font-size="11">呼叫 M</text>
-      <circle cx="454" cy="110" r="12" fill="var(--warn)"/><text x="454" y="114" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R2</text>
-      <text x="454" y="136" text-anchor="middle" font-size="11">用药 O</text>
-      <circle cx="505" cy="268" r="12" fill="var(--ok)"/><text x="505" y="272" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R3</text>
-      <text x="505" y="294" text-anchor="middle" font-size="11">晓安 A</text>
-      <circle cx="259" cy="318" r="12" fill="#78716c"/><text x="259" y="322" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R5</text>
-      <circle cx="97" cy="348" r="12" fill="#1e3a5f"/><text x="97" y="352" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R4</text>
+      <defs>
+        <filter id="dotGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <linearGradient id="qMust" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff1ee"/><stop offset="100%" stop-color="#fde8e0"/></linearGradient>
+        <linearGradient id="qHi" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0fdfa"/><stop offset="100%" stop-color="#d9f3ee"/></linearGradient>
+        <linearGradient id="qLow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fafaf9"/><stop offset="100%" stop-color="#f0ebe3"/></linearGradient>
+        <linearGradient id="qCharm" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fffbeb"/><stop offset="100%" stop-color="#f8eec8"/></linearGradient>
+      </defs>
+      <rect width="720" height="420" fill="#fbf8f2"/>
+      <rect x="70" y="30" width="270" height="170" fill="url(#qMust)"/>
+      <rect x="340" y="30" width="270" height="170" fill="url(#qHi)"/>
+      <rect x="70" y="200" width="270" height="170" fill="url(#qLow)"/>
+      <rect x="340" y="200" width="270" height="170" fill="url(#qCharm)"/>
+      <g stroke="#e4dcd0" stroke-width="1" stroke-dasharray="3 4">
+        <line x1="70" y1="115" x2="610" y2="115"/><line x1="70" y1="285" x2="610" y2="285"/>
+        <line x1="205" y1="30" x2="205" y2="370"/><line x1="475" y1="30" x2="475" y2="370"/>
+      </g>
+      <line x1="70" y1="200" x2="610" y2="200" stroke="#1c1917" stroke-width="2"/>
+      <line x1="340" y1="30" x2="340" y2="370" stroke="#1c1917" stroke-width="2"/>
+      <polygon points="610,200 598,195 598,205" fill="#1c1917"/>
+      <polygon points="340,30 335,42 345,42" fill="#1c1917"/>
+      <text x="340" y="398" text-anchor="middle" font-size="13" fill="#57534e" font-weight="600">Better →</text>
+      <text x="24" y="210" text-anchor="middle" font-size="13" fill="#57534e" font-weight="600" transform="rotate(-90 24 210)">|Worse| →</text>
+      <text x="200" y="52" text-anchor="middle" font-size="12" fill="#9a3412" font-weight="700">必备区 · 先做对</text>
+      <text x="480" y="52" text-anchor="middle" font-size="12" fill="#115e59" font-weight="700">高优先 · 同批上</text>
+      <text x="200" y="358" text-anchor="middle" font-size="12" fill="#78716c" font-weight="700">低影响 · 砍或缓</text>
+      <text x="480" y="358" text-anchor="middle" font-size="12" fill="#b45309" font-weight="700">魅力储备 · 做差异</text>
+      <g filter="url(#dotGlow)">
+        <circle cx="276" cy="78" r="16" fill="#9a3412"/><text x="276" y="83" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">R1</text>
+        <circle cx="454" cy="110" r="16" fill="#b45309"/><text x="454" y="115" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">R2</text>
+        <circle cx="505" cy="268" r="16" fill="#115e59"/><text x="505" y="273" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">R3</text>
+        <circle cx="259" cy="318" r="14" fill="#78716c"/><text x="259" y="323" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R5</text>
+        <circle cx="97" cy="348" r="14" fill="#1e3a5f"/><text x="97" y="353" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R4</text>
+      </g>
+      <text x="276" y="108" text-anchor="middle" font-size="12" fill="#1c1917" font-weight="600">呼叫 M</text>
+      <text x="454" y="140" text-anchor="middle" font-size="12" fill="#1c1917" font-weight="600">用药 O</text>
+      <text x="505" y="298" text-anchor="middle" font-size="12" fill="#1c1917" font-weight="600">晓安 A</text>
+      <text x="259" y="344" text-anchor="middle" font-size="11" fill="#57534e">兴趣 I</text>
+      <text x="97" y="374" text-anchor="middle" font-size="11" fill="#57534e">理财 R</text>
     </svg>
     <p class="cap">R1 左上先做对；R2 右上拉满意度；R3 右下做差异；R4/R5 左下砍或缓。</p>
   </div>
@@ -1164,6 +1279,11 @@ flowchart LR
       </ul>
     </article>
   </div>
+  <div class="state-poster">
+    <article class="ok"><div class="lab">STATE · OK</div><strong>可先不打</strong><p>打卡齐 · 活跃在阈值 · 无紧急。打开即安心，不必打电话。</p></article>
+    <article class="care"><div class="lab">STATE · CARE</div><strong>建议联系</strong><p>漏服 / 活跃超时 / 转责待确认。一键电话始终在。</p></article>
+    <article class="sos"><div class="lab">STATE · SOS</div><strong>今日有紧急</strong><p>当日发生过呼叫。全日保持该态，避免误读成平常一天。</p></article>
+  </div>
   <h4>例外表（边界情况）</h4>
   <div class="edge">
     <div><span class="q">漏服，但 10 分钟前刚活跃</span><span class="a"><b>结论：</b>建议联系</span><span class="a">理由写「用药未完成」；不因活跃掩盖漏服</span></div>
@@ -1179,6 +1299,15 @@ flowchart LR
     <div><b>备用</b>≥1 人；主责 30 秒未接或主动拒接 → 自动扩联；不接收日常安静推送。</div>
     <div><b>同城协助</b>帮助人物；可被主责一键临时拉入「就近协助」，不自动成为主责。</div>
     <div><b>临时转责</b>主责设定起止时间；期内扩联目标切换，到期自动归还，写进事件日志。</div>
+  </div>
+  <div class="expand-rail">
+    <div class="node on"><b>① 发起</b>父母大按钮<br>紧急呼叫</div>
+    <div class="arrow">→</div>
+    <div class="node"><b>② 主责</b>响铃 ≤5s<br>等待 30s</div>
+    <div class="arrow">→</div>
+    <div class="node"><b>③ 扩联</b>未接 / 拒接<br>自动找备用</div>
+    <div class="arrow">→</div>
+    <div class="node ok"><b>④ 闭环</b>接通记事件<br>或短信兜底</div>
   </div>
   <div class="fig">
     <pre class="mermaid">
@@ -1869,7 +1998,30 @@ flowchart TB
 </section>
 </div>
 <script>
-mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"loose"});
+mermaid.initialize({
+  startOnLoad:true,
+  theme:"base",
+  securityLevel:"loose",
+  themeVariables:{
+    primaryColor:"#f0fdfa",
+    primaryTextColor:"#1c1917",
+    primaryBorderColor:"#115e59",
+    secondaryColor:"#fff1ee",
+    secondaryTextColor:"#1c1917",
+    secondaryBorderColor:"#9a3412",
+    tertiaryColor:"#fffbeb",
+    tertiaryTextColor:"#1c1917",
+    tertiaryBorderColor:"#b45309",
+    lineColor:"#57534e",
+    textColor:"#1c1917",
+    mainBkg:"#fbf8f2",
+    nodeBorder:"#115e59",
+    clusterBkg:"#f3efe6",
+    titleColor:"#163d35",
+    edgeLabelBackground:"#fbf8f2",
+    fontFamily:"Source Han Sans SC, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
+  }
+});
 (function(){
   var links=document.querySelectorAll(".nav-bar a"),sections=[];
   links.forEach(function(a){var el=document.getElementById(a.getAttribute("href").slice(1));if(el)sections.push({link:a,el:el});});
