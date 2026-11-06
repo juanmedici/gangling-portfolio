@@ -82,7 +82,7 @@ th{background:var(--sand);font-size:11.5px;color:var(--muted);font-weight:600}
   box-shadow:0 22px 48px rgba(28,25,23,.22),inset 0 0 0 1px rgba(255,255,255,.08)
 }
 .phone-cap{text-align:center;font-size:12px;color:#57534e;margin:0 0 8px;letter-spacing:.02em}
-.screen{position:relative;background:var(--bg);border-radius:28px;overflow:hidden;height:620px;color:var(--ink);display:flex;flex-direction:column;font-family:-apple-system,"PingFang SC","Segoe UI","Microsoft YaHei",sans-serif}
+.screen{position:relative;background:var(--bg);border-radius:28px;overflow:hidden;height:640px;color:var(--ink);display:flex;flex-direction:column;font-family:-apple-system,"PingFang SC","Segoe UI","Microsoft YaHei",sans-serif}
 .screen .panel,.screen .call-body,.screen .calling,.screen .remind{overflow-y:auto;min-height:0}
 .screen::before{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:92px;height:22px;background:#0c0c0c;border-radius:14px;z-index:5}
 .sb{display:flex;justify-content:space-between;align-items:center;padding:12px 18px 0;font-size:12px;font-weight:700;color:var(--ink);position:relative;z-index:2;letter-spacing:.02em}
@@ -185,7 +185,7 @@ th{background:var(--sand);font-size:11.5px;color:var(--muted);font-weight:600}
 .calling{text-align:center;padding:36px 8px 12px;flex:1;display:flex;flex-direction:column;align-items:center}
 .calling .big{font-size:20px;font-weight:750;margin:12px 0 4px}
 .calling .sub{font-size:13px;color:var(--muted);margin-bottom:18px}
-.call-screen{background:linear-gradient(165deg,#1d2924 0%,#0c6d74 48%,#6f3d38 100%);color:#f4f7f5;height:620px}
+.call-screen{background:linear-gradient(165deg,#1d2924 0%,#0c6d74 48%,#6f3d38 100%);color:#f4f7f5;height:640px}
 .call-screen .sb{color:#eef7f6}.call-screen .mpbar .ttl{color:#eef7f6}
 .call-body{flex:1;display:flex;flex-direction:column;align-items:center;padding:28px 16px 16px;text-align:center}
 .call-ring{position:relative;width:120px;height:120px;margin:4px 0 16px}
@@ -274,6 +274,152 @@ th{background:var(--sand);font-size:11.5px;color:var(--muted);font-weight:600}
 footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
 @media(max-width:1200px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.top{padding:24px 16px}.top h1{font-size:26px}.q4,.stage,.phones,.phones.trio,.ia-tree{grid-template-columns:1fr}.arch-row{grid-template-columns:1fr}.wrap{padding:24px 14px 48px}}
+/* default = child/normal density */
+.screen{font-size:14px}
+.screen .mpbar .ttl{font-size:15px;font-weight:600}
+.screen .screen-head{padding:0 16px 10px}
+.screen .screen-head .eyebrow{font-size:11px;margin-bottom:2px}
+.screen .screen-head h5{font-size:17px;font-weight:650;letter-spacing:0}
+.screen .avatar{width:32px;height:32px;font-size:12px;box-shadow:none}
+.screen .panel{padding:0 12px 12px}
+.screen .sec-label{font-size:12px;margin:0 2px 6px}
+.screen .sec-label span{font-size:11px}
+.screen .med .ico{width:34px;height:34px;border-radius:10px;background:linear-gradient(180deg,#f7ecd4,var(--sand));color:var(--olive)}
+.screen .med .ico svg{width:18px;height:18px}
+.screen .med .body b{font-size:14px;font-weight:650}
+.screen .med .body .meta{font-size:11px}
+.screen .med-list .med{padding:11px 12px;gap:10px}
+.screen .chip{padding:5px 10px;font-size:11px;font-weight:650}
+.screen .verdict-card{padding:14px;border-radius:14px;margin-bottom:8px}
+.screen .verdict-card .ok{font-size:11px;padding:3px 8px;margin-bottom:8px}
+.screen .verdict-card strong{font-size:17px;font-weight:700;margin-bottom:4px}
+.screen .verdict-card .muted{font-size:12px}
+.screen .evidence{margin-top:10px;gap:5px}
+.screen .evidence span{font-size:11px;padding:4px 8px}
+.screen .stats{gap:8px;margin-bottom:8px}
+.screen .stat{padding:10px;min-height:auto;border-radius:12px}
+.screen .stat .lab{font-size:11px;margin-bottom:4px}
+.screen .stat b{font-size:18px;font-weight:700}
+.screen .stat .sub{font-size:10px}
+.screen .feed{padding:10px 12px;border-radius:12px;margin-bottom:8px}
+.screen .feed .lab{font-size:11px;margin-bottom:4px}
+.screen .feed-item{font-size:12px;padding:7px 0}
+.screen .btn-main,.screen .btn-ghost,.screen .btn-danger{font-size:14px;font-weight:650;min-height:42px;padding:10px 12px;border-radius:11px}
+.screen .btn-main{box-shadow:0 4px 12px rgba(19,158,167,.18)}
+.screen .member{padding:10px 12px;gap:10px}
+.screen .member .body b{font-size:14px}
+.screen .member .body .meta{font-size:11px}
+.screen .role{font-size:10px;padding:3px 7px}
+.screen .list .row{padding:12px;font-size:13px;min-height:44px}
+.screen .list .row .val{font-size:12px}
+.screen .alert-banner{padding:12px;border-radius:12px;margin-bottom:8px}
+.screen .alert-banner b{font-size:13px;margin-bottom:4px;font-weight:700}
+.screen .alert-banner p{font-size:12px}
+.screen .wx-card .bd strong{font-size:14px}
+.screen .wx-card .bd p{font-size:12px}
+.screen .card{border-radius:12px;margin-bottom:8px}
+.ticon{width:22px;height:22px;display:block;margin:0 auto 2px}
+.tabbar{padding:4px 4px 8px}
+.tabbar span{gap:2px;font-size:10px;font-weight:500;padding:4px 0;color:var(--faint)}
+.tabbar span em{display:none}
+.tabbar .on{color:var(--header);font-weight:650}
+.tabbar.parent .on{color:var(--accent)}
+.tabbar .on .ticon{stroke:currentColor}
+/* parent = large / elder mode */
+.screen.parent .screen-head h5{font-size:24px;font-weight:750}
+.screen.parent .screen-head .eyebrow{font-size:13px}
+.screen.parent .avatar{width:40px;height:40px;font-size:14px}
+.screen.parent .sos{width:132px;height:132px}
+.screen.parent .sos b{font-size:28px}
+.screen.parent .sos span{font-size:14px}
+.screen.parent .sos-wrap .hint{font-size:14px}
+.screen.parent .sec-label{font-size:15px}
+.screen.parent .med .body b{font-size:17px}
+.screen.parent .med .body .meta{font-size:13px}
+.screen.parent .med .ico{width:42px;height:42px}
+.screen.parent .med .ico svg{width:22px;height:22px}
+.screen.parent .chip{font-size:13px;padding:7px 12px}
+.screen.parent .list .row{font-size:16px;padding:16px;min-height:52px}
+.screen.parent .seg span{font-size:14px;padding:10px 2px}
+.screen.parent .remind .pillname{font-size:30px}
+.screen.parent .remind .dose{font-size:16px}
+.screen.parent .remind .big-ok{height:60px;font-size:20px}
+.screen.parent .calling .big{font-size:22px}
+.screen.parent .mpbar .ttl{font-size:16px}
+.screen.parent .tabbar span{font-size:11px}
+.screen.parent .ticon{width:24px;height:24px}
+.screen.parent .status-pill{font-size:12px;padding:6px 11px}
+.screen.parent .progress{height:8px;margin:10px 0 6px}
+.screen.parent .pill-visual{width:100px;height:100px;border-radius:28px}
+.ico-svg{display:flex;align-items:center;justify-content:center}
+.ico-svg svg{width:18px;height:18px}
+.call-btns a svg{width:22px;height:22px;display:block}
+/* —— maturity v2：对标家人守护类产品质感，保留晓安签名能力 —— */
+.screen{height:640px}
+.screen.call-screen{height:640px}
+.sb{padding:14px 16px 0;font-size:11px;font-weight:650}
+.sb .icons{gap:5px}
+.sb .icons .sig,.sb .icons .wifi{display:inline-block;width:13px;height:10px;position:relative;opacity:.9}
+.sb .icons .sig{background:linear-gradient(90deg,currentColor 0 2px,transparent 2px 3.5px,currentColor 3.5px 5.5px,transparent 5.5px 7px,currentColor 7px 9.5px,transparent 9.5px 11px,currentColor 11px 13px);clip-path:polygon(0 100%,100% 100%,100% 0,0 55%)}
+.sb .icons .wifi{border:1.5px solid currentColor;border-top:0;border-radius:0 0 10px 10px;height:7px;width:11px;margin-top:1px}
+.sb .icons .wifi::before{content:"";position:absolute;left:2px;top:-4px;width:5px;height:5px;border:1.5px solid currentColor;border-radius:50%;border-bottom-color:transparent;border-left-color:transparent;transform:rotate(-45deg)}
+.mpbar{background:linear-gradient(180deg,rgba(255,252,247,.92),rgba(255,252,247,.55));backdrop-filter:blur(10px);margin:0 0 2px;border-bottom:1px solid rgba(76,96,81,.06)}
+.brand-mark{display:inline-flex;align-items:center;gap:6px}
+.brand-mark::before{content:"";width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--salmon));box-shadow:0 0 0 2px rgba(19,158,167,.15)}
+.privacy-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--olive-soft);color:var(--olive);border:1px solid rgba(76,96,81,.14)}
+.privacy-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--olive)}
+.verdict-card{border:1px solid rgba(19,158,167,.14);padding:16px 14px 14px}
+.verdict-card .ok{letter-spacing:.02em}
+.verdict-card strong{font-size:19px;letter-spacing:-.03em}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px;position:relative}
+.metric-grid div{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.metric-grid em{display:block;font-style:normal;font-size:10px;color:var(--muted);font-weight:650;margin-bottom:2px}
+.metric-grid b{display:block;font-size:13px;font-weight:750;color:var(--ink);letter-spacing:-.01em}
+.verdict-card.care .metric-grid div{background:rgba(255,255,255,.65)}
+.decision-cta{display:grid;gap:7px;margin-top:8px}
+.decision-cta .btn-main{min-height:46px;font-size:15px;border-radius:12px}
+.sos-wrap{padding:16px 12px 14px;position:relative}
+.sos-wrap .hint{letter-spacing:.04em}
+.protocol-strip{margin-top:12px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.7);border:1px dashed rgba(214,90,76,.28);font-size:11.5px;color:var(--muted);line-height:1.45;text-align:left}
+.protocol-strip b{color:var(--salmon);font-weight:750}
+.protocol-strip .chain{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:11px;font-weight:700;color:var(--ink)}
+.protocol-strip .chain span{background:var(--salmon-soft);color:var(--salmon);padding:4px 8px;border-radius:8px}
+.protocol-strip .chain i{font-style:normal;color:var(--faint)}
+.med-card{background:var(--sheet);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:10px;border:1px solid rgba(76,96,81,.08)}
+.med-card .med-hd{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:linear-gradient(90deg,var(--mustard-soft),var(--sheet));border-bottom:1px solid var(--line)}
+.med-card .med-hd b{font-size:12px;font-weight:750}
+.med-card .med-hd span{font-size:11px;color:var(--warn-ink);font-weight:650}
+.time-rail{position:relative;padding-left:14px}
+.time-rail::before{content:"";position:absolute;left:5px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--teal),var(--mustard),var(--sand));border-radius:2px;opacity:.55}
+.time-rail .med{position:relative}
+.time-rail .med::before{content:"";position:absolute;left:-12px;top:22px;width:8px;height:8px;border-radius:50%;background:var(--sheet);border:2px solid var(--teal);z-index:1}
+.time-rail .med.done::before{background:var(--teal);border-color:var(--teal)}
+.time-rail .med.wait::before{border-color:var(--mustard);background:var(--mustard-soft)}
+.family-chain{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:4px;align-items:center;background:var(--sheet);border-radius:14px;padding:10px 8px;margin-bottom:10px;box-shadow:var(--shadow);border:1px solid rgba(76,96,81,.08)}
+.family-chain .fc{text-align:center;font-size:10px;color:var(--muted);line-height:1.3}
+.family-chain .fc b{display:block;font-size:12px;color:var(--ink);margin-bottom:2px}
+.family-chain .fc.on b{color:var(--teal)}
+.family-chain .arr{color:var(--faint);font-size:12px}
+.call-btns{gap:28px;margin:8px 0 14px}
+.call-btns a,.call-btns .decline,.call-btns .accept,.call-btns .hang{display:flex;flex-direction:column;align-items:center;gap:6px;width:auto!important;height:auto!important;background:transparent!important;box-shadow:none!important;border-radius:0;color:#fff;text-decoration:none}
+.call-btns a>i{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(0,0,0,.28)}
+.call-btns a small{font-size:11px;font-weight:650;opacity:.9;letter-spacing:.04em}
+.call-btns .decline>i{background:#57534e}.call-btns .accept>i{background:#15803d;width:70px;height:70px}
+.call-btns .hang>i{background:var(--salmon)}
+.call-btns a svg{width:22px;height:22px}
+.expand-card{border-radius:14px;padding:12px 12px 10px}
+.expand-steps span.on{background:rgba(21,128,61,.35);color:#fff}
+.soft-sheet{background:rgba(255,252,247,.88);border:1px solid rgba(76,96,81,.08);border-radius:14px;padding:10px 12px;margin-bottom:8px}
+.soft-sheet .lab{font-size:11px;font-weight:700;color:var(--olive);margin-bottom:4px}
+.quiet-note{font-size:11px;color:var(--muted);text-align:center;padding:4px 8px 2px;line-height:1.4}
+.tabbar{background:rgba(255,252,247,.96);border-top:1px solid rgba(76,96,81,.1)}
+.tabbar .on .ticon{stroke-width:2.4}
+.screen .verdict-card strong{font-size:18px}
+.screen .metric-grid{gap:6px}
+.screen .metric-grid b{font-size:12.5px}
+.screen.parent .protocol-strip{font-size:12.5px}
+.screen.parent .protocol-strip .chain{font-size:12px}
+.screen.parent .sos{width:136px;height:136px}
 </style>
 </head>
 <body>
@@ -435,35 +581,38 @@ flowchart TB
 
   <div class="proto-group">
     <h3>父母端</h3>
-    <p class="note">首页只保留呼叫与今日用药；到点提醒全屏只问一件事。</p>
+    <p class="note">首页只保留呼叫与今日用药；大按钮下写出扩联顺序；到点提醒全屏只问一件事。</p>
   </div>
   <div class="phones">
     <div>
       <p class="phone-cap">01 首页</p>
       <div class="phone"><div class="screen parent parent-home">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
-        <div class="mpbar"><span class="ttl">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
+        <div class="mpbar"><span class="ttl brand-mark">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head">
           <div class="head-row">
-            <div><div class="eyebrow">大字模式</div><h5>下午好，王妈妈</h5></div>
+            <div><div class="eyebrow">大字模式 · 今天周四</div><h5>下午好，王妈妈</h5></div>
             <div class="avatar salmon">王</div>
           </div>
         </div>
         <div class="panel">
           <div class="status-strip">
             <span class="status-pill"><i></i>家人在线</span>
-            <span class="status-pill sand"><i></i>今日 1/2</span>
-            <span class="status-pill olive"><i></i>大字模式</span>
+            <span class="status-pill sand"><i></i>药 1/2</span>
+            <span class="privacy-badge">定位关</span>
           </div>
           <div class="sos-wrap">
             <div class="hint">有事就按这里</div>
             <a class="sos" href="#proto"><b>紧急</b><span>呼叫家人</span></a>
+            <div class="protocol-strip"><b>按下去会发生什么</b><div class="chain"><span>女儿小刘</span><i>30秒</i><span>儿子小王</span></div>未接通会自动找下一位，不用你再拨号。</div>
           </div>
-          <div class="sec-label mustard">今天的药 <span>还剩 1 次</span></div>
-          <div class="progress hot"><i style="width:50%"></i></div>
-          <div class="card med-list">
-            <div class="med done"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>降压药</b><div class="meta">午饭后 · <b>已吃过</b></div></div><span class="chip">已吃</span></div>
-            <div class="med"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>钙片</b><div class="meta">晚饭后 · 约 18:30 提醒</div></div><span class="chip wait">待吃</span></div>
+          <div class="med-card">
+            <div class="med-hd"><b>今天的药</b><span>还剩 1 次</span></div>
+            <div class="progress hot" style="margin:10px 12px 0"><i style="width:50%"></i></div>
+            <div class="med-list time-rail">
+              <div class="med done"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>降压药</b><div class="meta">午饭后 · <b>已吃过</b></div></div><span class="chip">已吃</span></div>
+              <div class="med wait"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>钙片</b><div class="meta">晚饭后 · 约 18:30</div></div><span class="chip wait">待吃</span></div>
+            </div>
           </div>
         </div>
         <div class="tabbar parent"><span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>首页</span><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 19.5c1.5-3.2 3.8-4.8 6.5-4.8s5 1.6 6.5 4.8"/></svg>我的</span></div>
@@ -472,34 +621,42 @@ flowchart TB
     <div>
       <p class="phone-cap">02 用药提醒</p>
       <div class="phone"><div class="screen parent">
-        <div class="sb"><span>18:30</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>18:30</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">用药提醒</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="remind">
           <div class="clock">晚饭后 · 18:30</div>
           <div class="pill-visual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div>
           <div class="pillname">该吃钙片了</div>
-          <div class="dose">1 片 · 温开水送服<br>吃完家人会看到</div>
+          <div class="dose">1 片 · 温开水送服<br>点「我吃了」，家人就安心</div>
           <a class="big-ok" href="#proto">我吃了</a>
           <a class="later" href="#proto">过一会儿再说</a>
+          <p class="quiet-note" style="margin-top:16px">不会问你血压，也不会开定位</p>
         </div>
       </div></div>
     </div>
     <div>
       <p class="phone-cap">03 呼叫中</p>
       <div class="phone"><div class="screen parent">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">正在呼叫</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="panel">
           <div class="calling">
             <div class="call-ring" style="margin:0 auto 8px"><div class="call-ava">刘</div></div>
             <div class="big">正在呼叫女儿小刘</div>
-            <div class="sub">已等待 00:02</div>
-            <div class="feed" style="text-align:left">
-              <div class="lab">连接进度</div>
-              <div class="feed-item"><i></i><span>已通知小刘</span><span class="t">现在</span></div>
-              <div class="feed-item"><i></i><span>若未接听，将通知儿子小王</span><span class="t">30秒</span></div>
+            <div class="sub">已等待 00:12 · 响铃中</div>
+            <div class="family-chain" style="width:100%;margin-top:8px">
+              <div class="fc on"><b>小刘</b>第一 · 呼叫中</div>
+              <div class="arr">→</div>
+              <div class="fc"><b>30秒</b>未接扩联</div>
+              <div class="arr">→</div>
+              <div class="fc"><b>小王</b>第二</div>
             </div>
-            <a class="btn-ghost" href="#proto" style="margin-top:8px">取消呼叫</a>
+            <div class="soft-sheet" style="width:100%;text-align:left">
+              <div class="lab">进度</div>
+              <div class="feed-item" style="border:0;padding:4px 0"><i></i><span>已通知小刘</span><span class="t">现在</span></div>
+              <div class="feed-item" style="padding:4px 0"><i></i><span>未接将通知小王</span><span class="t">18秒后</span></div>
+            </div>
+            <a class="btn-ghost" href="#proto" style="margin-top:4px;width:100%">取消呼叫</a>
           </div>
         </div>
       </div></div>
@@ -507,7 +664,7 @@ flowchart TB
     <div>
       <p class="phone-cap">04 我的</p>
       <div class="phone"><div class="screen parent">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">我的</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head"><div class="eyebrow">显示与声音</div><h5>让字更大一点</h5></div>
         <div class="panel">
@@ -518,7 +675,8 @@ flowchart TB
               <div class="row"><span class="lab">提示音</span><div class="toggle on"></div></div>
             </div>
           </div>
-          <div class="card"><div class="member"><div class="avatar mustard">家</div><div class="body"><b>王家</b><div class="meta">家庭信息由家人管理</div></div><span class="role self">已加入</span></div></div>
+          <div class="card"><div class="member"><div class="avatar mustard">家</div><div class="body"><b>王家</b><div class="meta">家庭由家人代管 · 你只管用</div></div><span class="role self">已加入</span></div></div>
+          <div class="tip"><b>不会偷偷开定位</b>位置默认关闭；紧急呼叫也不依赖常开定位。</div>
           <div class="list"><div class="row"><span class="lab">关于晓安</span><span class="val chev">版本 1.0</span></div></div>
         </div>
         <div class="tabbar parent"><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>首页</span><span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 19.5c1.5-3.2 3.8-4.8 6.5-4.8s5 1.6 6.5 4.8"/></svg>我的</span></div>
@@ -528,14 +686,14 @@ flowchart TB
 
   <div class="proto-group">
     <h3>子女端</h3>
-    <p class="note">首页先给「今天要不要打电话」的结论；用药与家庭是下一步，不抢首页。</p>
+    <p class="note">首页先给「打不打电话」的结论与依据网格；不做健康曲线。用药与家庭是下一步。</p>
   </div>
   <div class="phones">
     <div>
       <p class="phone-cap">05 今日晓安</p>
       <div class="phone"><div class="screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
-        <div class="mpbar"><span class="ttl">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
+        <div class="mpbar"><span class="ttl brand-mark">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head">
           <div class="head-row">
             <div><div class="eyebrow">11 月 6 日 · 周四</div><h5>妈妈今天还好吗</h5></div>
@@ -545,29 +703,28 @@ flowchart TB
         <div class="panel">
           <div class="status-strip">
             <span class="status-pill"><span class="live-dot"></span>妈妈在线</span>
-            <span class="status-pill olive"><i></i>近 7 天无紧急</span>
+            <span class="privacy-badge">定位已关</span>
+            <span class="status-pill olive"><i></i>7 天无紧急</span>
           </div>
           <div class="verdict-card">
-            <div class="ok">今天可以先不打电话</div>
-            <strong>目前看起来一切正常</strong>
+            <div class="ok">结论 · 可先不打</div>
+            <strong>今天可以先不打电话</strong>
             <div class="muted">用药已完成 · 12 分钟前还在用手机</div>
-            <div class="evidence">
-              <span><em>用药</em>2/2</span>
-              <span><em>最近活跃</em>12 分钟前</span>
-              <span><em>今日状态</em>平稳</span>
-              <span><em>家庭</em>3 人</span>
-              <span><em>紧急呼叫</em>近 7 天无</span>
+            <div class="metric-grid">
+              <div><em>今日用药</em><b>2 / 2 已完成</b></div>
+              <div><em>最近活跃</em><b>12 分钟前</b></div>
+              <div><em>紧急呼叫</em><b>近 7 天无</b></div>
+              <div><em>主责状态</em><b>你本人在岗</b></div>
             </div>
-            <div class="trust-row"><span>依据今日用药与活跃信号</span><b>可信度 高</b></div>
+            <div class="trust-row"><span>仅依据履约与活跃 · 无定位无体征</span><b>可信度 高</b></div>
           </div>
           <div class="feed">
             <div class="lab">今天发生了什么</div>
             <div class="feed-item"><i></i><span>妈妈确认吃了降压药</span><span class="t">12:40</span></div>
             <div class="feed-item"><i></i><span>打开了晓安</span><span class="t">12:38</span></div>
-            <div class="feed-item"><i></i><span>昨夜睡眠提醒已关闭</span><span class="t">昨晚</span></div>
           </div>
-          <div class="cta-stack">
-            <a class="btn-main" href="#proto">给妈妈打电话</a>
+          <div class="decision-cta">
+            <a class="btn-main" href="#proto">仍想打电话 · 一键呼叫</a>
             <a class="btn-ghost" href="#proto">查看用药详情</a>
           </div>
         </div>
@@ -577,28 +734,34 @@ flowchart TB
     <div>
       <p class="phone-cap">06 需要关心一下</p>
       <div class="phone"><div class="screen">
-        <div class="sb"><span>20:12</span><span class="icons"><b><i></i></b></span></div>
-        <div class="mpbar"><span class="ttl">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">今晚</div><h5>钙片还没有确认</h5></div>
+        <div class="sb"><span>20:12</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
+        <div class="mpbar"><span class="ttl brand-mark">晓安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="screen-head"><div class="eyebrow">今晚 · 异常才推</div><h5>钙片还没有确认</h5></div>
         <div class="panel">
           <div class="alert-banner">
             <div class="ab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 8v5"/><circle cx="12" cy="17" r="1"/><path d="M10.2 4.5 3.8 16.2A2 2 0 0 0 5.6 19h12.8a2 2 0 0 0 1.8-2.8L13.8 4.5a2 2 0 0 0-3.6 0z"/></svg></div>
             <div class="ab-body">
-              <b>晚饭后的钙片超时未确认</b>
-              <p>提醒已发出 42 分钟。不一定有事，建议今晚问候一声。</p>
+              <b>晚饭后钙片超时未确认</b>
+              <p>提醒已发出 42 分钟。不一定有事——建议问候，不是报警。</p>
             </div>
           </div>
           <div class="verdict-card care">
-            <div class="ok" style="background:var(--mustard-soft);color:var(--warn-ink)">建议打个短电话</div>
+            <div class="ok" style="background:var(--mustard-soft);color:var(--warn-ink)">结论 · 建议联系</div>
             <strong>今天更适合主动问一句</strong>
-            <div class="muted">用药 1/2 · 活跃正常 · 没有紧急呼叫</div>
-            <div class="trust-row"><span>超时未确认 · 活跃仍正常</span><b>优先问候</b></div>
+            <div class="muted">漏服待确认 · 活跃仍正常 · 无紧急</div>
+            <div class="metric-grid">
+              <div><em>今日用药</em><b>1 / 2 待确认</b></div>
+              <div><em>最近活跃</em><b>28 分钟前</b></div>
+              <div><em>紧急呼叫</em><b>今日无</b></div>
+              <div><em>建议动作</em><b>短电话问候</b></div>
+            </div>
+            <div class="trust-row"><span>漏服优先于活跃掩盖</span><b>优先问候</b></div>
           </div>
-          <div class="cta-stack">
+          <div class="decision-cta">
             <a class="btn-main" href="#proto">打电话问候</a>
             <a class="btn-ghost" href="#proto">再发一次提醒</a>
           </div>
-          <div class="list" style="margin-top:10px">
+          <div class="list" style="margin-top:8px">
             <div class="row"><span class="lab">我已经问过了</span><span class="val chev">标记完成</span></div>
           </div>
         </div>
@@ -608,19 +771,23 @@ flowchart TB
     <div>
       <p class="phone-cap">07 用药</p>
       <div class="phone"><div class="screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">用药</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">帮妈妈安排</div><h5>今日用药</h5></div>
+        <div class="screen-head"><div class="eyebrow">子女代配 · 父母零设置</div><h5>今日用药</h5></div>
         <div class="panel">
           <div class="stats">
             <div class="stat teal"><div class="lab">今天</div><b>1 / 2</b><div class="sub">进行中</div><div class="bar"><i></i></div></div>
             <div class="stat warm"><div class="lab">本周未确认</div><b>1</b><div class="sub">周五钙片</div><div class="bar"><i></i></div></div>
           </div>
-          <div class="card med-list">
-            <div class="med done"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>降压药 · 午饭后</b><div class="meta">妈妈 12:40 <b>已确认</b></div></div><span class="chip">已吃</span></div>
-            <div class="med"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>钙片 · 晚饭后</b><div class="meta">约 18:30 自动提醒妈妈</div></div><span class="chip wait">待提醒</span></div>
+          <div class="med-card">
+            <div class="med-hd"><b>完成态时间线</b><span>漏服当日只推 1 条</span></div>
+            <div class="med-list time-rail">
+              <div class="med done"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>降压药 · 午饭后</b><div class="meta">妈妈 12:40 <b>已确认</b></div></div><span class="chip">已吃</span></div>
+              <div class="med wait"><div class="ico ico-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="3" width="8" height="18" rx="4"/><path d="M8 12h8"/></svg></div><div class="body"><b>钙片 · 晚饭后</b><div class="meta">约 18:30 自动提醒</div></div><span class="chip wait">待提醒</span></div>
+            </div>
           </div>
           <a class="btn-ghost" href="#proto">调整提醒时间</a>
+          <p class="quiet-note">这里只有完成态，没有心率血压曲线</p>
         </div>
         <div class="tabbar three"><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-4.2-6.5-9.2A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 6.5 3.8C18.5 16.8 12 21 12 21z"/><path d="M9.5 12.2 11.2 14l3.5-3.8"/></svg>晓安</span><span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M7 12h10"/><path d="M12 8v3"/></svg>用药</span><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19c1.2-3 3.2-4.5 5.5-4.5s4.3 1.5 5.5 4.5"/><path d="M14 14.2c1.5-.5 3-.3 4.5 1.3.6.7 1 1.5 1.2 2.5"/></svg>家庭</span></div>
       </div></div>
@@ -628,18 +795,25 @@ flowchart TB
     <div>
       <p class="phone-cap">08 家庭</p>
       <div class="phone"><div class="screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">家庭</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">王家</div><h5>紧急时找谁</h5></div>
+        <div class="screen-head"><div class="eyebrow">王家 · 扩联协议</div><h5>紧急时找谁</h5></div>
         <div class="panel">
+          <div class="family-chain">
+            <div class="fc on"><b>小刘</b>第一主责</div>
+            <div class="arr">→</div>
+            <div class="fc"><b>30s</b>未接扩联</div>
+            <div class="arr">→</div>
+            <div class="fc"><b>小王</b>第二备用</div>
+          </div>
           <div class="card">
-            <div class="member"><div class="avatar olive">王</div><div class="body"><b>王妈妈</b><div class="meta">使用父母端 · 大字模式</div></div><span class="role olive">妈妈</span><a class="quick" href="#proto" title="呼叫"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z"/></svg></a></div>
+            <div class="member"><div class="avatar olive">王</div><div class="body"><b>王妈妈</b><div class="meta">父母端 · 大字 · 定位关</div></div><span class="role olive">妈妈</span><a class="quick" href="#proto" title="呼叫"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z"/></svg></a></div>
             <div class="member"><div class="avatar">刘</div><div class="body"><b>女儿小刘</b><div class="meta">你 · 第一联系人</div></div><span class="role">第一</span></div>
-            <div class="member"><div class="avatar sand">王</div><div class="body"><b>儿子小王</b><div class="meta">你未接听时通知他</div></div><span class="role backup">第二</span></div>
+            <div class="member"><div class="avatar sand">王</div><div class="body"><b>儿子小王</b><div class="meta">未接听时自动通知</div></div><span class="role backup">第二</span></div>
           </div>
           <div class="wx-card">
             <div class="hd">来自微信的邀请</div>
-            <div class="bd"><strong>邀请你加入「王家」晓安</strong><p>成为第二联系人。默认不开启定位，仅在紧急呼叫或用药未确认时通知你。</p></div>
+            <div class="bd"><strong>邀请加入「王家」晓安</strong><p>成为第二联系人。默认不开启定位，仅紧急或漏服时通知。</p></div>
             <div class="ft"><span>打开小程序</span></div>
           </div>
           <div class="actions">
@@ -654,28 +828,28 @@ flowchart TB
 
   <div class="proto-group">
     <h3>紧急来电与设置</h3>
-    <p class="note">呼叫规则写清楚；定位默认关闭。</p>
+    <p class="note">接听页把扩联状态机写在眼前；设置把「定位默认关」做成产品承诺，而不是埋在条款里。</p>
   </div>
   <div class="phones trio">
     <div>
       <p class="phone-cap">09 紧急来电</p>
       <div class="phone"><div class="screen call-screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">紧急来电</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="call-body">
           <div class="call-ring"><div class="call-ava">王</div></div>
           <h5>王妈妈</h5>
-          <div class="sub">正在紧急呼叫你</div>
-          <div class="call-timer">响铃 00:03</div>
+          <div class="sub">正在紧急呼叫你 · 第一联系人</div>
+          <div class="call-timer">响铃 00:08 · 22 秒后扩联</div>
           <div class="call-btns">
-            <a class="decline" href="#proto" title="稍后"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></a>
-            <a class="accept" href="#proto" title="接听"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z"/></svg></a>
+            <a class="decline" href="#proto"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></i><small>拒接</small></a>
+            <a class="accept" href="#proto"><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z"/></svg></i><small>接听</small></a>
           </div>
           <div class="expand-card">
-            <b>如果接听不上</b>
-            30 秒后会通知第二联系人儿子小王。
+            <b>扩联协议 · 已写进家庭圈</b>
+            你若未接或拒接，30 秒后自动通知儿子小王——群里不用再商量谁去接。
             <div class="expand-steps">
-              <span>第一<br>小刘</span><i>→</i>
+              <span class="on">第一<br>小刘</span><i>→</i>
               <span>30秒</span><i>→</i>
               <span>第二<br>小王</span>
             </div>
@@ -686,23 +860,24 @@ flowchart TB
     <div>
       <p class="phone-cap">10 设置</p>
       <div class="phone"><div class="screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">设置</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head"><div class="eyebrow">通知与隐私</div><h5>怎么提醒我</h5></div>
         <div class="panel">
-          <div class="section-card"><div class="kicker">通知</div>
+          <div class="section-card"><div class="kicker">通知 · 异常才推</div>
             <div class="list" style="box-shadow:none;margin:0">
               <div class="row"><span class="lab">紧急呼叫提醒</span><div class="toggle on"></div></div>
               <div class="row"><span class="lab">用药未确认提醒</span><div class="toggle on"></div></div>
               <div class="row"><span class="lab">每日情况摘要</span><div class="toggle on"></div></div>
             </div>
           </div>
-          <div class="section-card"><div class="kicker">隐私</div>
+          <div class="section-card"><div class="kicker">隐私 · 反监视默认</div>
             <div class="list" style="box-shadow:none;margin:0">
               <div class="row"><span class="lab">分享妈妈的位置</span><div class="toggle"></div></div>
+              <div class="row"><span class="lab">轨迹回放</span><span class="val">永不提供</span></div>
             </div>
           </div>
-          <div class="tip"><b>位置默认关闭</b>如需开启，建议先和家人商量；仅紧急与用药未确认时使用。</div>
+          <div class="tip"><b>位置默认关闭</b>结论与紧急均不依赖常开定位。开启前建议先和家人商量。</div>
           <a class="btn-danger" href="#proto">退出这个家庭</a>
         </div>
         <div class="tabbar three"><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-4.2-6.5-9.2A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 6.5 3.8C18.5 16.8 12 21 12 21z"/><path d="M9.5 12.2 11.2 14l3.5-3.8"/></svg>晓安</span><span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M7 12h10"/><path d="M12 8v3"/></svg>用药</span><span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19c1.2-3 3.2-4.5 5.5-4.5s4.3 1.5 5.5 4.5"/><path d="M14 14.2c1.5-.5 3-.3 4.5 1.3.6.7 1 1.5 1.2 2.5"/></svg>家庭</span></div>
@@ -711,20 +886,20 @@ flowchart TB
     <div>
       <p class="phone-cap">11 已接通</p>
       <div class="phone"><div class="screen call-screen">
-        <div class="sb"><span>9:41</span><span class="icons"><b><i></i></b></span></div>
+        <div class="sb"><span>9:41</span><span class="icons"><i class="sig"></i><i class="wifi"></i><b><i></i></b></span></div>
         <div class="mpbar"><span class="ttl">通话中</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="call-body">
           <div class="call-ring"><div class="call-ava">王</div></div>
           <h5>王妈妈</h5>
           <div class="sub">通话中 · 00:18</div>
-          <div class="call-timer">已通知家人：呼叫已被接听</div>
+          <div class="call-timer">扩联已停止 · 家人已知接听</div>
           <div class="call-btns">
-            <a class="decline" href="#proto" title="静音"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v10"/><path d="M8 8a4 4 0 0 0 8 0"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 17v4"/></svg></a>
-            <a class="accept" href="#proto" style="background:#d65a4c" title="挂断"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z" transform="rotate(135 12 12)"/></svg></a>
+            <a class="decline" href="#proto"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v10"/><path d="M8 8a4 4 0 0 0 8 0"/><path d="M5 14a7 7 0 0 0 14 0"/><path d="M12 17v4"/></svg></i><small>静音</small></a>
+            <a class="hang" href="#proto"><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 3.8c.5-.5 1.3-.5 1.8 0l1.7 1.7c.4.4.5 1.1.2 1.6L9.7 9.3c-.2.4-.1.8.2 1.1l3.7 3.7c.3.3.7.4 1.1.2l2.2-1.2c.5-.3 1.2-.2 1.6.2l1.7 1.7c.5.5.5 1.3 0 1.8l-1.1 1.1c-.7.7-1.7 1-2.7.8-2.4-.4-4.8-2-7.3-4.5S5.6 9.5 5.2 7.1c-.2-1 .1-2 .8-2.7l1.2-1.2z" transform="rotate(135 12 12)"/></svg></i><small>挂断</small></a>
           </div>
           <div class="expand-card">
-            <b>本次呼叫</b>
-            由王妈妈发起 · 第一联系人小刘接听 · 无需再通知其他人。
+            <b>本次闭环</b>
+            王妈妈发起 → 第一联系人小刘接听 → 无需再通知其他人。事件已回写结论引擎。
           </div>
         </div>
       </div></div>
