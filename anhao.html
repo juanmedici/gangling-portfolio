@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘娟｜案例 05 · 安好 · 设计交付</title>
+<title>刘娟｜案例 05 · 知安 · 设计交付</title>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <style>
 :root{--ink:#1a221f;--muted:#5a635f;--paper:#f6f2ea;--sheet:#fbf9f5;--line:#e4dcd0;--accent:#c44b3a;--header:#0f5a57;--ok:#1a7a74;--warn:#c4922a;--blue:#3d5a6c;--soft:#e8f4f3;--mint:#b8ddd9}
@@ -180,6 +180,35 @@ th{background:#ebe4d8;font-size:11.5px;color:var(--muted);font-weight:600}
 .tabbar.parent .on{color:var(--accent)}.tabbar.parent .on::before{background:var(--accent)}
 .call-screen .tabbar{background:rgba(12,40,38,.85);border-top-color:rgba(255,255,255,.08)}
 .call-screen .tabbar span{color:#78716c}.call-screen .tabbar .on{color:#9dcdc8}.call-screen .tabbar .on::before{background:#9dcdc8}
+.diff-bar{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:8px;margin:14px 0 6px}
+.diff-bar article{background:#fff;border:1px solid var(--line);padding:12px 14px;font-size:12.5px;color:var(--muted)}
+.diff-bar b{display:block;color:var(--ink);margin-bottom:4px;font-size:13px}
+.diff-bar .us{border-top:3px solid var(--header);background:var(--soft);color:var(--ink)}
+.diff-bar .us b{color:var(--header)}
+.evidence{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.evidence span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:11px;color:var(--muted)}
+.evidence span em{font-style:normal;color:var(--ink);font-weight:700;margin-right:4px}
+.remind{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px 16px;background:linear-gradient(180deg,#fff,#f6f2ea)}
+.remind .clock{font-size:12px;color:var(--warn);font-weight:700;letter-spacing:.08em;margin-bottom:10px}
+.remind .pillname{font-size:26px;font-weight:800;line-height:1.25;margin:6px 0 8px;color:var(--ink)}
+.remind .dose{font-size:14px;color:var(--muted);margin-bottom:18px}
+.remind .big-ok{display:flex;align-items:center;justify-content:center;width:100%;max-width:240px;height:64px;border-radius:16px;background:var(--ok);color:#fff;font-size:20px;font-weight:800;text-decoration:none;box-shadow:0 10px 22px rgba(26,122,116,.28)}
+.remind .later{margin-top:12px;font-size:13px;color:var(--muted);text-decoration:none;font-weight:650}
+.alert-banner{background:#fff1ee;border:1px solid #f0b8af;border-radius:14px;padding:12px;margin-bottom:10px}
+.alert-banner b{display:block;color:var(--accent);font-size:14px;margin-bottom:4px}
+.alert-banner p{margin:0;font-size:11.5px;color:#8a4a40}
+.wx-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:10px}
+.wx-card .hd{background:#07c160;color:#fff;padding:8px 12px;font-size:11px;font-weight:700}
+.wx-card .bd{padding:12px}
+.wx-card .bd strong{display:block;font-size:14px;margin-bottom:4px}
+.wx-card .bd p{margin:0;font-size:11.5px;color:var(--muted)}
+.wx-card .ft{border-top:1px solid #f0ebe3;padding:8px 12px;font-size:11px;color:#07c160;font-weight:650}
+.parent-home .sos-wrap{margin-top:2px}
+.parent-home .med .body b{font-size:15px}
+.parent-home .med{padding:12px}
+.cta-stack{display:grid;gap:8px;margin-top:8px}
+.cta-stack .btn-main,.cta-stack .btn-ghost{padding:13px 8px;font-size:13.5px}
+.quiet-note{font-size:11px;color:var(--faint);text-align:center;margin-top:8px}
 .verdict{background:#163d35;color:#f4f7f5;padding:18px 20px;margin:16px 0}
 .verdict h3{color:#9dcdc8;margin:0 0 8px;font-size:12px;letter-spacing:.1em}
 .verdict .big{font-family:"Palatino Linotype","Songti SC",serif;font-size:18px;line-height:1.4;margin:8px 0;color:#fff}
@@ -201,7 +230,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     <a href="https://juanmedici.github.io/gangling-portfolio/anhao.html" target="_blank" rel="noopener">在线版</a>
   </div>
   <p class="kicker">案例 05 · 产品设计阶段作业</p>
-  <h1>安好 · 设计交付</h1>
+  <h1>知安 · 设计交付</h1>
   <p class="hero-def">本页只交设计阶段产物：功能结构表、鱼骨拆解、功能架构、版本方案、信息架构、原型。用研 / KANO / 体验 / 竞品的完整叙事在「银发最终作品集」，这里不重复粘贴。</p>
   <div class="hero-meta">
     <span><b>输入</b>P0 呼叫+用药 · P1 安好摘要 · R4 不做</span>
@@ -340,86 +369,91 @@ flowchart TB
 
 <section id="proto">
   <p class="sec-no">06</p>
-  <h2>小程序端完整界面</h2>
-  <p>按信息架构展开为<strong>父母端 3 屏 + 子女端 5 屏</strong>，覆盖履约、呼叫中、我的、今日安好、用药、家庭、紧急接听、设置。配色采用微调后的青绿主色 + 鲑红紧急 + 沙米色底，观感更接近可上线的微信小程序。</p>
+  <h2>知安 · 小程序端界面</h2>
+  <p>对标市面「用药提醒小程序 / 硬件监护 App」后，知安坚持<strong>单品单一</strong>：只做「今日要不要打电话」的结论、紧急扩联、用药确认。不做成健康全家桶。</p>
+  <div class="diff-bar">
+    <article><b>市面常见</b>用药台账 + 库存 OCR + 健康曲线；或 SOS 绑硬件。首页信息多，子女仍要自己判断。</article>
+    <article><b>常见陷阱</b>AI 陪伴、资讯商城、默认定位、指标墙。功能变多，信任变薄。</article>
+    <article class="us"><b>知安只做三件事</b>① 子女端一页结论　② 父母端大按钮呼叫　③ 用药确认同步。其余砍掉。</article>
+  </div>
 
   <div class="proto-group">
-    <h3>父母端 · 集中履约</h3>
-    <p class="note">底部仅「首页 / 我的」；首页只保留呼叫与用药。</p>
+    <h3>父母端 · 少页面、大按钮</h3>
+    <p class="note">学市面适老化：到点全屏只问一件事；日常首页只留呼叫 + 今日药。无发现页。</p>
   </div>
-  <div class="phones trio">
+  <div class="phones">
     <div>
-      <p class="phone-cap">01 首页 · 履约</p>
-      <div class="phone"><div class="screen">
+      <p class="phone-cap">01 首页（仅两件事）</p>
+      <div class="phone"><div class="screen parent-home">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
-        <div class="mpbar"><span class="ttl">安好</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="mpbar"><span class="ttl">知安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head">
           <div class="head-row">
-            <div><div class="eyebrow">大字号 · 父母端</div><h5>下午好，王妈妈</h5></div>
+            <div><div class="eyebrow">父母端 · 大字号</div><h5>王妈妈，下午好</h5></div>
             <div class="avatar">王</div>
           </div>
         </div>
         <div class="panel">
-          <div class="greet">
-            <div class="who"><strong>今天有 2 件事</strong><span class="muted">主联系人：女儿小刘 · 在线</span></div>
-            <span class="badge">家庭已连接</span>
-          </div>
           <div class="sos-wrap">
-            <div class="hint">有事就按这里 · 不用找号码</div>
-            <a class="sos" href="#proto"><b>SOS</b><span>紧急呼叫</span></a>
+            <div class="hint">不舒服就按 · 不用翻通讯录</div>
+            <a class="sos" href="#proto"><b>SOS</b><span>呼叫子女</span></a>
           </div>
-          <div class="sec-label">今日用药 <span>1 / 2 已完成</span></div>
-          <div class="progress"><i></i></div>
-          <div class="med"><div class="ico">药</div><div class="body"><b>降压药</b><div class="meta">午饭后 · 12:40 已确认</div></div><span class="chip">已吃</span></div>
-          <div class="med"><div class="ico">钙</div><div class="body"><b>钙片</b><div class="meta">晚饭后 · 约 18:30 提醒</div></div><span class="chip wait">待提醒</span></div>
-          <div class="tip"><b>小提示</b> 吃完点「已吃」就好，不用打电话报平安。</div>
+          <div class="sec-label">今日还要吃 <span>还剩 1 次</span></div>
+          <div class="med"><div class="ico">药</div><div class="body"><b>降压药</b><div class="meta">午饭后 · 已确认</div></div><span class="chip">已吃</span></div>
+          <div class="med"><div class="ico">钙</div><div class="body"><b>钙片</b><div class="meta">晚饭后 · 点一下就好</div></div><span class="chip wait">待吃</span></div>
+          <p class="quiet-note">设置、家庭角色由子女代管</p>
         </div>
         <div class="tabbar parent"><span class="on">首页</span><span>我的</span></div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">02 呼叫中</p>
+      <p class="phone-cap">02 到点提醒（全屏一件事）</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>18:30</span><span class="icons">5G · 84%</span></div>
+        <div class="mpbar"><span class="ttl">用药提醒</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="remind">
+          <div class="clock">到点提醒 · 语音可播</div>
+          <div class="pillname">该吃钙片了</div>
+          <div class="dose">晚饭后 · 1 片 · 温水送服</div>
+          <a class="big-ok" href="#proto">我吃了</a>
+          <a class="later" href="#proto">10 分钟后再说</a>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">03 呼叫中</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
-        <div class="mpbar"><span class="ttl">紧急呼叫</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="mpbar"><span class="ttl">正在呼叫</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="panel">
           <div class="calling">
             <div class="call-ring" style="margin:0 auto 8px"><div class="call-ava">刘</div></div>
-            <div class="big">正在呼叫女儿小刘</div>
-            <div class="sub">已等待 00:02 · 目标 ≤5 秒接通</div>
+            <div class="big">呼叫女儿小刘</div>
+            <div class="sub">00:02 · 她接不到会自动喊备用</div>
             <div class="feed" style="text-align:left">
-              <div class="lab">连接状态</div>
-              <div class="feed-item"><i></i><span>已通知主责联系人</span><span class="t">刚才</span></div>
-              <div class="feed-item"><i></i><span>备用联系人待命中</span><span class="t">30s</span></div>
+              <div class="lab">你不用再操作</div>
+              <div class="feed-item"><i></i><span>主责已响铃</span><span class="t">现在</span></div>
+              <div class="feed-item"><i></i><span>备用儿子待命</span><span class="t">30s</span></div>
             </div>
-            <a class="btn-ghost" href="#proto" style="margin-top:8px">取消呼叫</a>
+            <a class="btn-ghost" href="#proto" style="margin-top:8px">取消</a>
           </div>
         </div>
-        <div class="tabbar parent"><span class="on">首页</span><span>我的</span></div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">03 我的 · 极简</p>
+      <p class="phone-cap">04 我的（极简）</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
         <div class="mpbar"><span class="ttl">我的</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">只改自己能懂的</div><h5>显示与声音</h5></div>
+        <div class="screen-head"><div class="eyebrow">只改自己看得清的</div><h5>字号与声音</h5></div>
         <div class="panel">
           <div class="list">
-            <div class="row"><span class="lab">字号</span><span class="val">大</span></div>
-            <div class="row"><div style="flex:1"><div class="lab">选择字号</div><div class="seg"><span>标准</span><span class="on">大</span><span>更大</span></div></div></div>
+            <div class="row"><div style="flex:1"><div class="lab">字号</div><div class="seg"><span>标准</span><span class="on">大</span><span>更大</span></div></div></div>
+            <div class="row"><span class="lab">用药语音</span><div class="toggle on"></div></div>
             <div class="row"><span class="lab">提示音量</span><div class="toggle on"></div></div>
-            <div class="row"><span class="lab">用药语音提醒</span><div class="toggle on"></div></div>
           </div>
-          <div class="sec-label">当前家庭 <span>只读</span></div>
-          <div class="member">
-            <div class="avatar">家</div>
-            <div class="body"><b>王家家庭</b><div class="meta">改角色请找子女操作</div></div>
-            <span class="role self">已加入</span>
-          </div>
-          <div class="list">
-            <div class="row"><span class="lab">关于安好</span><span class="val">v0.9 MVP ›</span></div>
-          </div>
+          <div class="member"><div class="avatar">家</div><div class="body"><b>王家家庭</b><div class="meta">角色由子女设置</div></div><span class="role self">已加入</span></div>
+          <div class="list"><div class="row"><span class="lab">关于知安</span><span class="val">单品 · 结论与呼叫</span></div></div>
         </div>
         <div class="tabbar parent"><span>首页</span><span class="on">我的</span></div>
       </div></div>
@@ -427,165 +461,191 @@ flowchart TB
   </div>
 
   <div class="proto-group">
-    <h3>子女端 · 分发决策</h3>
-    <p class="note">主 Tab=安好 / 用药 / 家庭；设置从家庭进入。资讯商城不进一级导航。</p>
+    <h3>子女端 · 先结论，后细节</h3>
+    <p class="note">学市面「子女查看反馈」，但首页不放指标墙：先给可执行结论，异常才推待办。</p>
   </div>
   <div class="phones">
     <div>
-      <p class="phone-cap">04 今日安好</p>
+      <p class="phone-cap">05 今日知安（核心）</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
-        <div class="mpbar"><span class="ttl">安好</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="mpbar"><span class="ttl">知安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="screen-head">
           <div class="head-row">
-            <div><div class="eyebrow">11 月 6 日 · 周四</div><h5>今日安好</h5></div>
+            <div><div class="eyebrow">11 月 6 日 · 妈妈</div><h5>今天要打电话吗？</h5></div>
             <div class="avatar">刘</div>
           </div>
         </div>
         <div class="panel">
           <div class="verdict-card">
-            <div class="ok">● 状态平稳</div>
-            <strong>今天可以先不打电话</strong>
-            <div class="muted">用药完成 · 活跃 12 分钟前 · 无紧急</div>
-          </div>
-          <div class="stats">
-            <div class="stat"><div class="lab">用药打卡</div><b>2 / 2</b><div class="sub">今日已齐</div></div>
-            <div class="stat"><div class="lab">活跃</div><b>正常</b><div class="sub">12 分钟前</div></div>
-            <div class="stat"><div class="lab">紧急呼叫</div><b>0</b><div class="sub">近 7 日</div></div>
-            <div class="stat"><div class="lab">定位</div><b>关</b><div class="sub">默认隐私</div></div>
+            <div class="ok">结论 · 可以先不打</div>
+            <strong>状态平稳，无需打断她</strong>
+            <div class="muted">依据如下 · 打开本页目标 ≤10 秒决策</div>
+            <div class="evidence">
+              <span><em>用药</em>2/2</span>
+              <span><em>活跃</em>12 分钟前</span>
+              <span><em>紧急</em>近 7 日 0</span>
+            </div>
           </div>
           <div class="feed">
-            <div class="lab">近况</div>
+            <div class="lab">近况（可滑过）</div>
             <div class="feed-item"><i></i><span>妈妈确认了降压药</span><span class="t">12:40</span></div>
-            <div class="feed-item"><i></i><span>打开安好小程序</span><span class="t">12:38</span></div>
-            <div class="feed-item"><i></i><span>昨晚钙片已打卡</span><span class="t">昨 19:02</span></div>
+            <div class="feed-item"><i></i><span>打开知安完成打卡</span><span class="t">12:38</span></div>
           </div>
-          <div class="actions">
-            <a class="btn-main" href="#proto">给妈妈打电话</a>
-            <a class="btn-ghost" href="#proto">查看用药</a>
+          <div class="cta-stack">
+            <a class="btn-ghost" href="#proto">还是想打就打 · 给妈妈打电话</a>
+            <a class="btn-main" href="#proto">查看用药细节</a>
           </div>
+          <p class="quiet-note">定位默认关 · 不做监控看板</p>
         </div>
-        <div class="tabbar three"><span class="on">安好</span><span>用药</span><span>家庭</span></div>
+        <div class="tabbar three"><span class="on">知安</span><span>用药</span><span>家庭</span></div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">05 用药管理</p>
+      <p class="phone-cap">06 待跟进（异常才推）</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>20:12</span><span class="icons">5G · 71%</span></div>
+        <div class="mpbar"><span class="ttl">知安</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
+        <div class="screen-head"><div class="eyebrow">异常日 · 推送直达</div><h5>需要你跟一句</h5></div>
+        <div class="panel">
+          <div class="alert-banner">
+            <b>钙片超时未确认</b>
+            <p>晚饭后提醒已过 42 分钟。不是急诊，但建议今晚问一句或远程再催一次。</p>
+          </div>
+          <div class="verdict-card" style="background:linear-gradient(135deg,#fff6e5,#fff);border-color:#f0d39a">
+            <div class="ok" style="background:#fff1cc;color:var(--warn)">● 建议轻量跟进</div>
+            <strong>今天建议打个短电话</strong>
+            <div class="muted">用药 1/2 · 活跃正常 · 无紧急呼叫</div>
+          </div>
+          <div class="cta-stack">
+            <a class="btn-main" href="#proto">打电话问一句</a>
+            <a class="btn-ghost" href="#proto">再催一次提醒</a>
+          </div>
+          <div class="list" style="margin-top:10px">
+            <div class="row"><span class="lab">标记已跟进</span><span class="val">避免重复焦虑 ›</span></div>
+          </div>
+        </div>
+        <div class="tabbar three"><span class="on">知安</span><span>用药</span><span>家庭</span></div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">07 用药（代配，不堆台账）</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
         <div class="mpbar"><span class="ttl">用药</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">计划代配 · 子女端</div><h5>本周用药</h5></div>
+        <div class="screen-head"><div class="eyebrow">子女代配 · 不做库存商城</div><h5>妈妈今日用药</h5></div>
         <div class="panel">
-          <div class="week">
-            <span><b>一</b>齐</span><span class="on"><b>二</b>今</span><span><b>三</b></span><span><b>四</b></span><span class="miss"><b>五</b>漏</span><span><b>六</b></span><span><b>日</b></span>
+          <div class="stats">
+            <div class="stat"><div class="lab">今日</div><b>1 / 2</b><div class="sub">完成中</div></div>
+            <div class="stat"><div class="lab">本周漏服</div><b>1</b><div class="sub">周五钙片</div></div>
           </div>
-          <div class="sec-label">今日完成态 <span>1 / 2</span></div>
-          <div class="med"><div class="ico">药</div><div class="body"><b>降压药 · 午饭后</b><div class="meta">妈妈已确认 12:40</div></div><span class="chip">已吃</span></div>
-          <div class="med"><div class="ico">钙</div><div class="body"><b>钙片 · 晚饭后</b><div class="meta">将在 18:30 提醒父母</div></div><span class="chip wait">待提醒</span></div>
-          <div class="feed">
-            <div class="lab">漏服日摘要</div>
-            <div class="feed-item"><i style="background:var(--accent)"></i><span>上周五钙片未确认</span><span class="t">已跟进</span></div>
-          </div>
-          <a class="btn-ghost" href="#proto">代配用药计划</a>
+          <div class="med"><div class="ico">药</div><div class="body"><b>降压药 · 午饭后</b><div class="meta">妈妈 12:40 已确认</div></div><span class="chip">已吃</span></div>
+          <div class="med"><div class="ico">钙</div><div class="body"><b>钙片 · 晚饭后</b><div class="meta">18:30 将提醒父母</div></div><span class="chip wait">待提醒</span></div>
+          <a class="btn-ghost" href="#proto">改时间 / 代配计划</a>
+          <p class="quiet-note">不做 AI 识药柜、不做药品电商</p>
         </div>
-        <div class="tabbar three"><span>安好</span><span class="on">用药</span><span>家庭</span></div>
+        <div class="tabbar three"><span>知安</span><span class="on">用药</span><span>家庭</span></div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">06 家庭协同</p>
+      <p class="phone-cap">08 家庭（邀请与角色）</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
         <div class="mpbar"><span class="ttl">家庭</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">王家家庭</div><h5>成员与角色</h5></div>
+        <div class="screen-head"><div class="eyebrow">冷启动：先建圈</div><h5>谁接紧急</h5></div>
         <div class="panel">
-          <div class="member"><div class="avatar">王</div><div class="body"><b>王妈妈</b><div class="meta">父母端 · 履约对象</div></div><span class="role">被照护</span></div>
-          <div class="member"><div class="avatar">刘</div><div class="body"><b>女儿小刘</b><div class="meta">你 · 主责联系人</div></div><span class="role">主责</span></div>
-          <div class="member"><div class="avatar sand">王</div><div class="body"><b>儿子小王</b><div class="meta">备用 · 30 秒扩联</div></div><span class="role backup">备用</span></div>
-          <div class="actions" style="margin-top:4px">
+          <div class="member"><div class="avatar">王</div><div class="body"><b>王妈妈</b><div class="meta">父母端使用者</div></div><span class="role">履约</span></div>
+          <div class="member"><div class="avatar">刘</div><div class="body"><b>女儿小刘</b><div class="meta">你 · 主责</div></div><span class="role">主责</span></div>
+          <div class="member"><div class="avatar sand">王</div><div class="body"><b>儿子小王</b><div class="meta">30 秒未接扩联</div></div><span class="role backup">备用</span></div>
+          <div class="wx-card">
+            <div class="hd">微信邀请卡片</div>
+            <div class="bd"><strong>加入「王家」知安家庭</strong><p>你将被设为备用联系人。不监控定位，只在紧急与漏服时通知。</p></div>
+            <div class="ft">打开小程序</div>
+          </div>
+          <div class="actions">
             <a class="btn-main" href="#proto">邀请家人</a>
             <a class="btn-ghost" href="#proto">模拟呼叫</a>
           </div>
-          <div class="list" style="margin-top:10px">
-            <div class="row"><span class="lab">通知偏好</span><span class="val">进入设置 ›</span></div>
-            <div class="row"><span class="lab">隐私定位</span><span class="val">默认关闭</span></div>
-          </div>
         </div>
-        <div class="tabbar three"><span>安好</span><span>用药</span><span class="on">家庭</span></div>
+        <div class="tabbar three"><span>知安</span><span>用药</span><span class="on">家庭</span></div>
       </div></div>
     </div>
+  </div>
+
+  <div class="proto-group">
+    <h3>信任主链 · 紧急与设置</h3>
+    <p class="note">对标硬件 SOS：规则可见、未接扩联；隐私默认关定位，和监护 App 主动切割。</p>
+  </div>
+  <div class="phones trio">
     <div>
-      <p class="phone-cap">07 紧急接听</p>
+      <p class="phone-cap">09 紧急接听</p>
       <div class="phone"><div class="screen call-screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
         <div class="mpbar"><span class="ttl">紧急来电</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
         <div class="call-body">
           <div class="call-ring"><div class="call-ava">王</div></div>
           <h5>王妈妈</h5>
-          <div class="sub">紧急呼叫 · 你是主责联系人</div>
-          <div class="call-timer">响铃 00:03 · 目标 ≤5 秒接通</div>
+          <div class="sub">紧急呼叫 · 你是主责</div>
+          <div class="call-timer">响铃 00:03 · ≤5 秒接通</div>
           <div class="call-btns">
             <a class="decline" href="#proto">拒接</a>
             <a class="accept" href="#proto">接听</a>
           </div>
           <div class="expand-card">
-            <b>扩联规则（可见）</b>
-            30 秒未接将自动通知备用联系人。
+            <b>扩联可见</b>
+            30 秒未接 → 备用儿子。不把风险压在一个人身上。
             <div class="expand-steps">
-              <span>主责<br>女儿小刘</span><i>→</i>
-              <span>30 秒<br>未接</span><i>→</i>
-              <span>备用<br>儿子小王</span>
+              <span>主责<br>小刘</span><i>→</i>
+              <span>30s</span><i>→</i>
+              <span>备用<br>小王</span>
             </div>
           </div>
         </div>
-        <div class="tabbar three"><span>安好</span><span>用药</span><span class="on">家庭</span></div>
       </div></div>
     </div>
-  </div>
-  <div class="phones trio" style="margin-top:8px">
     <div>
-      <p class="phone-cap">08 设置与隐私</p>
+      <p class="phone-cap">10 设置（少而硬）</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="icons">5G · 84%</span></div>
         <div class="mpbar"><span class="ttl">设置</span><span class="mp-cap"><i>···</i><i>○</i></span></div>
-        <div class="screen-head"><div class="eyebrow">从家庭进入</div><h5>通知与隐私</h5></div>
+        <div class="screen-head"><div class="eyebrow">只保留信任相关</div><h5>通知与隐私</h5></div>
         <div class="panel">
           <div class="list">
-            <div class="row"><span class="lab">用药提醒推送</span><div class="toggle on"></div></div>
-            <div class="row"><span class="lab">紧急呼叫强提醒</span><div class="toggle on"></div></div>
-            <div class="row"><span class="lab">每日安好摘要</span><div class="toggle on"></div></div>
+            <div class="row"><span class="lab">紧急强提醒</span><div class="toggle on"></div></div>
+            <div class="row"><span class="lab">漏服跟进推送</span><div class="toggle on"></div></div>
+            <div class="row"><span class="lab">平稳日摘要</span><div class="toggle on"></div></div>
             <div class="row"><span class="lab">父母定位</span><div class="toggle"></div></div>
-            <div class="row"><span class="lab">定位说明</span><span class="val">默认关闭</span></div>
           </div>
-          <div class="list">
-            <div class="row"><span class="lab">当前角色</span><span class="val">主责联系人</span></div>
-            <div class="row"><span class="lab">家庭 ID</span><span class="val">AH-2091</span></div>
+          <div class="tip"><b>默认关闭定位</b> 与硬件监护产品主动区隔；需要时由家庭协商开启。</div>
+          <div class="list" style="margin-top:10px">
+            <div class="row"><span class="lab">产品边界</span><span class="val">无商城 / 无资讯 / 无 AI 陪聊</span></div>
           </div>
           <a class="btn-danger" href="#proto">退出家庭</a>
         </div>
-        <div class="tabbar three"><span>安好</span><span>用药</span><span class="on">家庭</span></div>
+        <div class="tabbar three"><span>知安</span><span>用药</span><span class="on">家庭</span></div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">信息架构对照</p>
-      <div class="phone"><div class="screen" style="min-height:560px;background:var(--soft)">
-        <div class="sb"><span>Map</span><span class="icons">IA</span></div>
+      <p class="phone-cap">单品边界卡</p>
+      <div class="phone"><div class="screen" style="background:var(--soft)">
+        <div class="sb"><span>Scope</span><span class="icons">MVP</span></div>
         <div class="panel" style="padding-top:28px">
           <div class="verdict-card">
-            <div class="ok">结构已闭合</div>
-            <strong>父母集中 · 子女分发</strong>
-            <div class="muted">8 个界面覆盖主路径，无商城/资讯一级入口</div>
+            <div class="ok">知安 = 决策单品</div>
+            <strong>不做全家桶</strong>
+            <div class="muted">功能少，是为了每天敢打开、紧急时信得过</div>
           </div>
           <div class="list">
-            <div class="row"><span class="lab">父母</span><span class="val">首页 · 呼叫中 · 我的</span></div>
-            <div class="row"><span class="lab">子女 Tab</span><span class="val">安好 · 用药 · 家庭</span></div>
-            <div class="row"><span class="lab">支线</span><span class="val">紧急来电 · 设置</span></div>
-            <div class="row"><span class="lab">杀掉</span><span class="val">资讯 / 商城 / 社区</span></div>
+            <div class="row"><span class="lab">做</span><span class="val">结论 · 呼叫 · 用药确认</span></div>
+            <div class="row"><span class="lab">学市面</span><span class="val">大字提醒 · 子女代配 · 家庭圈</span></div>
+            <div class="row"><span class="lab">砍掉</span><span class="val">指标墙 · 定位默认开 · 商城资讯 AI</span></div>
+            <div class="row"><span class="lab">差异</span><span class="val">先给「打不打电话」</span></div>
           </div>
-          <div class="tip"><b>讲述要点</b> 先给结论，再给电话；紧急路径规则对用户可见。</div>
         </div>
       </div></div>
     </div>
   </div>
-  <p class="note">高保真小程序端示意（非可点击工程）。可导入 Axure/Figma 补齐漏服告警、扩联成功、邀请链路等状态。完整叙事见 <a href="yinfa.html">yinfa.html</a></p>
+  <p class="note">界面按可上线微信小程序密度绘制。完整叙事与作业论证仍见本页上文章节；完整叙事：<a href="yinfa.html">yinfa.html</a></p>
 </section>
 
 <section id="check">
