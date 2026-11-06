@@ -122,11 +122,21 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 .app-proto .chip.live{background:var(--pur-soft);color:var(--pur2)}
 .app-proto .panel{flex:1;overflow-y:auto;min-height:0;padding:0 0 6px;position:relative;z-index:2}
 .app-proto .pad{padding:0 16px}
-.app-proto .hero{
-  position:relative;height:168px;border-radius:20px;overflow:hidden;margin:6px 0 14px;box-shadow:var(--shadow);
-  background:linear-gradient(145deg,#c9b0f2 0%,var(--pur) 42%,#5b2d9e 100%);color:#fff
+.app-proto .pic,.app-proto .hero,.app-proto .shot,.app-proto .cover,.app-proto .t,.app-proto .icn,.app-proto .topic,.app-proto .sheet .mini .t{
+  background-size:cover;background-position:center;background-repeat:no-repeat
 }
-.app-proto .hero.warm{background:linear-gradient(145deg,var(--cream) 0%,var(--tang) 45%,var(--coral) 100%);color:#3b2410}
+.app-proto .hero{
+  position:relative;height:168px;border-radius:20px;overflow:hidden;margin:6px 0 14px;box-shadow:var(--shadow);color:#fff;
+  background:
+    linear-gradient(180deg,rgba(26,22,37,.15) 0%,rgba(91,45,158,.55) 100%),
+    url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80") center/cover
+}
+.app-proto .hero.warm{
+  color:#3b2410;
+  background:
+    linear-gradient(180deg,rgba(253,242,229,.2) 0%,rgba(249,148,109,.55) 100%),
+    url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80") center/cover
+}
 .app-proto .hero .tag{position:absolute;top:12px;left:12px;font-size:10px;font-weight:750;letter-spacing:.08em;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.22);backdrop-filter:blur(8px)}
 .app-proto .hero .copy{position:absolute;left:14px;right:14px;bottom:14px}
 .app-proto .hero h3{margin:0 0 4px;font-size:20px;font-weight:780;letter-spacing:-.03em;line-height:1.15}
@@ -143,15 +153,20 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 .app-proto .pl .cover i{position:absolute;left:8px;bottom:8px;z-index:1;font-style:normal;font-size:10px;font-weight:700;color:#fff}
 .app-proto .pl .nm{font-size:12.5px;font-weight:700;line-height:1.25;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .app-proto .pl .sub{font-size:11px;color:var(--ter);margin-top:2px}
-.app-proto .a1{background:linear-gradient(145deg,#d4c0f7,var(--pur) 55%,#6b2fb8)}
-.app-proto .a2{background:linear-gradient(145deg,var(--peach),var(--coral) 58%,#c44720)}
-.app-proto .a3{background:linear-gradient(145deg,#ffe8c8,var(--tang) 55%,#d97706)}
-.app-proto .a4{background:linear-gradient(145deg,#e8e0ff,#a588de 50%,#7c3aed)}
-.app-proto .a5{background:linear-gradient(145deg,#fde2e4,#e07a5f 55%,#9b2226)}
+.app-proto .a1{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a2{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a3{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a4{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a5{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a6{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a7{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a8{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1497215728101-53627c6ad123?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a9{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a10{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80")}
 .app-proto .story{
   background:var(--surf);border-radius:18px;overflow:hidden;margin-bottom:12px;box-shadow:var(--shadow)
 }
-.app-proto .story .shot{height:112px;position:relative}
+.app-proto .story .shot{height:120px;position:relative}
 .app-proto .story .shot .badge{
   position:absolute;left:10px;top:10px;font-size:10px;font-weight:750;padding:3px 8px;border-radius:999px;
   background:rgba(255,255,255,.92);color:var(--pur2)
@@ -576,7 +591,7 @@ flowchart TD
   <p class="sec-no">06</p>
   <h2>App 原型</h2>
   <p class="pull">首页就要完成「看懂、纠偏、关掉」。视觉节奏对标 Spotify 货架、Apple News 故事卡、App Store Today 头图、网易云筛选片、Shopify 商店列表。紫橘九色不变，只改布局与内容。</p>
-  <p class="proto-note">身份仍只有三种：为你推荐 / 热门 / 广告。纠偏在 ··· 与底部表，确认后当次换题。</p>
+  <p class="proto-note">封面与场景图来自 Unsplash 公开图（可商用授权），仅用于原型示意。身份仍只有三种：为你推荐 / 热门 / 广告。</p>
 
   <div class="app-proto">
   <h3>主路径</h3>
@@ -588,12 +603,12 @@ flowchart TD
         <div class="topbar"><div class="hello">周四晚上好<b>发现</b></div><div class="ava">刘</div></div>
         <div class="chips"><span class="chip on">为你</span><span class="chip live">个性化开</span><span class="chip">关注</span><span class="chip">热门</span></div>
         <div class="panel"><div class="pad">
-          <div class="hero"><div class="orb"></div><div class="orb2"></div><span class="tag">今日精选</span><div class="copy"><h3>城市慢行图鉴</h3><p>根据你订阅的「城市徒步」整理</p></div></div>
-          <div class="sec"><b>你的歌单感货架</b><a href="#s6">全部</a></div>
+          <div class="hero"><span class="tag">今日精选</span><div class="copy"><h3>城市慢行图鉴</h3><p>根据你订阅的「城市徒步」整理</p></div></div>
+          <div class="sec"><b>为你精选</b><a href="#s6">全部</a></div>
           <div class="rail">
             <div class="pl"><div class="cover a1"><i>订阅</i></div><div class="nm">城市徒步精选</div><div class="sub">12 篇更新</div></div>
             <div class="pl"><div class="cover a2"><i>相似</i></div><div class="nm">轻装过夜</div><div class="sub">因为徒步</div></div>
-            <div class="pl"><div class="cover a3"><i>继续</i></div><div class="nm">雨天滨江线</div><div class="sub">昨晚看过</div></div>
+            <div class="pl"><div class="cover a10"><i>继续</i></div><div class="nm">雨天滨江线</div><div class="sub">昨晚看过</div></div>
           </div>
           <div class="sec"><b>接下来</b><a href="#s6">换一批</a></div>
           <article class="story">
@@ -656,10 +671,10 @@ flowchart TD
           <div class="rowlist">
             <div class="row"><div class="t a1"></div><div class="tx"><b>离线地图便签</b><span>4.9 · 路线标注</span></div><button class="install">获取</button></div>
             <div class="row"><div class="t a2"></div><div class="tx"><b>轻装清单</b><span>4.8 · 露营打包</span></div><button class="install">获取</button></div>
-            <div class="row"><div class="t a4"></div><div class="tx"><b>步道天气</b><span>4.7 · 局部预报</span></div><button class="install">获取</button></div>
+            <div class="row"><div class="t a10"></div><div class="tx"><b>步道天气</b><span>4.7 · 局部预报</span></div><button class="install">获取</button></div>
           </div>
           <article class="story">
-            <div class="shot a2"><span class="badge ad">广告</span></div>
+            <div class="shot a9"><span class="badge ad">广告</span></div>
             <div class="body">
               <h5>TrailPro 季末鞋款</h5>
               <p class="why">赞助内容 · 不是因为你看过什么</p>
@@ -682,9 +697,9 @@ flowchart TD
         <div class="topbar"><div class="hello">个性化已关<b>最新</b></div><div class="ava">刘</div></div>
         <div class="panel"><div class="pad">
           <div class="pers"><div><span class="lab">个性化</span><span class="sub">关闭后按时间排序</span></div><div class="sw"></div></div>
-          <article class="story"><div class="shot a3"><span class="badge hot">热门</span></div><div class="body"><h5>昨夜城市速报</h5><p class="why">20:14 发布</p><div class="bar"><span class="src">资讯</span><button class="icon-btn">···</button></div></div></article>
-          <article class="story"><div class="shot a4"><span class="badge hot">热门</span></div><div class="body"><h5>编辑精选 · 本周长文</h5><p class="why">19:02 发布</p><div class="bar"><span class="src">编辑部</span><button class="icon-btn">···</button></div></div></article>
-          <article class="story"><div class="shot a5"><span class="badge hot">热门</span></div><div class="body"><h5>社区投稿合集</h5><p class="why">18:40 发布</p><div class="bar"><span class="src">社区</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a10"><span class="badge hot">热门</span></div><div class="body"><h5>昨夜城市速报</h5><p class="why">20:14 发布</p><div class="bar"><span class="src">资讯</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a3"><span class="badge hot">热门</span></div><div class="body"><h5>编辑精选 · 本周长文</h5><p class="why">19:02 发布</p><div class="bar"><span class="src">编辑部</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a4"><span class="badge hot">热门</span></div><div class="body"><h5>社区投稿合集</h5><p class="why">18:40 发布</p><div class="bar"><span class="src">社区</span><button class="icon-btn">···</button></div></div></article>
         </div></div>
         <div class="tabbar">
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4 9.3V21h5.5v-6.2h5V21H20V9.3L12 3.2z"/></svg>首页</span>
@@ -712,8 +727,8 @@ flowchart TD
           </div>
           <div class="sec"><b>已屏蔽</b></div>
           <div class="igroup">
-            <div class="irow"><div class="icn a3"></div><div class="tx"><b>数码测评</b><span>不喜欢这类</span></div><span class="badge warn">屏蔽</span></div>
-            <div class="irow"><div class="icn a5"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">屏蔽</span></div>
+            <div class="irow"><div class="icn a7"></div><div class="tx"><b>数码测评</b><span>不喜欢这类</span></div><span class="badge warn">屏蔽</span></div>
+            <div class="irow"><div class="icn a8"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">屏蔽</span></div>
           </div>
           <div class="sec"><b>场景授权</b></div>
           <div class="igroup">
@@ -738,9 +753,9 @@ flowchart TD
         <div class="chips"><span class="chip on">全部</span><span class="chip">看过</span><span class="chip">不喜欢</span><span class="chip">广告</span></div>
         <div class="panel"><div class="pad">
           <div class="igroup">
-            <div class="irow"><div class="icn a3"></div><div class="tx"><b>数码测评</b><span>今天 12:08 · 不喜欢这类</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
-            <div class="irow"><div class="icn a5"></div><div class="tx"><b>职场鸡汤</b><span>昨天 · 看过了</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
-            <div class="irow"><div class="icn a2"></div><div class="tx"><b>理财课推广</b><span>周一 · 广告</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
+            <div class="irow"><div class="icn a7"></div><div class="tx"><b>数码测评</b><span>今天 12:08 · 不喜欢这类</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
+            <div class="irow"><div class="icn a8"></div><div class="tx"><b>职场鸡汤</b><span>昨天 · 看过了</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
+            <div class="irow"><div class="icn a9"></div><div class="tx"><b>理财课推广</b><span>周一 · 广告</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
           </div>
         </div></div>
         <div class="tabbar">
@@ -761,10 +776,10 @@ flowchart TD
           <div class="topics">
             <div class="topic a1 on"><i class="ck"></i>城市徒步</div>
             <div class="topic a2 on"><i class="ck"></i>轻装露营</div>
-            <div class="topic a3"><i class="ck"></i>家常菜</div>
+            <div class="topic a6"><i class="ck"></i>家常菜</div>
             <div class="topic a4 on"><i class="ck"></i>独立设计</div>
             <div class="topic a5"><i class="ck"></i>古典乐</div>
-            <div class="topic" style="background:linear-gradient(145deg,#b8e0d2,#2a9d8f)"><i class="ck"></i>亲子周末</div>
+            <div class="topic a3"><i class="ck"></i>亲子周末</div>
           </div>
         </div></div>
         <div class="foot">
