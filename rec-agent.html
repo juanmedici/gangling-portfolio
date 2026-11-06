@@ -82,31 +82,159 @@ th{background:#ebe4d8;color:var(--muted);font-size:12px}
 .stage div:nth-child(4){border-top-color:#78716c}
 .stage b{display:block;font-size:13px;margin-bottom:4px}
 .stage span{font-size:13px;color:var(--muted)}
-.demo{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start;margin:16px 0}
-.phone{width:320px;background:#1c1917;border-radius:28px;padding:12px;box-shadow:0 16px 40px rgba(28,25,23,.18)}
-.screen{background:#fbf8f2;border-radius:20px;overflow:hidden;min-height:560px;color:#1c1917}
-.statusbar{height:22px;background:#163d35}
-.appbar{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#163d35;color:#f4f7f5;font-size:13px}
-.appbar .switch{background:#f6e7c1;color:#1c1917;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:700}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
-.tiles div{background:#fff;border:1px solid #e4dcd0;border-radius:10px;padding:8px 10px;font-size:11px;color:#57534e}
-.tiles strong{display:block;color:#1c1917;font-size:13px}
-.feed{padding:0 12px 12px}
-.item{background:#fff;border:1px solid #e4dcd0;border-radius:12px;padding:12px;margin-bottom:8px}
-.item .kind{font-size:11px;font-weight:700;color:#1a4d42}
-.item.ad{background:#fff7ed;border-color:#fdba74}
-.item.ad .kind{color:#9a3412}
-.item h5{font-size:14px;margin:4px 0}
-.item p{font-size:12px;color:#57534e;margin:0}
-.item .row{display:flex;justify-content:space-between;margin-top:8px;font-size:12px}
-.item button{border:1px solid #e4dcd0;background:#fff;border-radius:999px;padding:3px 8px;font-size:11px}
-.tabbar{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;font-size:11px;padding:8px 0 12px;border-top:1px solid #e4dcd0;background:#fff}
-.tabbar .on{color:#9a3412;font-weight:700}
 footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+/* —— App 原型专用配色（紫橘 9 色），不影响作品集正文 —— */
+.app-proto{
+  --lav0:#f1f0fb;--lav1:#ece2ec;--lav2:#dfd2ec;--pur1:#a588de;--pur2:#a258e4;
+  --peach:#f9b99c;--coral:#f9946d;--cream:#fdf2e5;--tang:#fba943;
+  --ink:#1e1a2e;--muted:#6b6580;--line:rgba(162,88,228,.14);--sheet:#fffcff;
+  --shadow:0 1px 2px rgba(30,26,46,.04),0 8px 20px rgba(162,88,228,.10)
+}
+.proto-note{margin:8px 0 16px;font-size:13.5px;color:var(--muted)}
+.phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:14px 0 8px;justify-items:center;align-items:start}
+.phones.trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.phones>div{width:100%;max-width:260px}
+.phone-cap{text-align:center;font-size:12px;color:var(--muted);margin:0 0 8px;letter-spacing:.02em}
+.app-proto .phone{
+  width:100%;background:linear-gradient(160deg,#2a2438,#14101c);border-radius:34px;padding:11px;
+  box-shadow:0 22px 48px rgba(30,26,46,.22),inset 0 0 0 1px rgba(255,255,255,.08)
+}
+.app-proto .screen{
+  position:relative;background:linear-gradient(180deg,#f7f5fd 0%,var(--lav0) 40%,#efeaf8 100%);
+  border-radius:26px;overflow:hidden;height:600px;color:var(--ink);
+  display:flex;flex-direction:column;font-family:-apple-system,"PingFang SC","Segoe UI","Microsoft YaHei",sans-serif;font-size:13px
+}
+.app-proto .screen::before{content:"";position:absolute;left:50%;top:7px;transform:translateX(-50%);width:86px;height:20px;background:#0c0c0c;border-radius:12px;z-index:5}
+.app-proto .screen::after{content:"";position:absolute;left:50%;bottom:5px;transform:translateX(-50%);width:100px;height:4px;border-radius:999px;background:rgba(30,26,46,.16);z-index:6;pointer-events:none}
+.app-proto .sb{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 0;font-size:11px;font-weight:650;position:relative;z-index:2}
+.app-proto .sb .ic{display:flex;gap:5px;align-items:center;opacity:.85}
+.app-proto .sb .ic b{display:inline-block;width:14px;height:8px;border:1.4px solid currentColor;border-radius:2px;position:relative;font-size:0}
+.app-proto .sb .ic b::after{content:"";position:absolute;right:-3px;top:1.5px;width:2px;height:4px;background:currentColor;border-radius:1px}
+.app-proto .sb .ic b i{position:absolute;left:1px;top:1px;bottom:1px;width:62%;background:currentColor;border-radius:1px}
+.app-proto .head{
+  padding:8px 14px 10px;position:relative;z-index:2;
+  background:linear-gradient(135deg,rgba(162,88,228,.16),rgba(249,185,156,.12) 55%,transparent)
+}
+.app-proto .head .brand{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.app-proto .head .logo{display:inline-flex;align-items:center;gap:7px;font-size:16px;font-weight:750;letter-spacing:.01em}
+.app-proto .head .logo::before{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--pur2),var(--tang));box-shadow:0 0 0 3px rgba(162,88,228,.18)}
+.app-proto .toggle{
+  display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font-size:10.5px;font-weight:700;
+  background:linear-gradient(90deg,var(--pur2),#8b4ad4);color:#fff;box-shadow:0 6px 14px rgba(162,88,228,.28)
+}
+.app-proto .toggle.off{background:var(--lav1);color:var(--muted);box-shadow:none;border:1px solid var(--line)}
+.app-proto .toggle i{width:7px;height:7px;border-radius:50%;background:#fff;display:block}
+.app-proto .toggle.off i{background:var(--coral)}
+.app-proto .greet{font-size:11px;color:var(--muted);margin-bottom:2px}
+.app-proto .greet+b{display:block;font-size:17px;font-weight:750;letter-spacing:-.02em}
+.app-proto .panel{padding:0 12px 10px;flex:1;overflow-y:auto;min-height:0;position:relative;z-index:2}
+.app-proto .shelf-lab{display:flex;justify-content:space-between;align-items:baseline;margin:8px 2px 8px;font-size:12px;font-weight:750}
+.app-proto .shelf-lab span{font-size:11px;color:var(--pur2);font-weight:650}
+.app-proto .stats{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:8px}
+.app-proto .stat{
+  background:rgba(255,252,255,.9);border:1px solid var(--line);border-radius:12px;padding:9px 10px;box-shadow:var(--shadow)
+}
+.app-proto .stat em{display:block;font-style:normal;font-size:10px;color:var(--muted);font-weight:650;margin-bottom:3px}
+.app-proto .stat b{display:block;font-size:14px;font-weight:750}
+.app-proto .stat.warm{background:linear-gradient(160deg,var(--cream),#fff);border-color:rgba(251,169,67,.28)}
+.app-proto .stat.warm b{color:#c45f10}
+.app-proto .card{
+  background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:11px;margin-bottom:8px;box-shadow:var(--shadow)
+}
+.app-proto .card.rec{border-top:3px solid var(--pur2)}
+.app-proto .card.hot{border-top:3px solid var(--tang);background:linear-gradient(180deg,var(--cream),var(--sheet))}
+.app-proto .card.ad{border-top:3px solid var(--coral);background:linear-gradient(180deg,#fff5ef,var(--sheet))}
+.app-proto .card.blocked{opacity:.78;border-style:dashed}
+.app-proto .kind{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:750;padding:3px 8px;border-radius:999px;margin-bottom:6px}
+.app-proto .card.rec .kind{background:rgba(162,88,228,.12);color:var(--pur2)}
+.app-proto .card.hot .kind{background:rgba(251,169,67,.18);color:#c45f10}
+.app-proto .card.ad .kind{background:rgba(249,148,109,.2);color:#d4562a}
+.app-proto .card h5{margin:0 0 4px;font-size:13.5px;font-weight:750;line-height:1.3;letter-spacing:-.01em}
+.app-proto .card .why{font-size:11.5px;color:var(--muted);line-height:1.4;margin:0}
+.app-proto .card .why b{color:var(--pur2);font-weight:700}
+.app-proto .card .meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:9px}
+.app-proto .card .meta .ch{font-size:11px;color:var(--muted);font-weight:600}
+.app-proto .btn-pass{
+  border:none;border-radius:999px;padding:6px 11px;font-size:11px;font-weight:750;cursor:pointer;
+  background:linear-gradient(90deg,var(--coral),var(--tang));color:#fff;box-shadow:0 4px 12px rgba(249,148,109,.3)
+}
+.app-proto .btn-ghost{
+  border:1px solid var(--line);background:rgba(255,255,255,.8);border-radius:999px;padding:6px 11px;
+  font-size:11px;font-weight:700;color:var(--ink)
+}
+.app-proto .btn-main{
+  display:flex;align-items:center;justify-content:center;width:100%;min-height:42px;border:none;border-radius:12px;
+  background:linear-gradient(90deg,var(--pur2),#8b4ad4);color:#fff;font-size:14px;font-weight:750;
+  box-shadow:0 8px 18px rgba(162,88,228,.28);text-decoration:none
+}
+.app-proto .btn-soft{
+  display:flex;align-items:center;justify-content:center;width:100%;min-height:40px;border:1px solid var(--line);
+  border-radius:12px;background:rgba(255,255,255,.85);color:var(--ink);font-size:13px;font-weight:700;text-decoration:none;margin-top:7px
+}
+.app-proto .rail{display:flex;gap:8px;overflow:hidden;margin-bottom:8px}
+.app-proto .rail .tile{
+  flex:0 0 118px;height:78px;border-radius:12px;padding:10px;color:#fff;font-size:11px;font-weight:700;
+  display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)
+}
+.app-proto .rail .tile small{opacity:.85;font-weight:600;font-size:10px;margin-bottom:2px}
+.app-proto .rail .t1{background:linear-gradient(145deg,var(--pur2),#6d32b8)}
+.app-proto .rail .t2{background:linear-gradient(145deg,var(--coral),#e06a3a)}
+.app-proto .rail .t3{background:linear-gradient(145deg,var(--tang),#e08920)}
+.app-proto .chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.app-proto .chip{
+  border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 11px;font-size:11.5px;font-weight:700;color:var(--ink)
+}
+.app-proto .chip.on{background:linear-gradient(90deg,var(--pur2),#8b4ad4);color:#fff;border-color:transparent;box-shadow:0 4px 12px rgba(162,88,228,.25)}
+.app-proto .chip.ban{background:var(--cream);border-color:rgba(251,169,67,.35);color:#c45f10}
+.app-proto .list{background:var(--sheet);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:8px}
+.app-proto .row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:11px 12px;border-top:1px solid var(--line);font-size:12.5px}
+.app-proto .row:first-child{border-top:0}
+.app-proto .row .lab{font-weight:650}
+.app-proto .row .val{color:var(--muted);font-size:11.5px}
+.app-proto .sw{width:38px;height:22px;border-radius:999px;background:var(--lav1);position:relative;flex-shrink:0}
+.app-proto .sw::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.app-proto .sw.on{background:linear-gradient(90deg,var(--pur2),#8b4ad4)}
+.app-proto .sw.on::after{left:18px}
+.app-proto .sheet-panel{
+  margin-top:auto;background:rgba(255,252,255,.97);border-radius:18px 18px 0 0;padding:14px 14px 18px;
+  box-shadow:0 -12px 28px rgba(30,26,46,.12);border:1px solid var(--line);border-bottom:0
+}
+.app-proto .sheet-panel h5{margin:0 0 4px;font-size:15px;font-weight:750}
+.app-proto .sheet-panel p{margin:0 0 10px;font-size:12px;color:var(--muted)}
+.app-proto .reason{display:grid;gap:6px}
+.app-proto .reason button{
+  text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px;
+  font-size:12.5px;font-weight:650;color:var(--ink)
+}
+.app-proto .reason button.on{border-color:var(--pur2);background:rgba(162,88,228,.08);color:var(--pur2)}
+.app-proto .interest .tag{
+  display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:12px;
+  background:#fff;border:1px solid var(--line);margin-bottom:6px;font-size:12.5px;font-weight:650;box-shadow:var(--shadow)
+}
+.app-proto .interest .tag .acts{display:flex;gap:5px}
+.app-proto .pill-sub{font-size:10px;font-weight:750;padding:3px 7px;border-radius:999px;background:rgba(162,88,228,.12);color:var(--pur2)}
+.app-proto .pill-ban{font-size:10px;font-weight:750;padding:3px 7px;border-radius:999px;background:rgba(249,148,109,.18);color:#d4562a}
+.app-proto .empty{text-align:center;padding:28px 12px;color:var(--muted);font-size:12.5px}
+.app-proto .empty b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+.app-proto .tabbar{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center;padding:6px 2px 12px;
+  border-top:1px solid var(--line);background:rgba(255,252,255,.96);backdrop-filter:blur(10px);position:relative;z-index:2
+}
+.app-proto .tabbar span{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:#a39bb8;font-weight:500;padding:2px 0}
+.app-proto .tabbar .on{color:var(--pur2);font-weight:750}
+.app-proto .tabbar .on::before{content:"";width:14px;height:2px;border-radius:2px;background:currentColor;margin-bottom:1px}
+.app-proto .ticon{width:18px;height:18px;display:block}
+.app-proto .cover{
+  height:72px;border-radius:10px;margin-bottom:8px;
+  background:linear-gradient(135deg,var(--lav2),var(--pur1) 55%,var(--peach));position:relative;overflow:hidden
+}
+.app-proto .cover.o{background:linear-gradient(135deg,var(--cream),var(--tang) 60%,var(--coral))}
+.app-proto .cover.c{background:linear-gradient(135deg,#efe8ff,var(--pur2) 50%,#6d32b8)}
+.ux-side{margin-top:18px}
+@media(max-width:1100px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:860px){
   .top{padding:24px 16px}.top h1{font-size:28px}
-  .people,.grid3,.grid4,.q4,.facts,.stage,.demo{grid-template-columns:1fr}
-  .phone{margin:0 auto}
+  .people,.grid3,.grid4,.q4,.facts,.stage,.phones,.phones.trio{grid-template-columns:1fr}
   .wrap{padding:24px 14px 48px}
 }
 </style>
@@ -136,7 +264,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   <a href="#s3">用户</a>
   <a href="#s4">KANO</a>
   <a href="#s5">方案</a>
-  <a href="#s6">体验</a>
+  <a href="#s6">原型</a>
   <a href="#s7">首版</a>
   <a href="#s8">验证</a>
   <a href="#s9">商业</a>
@@ -378,60 +506,297 @@ flowchart TD
 
 <section id="s6">
   <p class="sec-no">06</p>
-  <h2>体验</h2>
-  <p>首页就要完成「看懂、纠偏、关掉」。兴趣、屏蔽和档案是回家的地方，不是完成主任务的必经之路。</p>
-  <div class="demo">
-    <div class="phone" aria-hidden="true">
-      <div class="screen">
-        <div class="statusbar"></div>
-        <div class="appbar"><span>荐知</span><span class="switch">正在按兴趣推荐</span></div>
-        <div class="tiles">
-          <div>今日主题<strong>城市徒步</strong></div>
-          <div>已屏蔽<strong>3 个主题</strong></div>
-          <div>多样性<strong>偏散</strong></div>
-          <div>本周<strong>复盘未生成</strong></div>
+  <h2>App 原型</h2>
+  <p class="pull">首页就要完成「看懂、纠偏、关掉」。配色只用在 App 原型：紫系承载信任与档案，橘系承载纠偏动作——对标 Spotify / Netflix 的「为什么推」、插件市场的货架分区，而不是换作品集皮肤。</p>
+  <p class="proto-note">身份只有三种样式：为你推荐 · 热门 · 广告。顶栏开关用整句；「不感兴趣」是主按钮，不当次生效就不算做完。</p>
+
+  <div class="app-proto">
+  <h3>主路径 · 看懂与纠偏</h3>
+  <div class="phones">
+    <div>
+      <p class="phone-cap">01 首页 · 按兴趣</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">荐知</span><span class="toggle"><i></i>正在按兴趣推荐</span></div>
+          <div class="greet">周四晚上</div>
+          <b>今天还可以走远一点</b>
         </div>
-        <div class="feed">
-          <article class="item">
+        <div class="panel">
+          <div class="stats">
+            <div class="stat"><em>今日主题</em><b>城市徒步</b></div>
+            <div class="stat warm"><em>已屏蔽</em><b>3 个主题</b></div>
+          </div>
+          <div class="shelf-lab">基于你的订阅 <span>换一批</span></div>
+          <div class="rail">
+            <div class="tile t1"><small>订阅</small>城市徒步</div>
+            <div class="tile t2"><small>相似</small>轻装露营</div>
+            <div class="tile t3"><small>看过</small>周末路线</div>
+          </div>
+          <article class="card rec">
+            <div class="cover c"></div>
             <div class="kind">为你推荐</div>
             <h5>周末适合走的三条城市路线</h5>
-            <p>因为你订阅了「城市徒步」。</p>
-            <div class="row"><span>资讯</span><button>不感兴趣</button></div>
+            <p class="why">因为你订阅了 <b>城市徒步</b></p>
+            <div class="meta"><span class="ch">资讯</span><button class="btn-pass">不感兴趣</button></div>
           </article>
-          <article class="item">
+          <article class="card hot">
             <div class="kind">热门</div>
             <h5>本周阅读最高的三篇</h5>
-            <p>这条对不上你的档案，所以不写「为你推荐」。</p>
-            <div class="row"><span>资讯</span><button>不感兴趣</button></div>
-          </article>
-          <article class="item ad">
-            <div class="kind">广告</div>
-            <h5>徒步鞋季末</h5>
-            <p>这是广告，不是因为你看过什么。</p>
-            <div class="row"><span>每屏至多 1 条</span><button>不感兴趣</button></div>
+            <p class="why">对不上档案，所以不写「为你推荐」</p>
+            <div class="meta"><span class="ch">资讯</span><button class="btn-ghost">不感兴趣</button></div>
           </article>
         </div>
-        <div class="tabbar"><span class="on">首页</span><span>兴趣</span><span>屏蔽</span><span>我的</span></div>
-      </div>
+        <div class="tabbar">
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
     </div>
     <div>
-      <h3>一条卡片上有什么</h3>
-      <ul>
-        <li>身份只有三种：为你推荐、热门、广告。三种样式分开，不能套同一句话。</li>
-        <li>为你推荐下面只有一句依据，能点进「屏蔽这个依据」。</li>
-        <li>不感兴趣是主按钮，不放进二级菜单。</li>
-        <li>顶栏开关用整句：正在按兴趣推荐，或当前是时间序。</li>
-        <li>四张卡只展示状态：今天在推什么、挡了什么、多样性停在哪、复盘开没开。复盘未到 v1.5 时，卡片写「尚未开放」，不留空入口。</li>
-      </ul>
-      <h3>三个人怎么走</h3>
-      <table>
-        <tr><th>人</th><th>先做的事</th><th>成功</th></tr>
-        <tr><td>林窄</td><td>点不感兴趣，再把多样性调高</td><td>下一条换题，相邻几条不再是同一个主题</td></tr>
-        <tr><td>周挑</td><td>先读理由，需要时点再来一组</td><td>多看了几条，长期档案没变</td></tr>
-        <tr><td>陈控</td><td>首屏关掉个性化，周末核对档案</td><td>时间序里不再出现「为你推荐」，档案能导出或删除</td></tr>
-      </table>
+      <p class="phone-cap">02 不感兴趣</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">荐知</span><span class="toggle"><i></i>正在按兴趣推荐</span></div>
+          <div class="greet">纠偏当次生效</div>
+          <b>选一个原因</b>
+        </div>
+        <div class="panel">
+          <article class="card blocked">
+            <div class="kind">为你推荐</div>
+            <h5>周末适合走的三条城市路线</h5>
+            <p class="why">因为你订阅了 <b>城市徒步</b></p>
+          </article>
+          <div class="sheet-panel">
+            <h5>不感兴趣</h5>
+            <p>写入屏蔽表 · 下一条起过滤 · 24 小时可撤销</p>
+            <div class="reason">
+              <button class="on">看过了</button>
+              <button>不喜欢这类</button>
+              <button>这是广告</button>
+            </div>
+            <a class="btn-main" href="#s6" style="margin-top:10px">确认并换下一条</a>
+            <a class="btn-soft" href="#s6">取消</a>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">03 广告分形</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">荐知</span><span class="toggle"><i></i>正在按兴趣推荐</span></div>
+          <div class="greet">每屏至多 1 条广告</div>
+          <b>句式不能像推荐</b>
+        </div>
+        <div class="panel">
+          <article class="card rec">
+            <div class="kind">为你推荐</div>
+            <h5>轻装过夜该带什么</h5>
+            <p class="why">因为你看过 <b>轻装露营</b></p>
+            <div class="meta"><span class="ch">资讯</span><button class="btn-pass">不感兴趣</button></div>
+          </article>
+          <article class="card ad">
+            <div class="cover o"></div>
+            <div class="kind">广告</div>
+            <h5>徒步鞋季末</h5>
+            <p class="why">这是广告，不是因为你看过什么</p>
+            <div class="meta"><span class="ch">赞助</span><button class="btn-ghost">不感兴趣</button></div>
+          </article>
+          <p style="font-size:11px;color:var(--muted);line-height:1.45;padding:4px 2px">禁止出现「因为你喜欢」。广告不读兴趣档案。</p>
+        </div>
+        <div class="tabbar">
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">04 关闭个性化</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">荐知</span><span class="toggle off"><i></i>当前是时间序</span></div>
+          <div class="greet">已关闭个性化</div>
+          <b>不再写「为你推荐」</b>
+        </div>
+        <div class="panel">
+          <div class="stats">
+            <div class="stat"><em>排序</em><b>时间序</b></div>
+            <div class="stat"><em>理由句</em><b>已隐藏</b></div>
+          </div>
+          <article class="card hot">
+            <div class="kind">热门</div>
+            <h5>昨夜更新的城市速报</h5>
+            <p class="why">时间序 · 不使用个性化依据</p>
+            <div class="meta"><span class="ch">资讯</span><button class="btn-ghost">不感兴趣</button></div>
+          </article>
+          <article class="card hot">
+            <div class="kind">热门</div>
+            <h5>编辑精选：本周长文</h5>
+            <p class="why">时间序 · 不使用个性化依据</p>
+            <div class="meta"><span class="ch">资讯</span><button class="btn-ghost">不感兴趣</button></div>
+          </article>
+          <a class="btn-main" href="#s6">重新打开个性化</a>
+        </div>
+        <div class="tabbar">
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
     </div>
   </div>
+
+  <h3>档案 · 屏蔽 · 冷启动</h3>
+  <div class="phones">
+    <div>
+      <p class="phone-cap">05 兴趣档案</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">兴趣</span><span class="btn-ghost" style="padding:5px 10px">导出</span></div>
+          <div class="greet">可改 · 可关 · 可带走</div>
+          <b>你的主题列表</b>
+        </div>
+        <div class="panel interest">
+          <div class="tag"><span>城市徒步</span><span class="acts"><span class="pill-sub">订阅</span></span></div>
+          <div class="tag"><span>轻装露营</span><span class="acts"><span class="pill-sub">订阅</span></span></div>
+          <div class="tag"><span>数码测评</span><span class="acts"><span class="pill-ban">已屏蔽</span></span></div>
+          <div class="tag"><span>职场鸡汤</span><span class="acts"><span class="pill-ban">已屏蔽</span></span></div>
+          <div class="shelf-lab" style="margin-top:12px">场景是否可读 <span>屏蔽优先</span></div>
+          <div class="list">
+            <div class="row"><span class="lab">资讯流</span><div class="sw on"></div></div>
+            <div class="row"><span class="lab">短视频</span><div class="sw on"></div></div>
+            <div class="row"><span class="lab">商品流</span><span class="val">未授权 · 会员</span></div>
+          </div>
+        </div>
+        <div class="tabbar">
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">06 屏蔽列表</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">屏蔽</span></div>
+          <div class="greet">按原因查看 · 可撤销</div>
+          <b>挡掉的主题</b>
+        </div>
+        <div class="panel">
+          <div class="chips">
+            <span class="chip on">全部</span>
+            <span class="chip">看过</span>
+            <span class="chip">不喜欢</span>
+            <span class="chip ban">广告</span>
+          </div>
+          <div class="list">
+            <div class="row"><div><div class="lab">数码测评</div><div class="val">不喜欢这类 · 今天 12:08</div></div><button class="btn-ghost">撤销</button></div>
+            <div class="row"><div><div class="lab">职场鸡汤</div><div class="val">看过了 · 昨天</div></div><button class="btn-ghost">撤销</button></div>
+            <div class="row"><div><div class="lab">理财课推广</div><div class="val">这是广告 · 周一</div></div><button class="btn-ghost">撤销</button></div>
+          </div>
+          <p style="font-size:11px;color:var(--muted);padding:4px 2px">撤销后下一刷恢复该类；不立刻重写长期权重。</p>
+        </div>
+        <div class="tabbar">
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">07 冷启动</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">荐知</span></div>
+          <div class="greet">先选 3 个主题</div>
+          <b>别让前 20 条全是大盘</b>
+        </div>
+        <div class="panel">
+          <div class="chips">
+            <span class="chip on">城市徒步</span>
+            <span class="chip on">轻装露营</span>
+            <span class="chip">家常菜</span>
+            <span class="chip on">独立设计</span>
+            <span class="chip">数码测评</span>
+            <span class="chip">亲子周末</span>
+            <span class="chip">古典乐</span>
+            <span class="chip">本地展览</span>
+          </div>
+          <div class="stats">
+            <div class="stat"><em>已选</em><b>3 / 3</b></div>
+            <div class="stat warm"><em>验收</em><b>前 10 ≥6 命中</b></div>
+          </div>
+          <a class="btn-main" href="#s6">生成第一刷</a>
+          <a class="btn-soft" href="#s6">跳过 · 先看热门</a>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="phone-cap">08 我的</p>
+      <div class="phone"><div class="screen">
+        <div class="sb"><span>9:41</span><span class="ic"><b><i></i></b></span></div>
+        <div class="head">
+          <div class="brand"><span class="logo">我的</span></div>
+          <div class="greet">危险操作放这里</div>
+          <b>档案与信任开关</b>
+        </div>
+        <div class="panel">
+          <div class="list">
+            <div class="row"><span class="lab">个性化推荐</span><div class="sw on"></div></div>
+            <div class="row"><span class="lab">多样性</span><span class="val">偏散 ›</span></div>
+            <div class="row"><span class="lab">再来一组</span><span class="val">仅当次临时 ›</span></div>
+          </div>
+          <div class="list">
+            <div class="row"><span class="lab">导出兴趣档案</span><span class="val">JSON ›</span></div>
+            <div class="row"><span class="lab">删除档案</span><span class="val" style="color:#d4562a">立即生效 ›</span></div>
+          </div>
+          <div class="list">
+            <div class="row"><span class="lab">周复盘</span><span class="val">v1.5 · 会员</span></div>
+            <div class="row"><span class="lab">跨场景商品流</span><span class="val">v1.0 · 会员</span></div>
+          </div>
+          <p style="font-size:11px;color:var(--muted);padding:2px">解释和开关永远免费。会员只卖第二场景与复盘。</p>
+        </div>
+        <div class="tabbar">
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5s5.5 1.5 7 4.5"/></svg>兴趣</span>
+          <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 6h14M7 6v13l5-3 5 3V6"/></svg>屏蔽</span>
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>我的</span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+  </div>
+
+  <div class="ux-side">
+  <h3>一条卡片上有什么</h3>
+  <ul>
+    <li>身份只有三种：为你推荐、热门、广告。三种样式与句式分开。</li>
+    <li>为你推荐下面只有一句可追溯依据；点依据可屏蔽这一类。</li>
+    <li>不感兴趣是橘系主按钮，写清原因后当次过滤。</li>
+    <li>顶栏开关用整句：正在按兴趣推荐 / 当前是时间序。</li>
+  </ul>
+  <h3>三个人怎么走</h3>
+  <table>
+    <tr><th>人</th><th>先做的事</th><th>成功</th></tr>
+    <tr><td>林窄</td><td>点不感兴趣，再把多样性调高</td><td>下一条换题，相邻几条不再是同一主题</td></tr>
+    <tr><td>周挑</td><td>先读理由，需要时点再来一组</td><td>多看了几条，长期档案没变</td></tr>
+    <tr><td>陈控</td><td>首屏关掉个性化，周末核对档案</td><td>时间序里不再出现「为你推荐」，档案能导出或删除</td></tr>
+  </table>
   <h3>四个页签</h3>
   <div class="tabs">
     <div class="on">首页<small>看、纠、关</small></div>
@@ -441,10 +806,10 @@ flowchart TD
   </div>
   <table>
     <tr><th>页</th><th>里面有什么</th><th>不放什么</th></tr>
-    <tr><td>首页</td><td>开关、四张状态卡、推荐列表</td><td>导出、删除、付款</td></tr>
-    <tr><td>兴趣</td><td>主题列表。每项可订阅、屏蔽，并选择哪些场景可以读</td><td>单条内容的播放和购买</td></tr>
-    <tr><td>屏蔽</td><td>按看过、不喜欢这类、广告过滤；撤销后下一刷恢复</td><td>新的推荐</td></tr>
-    <tr><td>我的</td><td>档案编辑、导出、删除确认；周复盘；会员</td><td>另一条信息流</td></tr>
+    <tr><td>首页</td><td>开关、货架、推荐列表</td><td>导出、删除、付款</td></tr>
+    <tr><td>兴趣</td><td>主题列表；订阅 / 屏蔽；场景是否可读</td><td>单条播放和购买</td></tr>
+    <tr><td>屏蔽</td><td>按原因过滤；撤销后下一刷恢复</td><td>新的推荐流</td></tr>
+    <tr><td>我的</td><td>档案编辑、导出、删除确认；复盘；会员</td><td>另一条信息流</td></tr>
   </table>
   <div class="fig"><pre class="mermaid">
 flowchart TD
@@ -464,10 +829,10 @@ flowchart TD
   <ul>
     <li>一个页签只做一件事。负反馈不进三级设置。</li>
     <li>屏蔽优先于订阅。两个状态冲突时，以屏蔽为准。</li>
-    <li>关闭个性化后，推荐理由、多样性旋钮和「再来一组」都不可用，避免关了还在调。</li>
-    <li>删除档案是立即生效的。导出文件里不含广告点击，只含主题、屏蔽和开关状态。</li>
-    <li>先做手机宽度的网页。理由的字号不小于标题的辅助信息，避免封面把依据挤没。</li>
+    <li>关闭个性化后，推荐理由、多样性旋钮和「再来一组」都不可用。</li>
+    <li>删除档案立即生效。导出不含广告点击，只含主题、屏蔽和开关状态。</li>
   </ul>
+  </div>
 </section>
 
 <section id="s7">
