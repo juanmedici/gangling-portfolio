@@ -83,138 +83,190 @@ th{background:#ebe4d8;color:var(--muted);font-size:12px}
 .stage b{display:block;font-size:13px;margin-bottom:4px}
 .stage span{font-size:13px;color:var(--muted)}
 footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
-/* —— App 原型：紫橘 9 色仅作用于机内，对标成熟内容 / 商店类产品 —— */
+/* —— App 原型：紫橘九色不变；布局对标 Spotify / Apple News / App Store / 网易云 / Shopify —— */
 .app-proto{
   --bg:#f6f4fb;--surf:#ffffff;--surf2:#f1f0fb;--lav1:#ece2ec;--lav2:#dfd2ec;
   --pur:#a258e4;--pur2:#8b45d4;--pur-soft:rgba(162,88,228,.12);
   --peach:#f9b99c;--coral:#f9946d;--cream:#fdf2e5;--tang:#fba943;
-  --ink:#1a1625;--sec:#5c566e;--ter:#8e87a0;--line:rgba(26,22,37,.08);
-  --shadow:0 1px 2px rgba(26,22,37,.04),0 8px 24px rgba(26,22,37,.06);
-  --r:14px
+  --ink:#1a1625;--sec:#5c566e;--ter:#8e87a0;--line:rgba(26,22,37,.06);
+  --shadow:0 2px 8px rgba(26,22,37,.05),0 12px 28px rgba(162,88,228,.08);
+  --r:16px
 }
 .proto-note{margin:8px 0 16px;font-size:13.5px;color:var(--muted)}
 .phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:14px 0 10px;justify-items:center;align-items:start}
-.phones>div{width:100%;max-width:272px}
+.phones>div{width:100%;max-width:278px}
 .phone-cap{text-align:center;font-size:12px;color:var(--muted);margin:0 0 8px}
 .app-proto .phone{
-  width:100%;background:#0e0c14;border-radius:36px;padding:10px;
-  box-shadow:0 24px 56px rgba(14,12,20,.28),inset 0 0 0 1px rgba(255,255,255,.1)
+  width:100%;background:#0e0c14;border-radius:38px;padding:11px;
+  box-shadow:0 28px 60px rgba(14,12,20,.3),inset 0 0 0 1px rgba(255,255,255,.1)
 }
 .app-proto .screen{
-  position:relative;background:var(--bg);border-radius:28px;overflow:hidden;height:620px;color:var(--ink);
-  display:flex;flex-direction:column;font-family:-apple-system,"SF Pro Text","PingFang SC","Segoe UI","Microsoft YaHei",sans-serif
+  position:relative;background:var(--bg);border-radius:30px;overflow:hidden;height:640px;color:var(--ink);
+  display:flex;flex-direction:column;font-family:-apple-system,"SF Pro Display","SF Pro Text","PingFang SC","Segoe UI",sans-serif
 }
-.app-proto .screen::before{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:88px;height:22px;background:#0a0a0a;border-radius:14px;z-index:8}
-.app-proto .screen::after{content:"";position:absolute;left:50%;bottom:6px;transform:translateX(-50%);width:108px;height:4px;border-radius:999px;background:rgba(26,22,37,.18);z-index:8;pointer-events:none}
+.app-proto .screen::before{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:90px;height:22px;background:#0a0a0a;border-radius:14px;z-index:8}
+.app-proto .screen::after{content:"";position:absolute;left:50%;bottom:6px;transform:translateX(-50%);width:110px;height:4px;border-radius:999px;background:rgba(26,22,37,.16);z-index:8;pointer-events:none}
 .app-proto .sb{display:flex;justify-content:space-between;align-items:center;padding:14px 18px 0;font-size:12px;font-weight:600;z-index:3;position:relative}
 .app-proto .sb .ic{display:flex;align-items:center;gap:5px;opacity:.9}
 .app-proto .sb .sig{width:13px;height:10px;background:currentColor;clip-path:polygon(0 70%,20% 55%,20% 100%,0 100%,0 70%,40% 40%,40% 100%,25% 100%,25% 55%,60% 20%,60% 100%,45% 100%,45% 35%,80% 0,80% 100%,65% 100%,65% 18%,100% 0,100% 100%,85% 100%,85% 12%)}
 .app-proto .sb .bat{width:16px;height:9px;border:1.4px solid currentColor;border-radius:2px;position:relative}
 .app-proto .sb .bat::after{content:"";position:absolute;right:-3px;top:2px;width:2px;height:4px;background:currentColor;border-radius:1px}
-.app-proto .sb .bat i{position:absolute;inset:1.5px 1.5px 1.5px 1.5px;width:70%;background:currentColor;border-radius:1px;display:block}
-.app-proto .nav{padding:6px 16px 8px;display:flex;align-items:center;justify-content:space-between;gap:10px;z-index:3;position:relative}
-.app-proto .nav .title{font-size:22px;font-weight:750;letter-spacing:-.03em;line-height:1.1}
-.app-proto .nav .ava{width:30px;height:30px;border-radius:50%;background:linear-gradient(145deg,var(--pur),var(--coral));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
-.app-proto .search{
-  margin:0 16px 10px;height:34px;border-radius:10px;background:var(--surf);border:1px solid var(--line);
-  display:flex;align-items:center;gap:8px;padding:0 12px;color:var(--ter);font-size:13px;box-shadow:0 1px 0 rgba(255,255,255,.8)
+.app-proto .sb .bat i{position:absolute;inset:1.5px;width:70%;background:currentColor;border-radius:1px;display:block}
+.app-proto .topbar{padding:8px 16px 0;display:flex;align-items:center;justify-content:space-between;z-index:3;position:relative}
+.app-proto .topbar .hello{font-size:12px;color:var(--ter);font-weight:500}
+.app-proto .topbar .hello b{display:block;font-size:24px;font-weight:780;color:var(--ink);letter-spacing:-.04em;margin-top:1px}
+.app-proto .ava{width:32px;height:32px;border-radius:50%;background:linear-gradient(145deg,var(--pur),var(--coral));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;box-shadow:0 4px 12px rgba(162,88,228,.28)}
+.app-proto .chips{display:flex;gap:7px;padding:10px 16px 6px;overflow:hidden}
+.app-proto .chip{flex-shrink:0;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:650;background:var(--surf);color:var(--sec);border:0;box-shadow:0 1px 2px rgba(26,22,37,.04)}
+.app-proto .chip.on{background:var(--ink);color:#fff}
+.app-proto .chip.live{background:var(--pur-soft);color:var(--pur2)}
+.app-proto .panel{flex:1;overflow-y:auto;min-height:0;padding:0 0 6px;position:relative;z-index:2}
+.app-proto .pad{padding:0 16px}
+.app-proto .hero{
+  position:relative;height:168px;border-radius:20px;overflow:hidden;margin:6px 0 14px;box-shadow:var(--shadow);
+  background:linear-gradient(145deg,#c9b0f2 0%,var(--pur) 42%,#5b2d9e 100%);color:#fff
 }
-.app-proto .search svg{width:14px;height:14px;opacity:.7;flex-shrink:0}
-.app-proto .seg{display:flex;gap:0;margin:0 16px 10px;padding:3px;background:var(--lav1);border-radius:10px}
-.app-proto .seg span{flex:1;text-align:center;font-size:12px;font-weight:650;padding:7px 0;border-radius:8px;color:var(--sec)}
-.app-proto .seg .on{background:var(--surf);color:var(--ink);box-shadow:0 1px 3px rgba(26,22,37,.08)}
-.app-proto .pers{margin:0 16px 8px;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--surf);border-radius:12px;border:1px solid var(--line)}
-.app-proto .pers .lab{font-size:13px;font-weight:650}
+.app-proto .hero.warm{background:linear-gradient(145deg,var(--cream) 0%,var(--tang) 45%,var(--coral) 100%);color:#3b2410}
+.app-proto .hero .tag{position:absolute;top:12px;left:12px;font-size:10px;font-weight:750;letter-spacing:.08em;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.22);backdrop-filter:blur(8px)}
+.app-proto .hero .copy{position:absolute;left:14px;right:14px;bottom:14px}
+.app-proto .hero h3{margin:0 0 4px;font-size:20px;font-weight:780;letter-spacing:-.03em;line-height:1.15}
+.app-proto .hero p{margin:0;font-size:12px;opacity:.88;line-height:1.35}
+.app-proto .hero .orb{position:absolute;right:-20px;top:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.12)}
+.app-proto .hero .orb2{position:absolute;right:30px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:rgba(249,185,156,.25)}
+.app-proto .sec{display:flex;justify-content:space-between;align-items:baseline;margin:2px 0 8px}
+.app-proto .sec b{font-size:17px;font-weight:780;letter-spacing:-.03em}
+.app-proto .sec a{font-size:12px;color:var(--pur);font-weight:650;text-decoration:none}
+.app-proto .rail{display:flex;gap:12px;margin:0 -16px;padding:0 16px 14px;overflow:hidden}
+.app-proto .pl{flex:0 0 118px}
+.app-proto .pl .cover{width:118px;height:118px;border-radius:14px;margin-bottom:7px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.app-proto .pl .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.35))}
+.app-proto .pl .cover i{position:absolute;left:8px;bottom:8px;z-index:1;font-style:normal;font-size:10px;font-weight:700;color:#fff}
+.app-proto .pl .nm{font-size:12.5px;font-weight:700;line-height:1.25;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.app-proto .pl .sub{font-size:11px;color:var(--ter);margin-top:2px}
+.app-proto .a1{background:linear-gradient(145deg,#d4c0f7,var(--pur) 55%,#6b2fb8)}
+.app-proto .a2{background:linear-gradient(145deg,var(--peach),var(--coral) 58%,#c44720)}
+.app-proto .a3{background:linear-gradient(145deg,#ffe8c8,var(--tang) 55%,#d97706)}
+.app-proto .a4{background:linear-gradient(145deg,#e8e0ff,#a588de 50%,#7c3aed)}
+.app-proto .a5{background:linear-gradient(145deg,#fde2e4,#e07a5f 55%,#9b2226)}
+.app-proto .story{
+  background:var(--surf);border-radius:18px;overflow:hidden;margin-bottom:12px;box-shadow:var(--shadow)
+}
+.app-proto .story .shot{height:112px;position:relative}
+.app-proto .story .shot .badge{
+  position:absolute;left:10px;top:10px;font-size:10px;font-weight:750;padding:3px 8px;border-radius:999px;
+  background:rgba(255,255,255,.92);color:var(--pur2)
+}
+.app-proto .story .shot .badge.hot{color:#c45f10}
+.app-proto .story .shot .badge.ad{color:#d4562a}
+.app-proto .story .body{padding:11px 12px 12px}
+.app-proto .story h5{margin:0 0 4px;font-size:15px;font-weight:750;letter-spacing:-.02em;line-height:1.3}
+.app-proto .story .why{margin:0;font-size:12px;color:var(--sec);line-height:1.4}
+.app-proto .story .why em{font-style:normal;color:var(--pur);font-weight:650}
+.app-proto .story .bar{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.app-proto .story .bar .src{font-size:11px;color:var(--ter);font-weight:600}
+.app-proto .icon-btn{
+  width:30px;height:30px;border-radius:50%;border:0;background:var(--surf2);color:var(--sec);
+  display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700
+}
+.app-proto .pass{
+  border:0;border-radius:999px;padding:6px 11px;font-size:11px;font-weight:750;
+  background:var(--coral);color:#fff;box-shadow:0 4px 12px rgba(249,148,109,.28)
+}
+.app-proto .rowlist{display:grid;gap:8px;margin-bottom:12px}
+.app-proto .row{
+  display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;
+  background:var(--surf);border-radius:14px;padding:8px;box-shadow:0 1px 3px rgba(26,22,37,.04)
+}
+.app-proto .row .t{width:52px;height:52px;border-radius:11px}
+.app-proto .row .tx b{display:block;font-size:13px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.app-proto .row .tx span{display:block;font-size:11px;color:var(--ter);margin-top:2px}
+.app-proto .install{
+  border:0;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:750;
+  background:var(--pur-soft);color:var(--pur2)
+}
+.app-proto .pers{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin:0 0 12px;padding:11px 12px;border-radius:14px;background:var(--surf);box-shadow:0 1px 3px rgba(26,22,37,.04)
+}
+.app-proto .pers .lab{font-size:13px;font-weight:700}
 .app-proto .pers .sub{display:block;font-size:11px;color:var(--ter);font-weight:500;margin-top:1px}
 .app-proto .sw{width:42px;height:25px;border-radius:999px;background:#d8d4e4;position:relative;flex-shrink:0}
 .app-proto .sw::after{content:"";position:absolute;top:2px;left:2px;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.18)}
 .app-proto .sw.on{background:var(--pur)}
 .app-proto .sw.on::after{left:19px}
-.app-proto .panel{flex:1;overflow-y:auto;min-height:0;padding:0 0 8px;position:relative;z-index:2}
-.app-proto .section{padding:4px 16px 2px;display:flex;justify-content:space-between;align-items:baseline}
-.app-proto .section b{font-size:15px;font-weight:750;letter-spacing:-.02em}
-.app-proto .section a{font-size:12px;color:var(--pur);font-weight:650;text-decoration:none}
-.app-proto .hrail{display:flex;gap:10px;padding:8px 16px 12px;overflow:hidden}
-.app-proto .hcard{flex:0 0 108px}
-.app-proto .hcard .art{width:108px;height:108px;border-radius:12px;margin-bottom:6px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.app-proto .hcard .art span{position:absolute;left:8px;bottom:8px;font-size:10px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
-.app-proto .a1{background:linear-gradient(145deg,#c4a8f0,var(--pur) 55%,#6b2fb8)}
-.app-proto .a2{background:linear-gradient(145deg,var(--peach),var(--coral) 60%,#d4562a)}
-.app-proto .a3{background:linear-gradient(145deg,var(--cream),var(--tang) 55%,#e08920)}
-.app-proto .a4{background:linear-gradient(145deg,#ddd6f3,#a588de 50%,#7c3aed)}
-.app-proto .hcard .nm{font-size:12px;font-weight:700;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.app-proto .hcard .meta{font-size:10px;color:var(--ter);margin-top:2px}
-.app-proto .feed{padding:0 12px}
-.app-proto .item{
-  display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;
-  background:var(--surf);border-radius:var(--r);padding:10px;margin-bottom:8px;border:1px solid var(--line);box-shadow:var(--shadow)
-}
-.app-proto .item .thumb{width:64px;height:64px;border-radius:10px;flex-shrink:0}
-.app-proto .item .body{min-width:0}
-.app-proto .item .k{font-size:10px;font-weight:750;letter-spacing:.02em;margin-bottom:3px}
-.app-proto .item.rec .k{color:var(--pur)}
-.app-proto .item.hot .k{color:#c45f10}
-.app-proto .item.ad .k{color:#d4562a}
-.app-proto .item h5{margin:0;font-size:13px;font-weight:700;line-height:1.3;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.app-proto .item .why{margin:3px 0 0;font-size:11px;color:var(--sec);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.app-proto .item .why em{font-style:normal;color:var(--pur);font-weight:650}
-.app-proto .item .more{width:28px;height:28px;border-radius:50%;border:0;background:transparent;color:var(--ter);display:flex;align-items:center;justify-content:center;align-self:start;margin-top:2px}
-.app-proto .item.ad{background:linear-gradient(180deg,#fff8f3,var(--surf));border-color:rgba(249,148,109,.25)}
-.app-proto .item.ad .thumb{background:linear-gradient(145deg,var(--cream),var(--tang))}
-.app-proto .dim{opacity:.45;filter:grayscale(.15)}
 .app-proto .sheet{
   position:absolute;left:0;right:0;bottom:0;z-index:7;background:var(--surf);
-  border-radius:18px 18px 0 0;padding:8px 16px 28px;box-shadow:0 -16px 40px rgba(26,22,37,.18)
+  border-radius:22px 22px 0 0;padding:8px 16px 30px;box-shadow:0 -20px 48px rgba(26,22,37,.18)
 }
-.app-proto .sheet .grab{width:36px;height:4px;border-radius:999px;background:#d8d4e4;margin:4px auto 12px}
-.app-proto .sheet h4{margin:0 0 2px;font-size:16px;font-weight:750}
+.app-proto .sheet .grab{width:36px;height:4px;border-radius:999px;background:#d8d4e4;margin:6px auto 14px}
+.app-proto .sheet .mini{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.app-proto .sheet .mini .t{width:44px;height:44px;border-radius:10px}
+.app-proto .sheet .mini b{display:block;font-size:13px;font-weight:700}
+.app-proto .sheet .mini span{font-size:11px;color:var(--ter)}
+.app-proto .sheet h4{margin:0 0 4px;font-size:17px;font-weight:780;letter-spacing:-.02em}
 .app-proto .sheet .hint{font-size:12px;color:var(--ter);margin:0 0 12px}
-.app-proto .opts{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.app-proto .opts{display:grid;gap:8px;margin-bottom:12px}
 .app-proto .opts button{
-  display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;border-top:1px solid var(--line);
-  background:var(--surf);padding:13px 14px;font-size:14px;font-weight:600;color:var(--ink)
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;border-radius:14px;
+  background:var(--surf2);padding:13px 14px;font-size:14px;font-weight:650;color:var(--ink)
 }
-.app-proto .opts button:first-child{border-top:0}
-.app-proto .opts button.on{background:var(--pur-soft);color:var(--pur2)}
+.app-proto .opts button.on{background:var(--pur-soft);color:var(--pur2);box-shadow:inset 0 0 0 1.5px rgba(162,88,228,.35)}
 .app-proto .opts .dot{width:18px;height:18px;border-radius:50%;border:1.5px solid #cfc9dd;flex-shrink:0}
 .app-proto .opts button.on .dot{border-color:var(--pur);background:var(--pur);box-shadow:inset 0 0 0 3px #fff}
 .app-proto .cta{
-  display:flex;align-items:center;justify-content:center;width:100%;height:46px;border:0;border-radius:12px;
-  background:var(--pur);color:#fff;font-size:15px;font-weight:700;text-decoration:none
+  display:flex;align-items:center;justify-content:center;width:100%;height:46px;border:0;border-radius:14px;
+  background:var(--pur);color:#fff;font-size:15px;font-weight:750;text-decoration:none;box-shadow:0 8px 20px rgba(162,88,228,.28)
 }
-.app-proto .cta.orange{background:var(--coral)}
-.app-proto .cta.ghost{background:var(--surf2);color:var(--ink);margin-top:8px;font-weight:650}
-.app-proto .igroup{margin:0 16px 12px;background:var(--surf);border-radius:12px;border:1px solid var(--line);overflow:hidden}
-.app-proto .irow{display:flex;align-items:center;gap:10px;padding:11px 12px;border-top:1px solid var(--line)}
+.app-proto .cta.orange{background:var(--coral);box-shadow:0 8px 20px rgba(249,148,109,.28)}
+.app-proto .cta.ghost{background:var(--surf2);color:var(--ink);margin-top:8px;font-weight:650;box-shadow:none}
+.app-proto .igroup{margin-bottom:12px;background:var(--surf);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(26,22,37,.04)}
+.app-proto .irow{display:flex;align-items:center;gap:10px;padding:12px;border-top:1px solid var(--line)}
 .app-proto .irow:first-child{border-top:0}
-.app-proto .irow .icn{width:36px;height:36px;border-radius:9px;flex-shrink:0}
+.app-proto .irow .icn{width:40px;height:40px;border-radius:11px;flex-shrink:0;box-shadow:var(--shadow)}
 .app-proto .irow .tx{flex:1;min-width:0}
-.app-proto .irow .tx b{display:block;font-size:13.5px;font-weight:650}
+.app-proto .irow .tx b{display:block;font-size:13.5px;font-weight:700}
 .app-proto .irow .tx span{font-size:11px;color:var(--ter)}
-.app-proto .badge{font-size:11px;font-weight:700;padding:4px 8px;border-radius:999px;background:var(--pur-soft);color:var(--pur2)}
+.app-proto .badge{font-size:11px;font-weight:750;padding:5px 9px;border-radius:999px;background:var(--pur-soft);color:var(--pur2)}
 .app-proto .badge.warn{background:rgba(249,148,109,.16);color:#d4562a}
-.app-proto .topics{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:4px 16px 12px}
+.app-proto .topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
 .app-proto .topic{
-  position:relative;height:72px;border-radius:12px;overflow:hidden;padding:10px;display:flex;align-items:flex-end;
-  color:#fff;font-size:13px;font-weight:750;border:2px solid transparent;box-shadow:var(--shadow)
+  position:relative;height:88px;border-radius:16px;overflow:hidden;padding:12px;display:flex;align-items:flex-end;
+  color:#fff;font-size:14px;font-weight:780;letter-spacing:-.02em;box-shadow:var(--shadow)
 }
-.app-proto .topic.on{border-color:var(--pur);box-shadow:0 0 0 2px rgba(162,88,228,.25),var(--shadow)}
-.app-proto .topic .ck{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.35);border:1.5px solid #fff}
-.app-proto .topic.on .ck{background:var(--pur);border-color:#fff;box-shadow:inset 0 0 0 2px #fff}
-.app-proto .foot{padding:8px 16px 18px}
+.app-proto .topic.on{outline:2.5px solid var(--pur);outline-offset:2px}
+.app-proto .topic .ck{
+  position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;
+  background:rgba(255,255,255,.28);border:1.5px solid rgba(255,255,255,.9)
+}
+.app-proto .topic.on .ck{background:var(--pur);border-color:#fff;box-shadow:inset 0 0 0 2.5px #fff}
+.app-proto .foot{padding:4px 16px 16px}
 .app-proto .tabbar{
-  display:grid;grid-template-columns:repeat(4,1fr);padding:6px 0 14px;border-top:1px solid var(--line);
-  background:rgba(246,244,251,.94);backdrop-filter:blur(16px);z-index:3;position:relative
+  display:grid;grid-template-columns:repeat(4,1fr);padding:8px 0 16px;border-top:1px solid var(--line);
+  background:rgba(246,244,251,.92);backdrop-filter:blur(18px);z-index:3;position:relative
 }
 .app-proto .tabbar span{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:var(--ter);font-weight:500}
-.app-proto .tabbar .on{color:var(--pur);font-weight:700}
+.app-proto .tabbar .on{color:var(--pur);font-weight:750}
 .app-proto .ticon{width:22px;height:22px}
-.app-proto .blur{filter:blur(1.5px);opacity:.55;pointer-events:none}
+.app-proto .blur{filter:blur(2px);opacity:.5;pointer-events:none}
+.app-proto .dim{opacity:.4}
 .ux-side{margin-top:18px}
+.ux-side{margin-top:18px}
+.task-hard{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.task-hard article{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 8px 24px rgba(28,25,23,.05);border-top:3px solid #9a3412}
+.task-hard article:nth-child(2){border-top-color:#b45309}
+.task-hard article:nth-child(3){border-top-color:#1a4d42}
+.task-hard article:nth-child(4){border-top-color:#7c3aed}
+.task-hard .lvl{font-size:11px;font-weight:750;letter-spacing:.06em;color:#9a3412;margin-bottom:6px}
+.task-hard article:nth-child(2) .lvl{color:#b45309}
+.task-hard article:nth-child(3) .lvl{color:#1a4d42}
+.task-hard article:nth-child(4) .lvl{color:#7c3aed}
+.task-hard h4{margin:0 0 8px;font-size:15px;line-height:1.35}
+.task-hard p{margin:6px 0;font-size:13px;color:#44403c;line-height:1.5}
+.task-hard b{color:#1c1917}
 @media(max-width:1100px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:860px){
   .top{padding:24px 16px}.top h1{font-size:28px}
-  .people,.grid3,.grid4,.q4,.facts,.stage,.phones,.phones.trio{grid-template-columns:1fr}
+  .people,.grid3,.grid4,.q4,.facts,.stage,.phones,.phones.trio,.task-hard{grid-template-columns:1fr}
   .wrap{padding:24px 14px 48px}
 }
 </style>
@@ -305,9 +357,45 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     <tr><th>步骤</th><th>做法</th><th>拿来干什么</th></tr>
     <tr><td>访谈</td><td>8 人半结构访谈。重度刷内容 3 人，网购决策 3 人，在意开关和授权 2 人</td><td>听到原话：何时觉得被骗、何时划走、信任停在哪</td></tr>
     <tr><td>问卷</td><td>20 份有效问卷，覆盖 15 条需求的正反两问，另加使用频率和付费意愿</td><td>把需求分成必备、期望、兴奋、无差异、反向</td></tr>
-    <tr><td>走查</td><td>固定任务：连续划掉 3 条不感兴趣，说出下一条变了没有</td><td>确认「下一刷换题」是否被用户感知</td></tr>
-    <tr><td>首屏</td><td>记录眼睛先落在封面、理由还是开关</td><td>理由和开关必须在首屏，不能进设置二级页</td></tr>
+    <tr><td>走查</td><td>四道难任务（见下），含冲突态、广告诱饵、关个性化后回潮</td><td>不只测「会不会点」，还测边界规则是否被理解</td></tr>
+    <tr><td>首屏</td><td>记录眼睛先落在封面、理由还是开关；再测无提示找开关</td><td>理由和开关必须在首屏，不能进设置二级页</td></tr>
   </table>
+  <h3>走查任务脚本 · 故意加难</h3>
+  <p class="note">任务写成「情景 + 约束 + 成功标准」。主持人不提示入口；踩坑也记，用来改规则而不是改话术。</p>
+  <div class="task-hard">
+    <article>
+      <div class="lvl">T1 · 对抗回潮</div>
+      <h4>连续纠偏后，系统是否偷偷把同类塞回来</h4>
+      <p><b>情景：</b>你刚刷完三条「数码测评」。请把它们全部标成不感兴趣（原因选「不喜欢这类」），然后继续往下划满 10 条。</p>
+      <p><b>约束：</b>不许打开兴趣页；不许问主持人「算不算同类」。</p>
+      <p><b>成功：</b>能指出 10 条里是否再出现数码测评；若出现，标出第几条。通过线：误推 &lt; 1 条。</p>
+      <p><b>陷阱：</b>夹一条标题像测评、标签却是「热门」的内容——要看用户是否被标题骗，还是会读身份标签。</p>
+    </article>
+    <article>
+      <div class="lvl">T2 · 理由可信度</div>
+      <h4>对得上的理由 vs 编的理由，你信哪句</h4>
+      <p><b>情景：</b>同一封面出现两次。A：「因为你订阅了城市徒步」。B：「猜你喜欢」。请决定点哪条，并口述为什么。</p>
+      <p><b>约束：</b>两句都出现在首屏，不得翻设置；看完立刻决定，限时 15 秒。</p>
+      <p><b>成功：</b>能说清依据是否可追溯；若选 A，能指回档案里的订阅项。通过线：半数以上认为 A 更能帮助决策。</p>
+      <p><b>陷阱：</b>再给一条「因为你看过某某」但对不上档案——看用户会不会要求改标热门。</p>
+    </article>
+    <article>
+      <div class="lvl">T3 · 关个性化 + 广告诱饵</div>
+      <h4>关掉之后，还敢不敢写成「为你推荐」</h4>
+      <p><b>情景：</b>请自行找到并关闭个性化。关闭后继续划 5 条；其中预埋 1 条广告、1 条仍写「为你推荐」的错误态（主持人可注入）。</p>
+      <p><b>约束：</b>不提示开关在哪；找到后计时。错误态出现时不主动解释。</p>
+      <p><b>成功：</b>首屏无提示找到开关；关闭后能识别「不该再出现为你推荐」；广告只被认成广告。通过线：6/8 找得到；错误态被指出。</p>
+      <p><b>陷阱：</b>广告文案写成「因为你看过」——这是红线，记为产品失败而非用户失败。</p>
+    </article>
+    <article>
+      <div class="lvl">T4 · 当次临时 vs 长期档案</div>
+      <h4>「再来一组」会不会把长期兴趣改脏</h4>
+      <p><b>情景：</b>先记下当前已订阅主题。使用「再来一组」多看一波临时内容，再进入兴趣页核对档案。</p>
+      <p><b>约束：</b>临时队列里允许点不感兴趣；会话结束必须回到原档案。</p>
+      <p><b>成功：</b>兴趣页主题权重与开始时一致；用户能口述「这次多看不影响长期」。通过线：档案字段无漂移。</p>
+      <p><b>陷阱：</b>临时队列里点了屏蔽——应只影响当次过滤，还是写入长期屏蔽表？首版规则：选「不喜欢这类」写长期；选「看过了」可只当次。走查要听用户预期是否与规则一致。</p>
+    </article>
+  </div>
   <div class="fig"><pre class="mermaid">
 flowchart LR
   A[访谈听动机] --> B[问卷给 15 条需求归类]
@@ -487,46 +575,44 @@ flowchart TD
 <section id="s6">
   <p class="sec-no">06</p>
   <h2>App 原型</h2>
-  <p class="pull">首页就要完成「看懂、纠偏、关掉」。机内界面按成熟内容 App 的信息密度来做：大标题导航、分段控件、横向货架、列表行、底部操作表。紫橘九色只作用于原型机。</p>
-  <p class="proto-note">卡片身份仍只有三种：为你推荐 / 热门 / 广告。纠偏入口在 ···，确认后当次换题。</p>
+  <p class="pull">首页就要完成「看懂、纠偏、关掉」。视觉节奏对标 Spotify 货架、Apple News 故事卡、App Store Today 头图、网易云筛选片、Shopify 商店列表。紫橘九色不变，只改布局与内容。</p>
+  <p class="proto-note">身份仍只有三种：为你推荐 / 热门 / 广告。纠偏在 ··· 与底部表，确认后当次换题。</p>
 
   <div class="app-proto">
   <h3>主路径</h3>
   <div class="phones">
     <div>
-      <p class="phone-cap">01 首页 · For You</p>
+      <p class="phone-cap">01 首页 · 今日</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">荐知</div><div class="ava">刘</div></div>
-        <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>搜索主题或内容</div>
-        <div class="seg"><span class="on">为你</span><span>关注</span><span>热门</span></div>
-        <div class="pers"><div><span class="lab">个性化</span><span class="sub">依据兴趣档案排序</span></div><div class="sw on"></div></div>
-        <div class="panel">
-          <div class="section"><b>基于你的订阅</b><a href="#s6">更多</a></div>
-          <div class="hrail">
-            <div class="hcard"><div class="art a1"><span>订阅</span></div><div class="nm">城市徒步精选</div><div class="meta">12 篇更新</div></div>
-            <div class="hcard"><div class="art a2"><span>相似</span></div><div class="nm">轻装露营</div><div class="meta">因为徒步</div></div>
-            <div class="hcard"><div class="art a3"><span>看过</span></div><div class="nm">周末路线</div><div class="meta">继续浏览</div></div>
+        <div class="topbar"><div class="hello">周四晚上好<b>发现</b></div><div class="ava">刘</div></div>
+        <div class="chips"><span class="chip on">为你</span><span class="chip live">个性化开</span><span class="chip">关注</span><span class="chip">热门</span></div>
+        <div class="panel"><div class="pad">
+          <div class="hero"><div class="orb"></div><div class="orb2"></div><span class="tag">今日精选</span><div class="copy"><h3>城市慢行图鉴</h3><p>根据你订阅的「城市徒步」整理</p></div></div>
+          <div class="sec"><b>你的歌单感货架</b><a href="#s6">全部</a></div>
+          <div class="rail">
+            <div class="pl"><div class="cover a1"><i>订阅</i></div><div class="nm">城市徒步精选</div><div class="sub">12 篇更新</div></div>
+            <div class="pl"><div class="cover a2"><i>相似</i></div><div class="nm">轻装过夜</div><div class="sub">因为徒步</div></div>
+            <div class="pl"><div class="cover a3"><i>继续</i></div><div class="nm">雨天滨江线</div><div class="sub">昨晚看过</div></div>
           </div>
-          <div class="section"><b>今日推荐</b><a href="#s6">换一批</a></div>
-          <div class="feed">
-            <article class="item rec">
-              <div class="thumb a1"></div>
-              <div class="body"><div class="k">为你推荐</div><h5>周末三条城市徒步线，人少景稳</h5><p class="why">因为你订阅了 <em>城市徒步</em></p></div>
-              <button class="more" aria-label="更多">···</button>
-            </article>
-            <article class="item hot">
-              <div class="thumb a3"></div>
-              <div class="body"><div class="k">热门</div><h5>本周阅读榜 · Top 3</h5><p class="why">大盘热门 · 未写入「为你」</p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item rec">
-              <div class="thumb a4"></div>
-              <div class="body"><div class="k">为你推荐</div><h5>雨天也能走的滨江慢行段</h5><p class="why">因为你看过 <em>周末路线</em></p></div>
-              <button class="more">···</button>
-            </article>
-          </div>
-        </div>
+          <div class="sec"><b>接下来</b><a href="#s6">换一批</a></div>
+          <article class="story">
+            <div class="shot a1"><span class="badge">为你推荐</span></div>
+            <div class="body">
+              <h5>周末三条人少景稳的城市线</h5>
+              <p class="why">因为你订阅了 <em>城市徒步</em></p>
+              <div class="bar"><span class="src">8 分钟 · 图文</span><button class="icon-btn">···</button></div>
+            </div>
+          </article>
+          <article class="story">
+            <div class="shot a3"><span class="badge hot">热门</span></div>
+            <div class="body">
+              <h5>本周阅读榜 · 编辑在看什么</h5>
+              <p class="why">大盘热门 · 未写入「为你」</p>
+              <div class="bar"><span class="src">合集</span><button class="icon-btn">···</button></div>
+            </div>
+          </article>
+        </div></div>
         <div class="tabbar">
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4 9.3V21h5.5v-6.2h5V21H20V9.3L12 3.2z"/></svg>首页</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
@@ -539,60 +625,48 @@ flowchart TD
       <p class="phone-cap">02 不感兴趣</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">荐知</div><div class="ava">刘</div></div>
-        <div class="panel blur">
-          <div class="feed" style="padding-top:8px">
-            <article class="item rec dim">
-              <div class="thumb a1"></div>
-              <div class="body"><div class="k">为你推荐</div><h5>周末三条城市徒步线，人少景稳</h5><p class="why">因为你订阅了 <em>城市徒步</em></p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item hot">
-              <div class="thumb a3"></div>
-              <div class="body"><div class="k">热门</div><h5>本周阅读榜 · Top 3</h5><p class="why">大盘热门</p></div>
-              <button class="more">···</button>
-            </article>
-          </div>
-        </div>
+        <div class="topbar"><div class="hello">周四晚上好<b>发现</b></div><div class="ava">刘</div></div>
+        <div class="panel blur"><div class="pad" style="padding-top:8px">
+          <article class="story dim"><div class="shot a1"></div><div class="body"><h5>周末三条人少景稳的城市线</h5></div></article>
+          <article class="story"><div class="shot a3"></div><div class="body"><h5>本周阅读榜</h5></div></article>
+        </div></div>
         <div class="sheet">
           <div class="grab"></div>
-          <h4>不感兴趣</h4>
-          <p class="hint">下一条起过滤 · 24 小时内可撤销</p>
+          <div class="mini"><div class="t a1"></div><div><b>周末三条城市线</b><span>为你推荐 · 城市徒步</span></div></div>
+          <h4>不想再看到？</h4>
+          <p class="hint">下一条起过滤 · 24 小时可撤销</p>
           <div class="opts">
             <button class="on"><i class="dot"></i>看过了</button>
             <button><i class="dot"></i>不喜欢这类</button>
             <button><i class="dot"></i>这是广告</button>
           </div>
-          <a class="cta orange" href="#s6">确认</a>
+          <a class="cta orange" href="#s6">确认并换下一条</a>
           <a class="cta ghost" href="#s6">取消</a>
         </div>
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">03 广告分形</p>
+      <p class="phone-cap">03 商店式推荐</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">荐知</div><div class="ava">刘</div></div>
-        <div class="seg"><span class="on">为你</span><span>关注</span><span>热门</span></div>
-        <div class="panel">
-          <div class="feed" style="padding-top:4px">
-            <article class="item rec">
-              <div class="thumb a2"></div>
-              <div class="body"><div class="k">为你推荐</div><h5>轻装过夜清单：只要 6 样</h5><p class="why">因为你看过 <em>轻装露营</em></p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item ad">
-              <div class="thumb"></div>
-              <div class="body"><div class="k">广告</div><h5>TrailPro 徒步鞋 · 季末</h5><p class="why">赞助内容 · 非个性化推荐</p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item rec">
-              <div class="thumb a4"></div>
-              <div class="body"><div class="k">为你推荐</div><h5>城市夜骑：灯带与路线注意</h5><p class="why">因为你订阅了 <em>城市徒步</em></p></div>
-              <button class="more">···</button>
-            </article>
+        <div class="topbar"><div class="hello">扩展发现<b>为你精选</b></div><div class="ava">刘</div></div>
+        <div class="chips"><span class="chip on">推荐</span><span class="chip">徒步</span><span class="chip">工具</span></div>
+        <div class="panel"><div class="pad">
+          <div class="sec"><b>因为你在用「路线收藏」</b></div>
+          <div class="rowlist">
+            <div class="row"><div class="t a1"></div><div class="tx"><b>离线地图便签</b><span>4.9 · 路线标注</span></div><button class="install">获取</button></div>
+            <div class="row"><div class="t a2"></div><div class="tx"><b>轻装清单</b><span>4.8 · 露营打包</span></div><button class="install">获取</button></div>
+            <div class="row"><div class="t a4"></div><div class="tx"><b>步道天气</b><span>4.7 · 局部预报</span></div><button class="install">获取</button></div>
           </div>
-        </div>
+          <article class="story">
+            <div class="shot a2"><span class="badge ad">广告</span></div>
+            <div class="body">
+              <h5>TrailPro 季末鞋款</h5>
+              <p class="why">赞助内容 · 不是因为你看过什么</p>
+              <div class="bar"><span class="src">赞助商</span><button class="pass">不感兴趣</button></div>
+            </div>
+          </article>
+        </div></div>
         <div class="tabbar">
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4 9.3V21h5.5v-6.2h5V21H20V9.3L12 3.2z"/></svg>首页</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
@@ -602,31 +676,16 @@ flowchart TD
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">04 关闭个性化</p>
+      <p class="phone-cap">04 时间序</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">荐知</div><div class="ava">刘</div></div>
-        <div class="pers"><div><span class="lab">个性化</span><span class="sub">已关闭 · 时间序</span></div><div class="sw"></div></div>
-        <div class="panel">
-          <div class="section"><b>最新</b></div>
-          <div class="feed">
-            <article class="item hot">
-              <div class="thumb a3"></div>
-              <div class="body"><div class="k">热门</div><h5>昨夜城市速报</h5><p class="why">按发布时间</p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item hot">
-              <div class="thumb a4"></div>
-              <div class="body"><div class="k">热门</div><h5>编辑精选 · 本周长文</h5><p class="why">按发布时间</p></div>
-              <button class="more">···</button>
-            </article>
-            <article class="item hot">
-              <div class="thumb a1"></div>
-              <div class="body"><div class="k">热门</div><h5>社区投稿合集</h5><p class="why">按发布时间</p></div>
-              <button class="more">···</button>
-            </article>
-          </div>
-        </div>
+        <div class="topbar"><div class="hello">个性化已关<b>最新</b></div><div class="ava">刘</div></div>
+        <div class="panel"><div class="pad">
+          <div class="pers"><div><span class="lab">个性化</span><span class="sub">关闭后按时间排序</span></div><div class="sw"></div></div>
+          <article class="story"><div class="shot a3"><span class="badge hot">热门</span></div><div class="body"><h5>昨夜城市速报</h5><p class="why">20:14 发布</p><div class="bar"><span class="src">资讯</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a4"><span class="badge hot">热门</span></div><div class="body"><h5>编辑精选 · 本周长文</h5><p class="why">19:02 发布</p><div class="bar"><span class="src">编辑部</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a5"><span class="badge hot">热门</span></div><div class="body"><h5>社区投稿合集</h5><p class="why">18:40 发布</p><div class="bar"><span class="src">社区</span><button class="icon-btn">···</button></div></div></article>
+        </div></div>
         <div class="tabbar">
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4 9.3V21h5.5v-6.2h5V21H20V9.3L12 3.2z"/></svg>首页</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
@@ -640,29 +699,29 @@ flowchart TD
   <h3>兴趣 · 屏蔽 · 冷启动 · 我的</h3>
   <div class="phones">
     <div>
-      <p class="phone-cap">05 兴趣</p>
+      <p class="phone-cap">05 兴趣库</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">兴趣</div><div class="ava">刘</div></div>
-        <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>搜索主题</div>
-        <div class="panel">
-          <div class="section"><b>已订阅</b><a href="#s6">管理</a></div>
+        <div class="topbar"><div class="hello">可带走的档案<b>兴趣</b></div><div class="ava">刘</div></div>
+        <div class="chips"><span class="chip on">全部</span><span class="chip">订阅中</span><span class="chip">已屏蔽</span></div>
+        <div class="panel"><div class="pad">
+          <div class="sec"><b>订阅中</b><a href="#s6">导出</a></div>
           <div class="igroup">
             <div class="irow"><div class="icn a1"></div><div class="tx"><b>城市徒步</b><span>资讯 · 视频已开</span></div><span class="badge">订阅</span></div>
             <div class="irow"><div class="icn a2"></div><div class="tx"><b>轻装露营</b><span>资讯已开</span></div><span class="badge">订阅</span></div>
           </div>
-          <div class="section"><b>已屏蔽</b></div>
+          <div class="sec"><b>已屏蔽</b></div>
           <div class="igroup">
             <div class="irow"><div class="icn a3"></div><div class="tx"><b>数码测评</b><span>不喜欢这类</span></div><span class="badge warn">屏蔽</span></div>
-            <div class="irow"><div class="icn a4"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">屏蔽</span></div>
+            <div class="irow"><div class="icn a5"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">屏蔽</span></div>
           </div>
-          <div class="section"><b>场景授权</b></div>
+          <div class="sec"><b>场景授权</b></div>
           <div class="igroup">
             <div class="irow"><div class="tx"><b>资讯流</b><span>可读档案</span></div><div class="sw on"></div></div>
             <div class="irow"><div class="tx"><b>短视频</b><span>可读档案</span></div><div class="sw on"></div></div>
             <div class="irow"><div class="tx"><b>商品流</b><span>未授权</span></div><span class="badge">会员</span></div>
           </div>
-        </div>
+        </div></div>
         <div class="tabbar">
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
@@ -675,15 +734,15 @@ flowchart TD
       <p class="phone-cap">06 屏蔽</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">屏蔽</div><div class="ava">刘</div></div>
-        <div class="seg"><span class="on">全部</span><span>看过</span><span>不喜欢</span><span>广告</span></div>
-        <div class="panel">
+        <div class="topbar"><div class="hello">可撤销<b>屏蔽</b></div><div class="ava">刘</div></div>
+        <div class="chips"><span class="chip on">全部</span><span class="chip">看过</span><span class="chip">不喜欢</span><span class="chip">广告</span></div>
+        <div class="panel"><div class="pad">
           <div class="igroup">
             <div class="irow"><div class="icn a3"></div><div class="tx"><b>数码测评</b><span>今天 12:08 · 不喜欢这类</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
-            <div class="irow"><div class="icn a4"></div><div class="tx"><b>职场鸡汤</b><span>昨天 · 看过了</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
+            <div class="irow"><div class="icn a5"></div><div class="tx"><b>职场鸡汤</b><span>昨天 · 看过了</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
             <div class="irow"><div class="icn a2"></div><div class="tx"><b>理财课推广</b><span>周一 · 广告</span></div><a class="badge" href="#s6" style="text-decoration:none">撤销</a></div>
           </div>
-        </div>
+        </div></div>
         <div class="tabbar">
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
@@ -696,21 +755,21 @@ flowchart TD
       <p class="phone-cap">07 冷启动</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">选择兴趣</div></div>
-        <div style="padding:0 16px 8px;font-size:13px;color:var(--sec);line-height:1.4">选 3 个主题，生成更准的第一刷</div>
-        <div class="panel">
+        <div class="topbar"><div class="hello">先选 3 个<b>你的口味</b></div></div>
+        <div class="panel"><div class="pad">
+          <p style="margin:4px 0 12px;font-size:13px;color:var(--sec);line-height:1.45">选得越多，第一刷越不像大盘热门</p>
           <div class="topics">
             <div class="topic a1 on"><i class="ck"></i>城市徒步</div>
             <div class="topic a2 on"><i class="ck"></i>轻装露营</div>
             <div class="topic a3"><i class="ck"></i>家常菜</div>
             <div class="topic a4 on"><i class="ck"></i>独立设计</div>
+            <div class="topic a5"><i class="ck"></i>古典乐</div>
             <div class="topic" style="background:linear-gradient(145deg,#b8e0d2,#2a9d8f)"><i class="ck"></i>亲子周末</div>
-            <div class="topic" style="background:linear-gradient(145deg,#fde2e4,#e63946)"><i class="ck"></i>古典乐</div>
           </div>
-        </div>
+        </div></div>
         <div class="foot">
           <div style="font-size:12px;color:var(--ter);margin-bottom:8px;text-align:center">已选 3 / 3</div>
-          <a class="cta" href="#s6">开始浏览</a>
+          <a class="cta" href="#s6">生成第一刷</a>
           <a class="cta ghost" href="#s6">先看热门</a>
         </div>
       </div></div>
@@ -719,29 +778,30 @@ flowchart TD
       <p class="phone-cap">08 我的</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
-        <div class="nav"><div class="title">我的</div><div class="ava">刘</div></div>
-        <div class="panel">
-          <div class="igroup" style="margin-top:4px">
+        <div class="topbar"><div class="hello">信任开关<b>我的</b></div><div class="ava">刘</div></div>
+        <div class="panel"><div class="pad">
+          <div class="hero warm" style="height:110px;margin-top:6px"><span class="tag">免费永久</span><div class="copy"><h3 style="font-size:18px">解释和开关</h3><p>不做成付费墙</p></div></div>
+          <div class="igroup">
             <div class="irow"><div class="tx"><b>个性化推荐</b><span>开启时显示推荐理由</span></div><div class="sw on"></div></div>
             <div class="irow"><div class="tx"><b>多样性</b><span>偏散</span></div><span style="color:var(--ter)">›</span></div>
             <div class="irow"><div class="tx"><b>再来一组</b><span>仅影响当次</span></div><span style="color:var(--ter)">›</span></div>
           </div>
-          <div class="section"><b>档案</b></div>
+          <div class="sec"><b>档案</b></div>
           <div class="igroup">
             <div class="irow"><div class="tx"><b>导出兴趣档案</b><span>JSON</span></div><span style="color:var(--ter)">›</span></div>
             <div class="irow"><div class="tx"><b>删除档案</b><span style="color:#d4562a">立即生效</span></div><span style="color:#d4562a">›</span></div>
           </div>
-          <div class="section"><b>会员</b></div>
+          <div class="sec"><b>会员</b></div>
           <div class="igroup">
             <div class="irow"><div class="tx"><b>周复盘</b><span>周末一页摘要</span></div><span class="badge">即将推出</span></div>
             <div class="irow"><div class="tx"><b>跨场景商品流</b><span>共用同一份兴趣</span></div><span class="badge">会员</span></div>
           </div>
-        </div>
+        </div></div>
         <div class="tabbar">
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20H14v-6h-4v6H4z"/></svg>首页</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19.2c1.6-3.2 4-4.8 7-4.8s5.4 1.6 7 4.8"/></svg>兴趣</span>
           <span><svg class="ticon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 5h12v15l-6-3.2L6 20V5z"/></svg>屏蔽</span>
-          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>我的</span>
+          <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>我的</span>
         </div>
       </div></div>
     </div>
@@ -756,12 +816,12 @@ flowchart TD
     <li>不感兴趣是橘系主按钮，写清原因后当次过滤。</li>
     <li>顶栏开关用整句：正在按兴趣推荐 / 当前是时间序。</li>
   </ul>
-  <h3>三个人怎么走</h3>
+  <h3>三个人怎么走 · 难路径</h3>
   <table>
-    <tr><th>人</th><th>先做的事</th><th>成功</th></tr>
-    <tr><td>林窄</td><td>点不感兴趣，再把多样性调高</td><td>下一条换题，相邻几条不再是同一主题</td></tr>
-    <tr><td>周挑</td><td>先读理由，需要时点再来一组</td><td>多看了几条，长期档案没变</td></tr>
-    <tr><td>陈控</td><td>首屏关掉个性化，周末核对档案</td><td>时间序里不再出现「为你推荐」，档案能导出或删除</td></tr>
+    <tr><th>人</th><th>难任务</th><th>必须跨过的坑</th><th>成功</th></tr>
+    <tr><td>林窄</td><td>屏蔽「数码测评」后，再把多样性调到最高，连续看 8 条</td><td>标题像测评、身份却是热门的诱饵；相邻主题是否仍撞车</td><td>8 条内无屏蔽主题回潮；相邻 5 条主题互不相同</td></tr>
+    <tr><td>周挑</td><td>读完理由后用「再来一组」，临时多看，再核对兴趣页</td><td>临时点「看过了」会不会改订阅；会话结束权重是否漂移</td><td>多看了内容，长期主题列表与权重不变</td></tr>
+    <tr><td>陈控</td><td>无提示关个性化 → 指出错误「为你推荐」→ 导出并删除档案</td><td>关了仍出现个性化句式；删除前无二次确认就生效</td><td>时间序干净；导出无广告字段；删除后推荐不再读档</td></tr>
   </table>
   <h3>四个页签</h3>
   <div class="tabs">
@@ -842,24 +902,27 @@ flowchart TD
 <section id="s8">
   <p class="sec-no">08</p>
   <h2>上线前怎么验证</h2>
-  <p>先证明「下一刷换题」这件事用户感知得到，再写成规则，最后才谈要不要做更复杂的排序。三步不过，不进入下一步。</p>
+  <p>先用四道难任务证伪边界，再写成规则，最后才谈更复杂的排序与收费。任一道硬条件不过，不进入下一步。</p>
   <div class="fig"><pre class="mermaid">
 flowchart LR
-  A[第 1 周 8 人 人工换下一条] -->|多数人说得出变了没有| B[第 2 步 规则网页]
-  B -->|不用人盯 误推下降| C[第 3 步 才试第二场景收费]
+  A[T1–T4 难任务走查] -->|四条通过线都过| B[规则网页]
+  B -->|误推下降且禁语站住| C[第二场景收费试验]
+  A -->|任一条不过| D[改规则或改可见性 再测]
+  D --> A
   </pre></div>
   <table>
     <tr><th>天</th><th>做什么</th><th>记下什么</th></tr>
-    <tr><td>1</td><td>找 8 个会刷信息流或网购的人，任务只有划掉和口述</td><td>谁没听懂任务。听不懂的结果作废，不拿来证明功能好</td></tr>
-    <tr><td>2–3</td><td>每人划掉 3 条。主持人按规则换上下一条，用户还不知道规则</td><td>能不能说出变了，或没变</td></tr>
-    <tr><td>4</td><td>同一批内容，一半人看「因为你看过」，一半人只看「猜你喜欢」</td><td>哪句更能帮忙决定点不点</td></tr>
-    <tr><td>5</td><td>让他们关掉个性化，不提示入口在哪</td><td>第一眼找不到的人数，以及找到后花了多久</td></tr>
-    <tr><td>6</td><td>问第二场景值不值 29 元。只记录愿不愿意</td><td>愿意、不愿意、说不清。不劝</td></tr>
-    <tr><td>7</td><td>只根据换题、理由、开关位置三件事做决定</td><td>进规则网页，或先改任务再测一轮</td></tr>
+    <tr><td>1</td><td>招募 8 人；预演 T1–T4 脚本；剔除听不懂「身份标签 / 档案」的样本</td><td>谁被剔除、卡在哪句术语。剔除不计入通过率</td></tr>
+    <tr><td>2</td><td>跑 T1 对抗回潮 + 标题诱饵</td><td>10 条内误推条数；是否误信热门诱饵</td></tr>
+    <tr><td>3</td><td>跑 T2 理由可信度（限时 15 秒）+ 伪理由探针</td><td>选 A/B 人数；是否要求伪理由改标热门</td></tr>
+    <tr><td>4</td><td>跑 T3：无提示找开关 + 注入错误「为你推荐」+ 广告禁语</td><td>找到开关耗时；错误态是否被指出；广告是否被认成推荐</td></tr>
+    <tr><td>5</td><td>跑 T4：再来一组后核对档案；追问屏蔽粒度预期</td><td>档案是否漂移；用户预期 vs 首版规则是否冲突</td></tr>
+    <tr><td>6</td><td>第二场景 29 元：先完成 T1 成功者才问愿不愿意付</td><td>愿意 / 不愿意 / 说不清。未通过 T1 者不计入付费意向</td></tr>
+    <tr><td>7</td><td>按四道任务的通过线汇总，决定进规则网页或改规则再测</td><td>进 / 停 / 改哪条规则（屏蔽粒度、伪理由、开关位置）</td></tr>
   </table>
   <div class="sheet">
-    <p><b>进入规则网页的条件：</b>8 人里至少 6 人能正确说出下一条变了没有；认为明确理由更有用的人不少于一半；开关在没有提示时，多数人能在首屏找到。</p>
-    <p><b>停下来的条件：</b>多数人看不出下一条有没有变。这时继续做排序模型没有意义，先改反馈的可见性。</p>
+    <p><b>进入规则网页的条件（四条同时满足）：</b>T1 误推 &lt; 10%；T2 明确理由更有用 ≥ 50% 且伪理由被要求改标；T3 无提示找到开关 ≥ 6/8 且错误态被指出；T4 档案无漂移。</p>
+    <p><b>停下来的条件：</b>T1 多数人看不出回潮，或 T3 关了个性化仍接受「为你推荐」。此时先改可见性与禁语，不碰排序模型。</p>
   </div>
 </section>
 
