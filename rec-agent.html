@@ -83,13 +83,13 @@ th{background:#ebe4d8;color:var(--muted);font-size:12px}
 .stage b{display:block;font-size:13px;margin-bottom:4px}
 .stage span{font-size:13px;color:var(--muted)}
 footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
-/* —— App 原型：紫橘九色不变；布局对标 Spotify / Apple News / App Store / 网易云 / Shopify —— */
+/* —— App 原型：紫橘九色；主骨架 = 大图故事卡 + 一句理由 —— */
 .app-proto{
-  --bg:#f6f4fb;--surf:#ffffff;--surf2:#f1f0fb;--lav1:#ece2ec;--lav2:#dfd2ec;
+  --bg:#f7f6fa;--surf:#ffffff;--surf2:#f3f1f7;--lav1:#ece2ec;--lav2:#dfd2ec;
   --pur:#a258e4;--pur2:#8b45d4;--pur-soft:rgba(162,88,228,.12);
   --peach:#f9b99c;--coral:#f9946d;--cream:#fdf2e5;--tang:#fba943;
-  --ink:#1a1625;--sec:#5c566e;--ter:#8e87a0;--line:rgba(26,22,37,.06);
-  --shadow:0 2px 8px rgba(26,22,37,.05),0 12px 28px rgba(162,88,228,.08);
+  --ink:#1a1625;--sec:#5c566e;--ter:#8e87a0;--line:rgba(26,22,37,.07);
+  --shadow:0 1px 2px rgba(26,22,37,.04);
   --r:16px
 }
 .proto-note{margin:8px 0 16px;font-size:13.5px;color:var(--muted)}
@@ -139,39 +139,38 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80") center/cover;
   box-shadow:0 0 0 1.5px #fff,0 2px 8px rgba(26,22,37,.12)
 }
-.app-proto .chips{display:flex;gap:7px;padding:8px 14px 6px;overflow:hidden}
-.app-proto .chip{flex-shrink:0;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:560;background:transparent;color:var(--sec);border:1px solid var(--line)}
+.app-proto .status{
+  margin:6px 14px 2px;padding:8px 12px;border-radius:12px;background:var(--pur-soft);
+  display:flex;align-items:center;justify-content:space-between;gap:8px
+}
+.app-proto .status b{font-size:12px;font-weight:650;color:var(--pur2)}
+.app-proto .status span{font-size:11px;color:var(--sec)}
+.app-proto .status.off{background:var(--surf2)}
+.app-proto .status.off b{color:var(--sec)}
+.app-proto .chips{display:flex;gap:6px;padding:8px 14px 4px;overflow:hidden}
+.app-proto .chip{flex-shrink:0;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:560;background:transparent;color:var(--sec);border:1px solid var(--line)}
 .app-proto .chip.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:650}
-.app-proto .chip.live{background:var(--pur-soft);color:var(--pur2);border-color:transparent}
 .app-proto .panel{flex:1;overflow-y:auto;min-height:0;padding:0 0 6px;position:relative;z-index:2}
-.app-proto .pad{padding:0 16px}
+.app-proto .pad{padding:0 14px}
 .app-proto .pic,.app-proto .hero,.app-proto .shot,.app-proto .cover,.app-proto .t,.app-proto .icn,.app-proto .topic,.app-proto .sheet .mini .t{
   background-size:cover;background-position:center;background-repeat:no-repeat
 }
 .app-proto .hero{
-  position:relative;height:168px;border-radius:20px;overflow:hidden;margin:6px 0 14px;box-shadow:var(--shadow);color:#fff;
+  position:relative;height:152px;border-radius:16px;overflow:hidden;margin:8px 0 12px;color:#fff;
   background:
-    linear-gradient(180deg,rgba(26,22,37,.15) 0%,rgba(91,45,158,.55) 100%),
+    linear-gradient(180deg,transparent 35%,rgba(14,12,20,.62) 100%),
     url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80") center/cover
 }
-.app-proto .hero.warm{
-  color:#3b2410;
-  background:
-    linear-gradient(180deg,rgba(253,242,229,.2) 0%,rgba(249,148,109,.55) 100%),
-    url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80") center/cover
-}
-.app-proto .hero .tag{position:absolute;top:12px;left:12px;font-size:10px;font-weight:750;letter-spacing:.08em;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.22);backdrop-filter:blur(8px)}
-.app-proto .hero .copy{position:absolute;left:14px;right:14px;bottom:14px}
-.app-proto .hero h3{margin:0 0 4px;font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
-.app-proto .hero p{margin:0;font-size:12px;opacity:.88;line-height:1.35}
-.app-proto .hero .orb{position:absolute;right:-20px;top:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.12)}
-.app-proto .hero .orb2{position:absolute;right:30px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:rgba(249,185,156,.25)}
-.app-proto .sec{display:flex;justify-content:space-between;align-items:baseline;margin:4px 0 8px}
-.app-proto .sec b{font-size:13px;font-weight:650;letter-spacing:.02em;color:var(--sec)}
+.app-proto .hero .tag{position:absolute;top:10px;left:10px;font-size:10px;font-weight:650;letter-spacing:.04em;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.2);backdrop-filter:blur(8px)}
+.app-proto .hero .copy{position:absolute;left:12px;right:12px;bottom:12px}
+.app-proto .hero h3{margin:0 0 3px;font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.app-proto .hero p{margin:0;font-size:11.5px;opacity:.88;line-height:1.35}
+.app-proto .sec{display:flex;justify-content:space-between;align-items:baseline;margin:2px 0 8px}
+.app-proto .sec b{font-size:12px;font-weight:650;letter-spacing:.04em;color:var(--ter);text-transform:none}
 .app-proto .sec a{font-size:12px;color:var(--pur);font-weight:600;text-decoration:none}
 .app-proto .profile{
   display:flex;align-items:center;gap:12px;margin:8px 0 14px;padding:12px;
-  background:var(--surf);border-radius:18px;box-shadow:var(--shadow)
+  background:var(--surf);border-radius:14px;border:1px solid var(--line)
 }
 .app-proto .profile .face{
   width:52px;height:52px;border-radius:50%;flex-shrink:0;
@@ -181,47 +180,47 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 .app-proto .profile .nm{font-size:16px;font-weight:650;letter-spacing:-.01em}
 .app-proto .profile .meta{font-size:12px;color:var(--ter);margin-top:3px;line-height:1.35}
 .app-proto .onboard-lead{
-  margin:10px 0 14px;padding:16px 14px;border-radius:18px;color:#fff;position:relative;overflow:hidden;
+  margin:8px 0 12px;padding:16px 14px;border-radius:16px;color:#fff;position:relative;overflow:hidden;
   background:
-    linear-gradient(135deg,rgba(91,45,158,.72),rgba(249,148,109,.55)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80") center/cover;
-  box-shadow:var(--shadow)
+    linear-gradient(180deg,rgba(14,12,20,.25) 0%,rgba(14,12,20,.62) 100%),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80") center/cover
 }
-.app-proto .onboard-lead h3{margin:0 0 4px;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.app-proto .onboard-lead h3{margin:0 0 4px;font-size:17px;font-weight:700;letter-spacing:-.02em}
 .app-proto .onboard-lead p{margin:0;font-size:12px;opacity:.9;line-height:1.4}
-.app-proto .rail{display:flex;gap:12px;margin:0 -16px;padding:0 16px 14px;overflow:hidden}
-.app-proto .pl{flex:0 0 118px}
-.app-proto .pl .cover{width:118px;height:118px;border-radius:14px;margin-bottom:7px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.app-proto .pl .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.35))}
-.app-proto .pl .cover i{position:absolute;left:8px;bottom:8px;z-index:1;font-style:normal;font-size:10px;font-weight:700;color:#fff}
-.app-proto .pl .nm{font-size:12.5px;font-weight:600;line-height:1.25;letter-spacing:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.app-proto .pl .sub{font-size:11px;color:var(--ter);margin-top:2px}
-.app-proto .a1{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a2{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a3{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a4{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a5{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a6{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a7{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a8{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1497215728101-53627c6ad123?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a9{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80")}
-.app-proto .a10{background-image:linear-gradient(180deg,transparent 40%,rgba(26,22,37,.35)),url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80")}
+.app-proto .rail{display:flex;gap:10px;margin:0 -14px;padding:0 14px 12px;overflow:hidden}
+.app-proto .pl{flex:0 0 88px}
+.app-proto .pl .cover{width:88px;height:88px;border-radius:12px;margin-bottom:6px;position:relative;overflow:hidden}
+.app-proto .pl .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.28))}
+.app-proto .pl .nm{font-size:11.5px;font-weight:600;line-height:1.25;letter-spacing:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.app-proto .pl .sub{font-size:10.5px;color:var(--ter);margin-top:2px}
+.app-proto .a1{background-image:url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a2{background-image:url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a3{background-image:url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a4{background-image:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a5{background-image:url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a6{background-image:url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a7{background-image:url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a8{background-image:url("https://images.unsplash.com/photo-1497215728101-53627c6ad123?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a9{background-image:url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80")}
+.app-proto .a10{background-image:url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80")}
 .app-proto .story{
-  background:var(--surf);border-radius:18px;overflow:hidden;margin-bottom:12px;box-shadow:var(--shadow)
+  background:var(--surf);border-radius:16px;overflow:hidden;margin-bottom:10px;
+  border:1px solid var(--line)
 }
-.app-proto .story .shot{height:120px;position:relative}
-.app-proto .story .shot .badge{
-  position:absolute;left:10px;top:10px;font-size:10px;font-weight:750;padding:3px 8px;border-radius:999px;
-  background:rgba(255,255,255,.92);color:var(--pur2)
+.app-proto .story .shot{height:168px;position:relative}
+.app-proto .story .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,12,20,.18));pointer-events:none}
+.app-proto .story .shot .id{
+  position:absolute;left:10px;top:10px;z-index:1;font-size:10px;font-weight:700;padding:4px 8px;border-radius:999px;
+  background:rgba(255,255,255,.94);color:var(--pur2);letter-spacing:.02em
 }
-.app-proto .story .shot .badge.hot{color:#c45f10}
-.app-proto .story .shot .badge.ad{color:#d4562a}
-.app-proto .story .body{padding:11px 12px 12px}
+.app-proto .story .shot .id.hot{color:#b45309;background:rgba(255,247,237,.96)}
+.app-proto .story .shot .id.ad{color:#c2410c;background:rgba(255,247,237,.96);border:1px solid rgba(249,148,109,.45)}
+.app-proto .story .body{padding:10px 12px 12px}
 .app-proto .story h5{margin:0 0 4px;font-size:14.5px;font-weight:650;letter-spacing:-.01em;line-height:1.35}
 .app-proto .story .why{margin:0;font-size:12px;color:var(--sec);line-height:1.4}
 .app-proto .story .why em{font-style:normal;color:var(--pur);font-weight:650}
 .app-proto .story .bar{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-.app-proto .story .bar .src{font-size:11px;color:var(--ter);font-weight:600}
+.app-proto .story .bar .src{font-size:11px;color:var(--ter);font-weight:500}
 .app-proto .icon-btn{
   width:30px;height:30px;border-radius:50%;border:0;background:var(--surf2);color:var(--sec);
   display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700
@@ -244,7 +243,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 }
 .app-proto .pers{
   display:flex;align-items:center;justify-content:space-between;gap:10px;
-  margin:0 0 12px;padding:11px 12px;border-radius:14px;background:var(--surf);box-shadow:0 1px 3px rgba(26,22,37,.04)
+  margin:0 0 12px;padding:11px 12px;border-radius:14px;background:var(--surf);border:1px solid var(--line)
 }
 .app-proto .pers .lab{font-size:13px;font-weight:700}
 .app-proto .pers .sub{display:block;font-size:11px;color:var(--ter);font-weight:500;margin-top:1px}
@@ -277,20 +276,23 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 }
 .app-proto .cta.orange{background:var(--coral);box-shadow:0 8px 20px rgba(249,148,109,.28)}
 .app-proto .cta.ghost{background:var(--surf2);color:var(--ink);margin-top:8px;font-weight:650;box-shadow:none}
-.app-proto .igroup{margin-bottom:12px;background:var(--surf);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(26,22,37,.04)}
+.app-proto .igroup{margin-bottom:12px;background:var(--surf);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 .app-proto .irow{display:flex;align-items:center;gap:10px;padding:12px;border-top:1px solid var(--line)}
 .app-proto .irow:first-child{border-top:0}
-.app-proto .irow .icn{width:40px;height:40px;border-radius:11px;flex-shrink:0;box-shadow:var(--shadow)}
+.app-proto .irow .icn{width:40px;height:40px;border-radius:10px;flex-shrink:0}
 .app-proto .irow .tx{flex:1;min-width:0}
 .app-proto .irow .tx b{display:block;font-size:13.5px;font-weight:600}
 .app-proto .irow .tx span{font-size:11px;color:var(--ter)}
-.app-proto .badge{font-size:11px;font-weight:750;padding:5px 9px;border-radius:999px;background:var(--pur-soft);color:var(--pur2)}
-.app-proto .badge.warn{background:rgba(249,148,109,.16);color:#d4562a}
+.app-proto .badge{font-size:11px;font-weight:600;padding:0;border-radius:0;background:transparent;color:var(--pur)}
+.app-proto .badge.warn{color:#c2410c}
+.app-proto .badge.muted{color:var(--ter);font-weight:500}
 .app-proto .topics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
 .app-proto .topic{
-  position:relative;height:88px;border-radius:16px;overflow:hidden;padding:12px;display:flex;align-items:flex-end;
-  color:#fff;font-size:14px;font-weight:780;letter-spacing:-.02em;box-shadow:var(--shadow)
+  position:relative;height:96px;border-radius:14px;overflow:hidden;padding:12px;display:flex;align-items:flex-end;
+  color:#fff;font-size:13.5px;font-weight:700;letter-spacing:-.01em
 }
+.app-proto .topic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(14,12,20,.55));pointer-events:none}
+.app-proto .topic>*{position:relative;z-index:1}
 .app-proto .topic.on{outline:2.5px solid var(--pur);outline-offset:2px}
 .app-proto .topic .ck{
   position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;
@@ -633,29 +635,29 @@ flowchart TD
 <section id="s6">
   <p class="sec-no">06</p>
   <h2>App 原型</h2>
-  <p class="pull">首页就要完成「看懂、纠偏、关掉」。顶栏对标 Spotify / 网易云：品牌或居中轻标题，不做左上粗黑大字。紫橘九色不变。</p>
-  <p class="proto-note">封面与场景图来自 Unsplash 公开图（可商用授权），仅用于原型示意。身份仍只有三种：为你推荐 / 热门 / 广告。</p>
+  <p class="pull">首页主骨架统一成「大图故事卡 + 一句理由」；个性化状态单独一条，不挤进筛选；身份只突出三种。</p>
+  <p class="proto-note">封面与场景图来自 Unsplash 公开图（可商用授权），仅用于原型示意。</p>
 
   <div class="app-proto">
   <h3>主路径</h3>
   <div class="phones">
     <div>
-      <p class="phone-cap">01 首页 · 今日</p>
+      <p class="phone-cap">01 首页 · 为你</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
         <div class="nav home"><div class="brand">荐知</div><div class="nav-r"><button class="nav-ico" aria-label="搜索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 3.5 3.5"/></svg></button><div class="ava" title="刘"></div></div></div>
-        <div class="chips"><span class="chip on">为你</span><span class="chip live">个性化开</span><span class="chip">关注</span><span class="chip">热门</span></div>
+        <div class="status"><b>正在按兴趣推荐</b><span>可在「我的」关闭</span></div>
+        <div class="chips"><span class="chip on">为你</span><span class="chip">热门</span></div>
         <div class="panel"><div class="pad">
-          <div class="hero"><span class="tag">今日精选</span><div class="copy"><h3>城市慢行图鉴</h3><p>根据你订阅的「城市徒步」整理</p></div></div>
-          <div class="sec"><b>为你精选</b><a href="#s6">全部</a></div>
+          <div class="hero"><span class="tag">今日</span><div class="copy"><h3>城市慢行图鉴</h3><p>根据你订阅的「城市徒步」整理</p></div></div>
+          <div class="sec"><b>相关主题</b><a href="#s6">换一批</a></div>
           <div class="rail">
-            <div class="pl"><div class="cover a1"><i>订阅</i></div><div class="nm">城市徒步精选</div><div class="sub">12 篇更新</div></div>
-            <div class="pl"><div class="cover a2"><i>相似</i></div><div class="nm">轻装过夜</div><div class="sub">因为徒步</div></div>
-            <div class="pl"><div class="cover a10"><i>继续</i></div><div class="nm">雨天滨江线</div><div class="sub">昨晚看过</div></div>
+            <div class="pl"><div class="cover a1"></div><div class="nm">城市徒步</div><div class="sub">已订阅</div></div>
+            <div class="pl"><div class="cover a2"></div><div class="nm">轻装过夜</div><div class="sub">相似</div></div>
+            <div class="pl"><div class="cover a10"></div><div class="nm">雨天滨江</div><div class="sub">继续</div></div>
           </div>
-          <div class="sec"><b>接下来</b><a href="#s6">换一批</a></div>
           <article class="story">
-            <div class="shot a1"><span class="badge">为你推荐</span></div>
+            <div class="shot a1"><span class="id">为你推荐</span></div>
             <div class="body">
               <h5>周末三条人少景稳的城市线</h5>
               <p class="why">因为你订阅了 <em>城市徒步</em></p>
@@ -663,7 +665,7 @@ flowchart TD
             </div>
           </article>
           <article class="story">
-            <div class="shot a3"><span class="badge hot">热门</span></div>
+            <div class="shot a3"><span class="id hot">热门</span></div>
             <div class="body">
               <h5>本周阅读榜 · 编辑在看什么</h5>
               <p class="why">大盘热门 · 未写入「为你」</p>
@@ -684,9 +686,10 @@ flowchart TD
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
         <div class="nav home"><div class="brand">荐知</div><div class="nav-r"><button class="nav-ico" aria-label="搜索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 3.5 3.5"/></svg></button><div class="ava" title="刘"></div></div></div>
+        <div class="status"><b>正在按兴趣推荐</b><span>可在「我的」关闭</span></div>
         <div class="panel blur"><div class="pad" style="padding-top:8px">
-          <article class="story dim"><div class="shot a1"></div><div class="body"><h5>周末三条人少景稳的城市线</h5></div></article>
-          <article class="story"><div class="shot a3"></div><div class="body"><h5>本周阅读榜</h5></div></article>
+          <article class="story dim"><div class="shot a1"><span class="id">为你推荐</span></div><div class="body"><h5>周末三条人少景稳的城市线</h5><p class="why">因为你订阅了 <em>城市徒步</em></p></div></article>
+          <article class="story"><div class="shot a3"><span class="id hot">热门</span></div><div class="body"><h5>本周阅读榜</h5></div></article>
         </div></div>
         <div class="sheet">
           <div class="grab"></div>
@@ -704,24 +707,35 @@ flowchart TD
       </div></div>
     </div>
     <div>
-      <p class="phone-cap">03 商店式推荐</p>
+      <p class="phone-cap">03 广告身份</p>
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
         <div class="nav home"><div class="brand">荐知</div><div class="nav-r"><button class="nav-ico" aria-label="搜索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 3.5 3.5"/></svg></button><div class="ava" title="刘"></div></div></div>
-        <div class="chips"><span class="chip on">推荐</span><span class="chip">徒步</span><span class="chip">工具</span></div>
+        <div class="status"><b>正在按兴趣推荐</b><span>可在「我的」关闭</span></div>
+        <div class="chips"><span class="chip on">为你</span><span class="chip">热门</span></div>
         <div class="panel"><div class="pad">
-          <div class="sec"><b>因为你在用「路线收藏」</b></div>
-          <div class="rowlist">
-            <div class="row"><div class="t a1"></div><div class="tx"><b>离线地图便签</b><span>4.9 · 路线标注</span></div><button class="install">获取</button></div>
-            <div class="row"><div class="t a2"></div><div class="tx"><b>轻装清单</b><span>4.8 · 露营打包</span></div><button class="install">获取</button></div>
-            <div class="row"><div class="t a10"></div><div class="tx"><b>步道天气</b><span>4.7 · 局部预报</span></div><button class="install">获取</button></div>
-          </div>
           <article class="story">
-            <div class="shot a9"><span class="badge ad">广告</span></div>
+            <div class="shot a2"><span class="id">为你推荐</span></div>
+            <div class="body">
+              <h5>轻装一晚：清单怎么收</h5>
+              <p class="why">因为你看过 <em>轻装过夜</em></p>
+              <div class="bar"><span class="src">6 分钟 · 图文</span><button class="icon-btn">···</button></div>
+            </div>
+          </article>
+          <article class="story">
+            <div class="shot a9"><span class="id ad">广告</span></div>
             <div class="body">
               <h5>TrailPro 季末鞋款</h5>
               <p class="why">赞助内容 · 不是因为你看过什么</p>
               <div class="bar"><span class="src">赞助商</span><button class="pass">不感兴趣</button></div>
+            </div>
+          </article>
+          <article class="story">
+            <div class="shot a4"><span class="id">为你推荐</span></div>
+            <div class="body">
+              <h5>独立设计小店周末市集</h5>
+              <p class="why">因为你订阅了 <em>独立设计</em></p>
+              <div class="bar"><span class="src">图集</span><button class="icon-btn">···</button></div>
             </div>
           </article>
         </div></div>
@@ -738,11 +752,13 @@ flowchart TD
       <div class="phone"><div class="screen">
         <div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><span class="bat"><i></i></span></span></div>
         <div class="nav home"><div class="brand">荐知</div><div class="nav-r"><button class="nav-ico" aria-label="搜索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 3.5 3.5"/></svg></button><div class="ava" title="刘"></div></div></div>
+        <div class="status off"><b>当前是时间序</b><span>个性化已关</span></div>
+        <div class="chips"><span class="chip">为你</span><span class="chip on">热门</span></div>
         <div class="panel"><div class="pad">
           <div class="pers"><div><span class="lab">个性化</span><span class="sub">关闭后按时间排序</span></div><div class="sw"></div></div>
-          <article class="story"><div class="shot a10"><span class="badge hot">热门</span></div><div class="body"><h5>昨夜城市速报</h5><p class="why">20:14 发布</p><div class="bar"><span class="src">资讯</span><button class="icon-btn">···</button></div></div></article>
-          <article class="story"><div class="shot a3"><span class="badge hot">热门</span></div><div class="body"><h5>编辑精选 · 本周长文</h5><p class="why">19:02 发布</p><div class="bar"><span class="src">编辑部</span><button class="icon-btn">···</button></div></div></article>
-          <article class="story"><div class="shot a4"><span class="badge hot">热门</span></div><div class="body"><h5>社区投稿合集</h5><p class="why">18:40 发布</p><div class="bar"><span class="src">社区</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a10"><span class="id hot">热门</span></div><div class="body"><h5>昨夜城市速报</h5><p class="why">20:14 发布</p><div class="bar"><span class="src">资讯</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a3"><span class="id hot">热门</span></div><div class="body"><h5>编辑精选 · 本周长文</h5><p class="why">19:02 发布</p><div class="bar"><span class="src">编辑部</span><button class="icon-btn">···</button></div></div></article>
+          <article class="story"><div class="shot a4"><span class="id hot">热门</span></div><div class="body"><h5>社区投稿合集</h5><p class="why">18:40 发布</p><div class="bar"><span class="src">社区</span><button class="icon-btn">···</button></div></div></article>
         </div></div>
         <div class="tabbar">
           <span class="on"><svg class="ticon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2 4 9.3V21h5.5v-6.2h5V21H20V9.3L12 3.2z"/></svg>首页</span>
@@ -765,19 +781,19 @@ flowchart TD
         <div class="panel"><div class="pad">
           <div class="sec"><b>订阅中</b><a href="#s6">导出</a></div>
           <div class="igroup">
-            <div class="irow"><div class="icn a1"></div><div class="tx"><b>城市徒步</b><span>资讯 · 视频已开</span></div><span class="badge">订阅</span></div>
-            <div class="irow"><div class="icn a2"></div><div class="tx"><b>轻装露营</b><span>资讯已开</span></div><span class="badge">订阅</span></div>
+            <div class="irow"><div class="icn a1"></div><div class="tx"><b>城市徒步</b><span>资讯 · 视频已开</span></div><span class="badge">订阅中</span></div>
+            <div class="irow"><div class="icn a2"></div><div class="tx"><b>轻装露营</b><span>资讯已开</span></div><span class="badge">订阅中</span></div>
           </div>
           <div class="sec"><b>已屏蔽</b></div>
           <div class="igroup">
-            <div class="irow"><div class="icn a7"></div><div class="tx"><b>数码测评</b><span>不喜欢这类</span></div><span class="badge warn">屏蔽</span></div>
-            <div class="irow"><div class="icn a8"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">屏蔽</span></div>
+            <div class="irow"><div class="icn a7"></div><div class="tx"><b>数码测评</b><span>不喜欢这类</span></div><span class="badge warn">已屏蔽</span></div>
+            <div class="irow"><div class="icn a8"></div><div class="tx"><b>职场鸡汤</b><span>看过了</span></div><span class="badge warn">已屏蔽</span></div>
           </div>
           <div class="sec"><b>场景授权</b></div>
           <div class="igroup">
             <div class="irow"><div class="tx"><b>资讯流</b><span>可读档案</span></div><div class="sw on"></div></div>
             <div class="irow"><div class="tx"><b>短视频</b><span>可读档案</span></div><div class="sw on"></div></div>
-            <div class="irow"><div class="tx"><b>商品流</b><span>未授权</span></div><span class="badge">会员</span></div>
+            <div class="irow"><div class="tx"><b>商品流</b><span>会员场景 · 未授权</span></div><span class="badge muted">会员</span></div>
           </div>
         </div></div>
         <div class="tabbar">
@@ -851,8 +867,8 @@ flowchart TD
           </div>
           <div class="sec"><b>会员</b></div>
           <div class="igroup">
-            <div class="irow"><div class="tx"><b>周复盘</b><span>周末一页摘要</span></div><span class="badge">即将推出</span></div>
-            <div class="irow"><div class="tx"><b>跨场景商品流</b><span>共用同一份兴趣</span></div><span class="badge">会员</span></div>
+            <div class="irow"><div class="tx"><b>周复盘</b><span>周末一页摘要</span></div><span class="badge muted">即将推出</span></div>
+            <div class="irow"><div class="tx"><b>跨场景商品流</b><span>共用同一份兴趣</span></div><span class="badge muted">会员</span></div>
           </div>
         </div></div>
         <div class="tabbar">
