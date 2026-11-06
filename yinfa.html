@@ -9,9 +9,35 @@
 :root{--ink:#1c1917;--muted:#57534e;--faint:#a8a29e;--paper:#f3efe6;--sheet:#fbf8f2;--line:#e4dcd0;--accent:#9a3412;--header:#163d35;--ok:#115e59;--warn:#b45309;--blue:#1e3a5f;--soft:#f0fdfa;--mint:#a7d7c5;--sand:#ebe4d8}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:"Source Han Sans SC","Noto Sans SC","PingFang SC","Segoe UI","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15.5px}
+body{
+  color:var(--ink);font-family:"Source Han Sans SC","Noto Sans SC","PingFang SC","Segoe UI","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15.5px;
+  background-color:#efe8da;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 8% -8%,rgba(22,61,53,.16),transparent 58%),
+    radial-gradient(ellipse 70% 45% at 98% 12%,rgba(154,52,18,.08),transparent 52%),
+    radial-gradient(ellipse 55% 40% at 50% 100%,rgba(17,94,89,.07),transparent 55%),
+    linear-gradient(180deg,#f6f1e7 0%,#efe8da 42%,#e9e2d4 100%);
+  background-attachment:fixed
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.45;
+  background-image:radial-gradient(rgba(28,25,23,.035) 1px,transparent 1px);
+  background-size:18px 18px
+}
 a{color:inherit}
-.top{background:var(--header);color:#f4f7f5;padding:36px 48px 32px}
+.top{
+  position:relative;z-index:1;color:#f4f7f5;padding:36px 48px 32px;overflow:hidden;
+  background:
+    radial-gradient(ellipse 80% 90% at 100% 0%,rgba(167,215,197,.18),transparent 48%),
+    radial-gradient(ellipse 55% 70% at 0% 100%,rgba(154,52,18,.22),transparent 50%),
+    linear-gradient(155deg,#1a473e 0%,#163d35 42%,#122f2a 100%)
+}
+.top::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.04) 50%,transparent 60%);
+  opacity:.7
+}
+.top>*{position:relative;z-index:1}
 .identity{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;font-size:13px;color:#b7c9c3;margin-bottom:22px}
 .identity .name{font-family:"Palatino Linotype","Songti SC",serif;font-size:20px;color:#fff;letter-spacing:.08em}
 .identity a{color:#a7d7c5;text-decoration:none;border-bottom:1px solid rgba(167,215,197,.45)}
@@ -109,11 +135,21 @@ a{color:inherit}
 .map a{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(167,215,197,.25);padding:10px 10px;text-decoration:none;color:#d5e3de;font-size:12px}
 .map a:hover{background:rgba(255,255,255,.14);color:#fff}
 .map b{display:block;color:var(--mint);font-size:11px;letter-spacing:.06em;margin-bottom:4px}
-.nav-bar{position:sticky;top:0;z-index:20;background:rgba(243,239,230,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:2px;padding:0 12px;overflow-x:auto}
+.nav-bar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(228,220,208,.85);display:flex;gap:2px;padding:0 12px;overflow-x:auto;box-shadow:0 8px 24px rgba(28,25,23,.04)}
 .nav-bar a{text-decoration:none;color:var(--muted);font-size:12px;padding:12px 9px 10px;border-bottom:2px solid transparent;white-space:nowrap}
 .nav-bar a:hover,.nav-bar a.active{color:var(--ink);border-bottom-color:var(--accent)}
-.wrap{max-width:1100px;margin:0 auto;padding:32px 28px 80px}
-section{margin-bottom:56px;scroll-margin-top:58px}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:32px 28px 80px}
+section{margin-bottom:56px;scroll-margin-top:58px;position:relative}
+section::before{
+  content:"";position:absolute;left:-18px;right:-18px;top:-18px;bottom:-8px;z-index:-1;border-radius:18px;pointer-events:none;
+  background:linear-gradient(165deg,rgba(251,248,242,.72),rgba(251,248,242,.28) 55%,transparent);
+  border:1px solid rgba(228,220,208,.35);opacity:.9
+}
+section:nth-child(4n+1)::before{background:linear-gradient(165deg,rgba(240,253,250,.55),rgba(251,248,242,.2) 60%,transparent)}
+section:nth-child(4n+2)::before{background:linear-gradient(165deg,rgba(255,241,238,.45),rgba(251,248,242,.18) 60%,transparent)}
+section:nth-child(4n+3)::before{background:linear-gradient(165deg,rgba(255,251,235,.5),rgba(251,248,242,.18) 60%,transparent)}
+.sheet{backdrop-filter:blur(4px)}
+.fig{box-shadow:0 10px 28px rgba(28,25,23,.04)}
 .sec-no{font-size:12px;letter-spacing:.14em;color:var(--accent);margin-bottom:6px}
 h2{font-family:"Palatino Linotype","Songti SC",serif;font-size:28px;font-weight:600;margin-bottom:14px}
 h3{font-size:16px;margin:22px 0 10px;font-weight:650}
