@@ -21,8 +21,15 @@ a{color:inherit}
 .hero-def{max-width:44em;margin-top:12px;font-size:17px;line-height:1.55;color:#fff}
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13px;color:var(--mint)}
 .hero-meta b{color:#fff;font-weight:600;margin-right:6px}
-.map{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}
-@media(min-width:961px){.map{grid-template-columns:repeat(7,1fr)}.map a{min-height:58px}}
+.reading-path{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}
+.reading-path a{display:block;background:rgba(255,255,255,.1);border:1px solid rgba(167,215,197,.35);padding:12px 12px;text-decoration:none;color:#e7efec;font-size:12.5px;min-height:64px}
+.reading-path a:hover{background:rgba(255,255,255,.16);color:#fff}
+.reading-path b{display:block;color:var(--mint);font-size:11px;letter-spacing:.08em;margin-bottom:4px}
+.map-lab{margin:16px 0 8px;font-size:11px;letter-spacing:.12em;color:#a7d7c5}
+.map{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:0}
+@media(min-width:961px){.map{grid-template-columns:repeat(7,1fr)}.map a{min-height:52px}}
+.chap-end{margin-top:18px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);font-size:13.5px;line-height:1.55;color:var(--ink)}
+.chap-end b{color:var(--accent);margin-right:6px}
 .killbox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
 .killbox div{border:1px solid var(--line);padding:14px 16px;background:#fff}
 .killbox .go{border-top:3px solid var(--ok);background:var(--soft)}
@@ -513,7 +520,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 @media(max-width:1200px){.phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:960px){
 .top{padding:24px 16px}.top h1{font-size:28px}
-.map,.steps,.roles,.scenes,.ux5,.phones,.phones.trio,.stage,.stage-row,.life7,.ia-tree,.nielsen,.q4,.prio,.comp-q,.killbox,.funnel,.quotes,.insight,.persona,.thesis,.contrast3,.journey,.jobs,.engine,.statebox,.defaults,.edge div,.mtree .branches{grid-template-columns:1fr}
+.reading-path,.map,.steps,.roles,.scenes,.ux5,.phones,.phones.trio,.stage,.stage-row,.life7,.ia-tree,.nielsen,.q4,.prio,.comp-q,.killbox,.funnel,.quotes,.insight,.persona,.thesis,.contrast3,.journey,.jobs,.engine,.statebox,.defaults,.edge div,.mtree .branches{grid-template-columns:1fr}
 .arch-row{grid-template-columns:1fr}.wrap{padding:24px 14px 48px}
 .mtree .fork{display:none}.mtree .trunk{height:14px}
 }
@@ -552,6 +559,13 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     <span><b>阶段</b>MVP 验证期</span>
     <span><b>样本</b>访谈 12 · KANO 问卷 22</span>
   </div>
+  <div class="reading-path">
+    <a href="#thesis"><b>I · 立论</b>立场、边界与问题定义</a>
+    <a href="#research"><b>II · 证据</b>用研 → KANO → 体验 → 竞品</a>
+    <a href="#depth"><b>III · 方案</b>机制 → 功能 → 架构 → 原型</a>
+    <a href="#validate"><b>IV · 验证</b>冷启动 · 生死线 · 商业时点</a>
+  </div>
+  <p class="map-lab">章节细目</p>
   <div class="map">
     <a href="#thesis"><b>00</b>立场·边界·机制</a>
     <a href="#hmw"><b>01</b>HMW 定方向</a>
@@ -570,19 +584,15 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
   </div>
 </header>
 <nav class="nav-bar">
-  <a href="#thesis">主张</a>
+  <a href="#thesis">I 立论</a>
+  <a href="#research">II 证据</a>
+  <a href="#depth">III 方案</a>
+  <a href="#validate">IV 验证</a>
   <a href="#hmw">HMW</a>
-  <a href="#research">用研</a>
   <a href="#kano">KANO</a>
-  <a href="#ux">体验</a>
   <a href="#compete">竞品</a>
-  <a href="#depth">机制</a>
   <a href="#func">功能</a>
-  <a href="#arch">架构</a>
-  <a href="#ver">版本</a>
-  <a href="#ia">IA</a>
   <a href="#proto">原型</a>
-  <a href="#validate">验证</a>
   <a href="#close">收束</a>
 </nav>
 <div class="wrap">
@@ -590,7 +600,10 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
 <section id="thesis">
   <p class="sec-no">00</p>
   <h2>产品主张：先定立场，再画边界，后立机制</h2>
-  <p class="pull">晓安是给子女用的决策产品，不是给父母用的健康 App。微信承载问安关系，硬件出售监护感；晓安只补中间空出来的一层——把不确定收成可行动的结论。</p>
+  <p class="pull">工作假设：晓安是给子女用的决策产品，不是给父母用的健康 App。微信承载问安关系，硬件出售监护感；中间空出来的一层——把不确定收成可行动的结论——尚无人系统承接。</p>
+  <div class="sheet">
+    <p><b>阅读约定：</b>§00 先立工作假设，便于抓住主线；§02–05 用证据回证或修正；§07 把差异落到可验收机制；§13 写清如何证伪与停做。主张可以前置，但不能悬空。</p>
+  </div>
 
   <div class="insight">
     <div><b>立场 · 站在谁一侧</b>付费与决策在异地子女；父母端只做「能独立完成」的履约动作。产品文案、首页信息架构与推送策略都按这一侧书写。</div>
@@ -673,8 +686,9 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     </article>
   </div>
   <div class="sheet">
-    <p><b>如何理解「窄」：</b>窄的是首版交付范围，不是对品类的理解。旅程图与相邻 Job 说明全场已经看过；KANO 与验证生死线说明敢于只切一段，并写清不过线就停什么。</p>
+    <p><b>如何理解「窄」：</b>窄的是首版交付范围，不是对品类的理解。旅程图与相邻 Job 说明全场已经看过；后文 KANO 与验证生死线说明敢于只切一段，并写清不过线就停什么。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>先站在子女决策一侧；照护全图看过，首版只切日常履约与紧急触达；差异靠可验收机制。以上为工作假设，由后续证据回证。</p>
 </section>
 
 <section id="hmw">
@@ -709,6 +723,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
       <p><b>晓安：</b>给子女的决策产品——无硬件启动；P0 为紧急呼叫（含扩联状态机）与用药打卡；P1 为结论引擎驱动的今日晓安页。签名能力：结论先于数据 · 异常才推 · 未接扩联。明确不做：医院 HIS、理财卖货、养老项目导流、默认直播定位、指标墙首页。</p>
     </article>
   </div>
+  <p class="chap-end"><b>本章结论</b>HMW 收束为：如何在不监视父母的前提下，确认「今天要不要打电话」。机会在任务协同层，不在再做一块硬件。</p>
 </section>
 
 <section id="research">
@@ -751,6 +766,7 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     <tr><td>被关心但不被监视</td><td>默认直播定位、摄像头必装</td><td>定位默认关；异常才推</td><td>监视感是弃用主因之一</td></tr>
     <tr><td>少在群里重复叮嘱</td><td>再做一个养生资讯流「增强粘性」</td><td>用药闭环 + 日摘要 1 条</td><td>资讯不解决执行可见问题；理财流为反向</td></tr>
   </table>
+  <p class="chap-end"><b>本章结论</b>证据回证了 §00 假设：子女缺的是「不确定」的完成态，父母反感的是监视感。产品应做结论与履约闭环，而不是指标墙或默认定位。</p>
 </section>
 
 <section id="kano">
@@ -825,13 +841,14 @@ footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--lin
     </svg>
     <p class="cap">R1 左上先做对；R2 右上拉满意度；R3 右下做差异；R4/R5 左下砍或缓。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>排期锁定：P0 = R1 呼叫 + R2 用药；P1 = R3 晓安结论；R4 反向永久不做；R5 暂缓。真伪辨别完成，「做什么 / 不做什么」从此可执行。</p>
 </section>
 
 <section id="ux">
   <p class="sec-no">04</p>
   <h2>用户体验分析：核心体验决定综合体验</h2>
   <p>照护协同的体验权重在「呼得通、药吃没吃、今天要不要打」，不在皮肤好看。目标用户不同，标准也不同：子女要 10 秒决策，父母要大按钮少步骤。</p>
-  <div class="hw"><b>课堂作业截屏点：</b>下方「报告五板块模板」「五角色定义表」「三场景定义」「任务流程图」四块可直接截屏留存。</div>
+  <div class="hw"><b>可截屏留存：</b>下方「体验五板块」「五角色定义」「三场景」「任务流程图」四块，对应课堂交付口径，同时服务产品叙事。</div>
 
   <h3><span class="shot">截屏 1</span>体验报告五板块（模板）</h3>
   <div class="ux5">
@@ -940,6 +957,7 @@ flowchart LR
     <div><b>易识别</b>父母首页只留呼叫与用药</div>
     <div><b>帮助</b>设置由子女代配，父母几乎无学习成本</div>
   </div>
+  <p class="chap-end"><b>本章结论</b>核心体验是「呼得通、药有完成态、10 秒能决策」；父母端少步骤，子女端少解读。皮肤与资讯流不进入体验权重中心。</p>
 </section>
 
 <section id="compete">
@@ -1011,6 +1029,7 @@ flowchart LR
     <h3>竞品结论</h3>
     <p class="big">与爱牵挂 / 360 同场，但用「无硬件协同」错位；先验证子女是否愿每天看一页晓安，再谈扩张。吸收 SOS 与家庭协同，避开指标墙与理财主路径。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>借硬件已验证的紧急触达形状，修微信缺的任务闭环；当前阶段只做 MVP 验证，不与硬件拼传感器，也不走理财主路径。</p>
 </section>
 
 <section id="tear">
@@ -1036,6 +1055,7 @@ flowchart LR
     </pre>
     <p class="cap">对策：不安心→R1；靠群叮→R2；缺结论→R3。每条次干鱼刺控制在 5 条内。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>鱼骨把痛点接到对策：不安心 → R1，靠群叮 → R2，缺结论 → R3。后文机制章负责把对策写成可执行规则。</p>
 </section>
 
 <section id="depth">
@@ -1134,6 +1154,7 @@ flowchart LR
     </pre>
     <p class="cap">读法：提醒→打卡→结论→决策→（必要时）电话→回写；紧急旁路经扩联同样回写。结论先于数据，在这条环上落地。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>产品壁垒落在三条可命名、可测试的机制：结论引擎、扩联状态机、反监视默认。差异不靠功能更长，而靠规则可验收。</p>
 </section>
 
 <section id="design">
@@ -1196,6 +1217,7 @@ flowchart LR
     </tr>
   </table>
   </div>
+  <p class="chap-end"><b>本章结论</b>功能表是用研 → KANO → 鱼骨的最小可交付单元；每条可单独验收，R4 在表内显式「永不」。</p>
 </section>
 
 <section id="arch">
@@ -1225,6 +1247,7 @@ flowchart TB
     </pre>
     <p class="cap">上薄下稳：入口少，主链三条，协同中台承载规则，基础层只服务闭环质量与可追溯。</p>
   </div>
+  <p class="chap-end"><b>本章结论</b>架构按父母履约 / 子女决策 / 协同中台分层；规则沉到中台，首页不为「功能多」服务。</p>
 </section>
 
 <section id="ver">
@@ -1252,6 +1275,7 @@ flowchart TB
     <tr><td>v2.0</td><td>「需要时再加手表/社区」</td><td>v1.5 留存过线</td><td>仍不做理财导流</td></tr>
   </table>
   </div>
+  <p class="chap-end"><b>本章结论</b>版本节奏先信任（呼叫）→ 再履约（用药）→ 再差异（晓安页）；每一版只回答一个验证问题，不过线不往下扩。</p>
 </section>
 
 <section id="ia">
@@ -1288,12 +1312,13 @@ flowchart TB
     </div>
   </div>
   <p class="note">父母底部 ≤2 入口；子女主 Tab=3（晓安/用药/家庭）。资讯、商城、社区、理财<strong>不进</strong>一级导航，从结构上执行 KANO「杀掉 R4」。</p>
+  <p class="chap-end"><b>本章结论</b>IA 执行「父母集中、子女分发」；被杀掉的需求不进一级导航，结构本身就是取舍。</p>
 </section>
 
 <section id="proto">
   <p class="sec-no">12</p>
   <h2>晓安 · 小程序端界面</h2>
-  <p>手机原型按成熟小程序规范重绘：分组卡片、系统底栏、大热区与清晰层级；五色仅作用于原型。作品集正文配色不变。</p>
+  <p>手机原型把前文主张落成可感知界面：父母端大字履约，子女端结论优先；五色仅作用于原型，作品集正文配色不变。</p>
 
   <div class="proto-group">
     <h3>父母端</h3>
@@ -1593,6 +1618,7 @@ flowchart TB
     </div>
   </div>
   <p class="note">以上为小程序端关键界面。设计交付页同步：<a href="anhao.html">anhao.html</a></p>
+  <p class="chap-end"><b>本章结论</b>原型把主张落成可感知界面：父母端大字履约，子女端结论优先；信息架构与五色取舍在界面上可直接指认。</p>
 </section>
 
 <section id="validate">
@@ -1710,6 +1736,7 @@ flowchart TB
     <tr><td>用药提醒被理解为医疗建议</td><td>产品文案定位为「执行提醒与家庭协同」，不做诊断与处方</td></tr>
     <tr><td>兄弟姐妹权责不清</td><td>强制设主责 + 备用；扩联规则写进家庭圈，减少群内扯皮</td></tr>
   </table>
+  <p class="chap-end"><b>本章结论</b>先冷启动与 90 天生死线证明「愿用」，过线再谈订阅；不过线写清停什么。商业跟在验证后面，不反过来绑架产品。</p>
 </section>
 
 <section id="close">
@@ -1720,12 +1747,11 @@ flowchart TB
     <p class="big">晓安是给子女的决策产品，不是给父母的健康 App。用研确认「不确定」高于「不知情」、关心不等于监视；KANO 将呼叫与用药定为 P0、晓安结论为 P1，并将理财导流识别为假需求。差异落在三条机制——结论引擎、扩联状态机、反监视默认；照护旅程上先只覆盖慢病日常与紧急触达。90 天过线前不收费，过线后只向主责子女试家庭订阅。</p>
   </div>
   <table>
-    <tr><th>讲述重点</th><th>落点</th></tr>
-    <tr><td>主张 · 立场 / 边界 / 机制 · 旅程与 Job</td><td>§00</td></tr>
-    <tr><td>HMW → 用研 → KANO → 体验 → 竞品</td><td>§01–05</td></tr>
-    <tr><td>鱼骨 · 结论引擎 / 协同协议 / 反监视 · 主循环</td><td>§06–07</td></tr>
-    <tr><td>功能结构 · 架构 · 版本 · IA · 原型</td><td>§08–12</td></tr>
-    <tr><td>冷启动 · 指标树 · 90 天生死线 · 商业时点</td><td>§13</td></tr>
+    <tr><th>讲述主线（四幕）</th><th>落点</th></tr>
+    <tr><td>I 立论 · 工作假设与边界</td><td>§00–01</td></tr>
+    <tr><td>II 证据 · 用研 / KANO / 体验 / 竞品回证</td><td>§02–05</td></tr>
+    <tr><td>III 方案 · 鱼骨 → 机制 → 功能 / 架构 / IA / 原型</td><td>§06–12</td></tr>
+    <tr><td>IV 验证 · 冷启动 · 生死线 · 商业时点</td><td>§13</td></tr>
   </table>
   <footer class="colophon">
     银发经济最终作品集 · 产品「晓安」。主张：给子女的决策产品——先定立场，再画边界，后立机制。KANO n=22 与竞品公开信息口径与分册详表一致；原型为高保真结构示意。深度材料：
