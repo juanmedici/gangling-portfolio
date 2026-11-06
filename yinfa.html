@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娟｜银发经济作品集 · 安好</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{--ink:#1c1917;--muted:#57534e;--faint:#a8a29e;--paper:#f3efe6;--sheet:#fbf8f2;--line:#e4dcd0;--accent:#9a3412;--header:#163d35;--ok:#115e59;--warn:#b45309;--blue:#1e3a5f}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15.5px}
+a{color:inherit}
+.top{background:var(--header);color:#f4f7f5;padding:36px 48px 32px}
+.identity{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;font-size:13px;color:#b7c9c3;margin-bottom:22px}
+.identity .name{font-family:"Palatino Linotype","Songti SC",serif;font-size:20px;color:#fff;letter-spacing:.08em}
+.identity a{color:#a7d7c5;text-decoration:none;border-bottom:1px solid rgba(167,215,197,.45)}
+.identity a:hover{color:#fff;border-bottom-color:#fff}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#a7d7c5;margin-bottom:10px}
+.top h1{font-family:"Palatino Linotype","Songti SC",serif;font-weight:600;font-size:36px;line-height:1.25;color:#fff}
+.hero-def{max-width:44em;margin-top:12px;font-size:17px;line-height:1.55;color:#fff}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13px;color:#a7d7c5}
+.hero-meta b{color:#fff;font-weight:600;margin-right:6px}
+.map{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}
+@media(min-width:961px){.map{grid-template-columns:repeat(7,1fr)}.map a{min-height:58px}}
+.killbox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.killbox div{border:1px solid var(--line);padding:14px 16px;background:#fff}
+.killbox .go{border-top:3px solid var(--ok);background:#f0fdfa}
+.killbox .stop{border-top:3px solid var(--accent);background:#fff7ed}
+.killbox b{display:block;margin-bottom:6px;font-size:14px}
+.killbox ul{margin:0;padding-left:1.1em;font-size:13px;color:var(--muted)}
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.funnel div{background:var(--sheet);border:1px solid var(--line);padding:12px;font-size:12.5px}
+.funnel b{display:block;color:var(--accent);margin-bottom:4px;font-size:13px}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.quotes blockquote{margin:0;background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 14px;font-size:13.5px}
+.quotes cite{display:block;margin-top:8px;font-size:12px;color:var(--muted);font-style:normal}
+.insight{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.insight div{background:#fff;border:1px solid var(--line);padding:14px;font-size:13px}
+.insight b{display:block;color:var(--accent);margin-bottom:6px;font-size:13px}
+.persona{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.persona article{background:#fff;border:1px solid var(--line);padding:16px}
+.persona h4{margin:0 0 8px;font-size:16px;color:var(--ink)}
+.persona .meta{font-size:12px;color:var(--muted);margin-bottom:10px}
+.persona ul{margin:0;padding-left:1.1em;font-size:13px;color:var(--muted)}
+.whybox{background:#163d35;color:#e7efec;padding:16px 18px;margin:14px 0;font-size:14px}
+.whybox b{color:#a7d7c5}
+.map a{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(167,215,197,.25);padding:10px 10px;text-decoration:none;color:#d5e3de;font-size:12px}
+.map a:hover{background:rgba(255,255,255,.14);color:#fff}
+.map b{display:block;color:#a7d7c5;font-size:11px;letter-spacing:.06em;margin-bottom:4px}
+.nav-bar{position:sticky;top:0;z-index:20;background:rgba(243,239,230,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:2px;padding:0 12px;overflow-x:auto}
+.nav-bar a{text-decoration:none;color:var(--muted);font-size:12px;padding:12px 9px 10px;border-bottom:2px solid transparent;white-space:nowrap}
+.nav-bar a:hover,.nav-bar a.active{color:var(--ink);border-bottom-color:var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 28px 80px}
+section{margin-bottom:56px;scroll-margin-top:58px}
+.sec-no{font-size:12px;letter-spacing:.14em;color:var(--accent);margin-bottom:6px}
+h2{font-family:"Palatino Linotype","Songti SC",serif;font-size:28px;font-weight:600;margin-bottom:14px}
+h3{font-size:16px;margin:22px 0 10px;font-weight:650}
+h4{font-size:14px;margin:12px 0 6px;font-weight:650;color:var(--muted)}
+p{margin:8px 0}ul,ol{padding-left:1.25em;margin:8px 0}li{margin:3px 0}
+.note{color:var(--muted);font-size:12.5px}
+.pull{font-family:"Palatino Linotype","Songti SC",serif;font-size:20px;line-height:1.45;padding:8px 0 8px 16px;border-left:3px solid var(--accent);margin:14px 0 18px}
+.sheet{background:var(--sheet);border:1px solid var(--line);padding:16px 18px;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 8px}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#ebe4d8;font-size:11.5px;color:var(--muted);font-weight:600}
+.scroll-x{overflow-x:auto}
+.tag{display:inline-block;font-size:11px;font-weight:650;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.tag.m{background:#fff7ed;color:var(--accent)}.tag.o{background:#fffbeb;color:var(--warn)}.tag.a{background:#f0fdfa;color:var(--ok)}
+.tag.i{background:#f5f5f4;color:#78716c}.tag.r{background:#eff6ff;color:var(--blue)}.tag.p0{background:#fff7ed;color:var(--accent)}.tag.p1{background:#f0fdfa;color:var(--ok)}.tag.p2{background:#f5f5f4;color:#78716c}.tag.kill{background:#eff6ff;color:var(--blue)}
+.tag.direct{background:#fff7ed;color:var(--accent)}.tag.indirect{background:#fffbeb;color:var(--warn)}.tag.potential{background:#f0fdfa;color:var(--ok)}
+.verdict{background:#163d35;color:#f4f7f5;padding:20px 22px;margin:16px 0}
+.verdict h3{color:#a7d7c5;margin:0 0 8px;font-size:12px;letter-spacing:.1em}
+.verdict .big{font-family:"Palatino Linotype","Songti SC",serif;font-size:19px;line-height:1.4;margin:8px 0 12px;color:#fff}
+.verdict p{margin:6px 0;color:#e7efec;font-size:14px}
+.verdict a{color:#a7d7c5}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.steps div{background:var(--sheet);border:1px solid var(--line);border-top:3px solid var(--header);padding:12px;font-size:12.5px}
+.steps div:nth-child(2){border-top-color:var(--accent)}.steps div:nth-child(3){border-top-color:var(--warn)}.steps div:nth-child(4){border-top-color:var(--ok)}.steps div:nth-child(5){border-top-color:var(--blue)}
+.steps b{display:block;font-size:13px;margin-bottom:4px}.steps span{color:var(--muted)}
+.hmw{display:grid;gap:10px;margin:12px 0}
+.hmw article{background:#fff;border:1px solid var(--line);padding:12px 14px}
+.hmw .n{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em}
+.roles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.roles article{background:#fff;border:1px solid var(--line);padding:12px;min-height:132px}
+.roles article.core{border-top:3px solid var(--accent);background:#fff7ed}
+.roles .lab{font-size:11px;color:var(--accent);font-weight:700;margin-bottom:4px}
+.roles h4{color:var(--ink);margin:0 0 6px;font-size:13.5px}
+.roles p{margin:0;font-size:12px;color:var(--muted)}
+.scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.scenes article{background:var(--sheet);border:1px solid var(--line);padding:14px}
+.scenes b{display:block;margin-bottom:6px}
+.scenes p{margin:0;font-size:13px;color:var(--muted)}
+.ux5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}
+.ux5 div{background:#fff;border:1px solid var(--line);padding:12px;font-size:12.5px}
+.ux5 b{display:block;color:var(--accent);margin-bottom:4px;font-size:12px}
+.q4{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:14px 0;border:2px solid var(--line);overflow:hidden}
+.q4>div{padding:14px 16px;min-height:100px}
+.q4 .q1{background:#fff7ed;border-right:1px solid #fdba74;border-bottom:1px solid #fdba74}
+.q4 .q2{background:#fffbeb;border-bottom:1px solid #fcd34d}
+.q4 .q3{background:#f5f5f4;border-right:1px solid #e7e5e4}
+.q4 .q4c{background:#f0fdfa}
+.q4 b{display:block;margin-bottom:6px;font-size:13.5px}.q4 p{margin:0;font-size:12.5px;color:var(--muted)}
+.stage{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.stage div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--header);padding:12px}
+.stage div:nth-child(2){border-top-color:var(--accent)}.stage div:nth-child(3){border-top-color:var(--warn)}.stage div:nth-child(4){border-top-color:var(--ok)}
+.stage b{display:block;font-size:13px;margin-bottom:4px}.stage span{font-size:12.5px;color:var(--muted)}
+.stage-row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0}
+.stage-row div{background:#fff;border:1px solid var(--line);padding:10px;font-size:11.5px;color:var(--muted)}
+.stage-row div.on{border-color:var(--accent);background:#fff7ed;color:var(--ink)}
+.stage-row b{display:block;font-size:12.5px;color:var(--ink);margin-bottom:4px}
+.stage-row div.on b{color:var(--accent)}
+.fig{background:linear-gradient(180deg,#fff,#fbf8f2);border:1px solid var(--line);padding:16px 12px 10px;margin:14px 0;overflow-x:auto}
+.fig .cap{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+.arch{display:grid;gap:8px;margin:14px 0}
+.arch-row{display:grid;grid-template-columns:100px 1fr;gap:8px}
+.arch-lab{background:var(--header);color:#f4f7f5;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;padding:10px;text-align:center}
+.arch-row.p0 .arch-lab{background:var(--accent)}.arch-row.p1 .arch-lab{background:var(--ok)}.arch-row.sys .arch-lab{background:var(--blue)}
+.arch-cells{display:flex;flex-wrap:wrap;gap:6px}
+.arch-cells span{background:#fff;border:1px solid var(--line);padding:7px 10px;font-size:12px}
+.ia-tree{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.ia-col{background:#fff;border:1px solid var(--line);padding:14px}
+.ia-col h4{color:var(--ink);margin:0 0 8px;font-size:15px}
+.ia-col ul{margin:0;padding-left:1.1em;font-size:13px;color:var(--muted)}
+.ia-col li b{color:var(--ink)}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.phone{background:#1c1917;border-radius:22px;padding:10px;box-shadow:0 12px 28px rgba(28,25,23,.14)}
+.screen{background:#fbf8f2;border-radius:14px;overflow:hidden;min-height:430px;color:#1c1917}
+.statusbar{height:18px;background:#163d35}
+.appbar{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#163d35;color:#f4f7f5;font-size:12px}
+.appbar .sub{font-size:10px;color:#a7d7c5}
+.panel{padding:10px 12px}
+.cardx{background:#fff;border:1px solid #e4dcd0;border-radius:8px;padding:10px;margin-bottom:8px;font-size:11.5px}
+.cardx strong{display:block;font-size:13px;margin-bottom:2px}.cardx .muted{color:#57534e}
+.bigbtn{display:block;text-align:center;background:#9a3412;color:#fff;padding:15px;border-radius:12px;font-weight:700;font-size:15px;margin:10px 0;text-decoration:none}
+.bigbtn.quiet{background:#163d35;font-size:13px;padding:12px}
+.checkrow{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #e4dcd0;border-radius:8px;padding:11px;margin-bottom:8px;font-size:13px}
+.checkrow span.btn{background:#115e59;color:#fff;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700}
+.metric{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.metric span{background:#fff;border:1px solid #e4dcd0;border-radius:6px;padding:8px;font-size:11px;text-align:center}
+.metric b{display:block;font-size:15px;color:var(--accent)}
+.tabbar{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;font-size:11px;padding:8px 0 12px;border-top:1px solid #e4dcd0;background:#fff}
+.tabbar .on{color:#9a3412;font-weight:700}
+.nielsen{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.nielsen div{background:var(--sheet);border:1px solid var(--line);padding:12px;font-size:12.5px}
+.nielsen b{display:block;color:var(--accent);margin-bottom:4px}
+.layer{border:1px solid var(--line);background:#fff;margin:10px 0}
+.layer-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;padding:10px 12px;background:#ebe4d8;border-bottom:1px solid var(--line)}
+.layer-h .lv{font-family:"Palatino Linotype","Songti SC",serif;font-size:16px;color:var(--accent);font-weight:600}
+.layer-b{padding:12px;font-size:13.5px}
+.prio{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.prio div{background:#fff;border:1px solid var(--line);padding:12px;text-align:center}
+.prio b{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+.req-list{display:grid;gap:10px;margin:12px 0}
+.req{background:var(--sheet);border:1px solid var(--line);padding:14px;display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:start}
+.req .id{font-family:"Palatino Linotype","Songti SC",serif;font-size:20px;color:var(--accent);line-height:1}
+.req h4{margin:0 0 4px;font-size:15px;color:var(--ink)}
+.req p{margin:0;font-size:13px;color:var(--muted)}
+.hw{background:#fff7ed;border:1px dashed #fdba74;padding:12px 14px;margin:12px 0 16px;font-size:13px}
+.hw b{color:var(--accent)}
+.shot{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--accent);padding:2px 8px;margin-right:8px;vertical-align:middle}
+.def-table td:first-child{white-space:nowrap;font-weight:650;width:7.5em}
+.life7{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0}
+.life7 div{background:#fff;border:1px solid var(--line);padding:10px 8px;font-size:11.5px;color:var(--muted);min-height:110px}
+.life7 div.on{border-color:var(--accent);background:#fff7ed;color:var(--ink);box-shadow:inset 0 3px 0 var(--accent)}
+.life7 b{display:block;font-size:12.5px;color:var(--ink);margin-bottom:4px}
+.life7 div.on b{color:var(--accent)}
+.comp-q{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:14px 0;border:2px solid var(--line)}
+.comp-q>div{padding:14px;min-height:96px;font-size:12.5px}
+.comp-q .c1{background:#fff7ed;border-right:1px solid #fdba74;border-bottom:1px solid #fdba74}
+.comp-q .c2{background:#fffbeb;border-bottom:1px solid #fcd34d}
+.comp-q .c3{background:#f5f5f4;border-right:1px solid #e7e5e4}
+.comp-q .c4{background:#f0fdfa}
+.comp-q b{display:block;margin-bottom:6px;font-size:13px}
+.thesis{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin:16px 0}
+.thesis .main{background:rgba(255,255,255,.1);border:1px solid rgba(167,215,197,.35);padding:16px 18px}
+.thesis .main .lab{font-size:11px;letter-spacing:.12em;color:#a7d7c5;margin-bottom:8px}
+.thesis .main .line{font-family:"Palatino Linotype","Songti SC",serif;font-size:22px;line-height:1.4;color:#fff}
+.thesis .sigs{display:grid;gap:8px}
+.thesis .sigs div{background:rgba(0,0,0,.18);border:1px solid rgba(167,215,197,.2);padding:12px 14px;font-size:12.5px;color:#d5e3de}
+.thesis .sigs b{display:block;color:#a7d7c5;margin-bottom:4px;font-size:13px}
+.contrast3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}
+.contrast3 article{background:#fff;border:1px solid var(--line);padding:14px;font-size:13px}
+.contrast3 .lab{font-size:11px;color:var(--muted);margin-bottom:4px}
+.contrast3 h4{margin:0 0 8px;font-size:15px;color:var(--ink)}
+.contrast3.on{border-top:3px solid var(--accent);background:#fff7ed}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.journey article{background:#fff;border:1px solid var(--line);padding:14px;font-size:12.5px;color:var(--muted);min-height:140px}
+.journey article.on{border-color:var(--accent);background:#fff7ed;color:var(--ink);box-shadow:inset 0 3px 0 var(--accent)}
+.journey b{display:block;font-size:13.5px;color:var(--ink);margin-bottom:6px}
+.journey article.on b{color:var(--accent)}
+.journey .tagline{display:block;margin-top:8px;font-size:11.5px;color:var(--accent);font-weight:650}
+.jobs{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;margin:14px 0}
+.jobs article{background:#fff;border:1px solid var(--line);padding:14px;font-size:12.5px}
+.jobs .now{border-top:3px solid var(--accent);background:#fff7ed}
+.jobs .later{border-top:3px solid var(--ok)}
+.jobs .out{border-top:3px solid #78716c;background:#f5f5f4}
+.jobs b{display:block;margin-bottom:6px;font-size:13.5px}
+.jobs ul{margin:0;padding-left:1.1em;color:var(--muted)}
+.engine{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:8px;margin:14px 0}
+.engine article{background:#fff;border:1px solid var(--line);padding:14px;font-size:12.5px}
+.engine b{display:block;color:var(--accent);margin-bottom:6px}
+.engine ul{margin:0;padding-left:1.1em;color:var(--muted)}
+.engine .mid{background:#163d35;color:#e7efec;border-color:#163d35}
+.engine .mid b{color:#a7d7c5}
+.engine .mid ul{color:#d5e3de}
+.statebox{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.statebox div{background:#fff;border:1px solid var(--line);padding:12px;font-size:12px;color:var(--muted)}
+.statebox b{display:block;color:var(--ink);margin-bottom:4px;font-size:13px}
+.statebox .core{border-top:3px solid var(--accent);background:#fff7ed;color:var(--ink)}
+.defaults{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.defaults div{background:var(--sheet);border:1px solid var(--line);padding:12px;font-size:12.5px}
+.defaults b{display:block;color:var(--accent);margin-bottom:4px}
+.edge{display:grid;gap:8px;margin:12px 0}
+.edge div{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:10px;background:#fff;border:1px solid var(--line);padding:12px 14px;font-size:12.5px}
+.edge .q{color:var(--muted)}.edge .a{color:var(--ink)}.edge .a b{color:var(--accent)}
+.mtree{margin:16px 0;text-align:center}
+.mtree .root{display:inline-block;max-width:28em;background:#163d35;color:#e7efec;padding:14px 20px;border:1px solid #163d35;text-align:left}
+.mtree .root .lab{font-size:11px;letter-spacing:.1em;color:#a7d7c5;margin-bottom:6px}
+.mtree .root .line{font-family:"Palatino Linotype","Songti SC",serif;font-size:17px;line-height:1.4;color:#fff}
+.mtree .root .note{margin-top:8px;font-size:12px;color:#d5e3de}
+.mtree .trunk{width:2px;height:22px;background:var(--line);margin:0 auto}
+.mtree .fork{position:relative;height:18px;margin:0 auto;width:min(720px,92%)}
+.mtree .fork::before{content:"";position:absolute;left:25%;right:25%;top:0;height:2px;background:var(--line)}
+.mtree .fork::after{content:"";position:absolute;left:50%;top:0;width:2px;height:100%;background:var(--line);transform:translateX(-50%)}
+.mtree .fork i{position:absolute;top:0;width:2px;height:100%;background:var(--line)}
+.mtree .fork i:first-child{left:25%;transform:translateX(-50%)}
+.mtree .fork i:last-child{left:75%;transform:translateX(-50%)}
+.mtree .branches{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:920px;margin:0 auto;text-align:left}
+.mtree .branch{position:relative}
+.mtree .branch > .labnode{background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);padding:10px 12px;font-size:13px;font-weight:650;text-align:center}
+.mtree .branch.guard > .labnode{border-top-color:#78716c;background:var(--sheet)}
+.mtree .branch .twig{width:2px;height:14px;background:var(--line);margin:0 auto}
+.mtree .branch .leaves{display:grid;grid-template-columns:1fr;gap:0;position:relative;padding-left:18px}
+.mtree .branch .leaves::before{content:"";position:absolute;left:6px;top:0;bottom:18px;width:2px;background:var(--line)}
+.mtree .leaf{position:relative;background:#fff;border:1px solid var(--line);padding:10px 12px;font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.mtree .leaf::before{content:"";position:absolute;left:-12px;top:50%;width:12px;height:2px;background:var(--line)}
+.mtree .leaf b{display:block;color:var(--ink);margin-bottom:2px;font-size:13px}
+.mtree .leaf .bar{display:inline-block;margin-top:4px;font-size:11px;color:var(--accent);font-weight:650}
+.mtree .branch.guard .leaf .bar{color:#78716c}
+footer.colophon{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+@media(max-width:960px){
+.top{padding:24px 16px}.top h1{font-size:28px}
+.map,.steps,.roles,.scenes,.ux5,.phones,.stage,.stage-row,.life7,.ia-tree,.nielsen,.q4,.prio,.comp-q,.killbox,.funnel,.quotes,.insight,.persona,.thesis,.contrast3,.journey,.jobs,.engine,.statebox,.defaults,.edge div,.mtree .branches{grid-template-columns:1fr}
+.arch-row{grid-template-columns:1fr}.wrap{padding:24px 14px 48px}
+.mtree .fork{display:none}.mtree .trunk{height:14px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="identity">
+    <span class="name">刘娟</span>
+    <span>产品经理作品集</span>
+    <a href="index.html">案例 01</a>
+    <a href="rec-agent.html">案例 03 · 荐知</a>
+    <a href="kano-yinfa.html">KANO 详表</a>
+    <a href="compete-yinfa.html">竞品详表</a>
+    <a href="anhao.html">设计交付页</a>
+    <a href="https://juanmedici.github.io/gangling-portfolio/yinfa.html" target="_blank" rel="noopener">在线版</a>
+  </div>
+  <p class="kicker">银发经济 · 最终作品集</p>
+  <h1>安好 · 给子女的决策产品</h1>
+  <p class="hero-def">不是再做一个老人健康 App，也不是去硬件版定位手表。安好把微信群里的碎片问安，收成「今天要不要打电话」的可执行结论——父母端只负责履约，子女端负责决策。</p>
+  <div class="thesis">
+    <div class="main">
+      <div class="lab">产品主张</div>
+      <div class="line">结论先于数据 · 异常才推 · 未接扩联</div>
+      <p style="margin:10px 0 0;font-size:13.5px;color:#d5e3de;line-height:1.55">首版只吃「慢病稳态日常 + 紧急触达」；复诊、情绪、社区、硬件都看得到边界，但不进 MVP。想得广，首版窄。</p>
+    </div>
+    <div class="sigs">
+      <div><b>签名 ① 结论条</b>打开 10 秒完成「打不打电话」，不堆心率曲线。</div>
+      <div><b>签名 ② 异常才推</b>默认安静；漏服日摘要仅 1 条，定位默认关。</div>
+      <div><b>签名 ③ 扩联状态机</b>主责 30 秒未接 → 备用；权责写进规则，不靠群里扯皮。</div>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <span><b>产品</b>安好</span>
+    <span><b>用户</b>异地子女（决策/付费）+ 居家父母（履约）</span>
+    <span><b>阶段</b>MVP 验证期</span>
+    <span><b>样本</b>访谈 12 · KANO 问卷 22</span>
+  </div>
+  <div class="map">
+    <a href="#thesis"><b>00</b>主张与边界</a>
+    <a href="#hmw"><b>01</b>HMW 定方向</a>
+    <a href="#research"><b>02</b>用户研究</a>
+    <a href="#kano"><b>03</b>KANO 分级</a>
+    <a href="#ux"><b>04</b>体验分析</a>
+    <a href="#compete"><b>05</b>竞品金字塔</a>
+    <a href="#tear"><b>06</b>鱼骨拆解</a>
+    <a href="#depth"><b>07</b>机制深挖</a>
+    <a href="#func"><b>08</b>功能结构</a>
+    <a href="#arch"><b>09</b>功能架构</a>
+    <a href="#ver"><b>10</b>版本方案</a>
+    <a href="#ia"><b>11</b>信息架构</a>
+    <a href="#proto"><b>12</b>原型</a>
+    <a href="#validate"><b>13</b>验证商业</a>
+  </div>
+</header>
+<nav class="nav-bar">
+  <a href="#thesis">主张</a>
+  <a href="#hmw">HMW</a>
+  <a href="#research">用研</a>
+  <a href="#kano">KANO</a>
+  <a href="#ux">体验</a>
+  <a href="#compete">竞品</a>
+  <a href="#depth">机制</a>
+  <a href="#func">功能</a>
+  <a href="#arch">架构</a>
+  <a href="#ver">版本</a>
+  <a href="#ia">IA</a>
+  <a href="#proto">原型</a>
+  <a href="#validate">验证</a>
+  <a href="#close">收束</a>
+</nav>
+<div class="wrap">
+
+<section id="thesis">
+  <p class="sec-no">00</p>
+  <h2>产品主张：深在机制，广在地图，特在立场</h2>
+  <p class="pull">安好是「给子女的决策产品」，不是「给父母的健康 App」。硬件卖监护感，微信占问安心智；安好只抢一件事——把不确定收成可行动的结论。</p>
+
+  <h3>三类方案对照（一句话记住差异）</h3>
+  <div class="contrast3">
+    <article>
+      <div class="lab">间接现状</div>
+      <h4>微信群问安</h4>
+      <p>启动成本为零，但没有完成态：问三遍「吃了吗」仍不确定。安好替代的是<strong>碎片问安</strong>，不是替代微信本身。</p>
+    </article>
+    <article>
+      <div class="lab">直接竞品</div>
+      <h4>硬件远程监护</h4>
+      <p>SOS 与定位已被验证，但「表绑人、指标墙绑子女」——看完仍不知道要不要打电话，还触发监视弃用。</p>
+    </article>
+    <article class="on">
+      <div class="lab">安好</div>
+      <h4>无硬件 · 任务级协同</h4>
+      <p>父母履约（呼叫 + 打卡），子女决策（结论条）；隐私默认关定位；权责用扩联规则写死。首版不做指标墙、不做导流。</p>
+    </article>
+  </div>
+
+  <h3>照护旅程图：想得广，首版只吃一段</h3>
+  <p>银发照护不是单一场景。先把全旅程摊开，再标清安好现在吃哪一段——广在判断，不在功能堆砌。</p>
+  <div class="journey">
+    <article>
+      <b>① 刚确诊 / 初现压力</b>
+      子女开始焦虑，但习惯未形成；常先买手表或堆群叮嘱。
+      <span class="tagline">安好：获客入口（先建圈代配）</span>
+    </article>
+    <article class="on">
+      <b>② 慢病稳态日常</b>
+      用药按时、偶发不适、每天想确认安好。这是留存与付费意愿发生地。
+      <span class="tagline">安好 MVP 主战场 · R2 + R3</span>
+    </article>
+    <article class="on">
+      <b>③ 急性 / 紧急事件</b>
+      头晕、跌倒恐惧、找不到人。信任在此建立或崩塌。
+      <span class="tagline">安好 MVP 底板 · R1 扩联</span>
+    </article>
+    <article>
+      <b>④ 恢复 / 失能前期</b>
+      复诊密集、照护升级、可能需要硬件或机构。
+      <span class="tagline">明确后置 · 过线再谈选配</span>
+    </article>
+  </div>
+
+  <h3>相邻 Job 地图：看得到边界，不进首版</h3>
+  <div class="jobs">
+    <article class="now">
+      <b>现在就做（MVP）</b>
+      <ul>
+        <li>紧急一键呼叫 + 未接扩联</li>
+        <li>用药提醒 / 已吃 / 漏服日摘要</li>
+        <li>今日安好一页结论</li>
+        <li>家庭圈主责 / 备用角色</li>
+      </ul>
+    </article>
+    <article class="later">
+      <b>看得到 · 过线后（P2+）</b>
+      <ul>
+        <li>复诊 / 体检日程提醒</li>
+        <li>同城亲友临时协助工单</li>
+        <li>可选手表接入（仍非必装）</li>
+        <li>兴趣小组小流量实验（R5）</li>
+      </ul>
+    </article>
+    <article class="out">
+      <b>明确不做 / 永不</b>
+      <ul>
+        <li>默认直播定位 / 指标墙首页</li>
+        <li>理财课 / 养老项目导流（R4）</li>
+        <li>医院 HIS、诊断处方</li>
+        <li>情绪陪伴机器人当主路径</li>
+      </ul>
+    </article>
+  </div>
+  <div class="sheet">
+    <p><b>读法：</b>面试被问「是不是太窄」时答——窄的是首版交付，不是品类理解。旅程图与 Job 地图证明想过全场；KANO 与生死线证明敢于只切一段。</p>
+  </div>
+</section>
+
+<section id="hmw">
+  <p class="sec-no">01</p>
+  <h2>HMW 五步法：为什么做「安好」</h2>
+  <p class="pull">How Might We：如何让异地子女在不监视父母的前提下，确认「今天要不要打电话」？</p>
+  <div class="whybox">
+    <b>机会判断（为何值得做）：</b>居家养老仍是主流选择；硬件远程监护供给已充分（手表、摄像头），但「谁该做什么、今天有没有落下」的任务协同层仍弱。公开调研里监控接受度远低于「可接受安装」意愿，说明低监视感方案有空间。安好切协同层，不切再做一块硬件。
+  </div>
+  <div class="hmw">
+    <article>
+      <div class="n">第一步 · 明确用户场景</div>
+      <p><b>谁：</b>一线/新一线在外工作的 28–45 岁子女 + 老家独自居住、至少一种慢病用药的父母。<br>
+      <b>When / Where：</b>工作日通勤或睡前；父母在家午餐后服药、偶发头晕不适。<br>
+      <b>麻烦：</b>① 微信群里「吃了吗」连问三遍仍不确定；② 买了手表父母嫌监视不愿戴；③ 打开硬件 App 是定位轨迹和指标墙，看完仍不知道要不要打电话。<br>
+      <b>目标：</b>紧急可触达、用药有闭环、日常有一页可决策的结论。</p>
+    </article>
+    <article>
+      <div class="n">第二步 · 拆解积极面</div>
+      <p>群聊启动成本为零、亲情语境强；手表能做 SOS 与定位说明「紧急触达」已被验证；子女愿意为安心付时间，部分愿付小额订阅；父母接受「被关心的提醒」，反感的是「被看着的直播」。可复用：家庭多成员、未接扩联、子女代配设置。</p>
+    </article>
+    <article>
+      <div class="n">第三步 · 转移责任</div>
+      <p>设置与医嘱时段 → 转移给子女代配；漏服汇总 → 转移给系统日摘要（不靠兄弟姐妹在群里互相盯）；主责未接 → 转移给系统 30 秒扩第二人；「要不要打电话」的解读 → 转移给结论条，而不是让子女读懂心率曲线。</p>
+    </article>
+    <article>
+      <div class="n">第四步 · 倒逼机制</div>
+      <p>结论条制造打开理由：不打开就不知道今日要不要行动；主责角色写入家庭圈，未接自动扩联，把「谁该接」从人情协商变成规则；激活门槛设为「模拟呼叫 + 3 天打卡」，未激活不计入试点成功，倒逼真用而非下载。</p>
+    </article>
+    <article>
+      <div class="n">第五步 · 解决方案</div>
+      <p><b>安好：</b>给子女的决策产品——无硬件启动；P0 紧急呼叫（扩联状态机）+ 用药打卡；P1 结论引擎驱动的今日安好页。签名能力：结论先于数据 · 异常才推 · 未接扩联。明确不做：医院 HIS、理财卖货、养老项目导流、默认直播定位、指标墙首页。</p>
+    </article>
+  </div>
+</section>
+
+<section id="research">
+  <p class="sec-no">02</p>
+  <h2>用户研究：弥补产品与用户的认知差距</h2>
+  <p>用研不是「多问几句」，而是防止拍脑袋。子女侧高频焦虑是「不确定」；父母侧高频反感是「被监视」。缺口不在再多一个健康 App，而在任务级协同没人接住。</p>
+
+  <h3>研究设计</h3>
+  <div class="steps">
+    <div><b>定性 · 深度访谈</b><span>子女 8 人 + 父母侧 4 人；45–70 分钟；多听少说，先开放再聚焦，5W2H 追完整故事</span></div>
+    <div><b>定性 · 可用性意向</b><span>纸面/口述走查「大按钮」「已吃」；观察是否需要子女代操作</span></div>
+    <div><b>定量 · KANO 问卷</b><span>正反两问 n=22（子女 14 · 父母侧 8）；算属性占比与 Better/|Worse|</span></div>
+    <div><b>方法取舍</b><span>家庭关系与健康隐私敏感 → 不做焦点小组；眼动对本阶段优先级贡献低 → 不做</span></div>
+    <div><b>找准用户</b><span>不先做「全体老人」；用预构场景锁定「异地照护家庭」再谈扩张</span></div>
+  </div>
+  <div class="sheet">
+    <p><b>访谈规范落地：</b>开场只请对方讲最近一次「群里问吃药 / 想确认安好」的完整故事（When/Where/Who/发生了什么），追 Why 焦虑或生气，最后才问 How 期望介入。禁止开场就问「你需不需要紧急按钮」。脱离主题的家庭矛盾先记笔记不打断，结束时再筛选与产品相关的点。</p>
+  </div>
+
+  <h3>典型原话（证据）</h3>
+  <div class="quotes">
+    <blockquote>「群里问三遍吃了没，妈妈回个嗯，我还是不踏实。不是不信任，是没有完成态。」<cite>— 子女 · 32 岁 · 沪漂 · 母亲高血压</cite></blockquote>
+    <blockquote>「手表定位一直开着，我像被看着。提醒吃药可以，别让我小孩随时看到我在哪。」<cite>— 父母侧 · 67 岁 · 独居</cite></blockquote>
+    <blockquote>「App 一打开全是心率血压曲线，我又不是医生。我只想知道今天要不要打电话。」<cite>— 子女 · 29 岁 · 曾购入亲情手表后闲置</cite></blockquote>
+    <blockquote>「真不舒服时通讯录字太小，找不到人。要就一个大红按钮。」<cite>— 父母侧 · 71 岁 · 用智能手机但少装 App</cite></blockquote>
+  </div>
+
+  <h3>洞察沉淀（支撑产品决策）</h3>
+  <div class="insight">
+    <div><b>洞察 1 · 不确定 &gt; 不知情</b>子女缺的不是更多数据，而是「完成 / 未完成 / 需不需要行动」的状态。→ 导出 R2 打卡完成态 + R3 结论条。</div>
+    <div><b>洞察 2 · 关心与监视被严格分开</b>提醒、呼叫可接受；默认直播定位与摄像头强绑定会触发弃用。→ 定位默认关；硬件后置选配。</div>
+    <div><b>洞察 3 · 紧急路径必须极端简单</b>不适时认知负荷陡增，翻通讯录会失败。→ R1 超大按钮 + 未接扩联，作为必备底线。</div>
+  </div>
+
+  <h3>认知差距 → 产品选择</h3>
+  <table>
+    <tr><th>用户真实需求</th><th>易出现的设计偏差</th><th>安好选择</th><th>为何这样选</th></tr>
+    <tr><td>确认今天要不要打电话</td><td>做指标仪表盘让子女自己解读</td><td>一页结论条</td><td>访谈中「看不懂曲线」反复出现</td></tr>
+    <tr><td>紧急时立刻找到人</td><td>假设会用手表长按 / 翻通讯录</td><td>超大按钮 + 30s 扩联</td><td>Worse 极高，属于不能缺的底线</td></tr>
+    <tr><td>被关心但不被监视</td><td>默认直播定位、摄像头必装</td><td>定位默认关；异常才推</td><td>监视感是弃用主因之一</td></tr>
+    <tr><td>少在群里重复叮嘱</td><td>再做一个养生资讯流「增强粘性」</td><td>用药闭环 + 日摘要 1 条</td><td>资讯不解决执行可见问题；理财流为反向</td></tr>
+  </table>
+</section>
+
+<section id="kano">
+  <p class="sec-no">03</p>
+  <h2>卡诺模型：五需求分级与真伪辨别</h2>
+  <p>一正一反两问 → 交叉表得 M/O/A/I/R（课堂亦称 L 为无差异）→ 多人按占比定属性 → SI(Better)/DSI(Worse) 进四象限排序。优先级：必备 &gt; 期望 &gt; 魅力；反向与无差异砍掉或暂缓。</p>
+
+  <h3>需求从哪来（访谈 → 可验收表述）</h3>
+  <p>5 条需求都写成可验证功能，而不是口号。R4 故意放入清单，用来识别假需求；若不做反向验证，容易把「导流变现」误写成核心功能。</p>
+  <div class="req-list">
+    <article class="req"><div class="id">R1</div><div><h4>紧急一键呼叫子女 / 备用联系人</h4><p>来源：父母「找不到人」、子女「怕自己在开会没接到」。父母端大按钮；30 秒未接扩第二人。验收：按下到响铃 ≤5 秒；父母可独立完成。</p></div><span class="tag m">M 必备</span></article>
+    <article class="req"><div class="id">R2</div><div><h4>今日用药提醒与「已吃」打卡</h4><p>来源：群叮嘱无完成态。子女代配时段；漏服当日只推 1 条。验收：试点家庭群内用药相关消息下降 ≥50%。</p></div><span class="tag o">O 期望</span></article>
+    <article class="req"><div class="id">R3</div><div><h4>子女端「今日是否安好」一页摘要</h4><p>来源：指标墙看完仍不会决策。打卡+活跃+结论；定位默认关。验收：打开 10 秒内完成「打不打电话」决策。</p></div><span class="tag a">A 魅力</span></article>
+    <article class="req"><div class="id">R4</div><div><h4>社区「最赚钱养老项目 / 理财课」推荐流</h4><p>来源：行业常见变现想象；放入清单做反向探针。若用户反感，则永久写入「不会有」。</p></div><span class="tag r">R 反向</span></article>
+    <article class="req"><div class="id">R5</div><div><h4>同城适老化兴趣小组</h4><p>来源：部分父母提到「想出门活动」。验收：父母能独立完成一次报名。用于判断是否分散主路径。</p></div><span class="tag i">I 无差异</span></article>
+  </div>
+
+  <h3>问卷统计与系数（n=22）</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>需求</th><th>M</th><th>O</th><th>A</th><th>I</th><th>R</th><th>主导</th><th>Better (SI)</th><th>Worse (DSI)</th><th>动作</th></tr>
+    <tr><td>R1 紧急呼叫</td><td>12</td><td>6</td><td>2</td><td>1</td><td>0</td><td><span class="tag m">M</span></td><td>0.38</td><td>−0.86</td><td><span class="tag p0">P0 先做对</span></td></tr>
+    <tr><td>R2 用药打卡</td><td>4</td><td>11</td><td>4</td><td>2</td><td>0</td><td><span class="tag o">O</span></td><td>0.71</td><td>−0.71</td><td><span class="tag p0">P0 同批</span></td></tr>
+    <tr><td>R3 安好摘要</td><td>1</td><td>5</td><td>12</td><td>3</td><td>0</td><td><span class="tag a">A</span></td><td>0.81</td><td>−0.29</td><td><span class="tag p1">P1 差异化</span></td></tr>
+    <tr><td>R5 兴趣小组</td><td>1</td><td>2</td><td>5</td><td>12</td><td>1</td><td><span class="tag i">I</span></td><td>0.35</td><td>−0.15</td><td><span class="tag p2">P2 暂缓</span></td></tr>
+    <tr><td>R4 理财推荐</td><td>0</td><td>1</td><td>0</td><td>4</td><td>16</td><td><span class="tag r">R</span></td><td>0.05</td><td>−0.05</td><td><span class="tag kill">杀掉</span></td></tr>
+  </table>
+  </div>
+  <p class="note">Better=(A+O)/(A+O+M+I)；Worse=−(O+M)/(A+O+M+I)。Q 矛盾卷已剔除。交叉定位全表见 <a href="kano-yinfa.html">KANO 详表页</a>。样本用于本产品优先级，不外推全国市场规模。</p>
+
+  <h3>如何读这些数（支撑排期）</h3>
+  <table>
+    <tr><th>需求</th><th>数据含义</th><th>产品动作</th></tr>
+    <tr><td>R1</td><td>|Worse|≈0.86 极高，Better 一般 → 缺了会怒，堆花活增益有限</td><td>首版必须可靠；交互做大做稳，不靠皮肤加分</td></tr>
+    <tr><td>R2</td><td>Better 与 |Worse| 双高 → 典型期望型，和满意度线性相关</td><td>与 R1 同为 P0；闭环质量直接拉满意度</td></tr>
+    <tr><td>R3</td><td>Better 最高、|Worse| 低 → 没有不至于弃用，有了形成记忆点</td><td>P1：P0 稳定后再做，作为对硬件「指标墙」的差异</td></tr>
+    <tr><td>R5</td><td>I 占多数 → 多数人无所谓</td><td>暂缓，避免分散适老化主路径</td></tr>
+    <tr><td>R4</td><td>R=16/22 → 提供会降低满意度</td><td>永久杀掉；也挡住「用资讯/理财补收入」的诱惑</td></tr>
+  </table>
+
+  <div class="prio">
+    <div><b>优先满足</b>必备 R1 → 期望 R2 → 魅力 R3</div>
+    <div><b>P0</b>呼叫 + 用药</div>
+    <div><b>P1</b>安好摘要</div>
+    <div><b>砍 / 缓</b>R4 杀掉 · R5 暂缓</div>
+  </div>
+
+  <h3>Better–Worse 四象限（读图规则）</h3>
+  <div class="fig">
+    <svg viewBox="0 0 720 420" role="img" aria-label="KANO 四象限">
+      <rect width="720" height="420" fill="#fbf8f2"/>
+      <rect x="70" y="30" width="270" height="170" fill="#fff7ed" opacity=".6"/>
+      <rect x="340" y="30" width="270" height="170" fill="#f0fdfa" opacity=".65"/>
+      <rect x="70" y="200" width="270" height="170" fill="#f5f5f4" opacity=".75"/>
+      <rect x="340" y="200" width="270" height="170" fill="#fffbeb" opacity=".55"/>
+      <line x1="70" y1="200" x2="610" y2="200" stroke="#1c1917" stroke-width="1.5"/>
+      <line x1="340" y1="30" x2="340" y2="370" stroke="#1c1917" stroke-width="1.5"/>
+      <text x="340" y="398" text-anchor="middle" font-size="12" fill="#57534e">Better →</text>
+      <text x="24" y="210" text-anchor="middle" font-size="12" fill="#57534e" transform="rotate(-90 24 210)">|Worse| →</text>
+      <text x="200" y="48" text-anchor="middle" font-size="11" fill="#9a3412">必备区</text>
+      <text x="480" y="48" text-anchor="middle" font-size="11" fill="#115e59">高优先</text>
+      <text x="200" y="358" text-anchor="middle" font-size="11" fill="#78716c">低影响</text>
+      <text x="480" y="358" text-anchor="middle" font-size="11" fill="#b45309">魅力储备</text>
+      <circle cx="276" cy="78" r="12" fill="#9a3412"/><text x="276" y="82" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R1</text>
+      <text x="276" y="104" text-anchor="middle" font-size="11">呼叫 M</text>
+      <circle cx="454" cy="110" r="12" fill="#b45309"/><text x="454" y="114" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R2</text>
+      <text x="454" y="136" text-anchor="middle" font-size="11">用药 O</text>
+      <circle cx="505" cy="268" r="12" fill="#115e59"/><text x="505" y="272" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R3</text>
+      <text x="505" y="294" text-anchor="middle" font-size="11">安好 A</text>
+      <circle cx="259" cy="318" r="12" fill="#78716c"/><text x="259" y="322" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R5</text>
+      <circle cx="97" cy="348" r="12" fill="#1e3a5f"/><text x="97" y="352" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">R4</text>
+    </svg>
+    <p class="cap">R1 左上先做对；R2 右上拉满意度；R3 右下做差异；R4/R5 左下砍或缓。</p>
+  </div>
+</section>
+
+<section id="ux">
+  <p class="sec-no">04</p>
+  <h2>用户体验分析：核心体验决定综合体验</h2>
+  <p>照护协同的体验权重在「呼得通、药吃没吃、今天要不要打」，不在皮肤好看。目标用户不同，标准也不同：子女要 10 秒决策，父母要大按钮少步骤。</p>
+  <div class="hw"><b>课堂作业截屏点：</b>下方「报告五板块模板」「五角色定义表」「三场景定义」「任务流程图」四块可直接截屏留存。</div>
+
+  <h3><span class="shot">截屏 1</span>体验报告五板块（模板）</h3>
+  <div class="ux5">
+    <div><b>① 品牌名称</b>安好 · 家庭照护协同</div>
+    <div><b>② 交互体验</b>父母两步内完成呼叫/打卡；子女打开即见结论</div>
+    <div><b>③ 视觉设计</b>父母端大字高对比；子女端信息密度服务决策</div>
+    <div><b>④ 品牌营销</b>亲友圈试点信任传播；不靠理财课获客</div>
+    <div><b>⑤ 用户关怀</b>异常才推、定位默认关、设置子女代配</div>
+  </div>
+
+  <h3 id="roles-def"><span class="shot">截屏 2</span>五类角色 · 课堂定义 + 安好映射</h3>
+  <p class="note">课堂要求：核心角色必须 &lt; 2 个（绝对主要使用者）；其余四类立体化描绘用户群。</p>
+  <div class="scroll-x">
+  <table class="def-table">
+    <tr><th>角色类型</th><th>课堂定义</th><th>安好映射</th></tr>
+    <tr><td>核心角色</td><td>绝对主要使用者，数量必须小于两个</td><td>① 异地子女照护者　② 居家父母（60+）</td></tr>
+    <tr><td>潜在角色</td><td>可能转化为核心用户的群体</td><td>父母刚出现慢病、开始有照护压力的子女</td></tr>
+    <tr><td>利益相关</td><td>因分享或互动能获得正反馈的利益绑定者</td><td>兄弟姐妹：进圈后分担扩联与漏服跟进</td></tr>
+    <tr><td>合作伙伴</td><td>与品牌有联合活动的外部合作平台用户</td><td>社区驿站 / 基层卫生（v2 联运，首版不进主路径）</td></tr>
+    <tr><td>帮助人物</td><td>能促使决策者下定决心使用产品的辅助者</td><td>同城亲友：紧急就近协助，降低主责顾虑</td></tr>
+  </table>
+  </div>
+  <div class="persona">
+    <article>
+      <h4>核心画像 A · 异地子女「小刘」</h4>
+      <p class="meta">34 岁 · 杭州互联网 · 母亲 68 岁独居老家 · 高血压+钙片</p>
+      <ul>
+        <li><b>目标：</b>每天 10 秒判断要不要打电话；开会时别漏接紧急。</li>
+        <li><b>现状：</b>家族群早晚各问一次药；曾买手表，母亲戴两周后抽屉吃灰。</li>
+        <li><b>体验标准：</b>信息要结论不要曲线；推送要少而准；愿意为少焦虑付小额月费。</li>
+        <li><b>失败敏感：</b>误报过多、理财广告、感觉在「监控老人」。</li>
+      </ul>
+    </article>
+    <article>
+      <h4>核心画像 B · 居家父母「王妈妈」</h4>
+      <p class="meta">68 岁 · 智能手机够用但少装 App · 嫌字小</p>
+      <ul>
+        <li><b>目标：</b>提醒吃药别忘；真不舒服能立刻找到女儿。</li>
+        <li><b>现状：</b>药盒靠记忆；不舒服时要翻通讯录，着急会点错。</li>
+        <li><b>体验标准：</b>按钮够大、步骤 ≤2、不要定位常开、设置让女儿弄。</li>
+        <li><b>失败敏感：</b>被当成「不会用的人」说教；广告推销保健品。</li>
+      </ul>
+    </article>
+  </div>
+  <div class="roles">
+    <article class="core"><div class="lab">核心 1/2</div><h4>异地子女</h4><p>决策与付费主体；每天想确认安好。</p></article>
+    <article class="core"><div class="lab">核心 2/2</div><h4>居家父母</h4><p>要提醒与紧急出口；不要监视感。</p></article>
+    <article><div class="lab">潜在</div><h4>初现照护压力的子女</h4><p>父母刚确诊慢病；可用「先建圈代配」转化。</p></article>
+    <article><div class="lab">利益相关</div><h4>兄弟姐妹</h4><p>进圈后有备用身份；减少「都是我在管」的不公平感。</p></article>
+    <article><div class="lab">帮助人物</div><h4>同城亲友</h4><p>主责担心「我接不到谁去现场」时，帮助人物促成安装。</p></article>
+  </div>
+
+  <h3 id="scenes-def"><span class="shot">截屏 3</span>三场景 · 课堂定义 + 安好映射</h3>
+  <div class="scenes">
+    <article>
+      <b>日常使用场景</b>
+      <p><b>定义：</b>大部分时间常规使用。<br>
+      <b>剧本：</b>22:30 小刘打开安好页，见「用药 2/2 · 今日可先不打」；白天王妈妈 14:00 点「已吃」。<br>
+      <b>产品含义：</b>留存发生地；推送默认安静，只服务打卡与结论。</p>
+    </article>
+    <article>
+      <b>必要使用场景</b>
+      <p><b>定义：</b>特定需求下才打开。<br>
+      <b>剧本：</b>王妈妈头晕长按大红按钮；小刘开会中 4 秒响铃；若 30 秒未接，二舅接到扩联。<br>
+      <b>产品含义：</b>信任发生地；失败即产品失败，故为 P0。</p>
+    </article>
+    <article>
+      <b>边缘使用场景</b>
+      <p><b>定义：</b>用户未必预想但会发生。<br>
+      <b>剧本：</b>小刘用「最后活跃 3 小时前」决定视频问安；周日代配把钙片改到晚饭后。<br>
+      <b>产品含义：</b>发现而非强推；不为此做复杂首页。</p>
+    </article>
+  </div>
+
+  <h3 id="task-flow"><span class="shot">截屏 4</span>任务流程图（泳道 · 示例说明）</h3>
+  <p>从开始到结束串联业务链条每一步；课堂常用泳道图。安好拆成两条主链：日常履约链 + 紧急触达链。</p>
+  <div class="fig">
+    <pre class="mermaid">
+flowchart LR
+  subgraph P[父母泳道]
+    P1[打开首页] --> P2[用药已吃]
+    P1 --> P3[紧急呼叫]
+  end
+  subgraph S[系统泳道]
+    S1[记录打卡] --> S2[生成今日安好]
+    S3[≤5s 响铃] --> S4{30s 未接?}
+    S4 -->|是| S5[扩第二联系人]
+  end
+  subgraph C[子女泳道]
+    C1[打开安好页] --> C2[10秒决策]
+    C3[接听紧急]
+  end
+  P2 --> S1 --> C1
+  P3 --> S3 --> C3
+  S5 --> C3
+    </pre>
+    <p class="cap">示例读法：日常链打卡→摘要→决策；紧急链呼叫→响铃→扩联。复杂设置不进父母泳道。</p>
+  </div>
+
+  <h3>尼尔森原则摘关键落地</h3>
+  <div class="nielsen">
+    <div><b>状态可见</b>呼叫中、已吃完成态、结论条随数据更新</div>
+    <div><b>匹配现实</b>用「要不要打电话」代替指标墙黑话</div>
+    <div><b>用户控制</b>定位默认关；可关非必要通知</div>
+    <div><b>防错容错</b>紧急防误触；未接自动扩联</div>
+    <div><b>易识别</b>父母首页只留呼叫与用药</div>
+    <div><b>帮助</b>设置由子女代配，父母几乎无学习成本</div>
+  </div>
+</section>
+
+<section id="compete">
+  <p class="sec-no">05</p>
+  <h2>竞品分析：借假修真</h2>
+  <p>目的不是临摹 UI，而是把抽象需求落成可对标的产品概念：硬件已经验证了「紧急触达」和「家庭圈」，但把软件做成了硬件配件；微信占了问安心智，却没有任务闭环。安好要借前者的能力形状，修成后者缺的结构化协同。</p>
+
+  <h3>三大类型与为何选它们</h3>
+  <table>
+    <tr><th>类型</th><th>对象</th><th>判定依据</th><th>对安好的意义</th></tr>
+    <tr><td><span class="tag direct">直接</span></td><td>爱牵挂、360 健康手表</td><td>同用户（子女+老人）+ 同照护远程服务</td><td>主对标；学习 SOS/家庭圈，避开「表绑人」路径</td></tr>
+    <tr><td><span class="tag indirect">间接</span></td><td>微信群问安、米家摄像头</td><td>同用户，服务是沟通或看护画面</td><td>安好要替代的是群碎片，不是替代微信本身</td></tr>
+    <tr><td><span class="tag potential">潜在</span></td><td>京东健康、支付宝亲情链</td><td>关系链/健康入口未来可能切入协同</td><td>提醒：过早做商城会与「不做导流」冲突</td></tr>
+  </table>
+
+  <h3>用户 × 服务 · 竞争关系四象限</h3>
+  <div class="comp-q">
+    <div class="c1"><b>同用户 · 同服务 → 高度直接竞争</b>爱牵挂、360。安好与其同场，用无硬件 + 任务中心错位，而不是功能全集对抗。</div>
+    <div class="c2"><b>同用户 · 不同服务 → 间接竞争</b>微信、摄像头。无直接利益冲突，但占「问安发生地」心智；安好做结构化替代，不是再做一个聊天。</div>
+    <div class="c3"><b>不同用户 · 同服务 → 间接 / 或变直接</b>机构养老数字化等；暂不进入首版叙事。</div>
+    <div class="c4"><b>不同用户 · 不同服务 → 不竞争</b>剔除，避免分析发散。</div>
+  </div>
+
+  <h3>能力对标（内部相对评分 1–5）</h3>
+  <p class="note">评分依据公开能力有无与叙事权重，用于相对排序，不作绝对测量。详矩阵见竞品详表。</p>
+  <div class="scroll-x">
+  <table>
+    <tr><th>能力</th><th>爱牵挂/360</th><th>微信群</th><th>安好目标</th><th>策略</th></tr>
+    <tr><td>紧急触达</td><td>5（硬件 SOS）</td><td>2（靠人工拨号）</td><td>4（软件大按钮+扩联）</td><td>吸收多通道与扩联，不拼传感器</td></tr>
+    <tr><td>用药闭环</td><td>2–3（提醒强、确认弱）</td><td>1（口头叮嘱）</td><td>5（提醒+已吃+日摘要）</td><td>主战场之一</td></tr>
+    <tr><td>今日是否安好</td><td>2（指标墙）</td><td>1（碎片消息）</td><td>5（一页结论）</td><td>差异化记忆点</td></tr>
+    <tr><td>启动摩擦</td><td>2（先买表再绑）</td><td>5（已安装）</td><td>4（有智能手机即可）</td><td>无硬件切入</td></tr>
+    <tr><td>低监视感</td><td>2（定位/监听叙事重）</td><td>3</td><td>5（定位默认关）</td><td>信任叙事</td></tr>
+  </table>
+  </div>
+
+  <h3>自身 vs 硬件主竞品 · 五层对照</h3>
+  <div class="layer"><div class="layer-h"><span class="lv">① 战略层</span></div><div class="layer-b"><b>硬件：</b>企业愿景绑定设备销售与续费服务；产品定位「表绑人、App 绑子女」。<b>安好：</b>子女为决策人；先验证愿用再谈订阅；不做资讯带货感。盈利后置，避免用导流污染信任。</div></div>
+  <div class="layer"><div class="layer-h"><span class="lv">② 范围层</span></div><div class="layer-b"><b>硬件：</b>定位、SOS、健康监测、家庭圈、资讯/报告。<b>安好：</b>吸收 SOS 多通道与家庭多成员；主做呼叫、用药闭环、安好摘要；明确砍理财流、必装定位、指标首页。</div></div>
+  <div class="layer"><div class="layer-h"><span class="lv">③ 结构层</span></div><div class="layer-b"><b>硬件：</b>信息架构以设备为中心（先绑表再看功能）。<b>安好：</b>以任务为中心——谁提醒、谁确认、今日结论；设置集中在子女端。</div></div>
+  <div class="layer"><div class="layer-h"><span class="lv">④ 框架层</span></div><div class="layer-b"><b>吸收：</b>防误触长按、未接扩第二人、邀请家人进圈。<b>规避：</b>单向监听、高频无关键推送、把父母丢进复杂设置页。</div></div>
+  <div class="layer"><div class="layer-h"><span class="lv">⑤ 表现层</span></div><div class="layer-b"><b>硬件子女端</b>易呈「监护舱」。<b>安好：</b>父母大按钮大字大触控；子女端一页决策，视觉服务「要不要打电话」，不服务「展示我很专业」。</div></div>
+  <p class="note">公开资料与完整评分见 <a href="compete-yinfa.html">竞品详表页</a>。</p>
+
+  <h3>产品发展七阶段 · 课堂全表 + 安好对照</h3>
+  <p>课堂：找到竞品并看清其所在阶段 → 拆该阶段最大版本特点 → 定自身阶段 → 输出针对性策略。安好当前落在 <b>② MVP 验证期</b>。</p>
+  <div class="life7">
+    <div><b>① 萌芽立项</b>方向与用户假设；尚未验证闭环。安好：已完成用研与 KANO，越过此阶段。</div>
+    <div class="on"><b>② MVP 验证</b>最小成本拉通模式，验证商业/使用闭环。安好：当前唯一主策略。</div>
+    <div><b>③ 跑马圈地</b>小规模试点 + 资源跟随，占细分。安好：P0 过线后选 1 城亲友圈试点。</div>
+    <div><b>④ 大幅扩张</b>关键节点砸资源做大规模扩张。安好：现在不做，过早烧钱。</div>
+    <div><b>⑤ 高度竞争</b>卷差异、抢份额。主竞品硬件 guardi 同质化多在此。安好：坚持错位，不硬碰。</div>
+    <div><b>⑥ 成熟巩固</b>提效、提付费或降本，守住基本盘。安好：尚远。</div>
+    <div><b>⑦ 衰退 / 求新</b>旧方案疲态，找新增长点。适用「纯微信群照护」这一旧方案，非安好自身。</div>
+  </div>
+  <div class="scroll-x">
+  <table>
+    <tr><th>阶段</th><th>典型动作</th><th>安好现在该不该做</th></tr>
+    <tr><td>① 萌芽立项</td><td>定方向、找用户、写假设</td><td>已完成，不再停留</td></tr>
+    <tr><td>② MVP 验证</td><td>最小成本拉通闭环</td><td><b>做 · 当前主策略</b></td></tr>
+    <tr><td>③ 跑马圈地</td><td>小规模试点 + 资源跟随</td><td>P0 跑通后启动</td></tr>
+    <tr><td>④ 大幅扩张</td><td>关键节点砸资源</td><td>不做</td></tr>
+    <tr><td>⑤ 高度竞争</td><td>强化差异、争夺份额</td><td>避免与硬件正面硬碰</td></tr>
+    <tr><td>⑥ 成熟巩固</td><td>提效 / 提价 / 降本</td><td>不适用</td></tr>
+    <tr><td>⑦ 衰退求新</td><td>找新增长或收缩</td><td>不适用自身；对照旧方案</td></tr>
+  </table>
+  </div>
+  <div class="verdict">
+    <h3>竞品结论</h3>
+    <p class="big">与爱牵挂 / 360 同场，但用「无硬件协同」错位；先验证子女是否愿每天看一页安好，再谈扩张。吸收 SOS 与家庭协同，避开指标墙与理财主路径。</p>
+  </div>
+</section>
+
+<section id="tear">
+  <p class="sec-no">06</p>
+  <h2>鱼骨拆解：从需求推到对策</h2>
+  <p>有竞品用金字塔五层（上节）；自身从需求推导用鱼骨。标准三条层级：主干骨 = 原因/需求，次干骨 = 表现，鱼刺 ≤5 条细节。另对齐问题—原因—对策。</p>
+  <div class="fig">
+    <pre class="mermaid">
+flowchart LR
+  H[鱼头 · 安好]
+  H --- A[主干 · 远程不安心]
+  H --- B[主干 · 用药靠群叮]
+  H --- C[主干 · 缺今日结论]
+  A --- A1[次干 · 触达不到]
+  A1 --- A11[无大按钮]
+  A1 --- A12[未接无人接力]
+  B --- B1[次干 · 执行不可见]
+  B1 --- B11[有提醒无确认]
+  B1 --- B12[漏服淹没群聊]
+  C --- C1[次干 · 决策成本高]
+  C1 --- C11[指标墙]
+  C1 --- C12[默认定位反感]
+    </pre>
+    <p class="cap">对策：不安心→R1；靠群叮→R2；缺结论→R3。每条次干鱼刺控制在 5 条内。</p>
+  </div>
+</section>
+
+<section id="depth">
+  <p class="sec-no">07</p>
+  <h2>机制深挖：结论引擎 · 协同协议 · 反监视默认</h2>
+  <p class="pull">差异不在功能清单更长，而在三条可命名、可验收的机制。下面把「安好页」「扩联」「低监视」从口号落到规则。</p>
+
+  <h3>① 安好结论引擎（R3 的内核）</h3>
+  <p>子女打开不是看数据墙，而是读系统给出的<strong>行动建议</strong>。输入只取履约与事件信号，不用医疗诊断模型冒充专业。</p>
+  <div class="engine">
+    <article>
+      <b>输入（仅这些）</b>
+      <ul>
+        <li>今日用药完成态（已吃 / 漏服 / 未到点）</li>
+        <li>最后活跃时间（App 内操作）</li>
+        <li>当日是否发生紧急呼叫</li>
+        <li>主责是否处于「临时转责」</li>
+      </ul>
+    </article>
+    <article class="mid">
+      <b>三态结论（互斥）</b>
+      <ul>
+        <li><b>可先不打</b>：应打卡已完成 + 活跃在阈值内 + 无紧急</li>
+        <li><b>建议联系</b>：漏服，或活跃超时，或主责已转责需确认</li>
+        <li><b>今日有紧急</b>：当日发生过呼叫（无论是否接通）</li>
+      </ul>
+    </article>
+    <article>
+      <b>输出动作</b>
+      <ul>
+        <li>结论条文案 + 理由一行</li>
+        <li>一键电话（始终可见）</li>
+        <li>不展示心率/血压/轨迹</li>
+        <li>定位开关默认关，结论不依赖定位</li>
+      </ul>
+    </article>
+  </div>
+  <h4>例外表（面试常问「那这种呢」）</h4>
+  <div class="edge">
+    <div><span class="q">漏服，但 10 分钟前刚活跃</span><span class="a"><b>结论：</b>建议联系</span><span class="a">理由写「用药未完成」；不因活跃掩盖漏服</span></div>
+    <div><span class="q">打卡齐全，但活跃已超 6 小时</span><span class="a"><b>结论：</b>建议联系</span><span class="a">阈值首版写死 6h，试点可调；避免假阴性安心</span></div>
+    <div><span class="q">紧急已接通并解决</span><span class="a"><b>结论：</b>今日有紧急</span><span class="a">全日保持该态，防止子女误以为「平常一天」</span></div>
+    <div><span class="q">主责出差，已临时转责二舅</span><span class="a"><b>结论：</b>建议联系（主责视角）</span><span class="a">主责仍见摘要；扩联目标临时改为二舅</span></div>
+  </div>
+
+  <h3>② 家庭协同协议（不只是角色表）</h3>
+  <p>兄弟姐妹之间的扯皮，产品用<strong>状态机</strong>接住，而不是再开一个群。</p>
+  <div class="statebox">
+    <div class="core"><b>主责</b>默认接听紧急、接收漏服摘要、可代配与转让；同一时间有且仅有 1 人。</div>
+    <div><b>备用</b>≥1 人；主责 30 秒未接或主动拒接 → 自动扩联；不接收日常安静推送。</div>
+    <div><b>同城协助</b>帮助人物；可被主责一键临时拉入「就近协助」，不自动成为主责。</div>
+    <div><b>临时转责</b>主责设定起止时间；期内扩联目标切换，到期自动归还，写进事件日志。</div>
+  </div>
+  <div class="fig">
+    <pre class="mermaid">
+flowchart LR
+  Call[父母发起紧急] --> Ring[主责响铃 ≤5s]
+  Ring --> A{30s 内接通?}
+  A -->|是| Done[呼叫中可见 · 记事件]
+  A -->|否/拒接| Bak[扩备用联系人]
+  Bak --> B{接通?}
+  B -->|是| Done
+  B -->|否| Sms[短信兜底 + 标记未达]
+  Transfer[主责开启临时转责] -.-> Ring
+    </pre>
+    <p class="cap">扩联状态机：权责预先写入家庭圈；群里不再现场商量「谁去接」。</p>
+  </div>
+
+  <h3>③ 反监视默认集（可背的原则）</h3>
+  <div class="defaults">
+    <div><b>定位默认关</b>结论与紧急均不依赖常开定位；需要时由父母主动开，或子女申请经同意。</div>
+    <div><b>异常才推</b>日常零骚扰；漏服合并为当日 1 条；禁止养生资讯刷存在感。</div>
+    <div><b>设置子女代配</b>父母端几乎无学习成本；复杂权限不进父母首页。</div>
+    <div><b>数据最小够用</b>子女见完成态与结论，不见病历原文、不见轨迹回放。</div>
+  </div>
+  <div class="whybox">
+    <b>机制收束：</b>R1 靠扩联状态机建立信任；R2 靠完成态消灭群叮嘱；R3 靠结论引擎形成每日打开理由。三条签名能力互相咬合——缺扩联则不敢托付，缺打卡则结论无输入，缺结论则子女留不住。
+  </div>
+
+  <h3 id="loop">④ 日常主循环（产品心跳）</h3>
+  <p>三条机制不是并列功能清单，而是同一心跳上的不同节拍：日常链养留存，紧急链建信任，两边都回写结论引擎。</p>
+  <div class="fig">
+    <pre class="mermaid">
+flowchart LR
+  Remind[到点提醒] --> Checkin[父母已吃]
+  Checkin --> Engine[结论引擎]
+  Engine --> Open[子女打开安好页]
+  Open --> Decide{打不打电话}
+  Decide -->|可先不打| Quiet[安静结束]
+  Decide -->|建议联系或有紧急| Call[一键电话]
+  Call --> Log[事件回写]
+  Quiet --> Engine
+  Log --> Engine
+  SOS[紧急大按钮] --> Expand[扩联状态机]
+  Expand --> Log
+    </pre>
+    <p class="cap">读法：提醒→打卡→结论→决策→（必要时）电话→回写；紧急旁路经扩联同样回写。结论先于数据，在这条环上落地。</p>
+  </div>
+</section>
+
+<section id="design">
+  <p class="sec-no">08</p>
+  <h2 id="func">需求 → 功能结构表</h2>
+  <p>推导链：用研痛点 → 鱼骨主干（不安心 / 靠群叮 / 缺结论）→ KANO 定级（R1M·R2O·R3A，杀掉 R4）→ 下表最小功能单元。每条都能单独验收，并写清字段级规则，避免口头理解偏差。</p>
+  <div class="sheet">
+    <p><b>拆解口径：</b>竞品侧用金字塔五层（§05）；自身从需求推对策用鱼骨因果（§06）。两边汇合到同一张功能结构表，再展开为架构图与版本节奏。</p>
+  </div>
+  <div class="scroll-x">
+  <table>
+    <tr><th>需求</th><th>模块</th><th>功能点（最小单元）</th><th>关键规则 / 字段</th><th>验收</th><th>版本</th></tr>
+    <tr>
+      <td>R1 <span class="tag m">M</span> <span class="tag p0">P0</span></td>
+      <td>紧急触达</td>
+      <td>大按钮发起；主责推送+系统响铃；30s 未接扩备用；呼叫中状态页</td>
+      <td>角色：主责 1 人、备用 ≥1；防误触：长按 1.5s 或二次确认（可用性测后择一）；超时：30s</td>
+      <td>响铃 ≤5s；父母独立完成率 ≥80%</td>
+      <td>v0.5</td>
+    </tr>
+    <tr>
+      <td>R2 <span class="tag o">O</span> <span class="tag p0">P0</span></td>
+      <td>用药闭环</td>
+      <td>子女代配计划；到点提醒；「已吃」；漏服日摘要仅 1 条</td>
+      <td>字段：药品名、时段、剂量文案（非处方）；子女只读完成态，不展示病历原文；漏服阈值：当日汇总</td>
+      <td>群内用药叮嘱下降 ≥50%</td>
+      <td>v1.0</td>
+    </tr>
+    <tr>
+      <td>R3 <span class="tag a">A</span> <span class="tag p1">P1</span></td>
+      <td>安好决策页</td>
+      <td>结论条；打卡汇总；最后活跃；一键电话；定位开关默认关</td>
+      <td>结论枚举：可先不打 / 建议联系 / 今日有紧急；输入仅用打卡+活跃+紧急事件，不用医疗诊断模型冒充</td>
+      <td>10 秒可读完；子女周活 ≥3 天</td>
+      <td>v1.5</td>
+    </tr>
+    <tr>
+      <td>支撑 <span class="tag p0">P0</span></td>
+      <td>家庭账号</td>
+      <td>创建家庭圈；邀请码/链接；角色分配；大字号高对比</td>
+      <td>主责可转让；父母端设置只读；退出家庭即停推</td>
+      <td>主责 3 分钟建圈并成功邀 1 人</td>
+      <td>v0.5</td>
+    </tr>
+    <tr>
+      <td>R5 <span class="tag p2">P2</span></td>
+      <td>社区活动</td>
+      <td>按街道匹配报名</td>
+      <td>不进一级导航；独立实验开关</td>
+      <td>父母可独立完成一次报名</td>
+      <td>v2.x</td>
+    </tr>
+    <tr>
+      <td>R4 <span class="tag kill">杀</span></td>
+      <td>—</td>
+      <td>理财/项目推荐流</td>
+      <td>代码与运营配置双禁止</td>
+      <td>—</td>
+      <td>永不</td>
+    </tr>
+  </table>
+  </div>
+</section>
+
+<section id="arch">
+  <p class="sec-no">09</p>
+  <h2>产品功能架构图</h2>
+  <p>架构服从优先级：父母端只暴露履约入口；协同规则与隐私默认放在中台；一切为三条主链服务，不为「看起来功能多」服务。</p>
+  <div class="arch">
+    <div class="arch-row p0"><div class="arch-lab">父母端</div><div class="arch-cells"><span>极简首页</span><span>紧急大按钮</span><span>用药列表</span><span>已吃打卡</span><span>呼叫中反馈</span></div></div>
+    <div class="arch-row p0"><div class="arch-lab">子女端</div><div class="arch-cells"><span>今日安好</span><span>紧急接听</span><span>用药代配</span><span>漏服摘要</span><span>家庭圈</span><span>通知/隐私设置</span></div></div>
+    <div class="arch-row p1"><div class="arch-lab">协同中台</div><div class="arch-cells"><span>主责/备用路由</span><span>30s 扩联状态机</span><span>异常才推策略</span><span>结论条生成</span><span>日摘要聚合</span></div></div>
+    <div class="arch-row sys"><div class="arch-lab">系统基础</div><div class="arch-cells"><span>账号与家庭权限</span><span>推送 / 短信兜底</span><span>提醒调度</span><span>事件审计日志</span><span>隐私默认（定位关）</span></div></div>
+  </div>
+  <div class="fig">
+    <pre class="mermaid">
+flowchart TB
+  Parent[父母端极简] --> SOS[紧急触达]
+  Parent --> Med[用药闭环]
+  Child[子女端决策] --> Sum[安好摘要]
+  Child --> Med
+  Child --> Fam[家庭圈]
+  SOS --> Push[多通道通知]
+  Med --> Push
+  Sum --> Log[事件日志]
+  Fam --> Acc[账号权限]
+  SOS --> Rule[扩联状态机]
+  Sum --> Rule
+    </pre>
+    <p class="cap">上薄下稳：入口少，主链三条，协同中台承载规则，基础层只服务闭环质量与可追溯。</p>
+  </div>
+</section>
+
+<section id="ver">
+  <p class="sec-no">10</p>
+  <h2>版本迭代方案</h2>
+  <p>先规划再画原型。用效果×成本四象限卡范围；版本节奏对齐「先信任、再履约、再差异」，不机械凑满 7 个版本号。</p>
+  <div class="q4">
+    <div class="q1"><b>必做 · 高效果低成本</b><p>建圈、紧急呼叫、用药打卡、漏服日摘要、子女代配、大字号</p></div>
+    <div class="q2"><b>慎做 · 高效果高成本</b><p>结论策略精细化、短信双通道兜底、可选硬件接入</p></div>
+    <div class="q3"><b>不做 · 低效果高成本</b><p>指标墙、默认定位、兴趣冷启动、硬件捆绑销售</p></div>
+    <div class="q4c"><b>杀掉 · 负效果</b><p>养老理财 / 保健品推荐流（KANO 反向）</p></div>
+  </div>
+  <div class="stage">
+    <div><b>v0.5 信任底板 · ~4 周</b><span>家庭圈+R1。只回答：父母能否独立呼通？呼不通则不上用药。</span></div>
+    <div><b>v1.0 履约闭环 · ~4 周</b><span>R2。只回答：群叮嘱是否下降？下降不够则不上安好页扩张。</span></div>
+    <div><b>v1.5 差异记忆 · ~3 周</b><span>R3。只回答：子女是否愿每天打开？打不开则不谈付费放量。</span></div>
+    <div><b>v2.0 可选扩展</b><span>硬件选配 / R5 小流量。前三版过线后才开闸。</span></div>
+  </div>
+  <div class="scroll-x">
+  <table>
+    <tr><th>版本</th><th>用户可感知变化</th><th>依赖</th><th>明确不做</th></tr>
+    <tr><td>v0.5</td><td>「出了事按一下就能找到人」</td><td>推送通道可用</td><td>用药、安好页、定位</td></tr>
+    <tr><td>v1.0</td><td>「药吃没吃不用在群里问」</td><td>v0.5 呼叫过线</td><td>理财流、兴趣、商城</td></tr>
+    <tr><td>v1.5</td><td>「打开就知道要不要打电话」</td><td>v1.0 打卡数据稳定</td><td>指标墙首页、默认定位</td></tr>
+    <tr><td>v2.0</td><td>「需要时再加手表/社区」</td><td>v1.5 留存过线</td><td>仍不做理财导流</td></tr>
+  </table>
+  </div>
+</section>
+
+<section id="ia">
+  <p class="sec-no">11</p>
+  <h2>信息架构：父母集中 · 子女分发</h2>
+  <p><b>集中：</b>父母认知与操作预算极低，首页收敛为「呼叫 + 用药」两件事。<b>分发：</b>子女从安好页拿到结论后，再按需进入用药、家庭、设置处理细节。</p>
+  <div class="ia-tree">
+    <div class="ia-col">
+      <h4>父母端（集中）</h4>
+      <ul>
+        <li><b>首页</b>
+          <ul>
+            <li>紧急呼叫（主 CTA，视觉权重最高）</li>
+            <li>今日用药列表 + 已吃</li>
+            <li>呼叫中 / 已接通 / 已扩联反馈</li>
+          </ul>
+        </li>
+        <li><b>我的（极简）</b>
+          <ul>
+            <li>字号 / 音量</li>
+            <li>当前家庭（只读，改角色去找子女）</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="ia-col">
+      <h4>子女端（分发）</h4>
+      <ul>
+        <li><b>今日安好（默认首页）</b>：结论条 · 打卡 · 活跃 · 快捷电话</li>
+        <li><b>用药</b>：计划代配 · 今日完成态 · 漏服日摘要</li>
+        <li><b>家庭</b>：成员角色 · 邀请 · 主/备联系人 · 模拟呼叫</li>
+        <li><b>设置</b>：通知偏好 · 隐私（定位默认关） · 退出家庭</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">父母底部 ≤2 入口；子女主 Tab=3（安好/用药/家庭）。资讯、商城、社区、理财<strong>不进</strong>一级导航，从结构上执行 KANO「杀掉 R4」。</p>
+</section>
+
+<section id="proto">
+  <p class="sec-no">12</p>
+  <h2>原型示意</h2>
+  <p>三屏对应三条主链的关键态：父母履约首页、子女 10 秒决策页、紧急接听与扩联规则可见。可直接对照信息架构讲述；视觉精修可再进 Axure/Figma。</p>
+  <div class="phones">
+    <div class="phone"><div class="screen">
+      <div class="statusbar"></div>
+      <div class="appbar"><span>安好 · 父母</span><span class="sub">大字号</span></div>
+      <div class="panel">
+        <div class="cardx"><strong>王妈妈</strong><span class="muted">主联系人：女儿小刘</span></div>
+        <a class="bigbtn" href="#proto">紧急呼叫子女</a>
+        <div class="checkrow"><span>降压药 · 午饭后</span><span class="btn">已吃</span></div>
+        <div class="checkrow"><span>钙片 · 晚饭后</span><span class="btn" style="background:#78716c">待提醒</span></div>
+      </div>
+      <div class="tabbar"><span class="on">首页</span><span>我的</span><span></span></div>
+    </div></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"></div>
+      <div class="appbar"><span>今日安好</span><span class="sub">10 秒决策</span></div>
+      <div class="panel">
+        <div class="cardx" style="background:#f0fdfa;border-color:#99f6e4"><strong>今天可以先不打电话</strong><span class="muted">用药完成 · 活跃 12 分钟前</span></div>
+        <div class="metric"><span><b>2/2</b>打卡</span><span><b>正常</b>活跃</span><span><b>0</b>紧急</span><span><b>关</b>定位</span></div>
+        <a class="bigbtn quiet" href="#proto">给妈妈打电话</a>
+      </div>
+      <div class="tabbar"><span class="on">安好</span><span>用药</span><span>家庭</span></div>
+    </div></div>
+    <div class="phone"><div class="screen">
+      <div class="statusbar"></div>
+      <div class="appbar"><span>紧急来电</span><span class="sub">主责</span></div>
+      <div class="panel">
+        <div class="cardx" style="background:#fff7ed;border-color:#fdba74"><strong>王妈妈发起紧急呼叫</strong><span class="muted">目标 ≤5 秒响铃</span></div>
+        <a class="bigbtn" href="#proto">立即接听</a>
+        <div class="cardx"><strong>扩联</strong><span class="muted">30 秒未接 → 备用联系人</span></div>
+      </div>
+      <div class="tabbar"><span>安好</span><span>用药</span><span class="on">家庭</span></div>
+    </div></div>
+  </div>
+  <p class="note">结构示意，可再导入 Axure / Figma 精绘。单独设计交付页：<a href="anhao.html">anhao.html</a></p>
+</section>
+
+<section id="validate">
+  <p class="sec-no">13</p>
+  <h2>验证生死线 · 冷启动 · 商业时点</h2>
+  <p class="pull">MVP 不只验证「做没做出来」，还要事先写清：谁先用、怎样算过线、不过线停什么、钱什么时候再谈。</p>
+
+  <h3>冷启动：第一批家庭怎么来</h3>
+  <div class="funnel">
+    <div><b>① 获客入口</b>子女主动建家庭圈（亲友转介 / 同学同事互助），不先做广告获客。</div>
+    <div><b>② 邀请路径</b>子女代配完成后，发邀请链接或面对面帮父母装好；父母端几乎零设置。</div>
+    <div><b>③ 首周任务</b>完成 1 次模拟呼叫 + 连续 3 天用药打卡，才算「激活家庭」。</div>
+    <div><b>④ 试点规模</b>首期 15–20 个异地照护家庭；主责子女可触达、愿周反馈。</div>
+  </div>
+  <div class="sheet">
+    <p><b>覆盖边界：</b>首版默认父母有能装 App 的智能手机。无智能机 / 仅老年机用户<strong>明确不进首版</strong>；记为后续可选硬件或子女代操作旁路，不拿来证明无硬件路径失败。</p>
+  </div>
+
+  <h3 id="metrics">北极星指标树（日常怎么度量）</h3>
+  <p>指标树管「产品每天健康不健康」；下面的 90 天表管「阶段性过线 / 停做」。阈值来自本试点假设，不外推全国基准。</p>
+  <div class="mtree" aria-label="北极星指标树">
+    <div class="root">
+      <div class="lab">北极星 · 根节点</div>
+      <div class="line">主责子女每周打开「今日安好」的天数</div>
+      <p class="note">对齐 v1.5「愿不愿每天打开」。试点：周活 ≥3 天过线；&lt;1.5 天不谈付费。</p>
+    </div>
+    <div class="trunk" aria-hidden="true"></div>
+    <div class="fork" aria-hidden="true"><i></i><i></i></div>
+    <div class="branches">
+      <div class="branch">
+        <div class="labnode">过程指标 · 驱动北极星</div>
+        <div class="twig" aria-hidden="true"></div>
+        <div class="leaves">
+          <div class="leaf"><b>用药打卡完成率</b>应打卡中「已吃」占比<span class="bar">↑ 越高越好</span></div>
+          <div class="leaf"><b>紧急呼通率</b>含 30s 扩联后接通；响铃 ≤5s<span class="bar">试点参考 ≥80%</span></div>
+          <div class="leaf"><b>群内用药叮嘱下降</b>相对建圈前的叮嘱条数<span class="bar">试点目标 ≥50%</span></div>
+        </div>
+      </div>
+      <div class="branch guard">
+        <div class="labnode">护栏指标 · 过线也不能破</div>
+        <div class="twig" aria-hidden="true"></div>
+        <div class="leaves">
+          <div class="leaf"><b>紧急误触率</b>防误触是否有效<span class="bar">↓ 越低越好</span></div>
+          <div class="leaf"><b>监视感投诉 / 弃用</b>「感到被看着」相关反馈<span class="bar">↓ 触发即修默认</span></div>
+          <div class="leaf"><b>非异常推送占比</b>违反「异常才推」的噪音<span class="bar">↓ 趋近于 0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sheet">
+    <p><b>与 90 天表的分工：</b>指标树回答「日常盯什么」；90 天表回答「哪段时间必须证明什么、不过线停什么」。过程指标掉了先改主循环，不先堆新功能；护栏破了优先修默认与推送策略。</p>
+  </div>
+
+  <h3>90 天验证：过线与停做</h3>
+  <div class="scroll-x">
+  <table>
+    <tr><th>周期</th><th>交付</th><th>验证问题</th><th>过线</th><th>失败即停 / 改</th></tr>
+    <tr>
+      <td>D1–30</td>
+      <td>v0.5 呼叫 + 建圈</td>
+      <td>父母能否独立呼通？</td>
+      <td>任务成功率 ≥80%；实验室响铃 ≤5s</td>
+      <td>成功率 &lt;60% → 停扩功能，先改父母端交互；连续两轮不过 → 停项目主路径</td>
+    </tr>
+    <tr>
+      <td>D31–60</td>
+      <td>v1.0 用药闭环</td>
+      <td>群里还要不要叮吃药？</td>
+      <td>试点家庭群内用药相关消息下降 ≥50%</td>
+      <td>下降 &lt;20% → 不做安好页扩张，先查提醒时机与代配成本</td>
+    </tr>
+    <tr>
+      <td>D61–90</td>
+      <td>v1.5 安好一页</td>
+      <td>子女愿不愿每天打开？</td>
+      <td>主责子女周活 ≥3 天；「愿意推荐」≥40%</td>
+      <td>周活 &lt;1.5 天 → 不谈付费、不进跑马圈地；回到「结论条是否真能 10 秒决策」</td>
+    </tr>
+  </table>
+  </div>
+  <div class="killbox">
+    <div class="go">
+      <b>过线之后才做</b>
+      <ul>
+        <li>进入跑马圈地：扩大到 1 个城市亲友圈</li>
+        <li>启动付费试验（见下）</li>
+        <li>评估可选硬件，仍非必装</li>
+      </ul>
+    </div>
+    <div class="stop">
+      <b>不过线明确不做</b>
+      <ul>
+        <li>不砸广告放量</li>
+        <li>不上理财/商城「补收入」</li>
+        <li>不与硬件厂商正面拼定位能力</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>商业时点：先愿用，再愿付</h3>
+  <div class="steps" style="grid-template-columns:repeat(3,1fr)">
+    <div><b>前 90 天 · 只验证愿用</b><span>免费。付钱会污染「是否真需要安好页」的信号。</span></div>
+    <div><b>过线后 · 付费试验</b><span>向主责子女收「家庭订阅」（规划 9.9–19.9 元/月档试价）；卖的是少叮嘱、少焦虑，不锁呼叫急救能力。</span></div>
+    <div><b>谁付钱</b><span>付费决策人 = 核心角色里的异地子女；父母端永不付费墙。</span></div>
+  </div>
+  <div class="sheet">
+    <p><b>一句话商业策略：</b>习惯养成前不收费；过线后只向主责子女卖订阅；紧急呼叫与基础打卡保持可用，避免用生命安全功能卡付费。若付费试验无人付，不加广告、不加导流，回到免费场景把安好页做扎实。</p>
+  </div>
+
+  <h3>风险与边界（面试常问）</h3>
+  <table>
+    <tr><th>风险</th><th>应对</th></tr>
+    <tr><td>父母无智能手机</td><td>首版不覆盖；不因此否定无硬件路径；后续才谈手表/按键硬件选配</td></tr>
+    <tr><td>硬件竞品抄「安好摘要」</td><td>用任务闭环与低监视叙事防守；不拼传感器参数</td></tr>
+    <tr><td>用药提醒被理解为医疗建议</td><td>产品文案定位为「执行提醒与家庭协同」，不做诊断与处方</td></tr>
+    <tr><td>兄弟姐妹权责不清</td><td>强制设主责 + 备用；扩联规则写进家庭圈，减少群内扯皮</td></tr>
+  </table>
+</section>
+
+<section id="close">
+  <p class="sec-no">14</p>
+  <h2>作品集收束</h2>
+  <div class="verdict">
+    <h3>30 秒讲述</h3>
+    <p class="big">安好是给子女的决策产品，不是给父母的健康 App。用研钉住「不确定 &gt; 不知情、关心≠监视」；KANO 把呼叫与用药定为 P0、安好结论为 P1，并杀掉理财假需求。差异落在三条机制——结论引擎、扩联状态机、反监视默认；照护旅程上只先吃慢病日常与紧急触达。90 天过线前不收费，过线后只向主责子女试家庭订阅。</p>
+  </div>
+  <table>
+    <tr><th>讲述重点</th><th>落点</th></tr>
+    <tr><td>主张 · 旅程图 · 相邻 Job（深广特）</td><td>§00</td></tr>
+    <tr><td>HMW → 用研 → KANO → 体验 → 竞品</td><td>§01–05</td></tr>
+    <tr><td>鱼骨 · 结论引擎 / 协同协议 / 反监视 · 主循环</td><td>§06–07</td></tr>
+    <tr><td>功能结构 · 架构 · 版本 · IA · 原型</td><td>§08–12</td></tr>
+    <tr><td>冷启动 · 指标树 · 90 天生死线 · 商业时点</td><td>§13</td></tr>
+  </table>
+  <footer class="colophon">
+    银发经济最终作品集 · 产品「安好」。主张：给子女的决策产品。KANO n=22 与竞品公开信息口径与分册详表一致；原型为结构示意。深度材料：
+    <a href="kano-yinfa.html">KANO 详表</a> ·
+    <a href="compete-yinfa.html">竞品详表</a> ·
+    <a href="anhao.html">设计交付页</a>
+  </footer>
+</section>
+</div>
+<script>
+mermaid.initialize({startOnLoad:true,theme:"neutral",securityLevel:"loose"});
+(function(){
+  var links=document.querySelectorAll(".nav-bar a"),sections=[];
+  links.forEach(function(a){var el=document.getElementById(a.getAttribute("href").slice(1));if(el)sections.push({link:a,el:el});});
+  function mark(){var y=window.scrollY+80,cur=sections[0];sections.forEach(function(s){if(s.el.offsetTop<=y)cur=s;});links.forEach(function(a){a.classList.remove("active");});if(cur)cur.link.classList.add("active");}
+  window.addEventListener("scroll",mark,{passive:true});mark();
+})();
+</script>
+</body>
+</html>
