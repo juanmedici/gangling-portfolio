@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晓安 · Axure 热区对照表</title>
+<style>
+:root{--ink:#1c1917;--muted:#57534e;--paper:#f3efe6;--sheet:#fbf8f2;--line:#e4dcd0;--accent:#9a3412;--header:#163d35;--ok:#115e59;--warn:#b45309}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15px}
+.top{background:var(--header);color:#f4f7f5;padding:28px 36px}
+.top h1{font-family:"Palatino Linotype","Songti SC",serif;font-size:28px;font-weight:600}
+.top p{margin-top:8px;color:#a7d7c5;max-width:46em}
+.top a{color:#fff}
+.nav{position:sticky;top:0;z-index:10;background:rgba(243,239,230,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:4px;padding:0 16px;overflow-x:auto}
+.nav a{text-decoration:none;color:var(--muted);font-size:13px;padding:12px 10px;white-space:nowrap;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:28px 24px 72px}
+section{margin-bottom:40px;scroll-margin-top:52px}
+h2{font-family:"Palatino Linotype","Songti SC",serif;font-size:24px;margin-bottom:10px}
+h3{font-size:16px;margin:18px 0 8px}
+p,li{margin:6px 0}ul,ol{padding-left:1.3em}
+.note{color:var(--muted);font-size:13px}
+.sheet{background:var(--sheet);border:1px solid var(--line);padding:14px 16px;margin:12px 0}
+.time{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.time div{background:#fff;border:1px solid var(--line);border-top:3px solid var(--header);padding:12px}
+.time div:nth-child(2){border-top-color:var(--accent)}
+.time div:nth-child(3){border-top-color:var(--warn)}
+.time div:nth-child(4){border-top-color:var(--ok)}
+.time b{display:block;font-size:13px}.time span{font-size:12.5px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;background:#fff}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#ebe4d8;font-size:12px;color:var(--muted)}
+code{font-family:Consolas,monospace;background:#ebe4d8;padding:1px 5px;border-radius:3px;font-size:12px}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:2px;background:#fff1ee;color:var(--accent)}
+.tag.ok{background:#f0fdfa;color:var(--ok)}
+.tag.mute{background:#f5f5f4;color:#78716c}
+.check li{margin:8px 0}
+.foot{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>晓安 · Axure 热区对照表</h1>
+  <p>给你在 Axure 里「贴图 + 连热区」用。截图来源：<a href="anhao.html#proto">anhao.html#proto</a>。预计 40–60 分钟完成主路径。</p>
+</header>
+<nav class="nav">
+  <a href="#time">用时</a>
+  <a href="#shot">截图命名</a>
+  <a href="#pages">页面树</a>
+  <a href="#wire">热区跳转</a>
+  <a href="#test">自测清单</a>
+</nav>
+<div class="wrap">
+
+<section id="time">
+  <h2>1. 建议用时</h2>
+  <div class="time">
+    <div><b>截图 15–20 分</b><span>11 张手机屏，按下方文件名保存</span></div>
+    <div><b>贴图 15–20 分</b><span>建页面树，每页放一张图</span></div>
+    <div><b>连线 20–30 分</b><span>按热区表盖 Hot Spot</span></div>
+    <div><b>自测 5–10 分</b><span>走通 3 条主路径即可</span></div>
+  </div>
+  <div class="sheet">
+    <b>Axure 操作口诀：</b>选中按钮区域 → 右键 <code>Convert to Hot Spot</code> → 右侧 Interactions → <code>OnClick → Open Link → 当前项目页面</code>。
+  </div>
+</section>
+
+<section id="shot">
+  <h2>2. 截图命名（直接当 Axure 页面名）</h2>
+  <p class="note">打开 <a href="anhao.html#proto">anhao.html#proto</a>，每个手机框单独截一张（只截黑色手机壳即可）。建议尺寸参考：宽约 375px 左右的手机框。</p>
+  <table>
+    <tr><th>文件名</th><th>端</th><th>屏上标题</th><th>Axure 页面名</th></tr>
+    <tr><td><code>00-入口.png</code></td><td>—</td><td>（自己做一页：两个按钮）</td><td>00 入口</td></tr>
+    <tr><td><code>P01-首页.png</code></td><td>父母</td><td>01 首页</td><td>P01 首页</td></tr>
+    <tr><td><code>P02-用药提醒.png</code></td><td>父母</td><td>02 用药提醒</td><td>P02 用药提醒</td></tr>
+    <tr><td><code>P03-呼叫中.png</code></td><td>父母</td><td>03 呼叫中</td><td>P03 呼叫中</td></tr>
+    <tr><td><code>P04-我的.png</code></td><td>父母</td><td>04 我的</td><td>P04 我的</td></tr>
+    <tr><td><code>C05-今日晓安.png</code></td><td>子女</td><td>05 今日晓安</td><td>C05 今日晓安</td></tr>
+    <tr><td><code>C06-建议联系.png</code></td><td>子女</td><td>06 需要关心一下</td><td>C06 建议联系</td></tr>
+    <tr><td><code>C07-用药.png</code></td><td>子女</td><td>07 用药</td><td>C07 用药</td></tr>
+    <tr><td><code>C08-家庭.png</code></td><td>子女</td><td>08 家庭</td><td>C08 家庭</td></tr>
+    <tr><td><code>C09-紧急来电.png</code></td><td>子女</td><td>09 紧急来电</td><td>C09 紧急来电</td></tr>
+    <tr><td><code>C10-设置.png</code></td><td>子女</td><td>10 设置</td><td>C10 设置</td></tr>
+    <tr><td><code>C11-已接通.png</code></td><td>子女</td><td>11 已接通</td><td>C11 已接通</td></tr>
+  </table>
+  <p class="note">建议把图片放在：<code>D:\Programs\产品作业\axure-assets\</code>（可自建文件夹）。</p>
+</section>
+
+<section id="pages">
+  <h2>3. Axure 左侧页面树（原样建）</h2>
+  <div class="sheet">
+<pre style="margin:0;font-family:Consolas,monospace;font-size:13px;line-height:1.55">晓安
+├── 00 入口
+├── 父母端          ← Folder
+│   ├── P01 首页
+│   ├── P02 用药提醒
+│   ├── P03 呼叫中
+│   └── P04 我的
+└── 子女端          ← Folder
+    ├── C05 今日晓安
+    ├── C06 建议联系
+    ├── C07 用药
+    ├── C08 家庭
+    ├── C09 紧急来电
+    ├── C10 设置
+    └── C11 已接通</pre>
+  </div>
+  <p><b>00 入口页</b>不用截图：白底两按钮即可——「我是父母」→ P01；「我是子女」→ C05。</p>
+</section>
+
+<section id="wire">
+  <h2>4. 热区跳转表（按这个连）</h2>
+  <p><span class="tag">必连</span> 课堂/面试演示最少做这些。<span class="tag mute">可选</span> 有时间再补。</p>
+
+  <h3>4.1 入口</h3>
+  <table>
+    <tr><th>页面</th><th>热区盖在</th><th>动作</th><th>跳到</th><th>优先级</th></tr>
+    <tr><td>00 入口</td><td>按钮「我是父母」</td><td>Open Link</td><td>P01 首页</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>00 入口</td><td>按钮「我是子女」</td><td>Open Link</td><td>C05 今日晓安</td><td><span class="tag">必连</span></td></tr>
+  </table>
+
+  <h3>4.2 父母端</h3>
+  <table>
+    <tr><th>页面</th><th>热区盖在（屏幕文案）</th><th>跳到</th><th>优先级</th></tr>
+    <tr><td>P01 首页</td><td>红色大圆「紧急 / 呼叫家人」</td><td>P03 呼叫中</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>P01 首页</td><td>「钙片」那一行（待吃）</td><td>P02 用药提醒</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>P01 首页</td><td>底部 Tab「我的」</td><td>P04 我的</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>P01 首页</td><td>底部 Tab「首页」</td><td>（可不连，已在本页）</td><td><span class="tag mute">可选</span></td></tr>
+    <tr><td>P02 用药提醒</td><td>大按钮「我吃了」</td><td>P01 首页</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>P02 用药提醒</td><td>「过一会儿再说」</td><td>P01 首页</td><td><span class="tag ok">建议</span></td></tr>
+    <tr><td>P03 呼叫中</td><td>「取消呼叫」</td><td>P01 首页</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>P03 呼叫中</td><td>头像 /「正在呼叫女儿小姜」整块</td><td>C09 紧急来电</td><td><span class="tag ok">建议</span>（跨端演示）</td></tr>
+    <tr><td>P04 我的</td><td>底部 Tab「首页」</td><td>P01 首页</td><td><span class="tag">必连</span></td></tr>
+  </table>
+
+  <h3>4.3 子女端</h3>
+  <table>
+    <tr><th>页面</th><th>热区盖在（屏幕文案）</th><th>跳到</th><th>优先级</th></tr>
+    <tr><td>C05 今日晓安</td><td>「仍想打电话 · 一键呼叫」</td><td>C11 已接通</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C05 今日晓安</td><td>「查看用药详情」</td><td>C07 用药</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C05 今日晓安</td><td>Tab「用药」</td><td>C07 用药</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C05 今日晓安</td><td>Tab「家庭」</td><td>C08 家庭</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C05 今日晓安</td><td>结论区（可先不打）整块</td><td>C06 建议联系</td><td><span class="tag mute">可选</span>（演示异常态切换）</td></tr>
+    <tr><td>C06 建议联系</td><td>「打电话问候」</td><td>C11 已接通</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C06 建议联系</td><td>「再发一次提醒」</td><td>留本页即可（可加 Toast 元件）</td><td><span class="tag mute">可选</span></td></tr>
+    <tr><td>C06 建议联系</td><td>Tab「用药 / 家庭」</td><td>C07 / C08</td><td><span class="tag ok">建议</span></td></tr>
+    <tr><td>C07 用药</td><td>Tab「晓安」</td><td>C05 今日晓安</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C07 用药</td><td>Tab「家庭」</td><td>C08 家庭</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C07 用药</td><td>「调整提醒时间」</td><td>可弹一层说明，不新开页</td><td><span class="tag mute">可选</span></td></tr>
+    <tr><td>C08 家庭</td><td>「邀请家人」</td><td>弹层（微信邀请文案）或留本页</td><td><span class="tag ok">建议</span></td></tr>
+    <tr><td>C08 家庭</td><td>「试一次呼叫」</td><td>P03 呼叫中 或 C09</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C08 家庭</td><td>妈妈行右侧电话小图标</td><td>C11 已接通</td><td><span class="tag mute">可选</span></td></tr>
+    <tr><td>C08 家庭</td><td>页面空白处加文字按钮「设置」</td><td>C10 设置</td><td><span class="tag ok">建议</span>（原图无齿轮时可手写）</td></tr>
+    <tr><td>C08 家庭</td><td>Tab「晓安 / 用药」</td><td>C05 / C07</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C09 紧急来电</td><td>绿色「接听」</td><td>C11 已接通</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C09 紧急来电</td><td>红色「拒接」</td><td>C05 今日晓安</td><td><span class="tag ok">建议</span></td></tr>
+    <tr><td>C10 设置</td><td>Tab「家庭」或自建「返回」</td><td>C08 家庭</td><td><span class="tag">必连</span></td></tr>
+    <tr><td>C11 已接通</td><td>「挂断」</td><td>C05 今日晓安</td><td><span class="tag">必连</span></td></tr>
+  </table>
+
+  <div class="sheet">
+    <b>讲紧急链路时的推荐顺序：</b>
+    00 → 父母 P01 → 紧急 → P03 →（点呼叫区）→ 子女 C09 → 接听 → C11 → 挂断回 C05。
+  </div>
+</section>
+
+<section id="test">
+  <h2>5. Preview 自测清单（勾完即可交）</h2>
+  <ol class="check">
+    <li>□ 入口能分别进父母端 / 子女端</li>
+    <li>□ 父母：首页 → 钙片 →「我吃了」→ 回首页</li>
+    <li>□ 父母：首页 → 紧急 → 呼叫中 → 取消回首页</li>
+    <li>□ 子女：晓安 → 用药 → 家庭 →（设置）→ 回家庭</li>
+    <li>□ 紧急：呼叫中 → 来电 → 接听 → 挂断</li>
+    <li>□ 底部 Tab 在晓安 / 用药 / 家庭之间能互跳</li>
+  </ol>
+  <div class="sheet">
+    <b>省时间策略：</b>先只做标了「必连」的热区（大约 18 个），三条主路径通了再补「建议 / 可选」。
+  </div>
+</section>
+
+<p class="foot">
+  对照表配套作品集：<a href="anhao.html">anhao.html</a>（设计交付）· <a href="yinfa.html">yinfa.html</a>（完整叙事）。
+  Axure 的 .rp 需你在本机保存；本页只负责命名与连线说明书。
+</p>
+</div>
+</body>
+</html>

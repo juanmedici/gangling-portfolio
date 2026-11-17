@@ -2,7 +2,7 @@
 
 ## 银发经济 · 最终作品集（主入口）
 
-**晓安 · 给子女的决策产品** — 主张/旅程/Job 地图 → HMW → 用研 → KANO → 体验 → 竞品 → 鱼骨 → 结论引擎/协同协议 → 功能结构 / 架构 / 版本 / IA / 原型（单品：结论 · 呼叫 · 用药确认）  
+**晓安 · 给子女的决策产品** — 页首 60 秒讲述 → 证据 → 方案 → 验证生死线；主张/用研/KANO/竞品/机制/IA/原型均在一页  
 
 https://juanmedici.github.io/gangling-portfolio/yinfa.html
 
@@ -11,6 +11,7 @@ https://juanmedici.github.io/gangling-portfolio/yinfa.html
 - [KANO 详表](https://juanmedici.github.io/gangling-portfolio/kano-yinfa.html)
 - [竞品详表](https://juanmedici.github.io/gangling-portfolio/compete-yinfa.html)
 - [设计交付页（案例 05 作业）](https://juanmedici.github.io/gangling-portfolio/anhao.html)
+- [Axure 热区对照表（贴图连线用）](https://juanmedici.github.io/gangling-portfolio/晓安-Axure热区对照表.html)
 
 ## 其他案例
 
